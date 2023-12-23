@@ -3,44 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: TheIsoperimetricProblem.aux
 The style file: unsrt.bst
 Database file #1: The-Isoperimetric-Problem-References.bib
-You've used 2 entries,
+You've used 3 entries,
             1791 wiz_defined-function locations,
-            455 strings with 3771 characters,
-and the built_in function-call counts, 295 in all, are:
-= -- 23
-> -- 8
+            459 strings with 3894 characters,
+and the built_in function-call counts, 413 in all, are:
+= -- 31
+> -- 12
 < -- 0
-+ -- 4
-- -- 2
-* -- 8
-:= -- 56
-add.period$ -- 6
-call.type$ -- 2
-change.case$ -- 1
++ -- 6
+- -- 3
+* -- 9
+:= -- 73
+add.period$ -- 8
+call.type$ -- 3
+change.case$ -- 2
 chr.to.int$ -- 0
-cite$ -- 2
-duplicate$ -- 18
-empty$ -- 34
-format.name$ -- 2
-if$ -- 64
+cite$ -- 3
+duplicate$ -- 23
+empty$ -- 52
+format.name$ -- 3
+if$ -- 92
 int.to.chr$ -- 0
-int.to.str$ -- 2
+int.to.str$ -- 3
 missing$ -- 3
-newline$ -- 13
-num.names$ -- 2
-pop$ -- 10
+newline$ -- 17
+num.names$ -- 3
+pop$ -- 17
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 5
+skip$ -- 9
 stack$ -- 0
 substring$ -- 0
-swap$ -- 2
+swap$ -- 3
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 2
-width$ -- 3
-write$ -- 22
+while$ -- 3
+width$ -- 4
+write$ -- 30

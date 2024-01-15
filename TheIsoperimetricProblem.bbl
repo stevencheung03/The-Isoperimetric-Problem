@@ -1,4 +1,20 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{wiegert2010sagacity}
+Jennifer Wiegert.
+\newblock The sagacity of circles: a history of the isoperimetric problem.
+\newblock {\em Loci, July}, 2010.
+
+\bibitem{ivor1941selections}
+Ivor Bulmer-Thomas.
+\newblock {\em Selections illustrating the history of Greek mathematics},
+  volume~2.
+\newblock Harvard University Press, 1941.
+
+\bibitem{virgil1981aeneid}
+Virgil.
+\newblock {\em The Aeneid}.
+\newblock Trans. Robert Fitzgerald. New York: Random House, 1981.
 
 \bibitem{kline1985mathematics}
 Morris Kline.
@@ -9,6 +25,28 @@ Morris Kline.
 S~Demjanenko.
 \newblock The isoperimetric inequality: A history of the problem, proofs and
   applications, 2008.
+
+\bibitem{yardley1994justin}
+JC~Yardley and R~Develin.
+\newblock Justin, epitome of the philippic history of pompeius trogus,
+  translated by jc yardley, with introduction and explanatory notes by r.
+\newblock {\em Develin, Seattle}, 1994.
+
+\bibitem{evans1920histories}
+Sebastian Evans et~al.
+\newblock {\em Manmouth, Geoffrey of. Histories of the Kings of Britain}.
+\newblock Number 577. JM Dent \& sons, Limited, 1920.
+
+\bibitem{nahin2021least}
+Paul~J Nahin.
+\newblock {\em When Least is Best: how mathematicians discovered many clever
+  ways to make things as small (or as large) as possible}, volume 114.
+\newblock Princeton University Press, 2021.
+
+\bibitem{heath2013history}
+Thomas~Little Heath.
+\newblock {\em A history of Greek mathematics}, volume~1.
+\newblock Cambridge University Press, 2013.
 
 \bibitem{gluck2012isoperimetric}
 Herman Gluck.

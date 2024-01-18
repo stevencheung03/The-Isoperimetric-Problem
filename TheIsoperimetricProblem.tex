@@ -264,26 +264,41 @@ Problems posed by the ancients not only speeded the progression towards more rig
 
 \section*{Important Preliminaries}
 \addcontentsline{toc}{chapter}{\hspace{0.2in}Important Preliminaries}
-(to do: find a good book to give the proof of the Jordan Curve theorem ,or from papers)
 We will take for granted the Jordan Curve Theorem
 \begin{theorem}[Jordan Curve Theorem]
-    A simple closed curve in the plane divides the plane into two regions, one compact and one non-compact, and in the common boundary of both regions
+    A simple closed curve in the plane divides the plane into two regions, one compact and one non-compact, and in the common boundary of both regions.
 \end{theorem}
+
+The Jordan Curve Theorem is just a standard, but highly non-trivial, result of the topology of $\mathbb{R}^2$, that any simple closed curve in the plane has an 'interior' and 'exterior': more precisely, the complement of the image of $\gamma$ (i.e. the set of two points $\mathbb{R}^2$ that are \underline{not} in the image of $\gamma$) is the disjoint union of two subsets of $\mathbb{R}^2$, denoted by $int(\gamma)$ and $ext(\gamma)$, with the following properties:
+\begin{enumerate}
+    \item $int(\gamma)$ is bounded, i.e. it is contained inside the circle of sufficiently large radius.
+    \item $ext(\gamma)$ is unbounded
+    \item Both of the regions $int(\gamma)$ and $ext(\gamma)$ are connected, i.e. they have the property that any two points in the same region can be joined by a curve contained entirely in the region (but any curve joining a point of $int(\gamma)$) to a point of $ext(\gamma)$ must cross the curve $\gamma$)
+\end{enumerate}
+
+
 \begin{note*}
     When we talk of the region bounded by a simple closed curve in the plane, we always mean the compact region
 \end{note*}
----
-(to do: change the 3 def below to more rigorous ones, ideally from books)
+
 \begin{definition}
     A closed curve, is a curve that changes direction but does not cross itself whilst changing direction.
 \end{definition}
+
 \begin{definition}
     A simple curve, is a curve that changes direction but does not cross itself whilst changing direction.
 \end{definition}
-The two definitions, above, are vital into understanding the main theorem. Since the isoperimetric inequality is a global result, we borrow concepts from topology
+
+\begin{definition}
+    A simple closed curve in $\mathbb{R}^2$, is a closed curve in $\mathbb{R}^2$ that has no self-intersections
+\end{definition}
+
+The two definitions, above, are vital into understanding the main theorem. Since the isoperimetric inequality is a global result, we borrow concepts from topology, such as:
+
 \begin{definition}
     A function is bounded if $\exists M \in \mathbb{R}$ such that $\left| f(x) \right| \leq M$.
 \end{definition}
+
 \begin{definition}
     Let $X$ be a topological space and $A \subset X$. An open cover for $A$ is a family $\{U_\lambda\}_{\lambda\in I}$ of open subsets of $X$ such that
     \begin{center}
@@ -291,9 +306,11 @@ The two definitions, above, are vital into understanding the main theorem. Since
     \end{center}
     An open cover is called finite if $\|I\|<\infty$. If $\{U_\lambda\}_{\lambda\in I}$ is an open cover for $A$ and $J \subset I$ is such that $A\subset\cup_{\lambda\in J}{U_\lambda}$, then $\{U_\lambda\}_{\lambda\in J}$ is called a subcover of $\{U_\lambda\}_{\lambda\in I}$.
 \end{definition}
+
 \begin{definition}
     A subset $A \subset X$ of a topological space called compact if every open cover of $A$ has a finite subcover. A space is called compact space if it is a compact subset of itself.
 \end{definition}
+
 \begin{definition} (Heine-Borel Theorem)
     A set in $\mathbb{R}^n$ is said to be compact if it is closed and bounded.
 \end{definition}
@@ -307,9 +324,37 @@ The two definitions, above, are vital into understanding the main theorem. Since
 \end{theorem}
 The circle therefore bounds the biggest area among all simple closed curves in the plane with a given length.
 \subsection{Unpacking Steiner's proof}
-The proof that I will be unpacking and taking a closer look at will be from the book (reference the book here), and is credited by them to Jakob Sternier. Packed and concise proof from ~\cite{gluck2012isoperimetric}
+The proof that I will be unpacking and taking a closer look at will be from the book (reference the book here), and is credited by them to Jakob Sternier. Packed and concise proof from~\cite{gluck2012isoperimetric}.
+\newline
+(todo: add my own insights and increase the length of the proof below)
 \begin{proof}
-    We will begin the proof by assuming the solution exists
+    We will begin the proof by assuming the solution exists. So there exists a simple closed curve C of a specified length L, enclosing a region with the maximum possible area.
+    \begin{enumerate}
+        \item We claim that the curve C must by convex, meaning that any straight line connecting two points (O and A) on C should entirely lie within the region enclosed by C. We justify this assertion thus, suppose that the curve is not convex then we could draw a segment OA connecting the two points of C, with the entire segment (except for its endpoints) situated outside of C. By mirroring the relevant arc of C between O and A along this line, a new curve of an identical length emerges, encapsulating a greater area, as illustrated in the figure below. Therefore, C is already a convex curve.
+        
+        \begin{minipage}{\linewidth}
+                \centering
+                \includegraphics[width=5cm]{iso_1.png}
+            \end{minipage}
+            
+     
+           
+        \item Select two points, P and Q, to partition our solution curve C into arcs of identical length. Consequently, the line segment PQ must divide the region enclosed by C into two sections of equal area. Failure to do so would imply that the portion with a larger area could be mirrored across PQ, resulting in another curve of the same length but with greater area. 
+
+         \begin{minipage}{\linewidth}
+                \centering
+                \includegraphics[width=5cm]{iso_2.png}
+            \end{minipage}
+
+        \item Next we will need to prove that the region bounded by the line PQ and the arc with length L/2 and endpoints P,Q bounds a region of maximum area and we will prove that the region is a semi-circle. Next we will need to prove that the region bounded by the line PQ and the arc with length L/2 and endpoints P,Q bounds a region of maximum area and we will prove that the region is a semi-circle. 
+        For the sake of contradiction assume that the angle PRQ is not a right angle. we can treat the arc as hinged at R and either open or close it to make the angle at R a right angle. This adjustment does not alter the arc's length, consequently expanding the total area encapsulated by the arc PRQ and the line PQ. However, this contradicts the maximization achieved by the original arc, which had already optimized the enclosed total area. Therefore, the inscribed angle at R must be a right angle, confirming that the arc is indeed a semi-circle. Now since we have proven that it is a semi circle, we can use this logic and expand it to the whole curve to conclude that it is a circle.
+        
+        \item Thus far, we have established that when considering a simple closed curve C with a designated length L, enclosing a region with maximum area, the curve in question must be a circle. Moving forward, we will demonstrate the existence of a maximizer and present this as the comprehensive Isoperimetric problem. In order to achieve this, we will approximate the curve C using a polygonal curve. 
+        Use Lemma X (need to prove that among all 2n-sided polygons with the same length L , the regular 2n-gon has the largest area.
+        Now, let C be a smooth, regular simple closed curve in the plane, with length L and enclosing a region of area A. 
+        $\forall \epsilon > 0 $ we can inscribe in C a polygon $ P_{\epsilon}$ whose length $L_{\epsilon}$ $|L_{\epsilon}-L|< \epsilon$ and the area $A_{\epsilon}$ which is $|A_{\epsilon}-A|< \epsilon$. 
+        Using Lemma Y, now as $\epsilon \to 0 $ and we obtain the desired inequality. Since the circle of the same length L encloses a region of area $A_{0}$ complying with $L^{2}=4\pi A_{0}$. Therefore, we ascertain that a circle achieves the maximum enclosed area among all smooth, regular, simple closed curves of the identical length. This confirms the existence of the maximizer. Hence the proof is complete.
+    \end{enumerate}
 \end{proof}
 
 \section{3 Dimensional Case (Sphere)}

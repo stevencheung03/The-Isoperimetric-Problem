@@ -1,0 +1,563 @@
+\documentclass[a4paper]{book}
+\usepackage{extarrows}
+\usepackage{amsmath,amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{answers}
+\usepackage{eufrak}
+\usepackage{eucal}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+{\setlength\arraycolsep{2pt}
+\usepackage{mathrsfs}
+\usepackage{graphicx,fancyhdr}
+\usepackage{graphicx} 
+\graphicspath{ {./images/} }
+\usepackage{caption}
+\usepackage{CJKnumb}
+\usepackage{titlesec}
+\titleformat{\chapter}{}{}{0em}{\bf\huge}
+\usepackage{amsthm}
+\usepackage{cite}
+\usepackage[utf8]{inputenc}
+\usepackage[colorlinks,urlcolor=blue,citecolor=blue,linkcolor=blue]{hyperref}
+\usepackage{tikz}
+\usepackage{setspace}
+\usepackage{xspace}
+\usepackage{cite}
+\usepackage{parskip}
+
+\newtheorem{theorem}{Theorem}%[section]
+\newtheorem{lemma}[theorem]{Lemma}%[section]
+\newtheorem{example}{Example}%[section]
+\newtheorem*{remark*}{Remark}%[section]
+\newtheorem*{note*}{Note}%[section]
+\newtheorem{proposition}{Proposition}%[section]
+\newtheorem{definition}{Definition}%[section]
+\newtheorem{conjecture}{Conjecture}%[section]
+\newtheorem{corollary}{Corollary}%[section]
+\newtheorem{problem}{Problem}%[section]
+\newtheorem{condition}{Condition}%[section]
+
+\renewcommand{\proofname}{\textbf{Proof}}
+
+\newenvironment{ddd}{\begin{rmdef}\rm}{\end{rmdef}}                             
+\newenvironment{eee}{\begin{rmexa}\rm}{\end{rmexa}}                             
+\newenvironment{rrr}{\begin{rmrem}\rm}{\end{rmrem}}                                   
+					                                        
+\newenvironment{pf}[1][Proof]{\par\noindent{\em #1}. }{\hfill\framebox(6,6)\par\medskip}
+
+\usepackage{geometry}
+ \usepackage[normalem]{ulem}
+%\renewcommand{\baselinestretch}{1.5}
+
+\geometry{left=3.5cm,right=3.5cm,top=2.5cm,bottom=2.5cm}
+
+\newcommand{\Poincare}{Poincar\'e\xspace}
+\newcommand{\Holder}{Hölder}
+
+\usepackage{graphicx} %picture
+\usepackage{float} %picture
+\usepackage{subfigure} %picture
+
+\usepackage[nottoc,notlot,notlof]{tocbibind}
+%Hölder
+%\renewcommand{\baselinestretch}{1.5}
+\let\cleardoublepage\clearpage
+\begin{document}
+
+\begin{titlepage}\phantom{|}\vspace{0.75in}
+\begin{center}
+    \underline{THE ISOPERIMETRIC PROBLEM}
+\end{center}
+\begin{center}
+    \underline{}
+\end{center}
+\vspace{1.5in}%{2.0in}
+\begin{center}
+    by
+\end{center}
+\vspace{.5in}
+\begin{center}
+    Steven Cheung \\
+    Sajid Kholozai \\
+    Steven Ballantine \\
+\end{center}
+\vspace{0.5in}
+\begin{center}
+    January 2024
+\end{center}
+\end{titlepage}
+
+\tableofcontents
+\thispagestyle{empty}
+\chapter*{Declaration}                % The * means no number for this chapter
+\pagenumbering{arabic}
+\addcontentsline{toc}{chapter}{\hspace{0.2in}Declaration}
+All sentences or passages quoted in this project dissertation from other
+people's work have been specifically acknowledged by clear cross referencing
+to author, work and page(s).  I understand that failure to do this amounts
+to plagiarism and will be considered grounds for failure in this module and
+the degree examination as a whole.
+
+
+\bigskip
+
+\noindent
+Name: Steven Cheung, Sajid Kholozai, Steven Ballantine
+
+
+\bigskip
+
+\noindent
+Date: 23rd January 2024
+
+
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{\hspace{0.2in}Abstract}
+In general, we want the maximum area whose boundary must pertain a specific length, this basic idea of the isoperimetric problem leaves many mathematicians puzzled still to this day.
+\newline
+\newline
+\textbf{Rich History:} Our problem is one not to be trifled with, and across many a centuries to even dating back to 200 BC, we can see the events unfold of how we learn about how the small intricacies become part of something larger and more complex. 
+\newline
+\newline
+\textbf{2-D Case:} The isoperimetric problem revolves around finding the shape that achieves the maximum enclosed area among all closed curves with a given length. Amongst the many simple curves, we identify that the circle is unique for pertaining the optimal area. We touch on Steiner's proof along the way to provide his insight into how this particular curve is maximal comparative to others. Additionally, show how the Euler-Lagrange Equation comes into effect; the finding of extremal curves with fixed areas and fixed perimeters. Our overall findings and conclusions are to show that across many a proofs through the decades, mathematicians have opted to find curves under this fixed perimeter constraint with additional factors taking place. Afterwards we focus on how Stokes' Theorem works with the inequality using a variety of calculus equations and figures in order to prove that the problem holds true under certain circumstances.
+\newline
+\newline
+\textbf{3-D Case:} Most common example of the isoperimetric inequality seen in three dimensional space is through a water droplet. Spherical in nature which allows us to refer back to our 2-D case, but applying further mathematical skills we delve into the world of surfaces, tension and forces. Here we will discuss the spherical isoperimetric inequality. (Here we will add our findings and conclusions, along with further proofs: Topological, Calculus, ODE)
+\newline
+\newline
+\textbf{N-Dimensions:} 
+\newline
+\newline
+\textbf{Manifolds:} 
+\newline
+\newline
+\textbf{Overview:} Follow along with us as we uncover historical insights, delve into mathematical expressions, and reveal connections between geometry, calculus, and many more fascinating fields of mathematics. This is the captivating story of understanding the isoperimetric problem.
+
+
+\chapter*{Introduction}
+\addcontentsline{toc}{chapter}{\hspace{0.2in}Introduction}
+\section*{Historical Notes}
+\addcontentsline{toc}{section}{\hspace{0.2in}Historical Notes}
+Isoperimeter, isos which is ancient Greek for equal and perimetron for perimeter. The isoperimetric perimetric problem, even though not properly formalized, was already thought about all throughout the history. 
+\newline
+\newline
+Book V of Pappus of Alexandria's Mathematical collections ~\cite{wiegert2010sagacity} began with a preface titled "On the Sagacity of Bees", rather than the history of mathematicians past or their accomplishments to follow. This was written near the end of the 3rd century $A.D.$. Observing, Pappus credited the bees with "a certain geometrical forethought" (Thomas 593~\cite{ivor1941selections}) for their nearly faultless hexagonal comb structre. He wrote
+\begin{center}
+    \begin{quote}
+        ``Bees know just this fact which is useful to them, that 
+        the hexagon is greater than the square and the triangle 
+        and will hold more honey for the same expenditure of 
+        material in constructing each"
+    \end{quote}
+    (Thomas 593~\cite{ivor1941selections})
+\end{center}
+Beyond the efficiency of bees, Pappus prefaced, "We" he continued
+\begin{center}
+    \begin{quote}
+        ``... will {}investigate a somewhat wider problem, namely that, 
+        of all equilateral and equiangular plane figures having an equal 
+        perimeter, that which has the greater number of angles is always great 
+        and the greates of them all is the circle having it's perimeter equal to them"
+    \end{quote}
+    (Thomas 593~\cite{ivor1941selections})
+\end{center}
+
+Pappus then started working on the isoperimetric problem, which included numerous smaller problems within it. The main objective of the problem is to determine which of the planes and figures with the same perimeter has the largest area amongst them.
+
+Although Pappus addressed the problem in the collections, it has been a topic of interest for centuries before. Appearing in both mathematical and literary materials and captivating the minds of mathematicians. 
+\newline
+\newline
+The isoperimetric issue demonstrates ancient mathmaticians' perceptiveness and the consistency of mathematical endeavor over time, even in the modern age. The isoperimetric problem have been used by poets and historians, despite its mathematical nature. Most famously, Virgil made use of the concept in his Roman epic, The Aeneid. To quote Virgil
+\begin{center}
+    \begin{quote}
+        ``At last they landed, where from far your eyes
+        May view the turrets of new Carthage rise;
+        There bought a space of ground, which Byrsa call'd,
+        From the bull's hide they first inclos'd and wall'd.""
+    \end{quote}
+    (Book I of Aeneid~\cite{virgil1981aeneid})
+\end{center}
+
+Virgil's version has it that Dido, daughter of the king of Tyre, fled home after her brother killed her husband. Dido ended up on the north coast of Africa, where she bargained to buy as much land as she could enclose with an oxhide. Thus, she cut the hide into thin strips, presumably met and solved enclosing the largest area with a given perimeter - the isoperimetric problem. Dido may have been clever enough and chose an area by the coast to exploit the shore as part of the perimeter. But this mostly spoils the purity of posed problem. Kline concludes~\cite{kline1985mathematics}. The Aeneid was written between $29$ and $19 B.C.$.
+\begin{figure}[h]
+    \begin{center}   
+        \includegraphics[width=120mm]{dido_1}
+        \caption{Representations of areas bounded by common shapes of the same perimeter. The semicircle, answer to Dido's problem which contains the greatest area. (image and caption from~\cite{demjanenko2008isoperimetric})}
+    \end{center}
+\end{figure}
+\leavevmode
+
+In the 3rd century $A.D.$, Roman historian Marcus Junianus Justinus compliled an account of Carthaginian folklore that the legendary founding of Carthage by Dido, called Elissa by the Greeks (the mythological origin of the city):
+\begin{center}
+    \begin{quote}
+        ``Then [Elissa] bout some land, just as much as could be covered by a cow's hide, where she could give some recreation to her men... She next gave orders for the hide to be cut into very fine strips, and in this way she took possession of a great area than she had apparently bargained for"
+    \end{quote}
+    (Book XVIII 157~\cite{yardley1994justin})
+\end{center}
+
+So since ancient Greece, around $100B.C.$, they wanted to measure the size of islands by timing how long it takes to circumnavigate the entire island. Proclus, a classical mathematician, mocked geometers for "measuring the size of a city from the lengths of its walls". To the common person of antiquity, two shapes with equal perimeter may have different areas. Interestingly, some individuals exploited this misconception to defraud others of land. Considerably more amusing, these con artists were viewed as liberal which demonstrates how unnatural the idea of shapes with a similar edge having different regions was to the old Greeks.
+\newline
+\newline
+Geoffrey of Monmouth's Historia Regum Britanniae (History of the Kings of England), a 12th century $A.D.$ chronicle of Arthurian legends, mentions the isoperimetric problem. In this story, Hengist, a German duke, appeals to King Vortigern for land in exchange for his military service:
+\begin{center}
+    \begin{quote}
+        ``'Grant', said Vortigern, 'unto thy servant but so much only as may be compassed round about by a single thong within the land thou hast given me, that so I ma build me a high place therein whereunto if need be I may betake me’...Straightaway...Hengist took a bull’s hide, and wrought the same into a single thong throughout. He then compassed round with his thong a stony place that he had right cunningly chosen, and within the space thus meted out did begin to build a castle that was afterwards called in British , Kaercorrei, but in Saxon, Thongceaster, the which in Latin’s speech is called Castrum corrigae'"
+    \end{quote}
+    (Monmouth 105-106~\cite{evans1920histories})
+\end{center}
+\leavevmode
+\newline
+\newline
+Thus, the poets and historians who chronicled the exploits of these mythological characters as well as the figures themselves found special meaning in the isoperimetric problem. Despite its extensive implications, the notion of isoperimetry was "naturally greek". The Greeks have pretty much solved it, by their standards. Zenodorus was an ancient Greek mathematician from around $200B.C.$ to $120B.C.$. And have mostly proved that a circle has greater area than any polygon with the same perimeter. Majority of his work was lost. However, fortunately, parts of his work survived through references by Pappus and Theon of Alexandria.
+
+Theon of Alexandria then develops this idea, with a summary of the proofs present by Zenodorus in "On Isoperimetric Figures". According to Theon, Zenodorus did not initiate his disussion of isoperimetry with the circle. Rather he stated that "Of all rectilinear figures having an equal perimeter - I mean equilateral and equiangular figures - the greatest is that which has the most angles" (Thomas 388-389~\cite{ivor1941selections}). In more modern language, the proposition is stated as follows: "Given two regular $n$-gons with the same perimeter, one with $n=n_1$ and the other with $n=n_2>n_1$ then the regualr $n_2$-gon has the larger area" (Nahin 47~\cite{nahin2021least}). Following this, Zenodorus was able to arrive at the proposition that "if a circle have an equal primter with an equilateral and equiangular rectilinear figure, the circle shall be the great" (Thomas 391~\cite{ivor1941selections}). As Heath notes in his "History of Greek Mathematics", Zenodorus chose to base his proof of this proposition on the theorem already established by Archimedes that "the area of a circle is eaual to the right-angled triange with perpendicular side equal to the radius and base equal to the perimeter of the circle" (Heath 209~\cite{heath2013history}). Frome here, Zenodorus proceeded on the basis of two preliminary lemmas: first that "if there be two triangels on the same base and with the same perimeter one bein isosceles and the other scalene, the isosceles triangle has the greater area" (Heath 209~\cite{heath2013history}); second that "given two isosceles triangles not similar to one another, if [one constructs] on the same bases two triangles similar to one another such that the sme of the areas of the similar triangles is great than the sum of the ares of the non-similar triangles" (Heath 210~\cite{heath2013history}). Both commentors seem to hint that it will be covered in subsequent chapters, but as Heath bemoans "in the text as we have it the promise is not fulfilled" (Heath 212~\cite{heath2013history}) (this entire paragraph is lifted from~\cite{wiegert2010sagacity})
+\newline
+\newline
+In the ancient world, the problem of isoperimetry was associated with the work of Zenodorus and his commentator Pappus. It was the work of a  Swiss mathematician Jacob Steiner (1796-1863) who tackled the isoperimetric theorem in the modern word.
+
+Indeed, the problem of isoperimetry in the niniteenth century emerged at an important juncture in mathematical thought. Mathematicians working in all fields of inquiry struggled over the use of analytic (i.e. calculus) or synthentic (i.e pure geometry) methods in solving problems.~\cite{wiegert2010sagacity} Nahin notes that Steiner's 1842 geometrical proof of the isoperimetric theorem is still regarded as a "model of mathematical ingenuity" despite subsequent discoveries of defects in the synthetic approach. The following propositions must be understood to be logically equivalent in order for Steiner's proof of the isoperimetric theorem to hold:
+\begin{center}
+    \begin{quote}
+        A. ``Of all closed curves in a plane with equal perimeters, the cicle bounds the largest area"
+        \newline
+        [and]
+        \newline
+        B. ``Of all closed curves in a plane with equal areas, the cricle has the smallest perimeter"
+    \end{quote}
+    (Nahim 55~\cite{nahin2021least})
+\end{center}
+
+Steiner thought he had demonstrated that the circle was the answer to the isoperimetric problem. As later researchers, especially the German mathematician Peter Dirichlet (1805-1859), remarked, Steiner had made an underlying assumption not explicitly addressed in his proof, namely that a solution existed (Nahin 59~\cite{nahin2021least}).
+\newline
+\newline
+Other mathematicians attempted to tackle the isoperimetric problem from the analytic or calculus-based perspective. And to no avail.
+
+Problems posed by the ancients not only speeded the progression towards more rigorous, complete systems of mathematics, but also prompted later innovators to develop new systems to deal with these early questions. The isoperimetric problem thus demonstrates an important continuity in mathematical thought. From Zenodorus to Pappus and from Steiner to the mathematicians of the twenty-first century, isoperimetry has transcended its origins in ancient geometry to become a building block of more modern analytic systems of mathematics~\cite{wiegert2010sagacity}. Below is a table summary:
+\begin{center}
+    \begin{tabular}{||c c c||} 
+        \hline
+        Name & Time Period & What they did? \\ [0.5ex] 
+        \hline
+        Pappus & written 3rd Century $A.D.$ & started working about the isoperimetric problem \\ && from bee's hexagonal comb structure  \\ 
+        \hline
+        Dido (The Aeneid) & 29$B.C.$-19$B.C.$ & enclose as much land with oxhide \\
+        \hline
+        Zenodorus & 200$B.C.$-120$B.C.$ & more angles means more area \\
+        \hline
+        Ancient Greece & 100$B.C.$ & circumnavigate land \\
+        \hline
+        Arthurian Legends & 12th Century $A.D.$ & exchanged land for military service \\
+        \hline
+        Steiner & 1842 & first proof (existence) \\ 
+        \hline
+        Peter Dirichlet & 1805-1859 & noticed flaw with Steiner's proof \\ [1ex]
+        \hline
+    \end{tabular}
+\end{center}
+
+\section*{Important Preliminaries}
+\addcontentsline{toc}{chapter}{\hspace{0.2in}Important Preliminaries}
+We will take for granted the Jordan Curve Theorem
+\begin{theorem}[Jordan Curve Theorem]
+    A simple closed curve in the plane divides the plane into two regions, one compact and one non-compact, and in the common boundary of both regions.
+\end{theorem}
+
+The Jordan Curve Theorem is just a standard, but highly non-trivial, result of the topology of $\mathbb{R}^2$, that any simple closed curve in the plane has an 'interior' and 'exterior': more precisely, the complement of the image of $\gamma$ (i.e. the set of two points $\mathbb{R}^2$ that are \underline{not} in the image of $\gamma$) is the disjoint union of two subsets of $\mathbb{R}^2$, denoted by $int(\gamma)$ and $ext(\gamma)$, with the following properties:
+\begin{enumerate}
+    \item $int(\gamma)$ is bounded, i.e. it is contained inside the circle of sufficiently large radius.
+    \item $ext(\gamma)$ is unbounded
+    \item Both of the regions $int(\gamma)$ and $ext(\gamma)$ are connected, i.e. they have the property that any two points in the same region can be joined by a curve contained entirely in the region (but any curve joining a point of $int(\gamma)$) to a point of $ext(\gamma)$ must cross the curve $\gamma$)
+\end{enumerate}
+
+
+\begin{note*} 
+    When we talk of the region bounded by a simple closed curve in the plane, we always mean the compact region
+\end{note*}
+
+\begin{definition}
+    A closed curve, is a curve that changes direction but does not cross itself whilst changing direction.
+\end{definition}
+
+\begin{definition}
+    A simple curve, is a curve that changes direction but does not cross itself whilst changing direction.
+\end{definition}
+
+\begin{definition}
+    A simple closed curve in $\mathbb{R}^2$, is a closed curve in $\mathbb{R}^2$ that has no self-intersections
+\end{definition}
+
+The two definitions, above, are vital into understanding the main theorem. Since the isoperimetric inequality is a global result, we borrow concepts from topology, such as:
+
+\begin{definition}
+    A function is bounded if $\exists M \in \mathbb{R}$ such that $\left| f(x) \right| \leq M$.
+\end{definition}
+
+\begin{definition}
+    Let $X$ be a topological space and $A \subset X$. An open cover for $A$ is a family $\{U_\lambda\}_{\lambda\in I}$ of open subsets of $X$ such that
+    \begin{center}
+        $A \subset \cup_{\lambda\in I}{U_\lambda}$
+    \end{center}
+    An open cover is called finite if $\|I\|<\infty$. If $\{U_\lambda\}_{\lambda\in I}$ is an open cover for $A$ and $J \subset I$ is such that $A\subset\cup_{\lambda\in J}{U_\lambda}$, then $\{U_\lambda\}_{\lambda\in J}$ is called a subcover of $\{U_\lambda\}_{\lambda\in I}$.
+\end{definition}
+
+\begin{definition}
+    A subset $A \subset X$ of a topological space called compact if every open cover of $A$ has a finite subcover. A space is called compact space if it is a compact subset of itself.
+\end{definition}
+
+\begin{definition} (Heine-Borel Theorem)
+    A set in $\mathbb{R}^n$ is said to be compact if it is closed and bounded.
+\end{definition}
+
+\subsection{Proof of Euler-Lagrange Equation}
+In the pursuit of maximizing the area under a fixed perimeter in the context of the Euler-Lagrange Equation, we must refresh our mind of geometry and calculus to discern the optimal solutions arising from extremal curves. Along the way we will lay the groundwork through key definitions, lemmas, and theorems that underpin this intricate proof.
+
+\subsubsection{Definitions}
+\begin{definition}(\textbf{Extrema})
+    In mathematics there is a branch known as calculus that deals with problems of finding the maxima or minima of functionals.
+\end{definition}
+
+\begin{definition}(\textbf{Lagrangian})
+    The Lagrangian, denoted by \(L(x, y, y')\) normally opted as \(L = T - V\) which defines as Kinetic minus Potential energies of the system, now defined as a function as the integrand of an expression within a broader function.
+\end{definition}
+
+\begin{proof}
+    \subsubsection{The Euler-Lagrange Equation}
+
+    Consider the functional \( J[y] \) defined as follows:
+    \[ J[y] = \int_{a}^{b} L(x, y, y') \, dx \]
+    where \( L(x, y, y') \) is the Lagrangian, and \( y' \) denotes the derivative of \( y \) with respect to \( x \) [1].
+
+    The critical points of \( J[y] \) satisfy the Euler-Lagrange equation:
+    \[ \frac{d}{dx} \left( \frac{\partial L}{\partial y'} \right) - \frac{\partial L}{\partial y} = 0 [2] \]
+
+    \subsubsection{Isoperimetric with Lagrangian}
+
+    For the isoperimetric problem, the Lagrangian \( L(x, y, y') \) becomes the integrand of the perimeter functional, which is the square root of \( 1 + (y')^2 \).
+    \[ L(x, y, y') = \sqrt{1 + (y')^2} \]
+
+    Applying the Euler-Lagrange equation to this Lagrangian, we get:
+    \[ \frac{d}{dx} \left( \frac{y'}{\sqrt{1 + (y')^2}} \right) - \frac{y}{\sqrt{1 + (y')^2}} = 0 \]
+
+    \subsubsection{Proof Continuation}
+
+    To extend our proof, we introduce the following lemmas and theorems:
+
+    \begin{lemma}(\textbf{Existence of Extremal Curves})
+        There exists at least one extremal curve that satisfies the Euler-Lagrange equation and corresponds to a critical point of the functional \( J[y] \).
+    \end{lemma}
+
+    \begin{theorem}(\textbf{Characterization of Extremal Curves})
+        Extremal curves represent solutions to the isoperimetric problem, providing the shapes that maximize the enclosed area under a fixed perimeter.
+    \end{theorem}
+
+    \begin{lemma}(\textbf{Regularity of Extremal Curves})
+        Extremal curves are smooth and regular, ensuring the validity of the Euler-Lagrange equation and the associated boundary conditions.
+    \end{lemma}
+
+    \begin{theorem}(\textbf{Uniqueness of Extremal Curves})
+        Under certain regularity conditions, there exists a unique extremal curve that satisfies the Euler-Lagrange equation and optimizes the area under a fixed perimeter.
+
+        Solving the differential equation subject to the fixed endpoints~\cite{goldstein1980classical}and~\cite{hilbert1985methods}, along with the fixed area constraint, leads us to the discovery of extremal curves that not only minimize the perimeter but also provide profound insights into the Isoperimetric Inequality in two-dimensional spaces.
+    \end{theorem}
+\end{proof}
+
+\subsection{Schmidt's Contribution and Stokes' (Greens') Theorem}
+E.Schmidt simplified the work of Weierstrass to whom provided a complete proof of the Isoperimetric problem, however this proof seemed difficult to digest thus later mathematicians came in to assist, decades later.
+
+\textbf{Initial Formula}
+Area, A, bounded by a positively oriented simple closed curve where: 
+
+\[\alpha(t)=(x(t),y(t)), t\in [a,b]:\]
+\[ A = -\int_{a}^{b} y(t)x'(t) \, dt = \int_{a}^{b} x(t)y'(t) \, dt = 1/2\int_{a}^{b} (xy'-yx') \, dt \]
+
+\begin{proof} 
+    In order to prove our initial formula, we can use the case of two straight-line segments which are parallel to the y-axis, on a graph. (Insert Figure here)
+
+    \begin{center}
+      \includegraphics[height=80mm]{Initial Formula Proof Graph.png}
+      \captionof{figure}{Graph of two straight-line segments}
+    \end{center}
+
+    The two lines have functions $y=f_1(x)$ \& $y=f_2(x), x\in[x_0,x_1], f_1>f_2$.
+
+    Using the knowledge of area underneath a curve, we know that this area bounded is:
+
+    \[ A =\int_{x_0}^{x_1} f_1(x) \, dx - \int_{x_0}^{x_1} f_2(x) \, dx \]
+    Using the figure above and since we know the curve is positively oriented, we can now determine whether the proof exists under this case.
+
+    \[ A =-\int_{a}^{t_1} y(t)x'(t) \, dt - \int_{t_2}^{t_3} y(t)x'(t) \, dt = -\int_{a}^{b} y(t)x'(t) \, dt \].
+
+    With the case of $x'(t)=0$, this therefore proves our initial formula.  
+\end{proof}
+
+\begin{theorem}(\textbf{Isoperimetric in Greens' Theorem})
+    Using theorem 2 in section 1.1 shown previously but with an equation rearranged to:
+    \[l^2 -4\pi A\geqslant 0\]
+    Can be proved using Greens' Theorem also known as Stokes', and with the help of a visual aid in figure 3.
+\end{theorem}
+
+\begin{proof}
+    (More proof of Greens' Theorem that lead up to Figure 3)
+    \begin{center}
+      \includegraphics[height=100mm]{Proof 1 Figure.png}
+      \captionof{figure}{Representation of proof of theorem}
+    \end{center}
+\end{proof}
+
+\begin{remark*}
+    We can check whether the proof applies to C curves of: 
+    \[\alpha(t)=(x(t),y(t)), t\in [a,b] \forall x(t),y(t) \] must have continuous first derivatives.~\cite{do2016differential}
+\end{remark*}
+
+\begin{remark*}
+    The Isoperimetric Inequality holds true if and only if, the direct proofs are able to define arc-length and area for the curves and took them into consideration. (Insert more text for remark) ~\cite{do2016differential}
+\end{remark*}
+
+\begin{center}
+  \includegraphics[width=100mm]{2nd Remark Figure.png}
+  \captionof{figure}{Figure 4: Remark 2, piecewise $C^1$ curve}
+\end{center}
+
+\subsection{Further Proofs}
+\subsubsection{Weierstrass and Weyl's Inequality}
+Direct proofs from Weierstrass' corollary can be found in $Curves$ $and$ $Surfaces$ $in$ $Euclidean$ $Spaces$~\cite{chern1966curves}
+%--------------------------------------------------------------------------------------
+
+\chapter{The Isoperimetric Theorems for 2D, 3D and $n$D Cases}
+\section{2 Dimensional Case (Plane)}
+\begin{theorem}
+    Let $C$ be a simple closed curve in the plane with length $L$ and bounding a region of area $A$ . 
+    Then $L^2 \leq 4\pi A$ with equality if and only if $C$ is a circle.
+\end{theorem}
+The circle therefore bounds the biggest area among all simple closed curves in the plane with a given length.
+\newline
+\begin{lemma} 
+    Among all the triangles with the same base, the isosceles triangle covers the greatest area.
+\end{lemma}
+\begin{figure}[h]
+    \centering
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=65mm]{isofig5.png} % first figure itself
+        \caption{Figure I}
+    \end{minipage}\hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=65mm]{isofig6.png} % second figure itself
+        \caption{figure II}
+    \end{minipage}
+\end{figure}
+\begin{proof} 
+    Let us consider the triangle ABC with base AB=b, looking at the figure above then our statement is logically equivalent to minimising AC+CB, since the area is just the product of the base and the height, we can slide C along the line $l_1$ this will preserve the area but alter the length of AC+CB, now to prove that the triangle shown in figure II minimises AC+CB we will use some inpiration from physics, lets consider a ray of light travelling from A to the line L, reflecting and then travelling back to B, now from the laws of attraction, light takes the shortest path, and the laws of reflection tells us that the angle of incident is equal to the angle of reflection with respect to the normal, in other words, for our scenario this means that AC=CB since the angles are the same. 
+\end{proof}
+
+\begin{lemma}
+    For a given perimeter the equilateral triangle has the biggest area of all the triangles. 
+\end{lemma}
+\begin{proof} 
+    Well from our previous diagram we can treat AC as the base and follow the same logic to arrive at the conclusion that CB=AB, similarly, treat CB as the base and follow the exact steps to arrive at the conclusion AC=AB, so from all of this we can conclude that AB=BC=AC, and so the equilateral triangle maximises the area.
+\end{proof}
+
+\begin{theorem}
+    Among regular polygons with fixed perimeter, an increase in the number of sides results in a larger area.    
+\end{theorem} 
+
+\begin{minipage}{\linewidth}
+    \centering
+    \includegraphics[width=7cm]{isofig10.png}
+    \captionof{figure}{Figure III}
+\end{minipage}
+\begin{proof} 
+    Let $P$ be the perimeter of of this n sided polygon In addition let $h$ be the apothem, which is the perpendicular which goes from the centre to a side. Then the area of the polygon is A where,  $A=\frac{1}{2} hP$. By considering the diagram above we can see that as n increases the length of the sides as well as the angle $\alpha$ decreases which means h increases. Well this means that the area must increase as $P$ is fixed and $h$ is increasing.
+\end{proof}
+\begin{theorem}   If L is the perimeter and A is the area of
+any regular 2n-sided polygon, then $$L^{2} \ge 8n*A*tan(\frac{\pi}{2n})$$
+\end{theorem}
+
+\begin{figure} [h]
+    \centering
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{isofig8.png} % first figure itself
+        \caption{Figure V}
+    \end{minipage}\hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{isofig9.png} % second figure itself
+        \caption{figure VI}
+    \end{minipage}
+\end{figure}
+\begin{proof}
+    Since its a regular polygon we could consider one of the 2n triangles its made off as shown in the figure above. $$tan(\alpha)=\frac{(\frac{L}{4n})}{h}$$
+    
+    Rearranging the formula to make h the subject as well as using the fact that $\alpha=\frac{2\pi}{2n} \frac{1}{2}=\frac{\pi}{2n}$, we get $$h=\frac{L}{4n} \frac{1}{tan(\frac{\pi}{2n})}$$
+    
+    Now for the area of the above triangle we get $\frac{1}{2}h*\frac{L}{2n}$ 
+    
+    Substituting h, we obtain $$\frac{L^{2}}{16n^{2}} \frac{1}{tan(\frac{\pi}{2n})}$$
+
+    Finally, we consider the area of the whole polygon which is just 2n times of the above expression. So we have 
+    $$A=\frac{L^{2}}{8n} \frac{1}{tan(\frac{\pi}{2n})}$$
+    Since this is the optimal area we can be more precise and by rearranging the express we can conclude our desired expression which was $L^{2} \ge 8nAtan(\frac{\pi}{2n})$
+\end{proof}
+
+\subsection{Unpacking Steiner's proof}
+The proof that I will be unpacking and taking a closer look at will be from the book (reference the book here), and is credited by them to Jakob Sternier. Packed and concise proof from~\cite{gluck2012isoperimetric}. To reiterate, the German mathematician Peter Dirichlet (1805- 1859), remarked, Steiner had made an underlying assumption not explicitly addressed in his proof, namely that a solution existed (Nahin 59~\cite{nahin2021least}). A rather helpful computer visualisation, before we start the proof, to aid in the identification that indeed the circle is an answer, and how naturally a compressed circle (ellipse) has less area than a full and complete circle.
+\begin{minipage}{\linewidth}
+    \centering
+    \includegraphics[width=150mm]{steinerproofvisualisation.png}
+    \captionof{figure}{Area comparison of curves, Steiner's Proof}
+\end{minipage}
+\begin{proof}
+    We will begin the proof by assuming the existence of a solution. In other words, that there exists a simple closed curve C of a specified length L, enclosing a region with the maximum possible area.
+    \begin{enumerate}
+        \item We claim that the curve C must by convex, meaning that any straight line connecting two points (O and A) on C should entirely lie within the region enclosed by C. We justify this assertion thus, suppose that the curve is not convex then we could draw a segment OA connecting the two points of C, with the entire segment (except for its endpoints) situated outside of C. By mirroring the relevant arc of C between O and A along this line, a new curve of an identical length emerges, encapsulating a greater area, as illustrated in the figure below. Therefore, C is already a convex curve.
+
+        \begin{minipage}{\linewidth}
+            \centering
+            \includegraphics[width=70mm]{isofig1.png}
+            \captionof{figure}{Figure VII}
+        \end{minipage}
+        \item Select two points, P and Q, to partition our solution curve C into arcs of identical length. Consequently, the line segment PQ must divide the region enclosed by C into two sections of equal area. Failure to do so would imply that the portion with a larger area could be mirrored across PQ, resulting in another curve of the same length but with greater area.
+
+        \begin{minipage}{\linewidth}
+            \centering
+            \includegraphics[width=80mm]{isofig4.png}
+            \captionof{figure}{Figure VIII}
+        \end{minipage}
+        \item Next we will need to prove that the region bounded by the line PQ and the arc with length L/2 and endpoints P,Q bounds a region of maximum area and we will prove that the region is a semi-circle. Next we will need to prove that the region bounded by the line PQ and the arc with length L/2 and endpoints P,Q bounds a region of maximum area and we will prove that the region is a semi-circle. for this we are making an assumption which is that of all possible triangles with two sides of given length, the triangle of maximum area is the right triangle with the given sides as the perpendicular sides. This is quite straight forward, consider the figure below.
+
+        \begin{minipage}{\linewidth}
+            \centering
+            \includegraphics[width=85mm]{isofig3.png}
+            \captionof{figure}{Figure IX}
+        \end{minipage}
+        Well, we know that $gsin($x$)=h$ $\&$ the area of triangle, $A=(1/2)fh=(1/2)fgsin(x)$, clearly A is maximised when x is $90^\circ$ as sin(x) is then equal to 1.
+
+        Now turning our attention back figure VIII, for the sake of contradiction we will assume that the angle PRQ is not a right angle. Then, we can treat the arc as hinged at R and either open or close it to make the angle at R a right angle, we can do this by adjusting either PR or RQ or maybe both. This adjustment does not alter the arc's length, consequently expanding the total area encapsulated by the arc PRQ and the line PQ. However, this contradicts the maximization achieved by the original arc, which had already optimized the enclosed total area. Therefore, the inscribed angle at R must be a right angle, confirming that the arc is indeed a semi-circle. Now since we have proven that it is a semi circle, we can use this logic and expand it to the whole curve to conclude that it is a circle, by way of reflecting the curve along the original symmetry line.
+        
+        \item Thus far, we have established that when considering a simple closed curve C with a designated length L, enclosing a region with maximum area, the curve in question must be a circle. Moving forward, we will demonstrate the existence of a maximizer and present this as the comprehensive Isoperimetric problem. In order to achieve this, we will approximate the curve C using a polygonal curve. 
+        Use Theorem 7 (we will consider the case where N=2n, as this is just a case of the general theorem)
+        Now, let C be a smooth, regular simple closed curve in the plane, with length L and enclosing a region of area A. 
+        We can cleverly manipulate our expression from theorem 8 to obtain
+        $$L^{2} \ge 4\pi A \frac{tan(\frac{\pi}{2n})}{\frac{\pi}{2n}}$$
+        Now if we carefuly choose our points such that $n \to \infty $,  $L_{n} \to L$ and $A_{n} \to A$, 
+        Well, as $n \to \infty$ our expression above becomes
+        $$L^{2} \ge 4\pi A$$
+
+        Now we need to show that the equality materialises if and only if the curve in question happens to be a circle. Well if L represents the perimeter of a closed curve, the maximum enclosed area is $\frac{L^{2}}{4\pi}$, conversely if A denotes the area enclosed by a simple closed curve the minimum for the perimeter would be $\sqrt{4 \pi A}$, but the circle is the only curve capable of satisfying such conditions, thus we know that a circle maximises enclosed area among all smooth regular simple closed curves of a fixed length.This confirms the existence of the maximizer. Hence the proof is complete.  
+    \end{enumerate}
+\end{proof}
+
+%\section{3 Dimensional Case (Sphere)}
+
+%\section{$n$ Dimensional Case ($\mathbb{R}^n$)}
+
+%\chapter{Manifolds}
+
+\bibliography{The-Isoperimetric-Problem-References}
+\bibliographystyle{unsrt}
+\end{document}

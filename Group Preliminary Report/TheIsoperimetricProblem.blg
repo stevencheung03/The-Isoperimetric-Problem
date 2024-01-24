@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2022)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: TheIsoperimetricProblem.aux
+The style file: unsrt.bst
+Database file #1: The-Isoperimetric-Problem-References.bib
+Warning--there's a number but no series in evans1920histories
+Warning--empty publisher in chern1966curves
+You've used 14 entries,
+            1791 wiz_defined-function locations,
+            514 strings with 5206 characters,
+and the built_in function-call counts, 2061 in all, are:
+= -- 169
+> -- 64
+< -- 4
++ -- 30
+- -- 16
+* -- 60
+:= -- 342
+add.period$ -- 42
+call.type$ -- 14
+change.case$ -- 5
+chr.to.int$ -- 0
+cite$ -- 16
+duplicate$ -- 127
+empty$ -- 246
+format.name$ -- 16
+if$ -- 475
+int.to.chr$ -- 0
+int.to.str$ -- 14
+missing$ -- 22
+newline$ -- 72
+num.names$ -- 14
+pop$ -- 78
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 37
+stack$ -- 0
+substring$ -- 0
+swap$ -- 18
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 2
+while$ -- 14
+width$ -- 16
+write$ -- 143
+(There were 2 warnings)

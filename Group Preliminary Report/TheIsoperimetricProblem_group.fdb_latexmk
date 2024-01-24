@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex TheIsoperimetricProblem_group"] 1706087993 "TheIsoperimetricProblem_group.aux" "TheIsoperimetricProblem_group.bbl" "TheIsoperimetricProblem_group" 1706088006
+["bibtex TheIsoperimetricProblem_group"] 1706088910 "TheIsoperimetricProblem_group.aux" "TheIsoperimetricProblem_group.bbl" "TheIsoperimetricProblem_group" 1706088924
   "/usr/local/texlive/2022/texmf-dist/bibtex/bst/base/unsrt.bst" 1292289607 18030 1376b4b231b50c66211e47e42eda2875 ""
   "The-Isoperimetric-Problem-References.bib" 1706087413 2523 2fd7f288f1b5eb46122e20c9700877c1 ""
-  "TheIsoperimetricProblem_group.aux" 1706088006 6344 e51d836509cf69de277b03c451236f36 "pdflatex"
+  "TheIsoperimetricProblem_group.aux" 1706088923 6461 e21325061a4d7a5545562f78f3cac5cf "pdflatex"
   (generated)
   "TheIsoperimetricProblem_group.bbl"
   "TheIsoperimetricProblem_group.blg"
-["pdflatex"] 1706087993 "TheIsoperimetricProblem_group.tex" "TheIsoperimetricProblem_group.pdf" "TheIsoperimetricProblem_group" 1706088006
+["pdflatex"] 1706088910 "TheIsoperimetricProblem_group.tex" "TheIsoperimetricProblem_group.pdf" "TheIsoperimetricProblem_group" 1706088924
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -195,11 +195,11 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1662867289 2826440 2ed3ae50fe77d7fa3fb5b41986f36f8f ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "TheIsoperimetricProblem_group.aux" 1706088006 6344 e51d836509cf69de277b03c451236f36 "pdflatex"
-  "TheIsoperimetricProblem_group.bbl" 1706087993 2335 9db7a8a9b63723a6520a34c3678aaad6 "bibtex TheIsoperimetricProblem_group"
-  "TheIsoperimetricProblem_group.out" 1706088006 2169 79dbc6cc923498603884b6d9209fcd85 "pdflatex"
-  "TheIsoperimetricProblem_group.tex" 1706087980 37595 605e704105a0a0616b98de5966f4a335 ""
-  "TheIsoperimetricProblem_group.toc" 1706088006 1409 f79cdf1f94c60090c12d9944e2b5d815 "pdflatex"
+  "TheIsoperimetricProblem_group.aux" 1706088923 6461 e21325061a4d7a5545562f78f3cac5cf "pdflatex"
+  "TheIsoperimetricProblem_group.bbl" 1706088910 2335 9db7a8a9b63723a6520a34c3678aaad6 "bibtex TheIsoperimetricProblem_group"
+  "TheIsoperimetricProblem_group.out" 1706088923 2266 32a9da6fd6d801221097d1bf989b0772 "pdflatex"
+  "TheIsoperimetricProblem_group.tex" 1706088895 37619 f587e314108a93e87b7c0bdcbaa7aa08 ""
+  "TheIsoperimetricProblem_group.toc" 1706088923 1485 f8fc9e04c53afa0ed495b5b4ef32db09 "pdflatex"
   "images//2nd Remark Figure.png" 1706049376 11228 2d31b7f2c1b9d6d01b5ae4d92f9bedbd ""
   "images//Initial Formula Proof Graph.png" 1706049376 11917 0e7f6d3ec9b95bce8ffb6b4cef6579c2 ""
   "images//Proof 1 Figure.png" 1706049376 30314 1db1e7aefed5e2f132964433dc1bdfc7 ""

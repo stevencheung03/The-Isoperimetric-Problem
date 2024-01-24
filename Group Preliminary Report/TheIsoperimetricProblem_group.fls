@@ -1,4 +1,4 @@
-PWD /Users/stevencheung/Documents/Dissertation/The-Isoperimetric-Problem/Group
+PWD /Users/stevencheung/Documents/Dissertation/The-Isoperimetric-Problem/Group Preliminary Report
 INPUT /usr/local/texlive/2022/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt
@@ -1087,9 +1087,9 @@ INPUT ./images//dido_1.png
 INPUT ./images//dido_1.png
 INPUT ./images//dido_1.png
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmsl10.tfm
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbxti10.tfm
 INPUT ./images//Initial Formula Proof Graph.png
 INPUT ./images//Initial Formula Proof Graph.png

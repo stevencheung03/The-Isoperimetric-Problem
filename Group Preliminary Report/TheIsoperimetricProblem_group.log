@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.11)  24 JAN 2024 09:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.11)  24 JAN 2024 09:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1073,7 +1073,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 170--174
 
  []
 
-<./images//dido_1.png, id=93, 722.7pt x 317.185pt>
+<./images//dido_1.png, id=98, 722.7pt x 317.185pt>
 File: ./images//dido_1.png Graphic file (type png)
 <use ./images//dido_1.png>
 Package pdftex.def Info: ./images//dido_1.png  used on input line 187.
@@ -1105,49 +1105,48 @@ Overfull \hbox (50.96915pt too wide) in paragraph at lines 240--259
  [] 
  []
 
-[6]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 314.
+(hyperref)                than one, level fixed on input line 264.
 
-[7]
-<./images//Initial Formula Proof Graph.png, id=174, 205.9695pt x 158.39175pt>
+[6] [7]
+<./images//Initial Formula Proof Graph.png, id=179, 205.9695pt x 158.39175pt>
 File: ./images//Initial Formula Proof Graph.png Graphic file (type png)
 <use ./images//Initial Formula Proof Graph.png>
 Package pdftex.def Info: ./images//Initial Formula Proof Graph.png  used on inp
-ut line 380.
+ut line 382.
 (pdftex.def)             Requested size: 295.99554pt x 227.62204pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 381.
+(caption)                particular \caption on input line 383.
 See the caption package documentation for explanation.
 
 [8 <./images//Initial Formula Proof Graph.png>]
-<./images//Proof 1 Figure.png, id=185, 245.718pt x 298.716pt>
+<./images//Proof 1 Figure.png, id=190, 245.718pt x 298.716pt>
 File: ./images//Proof 1 Figure.png Graphic file (type png)
 <use ./images//Proof 1 Figure.png>
-Package pdftex.def Info: ./images//Proof 1 Figure.png  used on input line 405.
+Package pdftex.def Info: ./images//Proof 1 Figure.png  used on input line 407.
 (pdftex.def)             Requested size: 234.06816pt x 284.52756pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 406.
+(caption)                particular \caption on input line 408.
 See the caption package documentation for explanation.
 
-<./images//2nd Remark Figure.png, id=188, 211.38976pt x 114.4275pt>
+<./images//2nd Remark Figure.png, id=193, 211.38976pt x 114.4275pt>
 File: ./images//2nd Remark Figure.png Graphic file (type png)
 <use ./images//2nd Remark Figure.png>
 Package pdftex.def Info: ./images//2nd Remark Figure.png  used on input line 42
-0.
+2.
 (pdftex.def)             Requested size: 284.52756pt x 154.02696pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 421.
+(caption)                particular \caption on input line 423.
 See the caption package documentation for explanation.
 
 [9 <./images//Proof 1 Figure.png>]
-Overfull \hbox (0.41028pt too wide) in paragraph at lines 426--428
+Overfull \hbox (0.41028pt too wide) in paragraph at lines 428--430
 \OT1/cmr/m/n/10 Direct proofs from Weier-strass' corol-lary can be found in $\O
 ML/cmm/m/it/10 Curves$ $and$ $Surfaces$ $in$ $Euclidean$
  []
@@ -1156,101 +1155,101 @@ ML/cmm/m/it/10 Curves$ $and$ $Surfaces$ $in$ $Euclidean$
 Chapter 1.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 429.
+(hyperref)                removing `math shift' on input line 431.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 429.
+(hyperref)                removing `math shift' on input line 431.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 435--437
+Underfull \hbox (badness 10000) in paragraph at lines 437--439
 
  []
 
-<./images//isofig5.png, id=207, 1695.33376pt x 1461.96187pt>
+<./images//isofig5.png, id=212, 1695.33376pt x 1461.96187pt>
 File: ./images//isofig5.png Graphic file (type png)
 <use ./images//isofig5.png>
-Package pdftex.def Info: ./images//isofig5.png  used on input line 444.
+Package pdftex.def Info: ./images//isofig5.png  used on input line 446.
 (pdftex.def)             Requested size: 184.9429pt x 159.47783pt.
-<./images//isofig6.png, id=208, 1665.97406pt x 1502.61375pt>
+<./images//isofig6.png, id=213, 1665.97406pt x 1502.61375pt>
 File: ./images//isofig6.png Graphic file (type png)
 <use ./images//isofig6.png>
-Package pdftex.def Info: ./images//isofig6.png  used on input line 449.
+Package pdftex.def Info: ./images//isofig6.png  used on input line 451.
 (pdftex.def)             Requested size: 184.9429pt x 166.80127pt.
 [11
 
  <./images//isofig5.png> <./images//isofig6.png>]
-<./images//isofig10.png, id=221, 283.0575pt x 271.0125pt>
+<./images//isofig10.png, id=226, 283.0575pt x 271.0125pt>
 File: ./images//isofig10.png Graphic file (type png)
 <use ./images//isofig10.png>
-Package pdftex.def Info: ./images//isofig10.png  used on input line 470.
+Package pdftex.def Info: ./images//isofig10.png  used on input line 472.
 (pdftex.def)             Requested size: 199.16928pt x 190.69992pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 471.
+(caption)                particular \caption on input line 473.
 See the caption package documentation for explanation.
 
-<./images//isofig8.png, id=222, 222.8325pt x 198.7425pt>
+<./images//isofig8.png, id=227, 222.8325pt x 198.7425pt>
 File: ./images//isofig8.png Graphic file (type png)
 <use ./images//isofig8.png>
-Package pdftex.def Info: ./images//isofig8.png  used on input line 484.
+Package pdftex.def Info: ./images//isofig8.png  used on input line 486.
 (pdftex.def)             Requested size: 199.1693pt x 177.6384pt.
-<./images//isofig9.png, id=223, 222.8325pt x 198.7425pt>
+<./images//isofig9.png, id=228, 222.8325pt x 198.7425pt>
 File: ./images//isofig9.png Graphic file (type png)
 <use ./images//isofig9.png>
-Package pdftex.def Info: ./images//isofig9.png  used on input line 489.
+Package pdftex.def Info: ./images//isofig9.png  used on input line 491.
 (pdftex.def)             Requested size: 199.1693pt x 177.6384pt.
 [12 <./images//isofig10.png> <./images//isofig8.png> <./images//isofig9.png>]
-<./images//steinerproofvisualisation.png, id=234, 469.755pt x 381.8265pt>
+<./images//steinerproofvisualisation.png, id=239, 469.755pt x 381.8265pt>
 File: ./images//steinerproofvisualisation.png Graphic file (type png)
 <use ./images//steinerproofvisualisation.png>
 Package pdftex.def Info: ./images//steinerproofvisualisation.png  used on input
- line 511.
+ line 513.
 (pdftex.def)             Requested size: 426.79134pt x 346.90334pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 512.
+(caption)                particular \caption on input line 514.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (28.45274pt too wide) in paragraph at lines 511--512
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 513--514
  [][] 
  []
 
 [13 <./images//steinerproofvisualisation.png>]
-<./images//isofig1.png, id=242, 181.42781pt x 158.84344pt>
+<./images//isofig1.png, id=247, 181.42781pt x 158.84344pt>
 File: ./images//isofig1.png Graphic file (type png)
 <use ./images//isofig1.png>
-Package pdftex.def Info: ./images//isofig1.png  used on input line 521.
+Package pdftex.def Info: ./images//isofig1.png  used on input line 523.
 (pdftex.def)             Requested size: 199.16928pt x 174.37929pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 522.
+(caption)                particular \caption on input line 524.
 See the caption package documentation for explanation.
 
-<./images//isofig4.png, id=243, 1707.37875pt x 1409.265pt>
+<./images//isofig4.png, id=248, 1707.37875pt x 1409.265pt>
 File: ./images//isofig4.png Graphic file (type png)
 <use ./images//isofig4.png>
-Package pdftex.def Info: ./images//isofig4.png  used on input line 528.
+Package pdftex.def Info: ./images//isofig4.png  used on input line 530.
 (pdftex.def)             Requested size: 227.62204pt x 187.87717pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 529.
+(caption)                particular \caption on input line 531.
 See the caption package documentation for explanation.
 
 [14 <./images//isofig1.png> <./images//isofig4.png>]
-<./images//isofig3.png, id=254, 2668.7203pt x 1556.06343pt>
+<./images//isofig3.png, id=259, 2668.7203pt x 1556.06343pt>
 File: ./images//isofig3.png Graphic file (type png)
 <use ./images//isofig3.png>
-Package pdftex.def Info: ./images//isofig3.png  used on input line 535.
+Package pdftex.def Info: ./images//isofig3.png  used on input line 537.
 (pdftex.def)             Requested size: 241.84842pt x 141.01315pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 536.
+(caption)                particular \caption on input line 538.
 See the caption package documentation for explanation.
 
 (./TheIsoperimetricProblem_group.bbl [15 <./images//isofig3.png>]) [16
@@ -1259,20 +1258,20 @@ See the caption package documentation for explanation.
 (./TheIsoperimetricProblem_group.aux)
 Package rerunfilecheck Info: File `TheIsoperimetricProblem_group.out' has not c
 hanged.
-(rerunfilecheck)             Checksum: 79DBC6CC923498603884B6D9209FCD85;2169.
+(rerunfilecheck)             Checksum: 32A9DA6FD6D801221097D1BF989B0772;2266.
  )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 12 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 24646 strings out of 478268
- 450484 string characters out of 5846347
- 727425 words of memory out of 5000000
- 42293 multiletter control sequences out of 15000+600000
+ 24648 strings out of 478268
+ 450518 string characters out of 5846347
+ 726425 words of memory out of 5000000
+ 42294 multiletter control sequences out of 15000+600000
  478977 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 88i,8n,91p,2157b,20575s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 88i,8n,91p,2157b,20581s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/c
@@ -1290,11 +1289,11 @@ usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></u
 sr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
 ></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10
 .pfb>
-Output written on TheIsoperimetricProblem_group.pdf (18 pages, 13630624 bytes).
+Output written on TheIsoperimetricProblem_group.pdf (18 pages, 13630957 bytes).
 
 PDF statistics:
- 355 PDF objects out of 1000 (max. 8388607)
- 277 compressed objects within 3 object streams
- 86 named destinations out of 1000 (max. 500000)
- 174 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 360 PDF objects out of 1000 (max. 8388607)
+ 282 compressed objects within 3 object streams
+ 87 named destinations out of 1000 (max. 500000)
+ 182 words of extra memory for PDF output out of 10000 (max. 10000000)
 

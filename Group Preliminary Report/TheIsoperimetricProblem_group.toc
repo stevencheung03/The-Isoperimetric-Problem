@@ -3,13 +3,14 @@
 \contentsline {chapter}{\hspace {0.2in}Introduction}{3}{chapter*.4}%
 \contentsline {section}{\hspace {0.2in}Historical Notes}{3}{section*.5}%
 \contentsline {chapter}{\hspace {0.2in}Important Preliminaries}{6}{figure.caption.6}%
-\contentsline {subsection}{\numberline {0.0.1}Proof of Euler-Lagrange Equation}{7}{subsection.0.0.1}%
+\contentsline {subsection}{\numberline {0.0.1}Basics}{6}{subsection.0.0.1}%
+\contentsline {subsection}{\numberline {0.0.2}Proof of Euler-Lagrange Equation}{7}{subsection.0.0.2}%
 \contentsline {subsubsection}{Definitions}{7}{subsubsection*.7}%
 \contentsline {subsubsection}{The Euler-Lagrange Equation}{7}{subsubsection*.8}%
 \contentsline {subsubsection}{Isoperimetric with Lagrangian}{7}{subsubsection*.9}%
 \contentsline {subsubsection}{Proof Continuation}{7}{subsubsection*.10}%
-\contentsline {subsection}{\numberline {0.0.2}Schmidt's Contribution and Stokes' (Greens') Theorem}{8}{subsection.0.0.2}%
-\contentsline {subsection}{\numberline {0.0.3}Further Proofs}{10}{subsection.0.0.3}%
+\contentsline {subsection}{\numberline {0.0.3}Schmidt's Contribution and Stokes' (Greens') Theorem}{8}{subsection.0.0.3}%
+\contentsline {subsection}{\numberline {0.0.4}Further Proofs}{10}{subsection.0.0.4}%
 \contentsline {subsubsection}{Weierstrass and Weyl's Inequality}{10}{subsubsection*.11}%
 \contentsline {chapter}{\numberline {1}The Isoperimetric Theorems for 2D, 3D and $n$D Cases}{11}{chapter.1}%
 \contentsline {section}{\numberline {1.1}2 Dimensional Case (Plane)}{11}{section.1.1}%

@@ -1,0 +1,24 @@
+To Add:
+- Write in "Seven Proofs Concerning Variants Of The Isoperimatric Property Of The Circle"
+- Basics in Geometry
+- One more proof of 2D
+- Add a breakdown of the main proof presented
+- All of the proof
+- Add AM-Gm inequality to Important Preliminaries
+- Add Herons formula to Important Preliminaries
+- Add section about n tends to infinity
+- Add ideas of proof from powerpoint
+
+To Refactor:
+- Schmidt's Contribution and Stokes' (Greens') Theorem
+- Further Proofs
+- Lemma 8 to the powerpoint one
+- Lemma 9 to remark
+- Theorem 10 to rewrite and as proposition (use images from powerpoint)
+- Theorem 11 to lemma
+- Redo all the images so they are consistent
+- Referencing to harvard style
+
+
+To Remove:
+- Proof of Euler-Langrange Equation

@@ -45,14 +45,13 @@
 \newenvironment{ddd}{\begin{rmdef}\rm}{\end{rmdef}}                             
 \newenvironment{eee}{\begin{rmexa}\rm}{\end{rmexa}}                             
 \newenvironment{rrr}{\begin{rmrem}\rm}{\end{rmrem}}                                   
-					                                        
 \newenvironment{pf}[1][Proof]{\par\noindent{\em #1}. }{\hfill\framebox(6,6)\par\medskip}
 
 \usepackage{geometry}
  \usepackage[normalem]{ulem}
 %\renewcommand{\baselinestretch}{1.5}
 
-\geometry{left=3.5cm,right=3.5cm,top=2.5cm,bottom=2.5cm}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
 
 \newcommand{\Poincare}{Poincar\'e\xspace}
 \newcommand{\Holder}{Hölder}
@@ -149,14 +148,14 @@ In general, we want the maximum area whose boundary must pertain a specific leng
 \textbf{Overview:} Follow along with us as we uncover historical insights, delve into mathematical expressions, and reveal connections between geometry, calculus, and many more fascinating fields of mathematics. This is the captivating story of understanding the isoperimetric problem.
 
 
-\chapter*{Introduction}
-\addcontentsline{toc}{chapter}{\hspace{0.2in}Introduction}
-\section*{Historical Notes}
-\addcontentsline{toc}{section}{\hspace{0.2in}Historical Notes}
+\chapter{Introduction}
+%\addcontentsline{toc}{chapter}{\hspace{0.2in}Introduction}
+\section{Historical Notes}
+%\addcontentsline{toc}{section}{\hspace{0.2in}Historical Notes}
 Isoperimeter, isos which is ancient Greek for equal and perimetron for perimeter. The isoperimetric perimetric problem, even though not properly formalized, was already thought about all throughout the history. 
 \newline
 \newline
-Book V of Pappus of Alexandria's Mathematical collections ~\cite{wiegert2010sagacity} began with a preface titled "On the Sagacity of Bees", rather than the history of mathematicians past or their accomplishments to follow. This was written near the end of the 3rd century $A.D.$. Observing, Pappus credited the bees with "a certain geometrical forethought" (Thomas 593~\cite{ivor1941selections}) for their nearly faultless hexagonal comb structre. He wrote
+Book V of Pappus of Alexandria's Mathematical collections ~\cite{wiegert2010sagacity} began with a preface titled "On the Sagacity of Bees", rather than the history of mathematicians past or their accomplishments to follow. This was written near the end of the 3rd century $A.D.$. Observing, Pappus credited the bees with "a certain geometrical forethought" (Thomas 593~\cite{ivor1941selections}) for their nearly faultless hexagonal comb structure. He wrote
 \begin{center}
     \begin{quote}
         ``Bees know just this fact which is useful to them, that 
@@ -270,8 +269,8 @@ Problems posed by the ancients not only speeded the progression towards more rig
     \end{tabular}
 \end{center}
 
-\section*{Important Preliminaries}
-\addcontentsline{toc}{chapter}{\hspace{0.2in}Important Preliminaries}
+\section{Important Preliminaries}
+%\addcontentsline{toc}{chapter}{\hspace{0.2in}Important Preliminaries}
 We will take for granted the Jordan Curve Theorem
 \begin{theorem}[Jordan Curve Theorem]
     A simple closed curve in the plane divides the plane into two regions, one compact and one non-compact, and in the common boundary of both regions.
@@ -436,10 +435,9 @@ Area, A, bounded by a positively oriented simple closed curve where:
 \subsection{Further Proofs}
 \subsubsection{Weierstrass and Weyl's Inequality}
 Direct proofs from Weierstrass' corollary can be found in $Curves$ $and$ $Surfaces$ $in$ $Euclidean$ $Spaces$~\cite{chern1966curves}
-%--------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------
 
-\chapter{The Isoperimetric Theorems for 2D, 3D and $n$D Cases}
-\section{2 Dimensional Case (Plane)}
+\chapter{2-Dimensional Case ($\mathbb{R}^2$)}
 \begin{theorem}
     Let $C$ be a simple closed curve in the plane with length $L$ and bounding a region of area $A$ . 
     Then $L^2 \leq 4\pi A$ with equality if and only if $C$ is a circle.
@@ -516,7 +514,7 @@ any regular 2n-sided polygon, then $$L^{2} \ge 8n*A*tan(\frac{\pi}{2n})$$
     Since this is the optimal area we can be more precise and by rearranging the express we can conclude our desired expression which was $L^{2} \ge 8nAtan(\frac{\pi}{2n})$
 \end{proof}
 
-\subsection{Unpacking Steiner's proof}
+\section{Unpacking Steiner's proof}
 The proof that I will be unpacking and taking a closer look at will be from the book (reference the book here), and is credited by them to Jakob Sternier. Packed and concise proof from~\cite{gluck2012isoperimetric}. To reiterate, the German mathematician Peter Dirichlet (1805- 1859), remarked, Steiner had made an underlying assumption not explicitly addressed in his proof, namely that a solution existed (Nahin 59~\cite{nahin2021least}). A rather helpful computer visualisation, before we start the proof, to aid in the identification that indeed the circle is an answer, and how naturally a compressed circle (ellipse) has less area than a full and complete circle.
 \begin{minipage}{\linewidth}
     \centering
@@ -564,9 +562,9 @@ The proof that I will be unpacking and taking a closer look at will be from the 
     \end{enumerate}
 \end{proof}
 
-\section{3 Dimensional Case (Sphere)}
+\chapter{3-Dimensional Case ($\mathbb{R}^3$)}
 
-\section{$n$ Dimensional Case ($\mathbb{R}^n$)}
+\chapter{$n$-Dimensional Case ($\mathbb{R}^n$)}
 
 \chapter{Manifolds}
 

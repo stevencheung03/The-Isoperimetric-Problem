@@ -31,8 +31,8 @@
 \newtheorem{theorem}{Theorem}%[section]
 \newtheorem{lemma}[theorem]{Lemma}%[section]
 \newtheorem{example}{Example}%[section]
-\newtheorem*{remark*}{Remark}%[section]
-\newtheorem*{note*}{Note}%[section]
+\newtheorem{remark}{Remark}%[section]
+\newtheorem{note}{Note}%[section]
 \newtheorem{proposition}{Proposition}%[section]
 \newtheorem{definition}{Definition}%[section]
 \newtheorem{conjecture}{Conjecture}%[section]
@@ -284,9 +284,9 @@ The Jordan Curve Theorem is just a standard, but highly non-trivial, result of t
 \end{enumerate}
 
 
-\begin{note*} 
+\begin{note} 
     When we talk of the region bounded by a simple closed curve in the plane, we always mean the compact region
-\end{note*}
+\end{note}
 
 \begin{definition}
     A closed curve, is a curve that changes direction but does not cross itself whilst changing direction.
@@ -388,8 +388,8 @@ Area, A, bounded by a positively oriented simple closed curve where:
     In order to prove our initial formula, we can use the case of two straight-line segments which are parallel to the y-axis, on a graph. (Insert Figure here)
 
     \begin{center}
-      \includegraphics[height=80mm]{Initial Formula Proof Graph.png}
-      \captionof{figure}{Graph of two straight-line segments}
+	\includegraphics[height=80mm]{Initial Formula Proof Graph.png}
+      	\captionof{figure}{Graph of two straight-line segments}
     \end{center}
 
     The two lines have functions $y=f_1(x)$ \& $y=f_2(x), x\in[x_0,x_1], f_1>f_2$.
@@ -418,14 +418,14 @@ Area, A, bounded by a positively oriented simple closed curve where:
     \end{center}
 \end{proof}
 
-\begin{remark*}
+\begin{remark}
     We can check whether the proof applies to C curves of: 
     \[\alpha(t)=(x(t),y(t)), t\in [a,b] \forall x(t),y(t) \] must have continuous first derivatives.~\cite{do2016differential}
-\end{remark*}
+\end{remark}
 
-\begin{remark*}
+\begin{remark}
     The Isoperimetric Inequality holds true if and only if, the direct proofs are able to define arc-length and area for the curves and took them into consideration. (Insert more text for remark) ~\cite{do2016differential}
-\end{remark*}
+\end{remark}
 
 \begin{center}
   \includegraphics[width=100mm]{2nd Remark Figure.png}
@@ -437,6 +437,43 @@ Area, A, bounded by a positively oriented simple closed curve where:
 Direct proofs from Weierstrass' corollary can be found in $Curves$ $and$ $Surfaces$ $in$ $Euclidean$ $Spaces$~\cite{chern1966curves}
 
 \subsection{Basics In Convex Geometry}
+This is the necessary language and notation, which will be used in the following sections. This will give us a way to describe objects and sets in Euclidean space. The term convex is used to refere to a shape that has a curve or a protuding suface. In other words, all the lines across the outline are straight and they point outwards. Examples of convex polygons are signboard, a football, etc. The complement of convex is concave, where the shape curves inwards and no protuding surface at some point. For example the inside of a bowl. A clear definition of when a set is convex is given below.
+
+\begin{definition}
+	A set $A\subseteq\mathbb{R}^n$ is called $convex$ if all $x,y\in A$ satisfy $(1-\lambda)x+\lambda y\in A$, $0\leq\lambda\leq1$
+\end{definition}
+
+\begin{remark}
+	Intersections of convex sets, and for affine maps the pre-image and the image of convex sets are also convex. Let $A, B \subset\mathbb{R}^n$ be convex and $\lambda\in\mathbb{R}$. Then
+	\begin{center}
+		$\lambda B=\{x\in\mathbb{R}^n;\exists b\in B$ with $x=\lambda\dot b\}$, and
+	
+		$\lambda+B=\{x\in\mathbb{R}^n;\exists a\in A, b\in B$ with $x=a+b\}$
+	\end{center}
+	are also convex
+\end{remark}
+
+\begin{definition}
+	Let $A\subseteq\mathbb{R}^n$ be non-empty, compact and convex. Then $A$ is called $convex$ $body$. The set of all convex bodies of $\mathbb{R}^n$ is denoted by $K^n$ and the set of all convex bodies in $\mathbb{R}^n$ with non-empty interior is denoted by $K_{0}^{n}$.
+\end{definition}
+
+\begin{definition}
+	\begin{itemize}
+		\item Define $\bar{R}=\mathbb{R}\cup\{ \infty,-\infty\}$.
+		\item A function $f:\mathbb{R}^n\to\bar{\mathbb{R}}$ is called $proper$ if it satisfies $\{f=-\infty\}=\emptyset$ and $\{f=\infty\}\neq\mathbb{R}^n$.
+		\item A function $f:\mathbb{R}^n\to\bar{\mathbb{R}}$ is called $convex$ if it satisfies 
+		\begin{center}
+			$f((1-\lambda)x+\lambda y)\leq(1-\lambda)f(x)+\lambda f(y)$
+		\end{center}
+		for all $x, y\in\mathbb{R}^n$ and $0\leq\lambda\leq1$.
+		\item . A function $f:D\to\bar{\mathbb{R}}$ with $D\subseteq\mathbb{R}^n$ is called convex if its expansion on $\mathbb{R}^n$
+		\begin{center}
+			$\tilde{f}(x):=$
+		\end{center}
+		is convex.
+		\item A function $f$ is $concave$ if $-f$ is convex.
+	\end{itemize}
+\end{definition}
 
 \section{Seven Proofs Concerning Variants of the Isoperimetric Property Of The Circle}
 %-------------------------------------------------------------------------------------

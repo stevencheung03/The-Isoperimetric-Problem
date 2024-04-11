@@ -437,7 +437,10 @@ Area, A, bounded by a positively oriented simple closed curve where:
 Direct proofs from Weierstrass' corollary can be found in $Curves$ $and$ $Surfaces$ $in$ $Euclidean$ $Spaces$~\cite{chern1966curves}
 
 \subsection{Basics In Convex Geometry}
-This is the necessary language and notation, which will be used in the following sections. This will give us a way to describe objects and sets in Euclidean space. The term convex is used to refere to a shape that has a curve or a protuding suface. In other words, all the lines across the outline are straight and they point outwards. Examples of convex polygons are signboard, a football, etc. The complement of convex is concave, where the shape curves inwards and no protuding surface at some point. For example the inside of a bowl. A clear definition of when a set is convex is given below.
+You may be wondering why we would study convex geometry but this is the necessary language and notation, which will be used in the following sections. Convex geometry will give us a way to describe objects and sets in Euclidean space; We consider convex, compact sets in $\mathbb{R}^n$ and their properties (areas, volumes, etc). The term convex is used to refere to a shape that has a curve or a protuding suface. In other words, all the lines across the outline are straight and they point outwards. Examples of convex polygons are signboard, a football, etc. The complement of convex is concave, where the shape curves inwards and no protuding surface at some point. For example the inside of a bowl. A clear definition of when a set is convex is given below. 
+
+As our goal is to maximize, get the largest area, it is quite clear on why we choose convex curves over concave curves. When studying the polygons, it is easy to think that all convex polygons are regular as all regular polygons are convex, but that is not the case.
+\newline
 
 \begin{definition}
 	A set $A\subseteq\mathbb{R}^n$ is called $convex$ if all $x,y\in A$ satisfy $(1-\lambda)x+\lambda y\in A$, $0\leq\lambda\leq1$
@@ -468,14 +471,18 @@ This is the necessary language and notation, which will be used in the following
 		for all $x, y\in\mathbb{R}^n$ and $0\leq\lambda\leq1$.
 		\item . A function $f:D\to\bar{\mathbb{R}}$ with $D\subseteq\mathbb{R}^n$ is called convex if its expansion on $\mathbb{R}^n$
 		\begin{center}
-			$\tilde{f}(x):=$
+			\begin{equation}
+				  \tilde{f}(x):=\begin{cases}
+				    	f(x), & \text{for $x\in D$}.\\
+				   	 \infty, & \text{otherwise}.
+				  \end{cases}
+			\end{equation}
 		\end{center}
 		is convex.
 		\item A function $f$ is $concave$ if $-f$ is convex.
 	\end{itemize}
 \end{definition}
-
-\section{Seven Proofs Concerning Variants of the Isoperimetric Property Of The Circle}
+(Some Figure here)
 %-------------------------------------------------------------------------------------
 
 \chapter{2-Dimensional Case ($\mathbb{R}^2$)}
@@ -484,7 +491,13 @@ This is the necessary language and notation, which will be used in the following
     Then $L^2 \leq 4\pi A$ with equality if and only if $C$ is a circle.
 \end{theorem}
 The circle therefore bounds the biggest area among all simple closed curves in the plane with a given length.
-\newline
+
+\section{Seven Proofs Concerning Variants of the Isoperimetric Property}
+This is possibly may be one of the oldest problem in differential geometry. With that it comes with multiple mathematicians trying to prove the problem and or simplify the problem. The first considered real and rigorous proof was by Jakob Steiner however it had an apparent flaw, later indicated by K. Weierstrass. That it only proved the existence. In fact the isoperimetric problem was only a corollary of a theory developed by Weierstrass to handle problems of maximizing or minimizing certain integrals, this theory is called calculus of variations. More direct proofs were discovered later. We will mainly look at J.Steiner's and E.Schmidt's proof but the other proofs are mainly here to give additional insight on how to think about this problem. The seven proofs were done by Jakob Steiner, Karl Weierstrass, Erhard Schmidt, Vladimir Boltjanski, Richard Demar, Alfred D. Garvin, David Singmaster and D.J.Souppouris, and Gary Lawlor. This section is mostly studied from Kimberly Holman as her Masters Thesis ~\cite{ holman2022isoperimetric}.
+
+\subsection{Jakob Steiner}
+Firstly, we will look at this proposition. Isosceles triangle has the smallest leg-sum compared to trianges of the same baselien and either height or area, and vice-versa. Given an uneqal triangle, we want to maximise area on a triangle with the same baseline. We make the other two sides, not the baseline, equal. The result is a triangle witha smaller leg-sum, and therefor a smaller perimeter, containigng the same area. Now we can expand on the previous principle to demonstrate that any parallel trapezoid with unequal angles on one baseline may be transformed into another of the same area and baselines; Moreover, the new parallel trapezoid will have symmetry along the axis formed by the baseline midpoints and a smalelr sum of side lengths.
+
 \begin{lemma} 
     Among all the triangles with the same base, the isosceles triangle covers the greatest area.
 \end{lemma}

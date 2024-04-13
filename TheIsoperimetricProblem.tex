@@ -688,6 +688,26 @@ The following section introduces the support function, which can be used to asce
 	The support function is equal 1 on $B^{n}$ since the maximum is also 1.
 \end{remark}
 
+\begin{remark}
+	The support funtion has the following properties:
+	\begin{enumerate}
+		\item $h_{k}\leq h_{L}$ if and only if $K\subseteq L$,
+		\item $h(\{z\},u)=\langle x,y\rangle$ for $z,u\in\mathbb{R}^{n}$,
+		\item $h(K+t,u)=h(K,u)+\langle t,u\rangle$ for $t,u\in\mathbb{R}^{n}$,
+		\item $h(\lambda K, u)=\lambda h(K,u)=h(K,\lambda u)$ for $\lambda\in\mathbb{R}_{0}^{+}$, $u\in\mathbb{R}^{n}$,
+		\item $h(-K,u)=h(K,-u)$ for $u\in\mathbb{R}^{n}$,
+		\item $h(K,u_{1}+u_{2})\leq h(K,u_{1})+h(K,u_{2})$ for $u_{1},u_{2}\in\mathbb{R}^{n}$,
+		\item $h(K,\cdot)=: h_{k}$ is convex.
+	\end{enumerate}
+\end{remark}
+
+\begin{lemma}
+	Let $K,L\in K^{n}$, then$h(K+L,u)= h(K,u)+h(L,u)$.
+\end{lemma}
+\begin{proof}
+	tbc.
+\end{proof}
+
 \section{The Hausdorff Metric}
 \section{Volume and Surface Measure}
 \section{Brunn-Minkowski Theorem}

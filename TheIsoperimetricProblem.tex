@@ -653,10 +653,41 @@ This proof will need:
 			
 			$= \int_{0}^{l} x'y \,dt$ \;\;\;by Green's theorem
 	\end{enumerate}
+	
+	(to be finished )
 \end{proof}
 
 \chapter{n-Dimensional Case ($\mathbb{R}^n$)}
 \section{The Support Function}
+The following section introduces the support function, which can be used to ascertain the "height" of a convex body. The support function is a convex function on $\mathbb{R}$ and is compatible with many geometric opetions such as scaling, translation, rotation and importantly the \textbf{Minkowski addition}. These characteristics make the support function one of the most important foundational ideas in convex geometry.
+
+\begin{definition}
+	Let $K\subseteq\mathbb{R}^n$ be non-empty, convex and closed. The $support$ $function$ $h(K,\cdot\space)=h_k$ is defined by
+	\begin{center}
+		$h(K,u):=sup\{\langle x,u\rangle;x\in K\}$ for $u\in\mathbb{R}^n$
+	\end{center}
+	Furthermore we define for $u\in dom\,h(K,\cdot)\backslash\{0\}$
+	\begin{center}
+		$H(K,u):=\{x\in\mathbb{R}^n;\langle x,u\rangle=h(K,u)\}$ a supporting plane of K,
+		
+		$H^{-}:=\{x\in\mathbb{R}^n;\langle x,u\rangle\leq h(K,u)\}$ a support half space of K, and 
+		
+		$F(K,u):=H(K,u)\cap K$ a support domain of K
+	\end{center}
+\end{definition}
+
+\begin{remark}
+	The suuport function for $u\in\mathbb{S}^{n-1}\cap dom\,h(K,\cdot)$ can be viewed as the distance of the supporting plane at K with outer unit normal to the origin.(give some figure)
+\end{remark}
+
+\begin{remark}
+	For $B^{n}$ and $u\in\mathbb{S}^{n-1}$ the support function can be computed easily. For arbirary $x\in B^{n}$ and $u\in\mathbb{S}^{n-1}$ Cauchy Swarz gives us
+	\begin{center}
+		$|\langle x,u\rangle|\leq||u||\:||x||\leq1$
+	\end{center}
+	The support function is equal 1 on $B^{n}$ since the maximum is also 1.
+\end{remark}
+
 \section{The Hausdorff Metric}
 \section{Volume and Surface Measure}
 \section{Brunn-Minkowski Theorem}

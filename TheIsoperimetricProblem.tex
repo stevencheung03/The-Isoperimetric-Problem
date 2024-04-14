@@ -502,17 +502,40 @@ Firstly, we will look at this proposition. Isosceles triangle has the smallest l
     Among all the triangles with the same base, the isosceles triangle covers the greatest area.
 \end{lemma}
 \begin{figure}[h]
-    \centering
-    \begin{minipage}{0.5\textwidth}
-        \centering
-        \includegraphics[width=65mm]{isofig5.png} % first figure itself
-        \caption{Figure I}
-    \end{minipage}\hfill
-    \begin{minipage}{0.5\textwidth}
-        \centering
-        \includegraphics[width=65mm]{isofig6.png} % second figure itself
-        \caption{figure II}
-    \end{minipage}
+	\centering
+	\begin{minipage}{0.5\textwidth}
+		\centering
+        		\includegraphics[width=65mm]{isofig5.png} % first figure itself
+        		\caption{Figure I}
+		%Tikz
+		\begin{tikzpicture}
+			\pgfdeclarelayer{nodelayer} 
+			\pgfdeclarelayer{edgelayer}
+			\pgfsetlayers{main,nodelayer,edgelayer}
+			% nodes
+			\begin{pgfonlayer}{nodelayer}
+				\node [style=none] (A) at (0,10) {};
+				\node [style=none] (B) at (6,10) {};
+				\node [style=none] (C) at (0,13) {};
+				\node [style=none] (D) at (6,13) {};
+			\end{pgfonlayer}
+			% horizontal parallel lines
+			\begin{pgfonlayer}{edgelayer}
+				\draw (0,10) -- (6,10);
+				\draw (0,13) -- (6,13);
+				% diagonal lines
+				\draw (1,10) -- (3,13);
+				\draw (3,13) -- (5,10);
+				\draw (1,10) -- (3.5,13);
+				\draw (3.5,13) -- (5,10);
+			\end{pgfonlayer}{edgelayer}
+		\end{tikzpicture}
+	\end{minipage}\hfill
+    	\begin{minipage}{0.5\textwidth}
+		\centering
+		\includegraphics[width=65mm]{isofig6.png} % second figure itself
+		\caption{figure II}
+	\end{minipage}
 \end{figure}
 \begin{proof} 
     Let us consider the triangle ABC with base AB=b, looking at the figure above then our statement is logically equivalent to minimising AC+CB, since the area is just the product of the base and the height, we can slide C along the line $l_1$ this will preserve the area but alter the length of AC+CB, now to prove that the triangle shown in figure II minimises AC+CB we will use some inpiration from physics, lets consider a ray of light travelling from A to the line L, reflecting and then travelling back to B, now from the laws of attraction, light takes the shortest path, and the laws of reflection tells us that the angle of incident is equal to the angle of reflection with respect to the normal, in other words, for our scenario this means that AC=CB since the angles are the same. 

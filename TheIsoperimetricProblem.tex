@@ -322,120 +322,7 @@ The two definitions, above, are vital into understanding the main theorem. Since
     A set in $\mathbb{R}^n$ is said to be compact if it is closed and bounded.
 \end{definition}
 
-\subsection{Proof of Euler-Lagrange Equation}
-In the pursuit of maximizing the area under a fixed perimeter in the context of the Euler-Lagrange Equation, we must refresh our mind of geometry and calculus to discern the optimal solutions arising from extremal curves. Along the way we will lay the groundwork through key definitions, lemmas, and theorems that underpin this intricate proof.
-
-\subsubsection{Definitions}
-\begin{definition}(\textbf{Extrema})
-    In mathematics there is a branch known as calculus that deals with problems of finding the maxima or minima of functionals.
-\end{definition}
-
-\begin{definition}(\textbf{Lagrangian})
-    The Lagrangian, denoted by \(L(x, y, y')\) normally opted as \(L = T - V\) which defines as Kinetic minus Potential energies of the system, now defined as a function as the integrand of an expression within a broader function.
-\end{definition}
-
-\begin{proof}
-    \subsubsection{The Euler-Lagrange Equation}
-
-    Consider the functional \( J[y] \) defined as follows:
-    \[ J[y] = \int_{a}^{b} L(x, y, y') \, dx \]
-    where \( L(x, y, y') \) is the Lagrangian, and \( y' \) denotes the derivative of \( y \) with respect to \( x \) [1].
-
-    The critical points of \( J[y] \) satisfy the Euler-Lagrange equation:
-    \[ \frac{d}{dx} \left( \frac{\partial L}{\partial y'} \right) - \frac{\partial L}{\partial y} = 0 [2] \]
-
-    \subsubsection{Isoperimetric with Lagrangian}
-
-    For the isoperimetric problem, the Lagrangian \( L(x, y, y') \) becomes the integrand of the perimeter functional, which is the square root of \( 1 + (y')^2 \).
-    \[ L(x, y, y') = \sqrt{1 + (y')^2} \]
-
-    Applying the Euler-Lagrange equation to this Lagrangian, we get:
-    \[ \frac{d}{dx} \left( \frac{y'}{\sqrt{1 + (y')^2}} \right) - \frac{y}{\sqrt{1 + (y')^2}} = 0 \]
-
-    \subsubsection{Proof Continuation}
-
-    To extend our proof, we introduce the following lemmas and theorems:
-
-    \begin{lemma}(\textbf{Existence of Extremal Curves})
-        There exists at least one extremal curve that satisfies the Euler-Lagrange equation and corresponds to a critical point of the functional \( J[y] \).
-    \end{lemma}
-
-    \begin{theorem}(\textbf{Characterization of Extremal Curves})
-        Extremal curves represent solutions to the isoperimetric problem, providing the shapes that maximize the enclosed area under a fixed perimeter.
-    \end{theorem}
-
-    \begin{lemma}(\textbf{Regularity of Extremal Curves})
-        Extremal curves are smooth and regular, ensuring the validity of the Euler-Lagrange equation and the associated boundary conditions.
-    \end{lemma}
-
-    \begin{theorem}(\textbf{Uniqueness of Extremal Curves})
-        Under certain regularity conditions, there exists a unique extremal curve that satisfies the Euler-Lagrange equation and optimizes the area under a fixed perimeter.
-
-        Solving the differential equation subject to the fixed endpoints~\cite{goldstein1980classical}and~\cite{hilbert1985methods}, along with the fixed area constraint, leads us to the discovery of extremal curves that not only minimize the perimeter but also provide profound insights into the Isoperimetric Inequality in two-dimensional spaces.
-    \end{theorem}
-\end{proof}
-
-\subsection{Schmidt's Contribution and Stokes' (Greens') Theorem}
-E.Schmidt simplified the work of Weierstrass to whom provided a complete proof of the Isoperimetric problem, however this proof seemed difficult to digest thus later mathematicians came in to assist, decades later.
-
-\textbf{Initial Formula}
-Area, A, bounded by a positively oriented simple closed curve where: 
-
-\[\alpha(t)=(x(t),y(t)), t\in [a,b]:\]
-\[ A = -\int_{a}^{b} y(t)x'(t) \, dt = \int_{a}^{b} x(t)y'(t) \, dt = 1/2\int_{a}^{b} (xy'-yx') \, dt \]
-
-\begin{proof} 
-    In order to prove our initial formula, we can use the case of two straight-line segments which are parallel to the y-axis, on a graph. (Insert Figure here)
-
-    \begin{center}
-	\includegraphics[height=80mm]{Initial Formula Proof Graph.png}
-      	\captionof{figure}{Graph of two straight-line segments}
-    \end{center}
-
-    The two lines have functions $y=f_1(x)$ \& $y=f_2(x), x\in[x_0,x_1], f_1>f_2$.
-
-    Using the knowledge of area underneath a curve, we know that this area bounded is:
-
-    \[ A =\int_{x_0}^{x_1} f_1(x) \, dx - \int_{x_0}^{x_1} f_2(x) \, dx \]
-    Using the figure above and since we know the curve is positively oriented, we can now determine whether the proof exists under this case.
-
-    \[ A =-\int_{a}^{t_1} y(t)x'(t) \, dt - \int_{t_2}^{t_3} y(t)x'(t) \, dt = -\int_{a}^{b} y(t)x'(t) \, dt \].
-
-    With the case of $x'(t)=0$, this therefore proves our initial formula.  
-\end{proof}
-
-\begin{theorem}(\textbf{Isoperimetric in Greens' Theorem})
-    Using theorem 2 in section 1.1 shown previously but with an equation rearranged to:
-    \[l^2 -4\pi A\geqslant 0\]
-    Can be proved using Greens' Theorem also known as Stokes', and with the help of a visual aid in figure 3.
-\end{theorem}
-
-\begin{proof}
-    (More proof of Greens' Theorem that lead up to Figure 3)
-    \begin{center}
-      \includegraphics[height=100mm]{Proof 1 Figure.png}
-      \captionof{figure}{Representation of proof of theorem}
-    \end{center}
-\end{proof}
-
-\begin{remark}
-    We can check whether the proof applies to C curves of: 
-    \[\alpha(t)=(x(t),y(t)), t\in [a,b] \forall x(t),y(t) \] must have continuous first derivatives.~\cite{do2016differential}
-\end{remark}
-
-\begin{remark}
-    The Isoperimetric Inequality holds true if and only if, the direct proofs are able to define arc-length and area for the curves and took them into consideration. (Insert more text for remark) ~\cite{do2016differential}
-\end{remark}
-
-\begin{center}
-  \includegraphics[width=100mm]{2nd Remark Figure.png}
-  \captionof{figure}{Figure 4: Remark 2, piecewise $C^1$ curve}
-\end{center}
-
-\subsection{Further Proofs}
-\subsubsection{Weierstrass and Weyl's Inequality}
-Direct proofs from Weierstrass' corollary can be found in $Curves$ $and$ $Surfaces$ $in$ $Euclidean$ $Spaces$~\cite{chern1966curves}]
-
+\newpage
 \subsection{Basics in Convex Geometry}
 You may be wondering why we would study convex geometry but this is the necessary language and notation, which will be used in the following sections. Convex geometry will give us a way to describe objects and sets in Euclidean space; We consider convex, compact sets in $\mathbb{R}^n$ and their properties (areas, volumes, etc). The term convex is used to refere to a shape that has a curve or a protuding suface. In other words, all the lines across the outline are straight and they point outwards. Examples of convex polygons are signboard, a football, etc. The complement of convex is concave, where the shape curves inwards and no protuding surface at some point. For example the inside of a bowl. A clear definition of when a set is convex is given below. 
 
@@ -493,10 +380,81 @@ As our goal is to maximize, get the largest area, it is quite clear on why we ch
 The circle therefore bounds the biggest area among all simple closed curves in the plane with a given length.
 
 \section{Seven Proofs Concerning Variants of the Isoperimetric Property}
-This is possibly may be one of the oldest problem in differential geometry. With that it comes with multiple mathematicians trying to prove the problem and or simplify the problem. The first considered real and rigorous proof was by Jakob Steiner however it had an apparent flaw, later indicated by K. Weierstrass. That it only proved the existence. In fact the isoperimetric problem was only a corollary of a theory developed by Weierstrass to handle problems of maximizing or minimizing certain integrals, this theory is called calculus of variations. More direct proofs were discovered later. We will mainly look at J.Steiner's and E.Schmidt's proof but the other proofs are mainly here to give additional insight on how to think about this problem. The seven proofs were done by Jakob Steiner, Karl Weierstrass, Erhard Schmidt, Vladimir Boltjanski, Richard Demar, Alfred D. Garvin, David Singmaster and D.J.Souppouris, and Gary Lawlor. This section is mostly studied from Kimberly Holman as her Masters Thesis ~\cite{ holman2022isoperimetric}.
+This is possibly may be one of the oldest problem in differential geometry. With that it comes with multiple mathematicians trying to prove the problem and or simplify the problem. The first considered real and rigorous proof was by Jakob Steiner however it had an apparent flaw, later indicated by K. Weierstrass. That it only proved the existence. In fact the isoperimetric problem was only a corollary of a theory developed by Weierstrass to handle problems of maximizing or minimizing certain integrals, this theory is called calculus of variations. More direct proofs were discovered later. We will mainly look at J.Steiner's and E.Schmidt's proof but the other proofs are mainly here to give additional insight on how to think about this problem. 
+
+The seven proofs were done by Jakob Steiner, Karl Weierstrass, Erhard Schmidt, Vladimir Boltjanski, Richard Demar, Alfred D. Garvin, David Singmaster and D.J.Souppouris, and Gary Lawlor. This section is mostly studied from Kimberly Holman as her Masters Thesis~\cite{holman2022isoperimetric}.
 
 \subsection{Jakob Steiner}
 Firstly, we will look at this proposition. Isosceles triangle has the smallest leg-sum compared to trianges of the same baselien and either height or area, and vice-versa. Given an uneqal triangle, we want to maximise area on a triangle with the same baseline. We make the other two sides, not the baseline, equal. The result is a triangle witha smaller leg-sum, and therefor a smaller perimeter, containigng the same area. Now we can expand on the previous principle to demonstrate that any parallel trapezoid with unequal angles on one baseline may be transformed into another of the same area and baselines; Moreover, the new parallel trapezoid will have symmetry along the axis formed by the baseline midpoints and a smalelr sum of side lengths.
+
+\subsection{Karl Weierstrass}
+Relying on calculus of variation, this proof defines area and length in terms of integrals. However Karl Weierstrass's calculus of variation is very strong, and that the isoperimetric problem pops out of it. Calculus of variations is concerned with the problem of extremising "functionals", finding extrema of functions of \textit{infinite} variables. Functionals can be looked at like "functions of functions". The result is two Euler-Lagrange equations which when solved, provide an equation in the form of a circle and the length of the radius which optimizes the area given the length of the perimeter. The lagrangian, denoted by $L(x,y,y')$ normally opted as $L=T-V$, the kinetic energy minus the potential energy. Extremal curves represent solutions to the isoperimetric problem, providing the shapes that maximize the enclosed area under a fixed perimeter. Extremal curves are smooth and regular, ensuring the validity of the Euler-Lagrange equation and the associated boundary conditions. We shall not give proofs to these theorem and lemmas.
+\begin{theorem}
+	Consider the functional $J(Y)$, an extremum, defined as follows:
+	\begin{center}
+		$J[y]=\int_{a}^{b}L(x,y,y')\,dx$
+	\end{center}
+	where $L(x,y,y')$ is the lagrangian and $y'$ denotes the derivative of $y$ with respect to $x$. The critical points of $J[y]$ satisfy the Euler-Lagrange equation:
+	\begin{center}
+		$\frac{\partial}{\partial x}(\frac{\partial L}{\partial y'})-\frac{\partial L}{\partial y}=0$
+	\end{center}
+\end{theorem}
+\begin{remark}
+	$Y$ satisfying the Euler-Lagrange equation is a necessary, but not sufficient, condition for $J(Y)$ to be an extremum. In other words, a function $Y(x)$ may satisfy the Euler-Lagrange equation even when $J(Y)$ is not an extremum.
+\end{remark}
+\subsubsection{Isoperimetric with Lagrangian}
+For the isoperimetric problem, the Lagrangian $L(x, y, y')$ becomes the integrand of the perimeter functional, which is the square root of $1 + (y')^2$.
+\begin{center}
+	$L(x, y, y') = \sqrt{1 + (y')^2}$
+\end{center}
+Applying the Euler-Lagrange equation to this Lagrangian, we get:
+\begin{center}
+	$\frac{d}{dx} \left( \frac{y'}{\sqrt{1 + (y')^2}} \right) - \frac{y}{\sqrt{1 + (y')^2}} = 0$
+\end{center}
+\begin{lemma}(\textbf{Existence of Extremal Curves})
+        There exists at least one extremal curve that satisfies the Euler-Lagrange equation and corresponds to a critical point of the functional \( J[y] \).
+    \end{lemma}
+
+    \begin{lemma}(\textbf{Uniqueness of Extremal Curves})
+        Under certain regularity conditions, there exists a unique extremal curve that satisfies the Euler-Lagrange equation and optimizes the area under a fixed perimeter.
+
+        Solving the differential equation subject to the fixed endpoints~\cite{goldstein1980classical} and~\cite{hilbert1985methods}, along with the fixed area constraint, leads us to the discovery of extremal curves that not only minimize the perimeter but also provide profound insights into the Isoperimetric Inequality in two-dimensional spaces.
+    \end{lemma}
+Direct proofs from Weierstrass' corollary can be found in $Curves$ $and$ $Surfaces$ $in$ $Euclidean$ $Spaces$~\cite{chern1966curves}.
+
+\subsection{Erhard Schmidt}
+E.Schmidt simplified the work of Weierstrass to whom provided a complete proof of the Isoperimetric problem, however this proof seemed difficult to digest thus later mathematicians came in to assist, decades later. Beginning with parameterised curves, a circle is defined using carefully selected intervals and bounding. Using advanced calculus, isoperimetric equality is obtained if all calculated isoperimetric inequality statements are equalities. But here we will start off with the initial formula that we will see down below and how this initial formula will be used.
+
+\textbf{Initial Formula}
+Area, A, bounded by a positively oriented simple closed curve where: 
+\begin{center}
+	$\alpha(t)=(x(t),y(t)), t\in [a,b]$
+\end{center}
+\begin{center}
+	$A=-\int_{a}^{b}y(t)x'(t)\,dt=\int_{a}^{b}x(t)y'(t)\,dt = 1/2\int_{a}^{b}(xy'-yx')\,dt$
+\end{center}
+
+\subsection{Vladimir Boltjanski}
+Boltjanski's work provided a summary of Steiner's isoperimetric proof. Which starts off by showing that the maximum area of the shape must be convex.
+\begin{proof}
+	\begin{enumerate}
+		\item Towards a general shape. He makes a "cross-cut" that divides the boundary into two equal lengths. If every cross-cut has equal area then the shape is extremal. Otherwise, omit the side with smaller area and reflect the larger area across the cross-cut. We may continue in this way until every cross-cut. We may continue in this way until every cross-cut has equal area.
+		\item Now  he takes a fixed cross-cut, $a$, $b$, and any boundary points distinct from $a$ and $b$, $c$, and demonstrates that the extremal must have $\angle acb=90^{\circ}$. If the angle is anything else, install a hinge and rotate about $c$ until the angle mesaure of $acb$ is $90^{\circ}$.
+		\item The reflect over the cross-cut to achieve a shape with greater area and same perimeter.
+	\end{enumerate}
+\end{proof}
+
+\subsection{Richard Demar}
+Demar begins with an indirect proof to show that the extremal is convex, then proceeds with a trivial example that the square is not extremal. While the square example is trivial and can easily be proved computationally, the trick Demar uses here will be used in subsequent proofs.
+
+\subsection{Alfred D. Garvin}
+Expanding on the work of Demar, physical experiments are performed to prove the statements. First, liquid mercury is slowly poured into a confined triangular reservoir and is expected to take on an isoperimetrically optimal configuration, which it does. However, the meniscus effect of the mercury slightly skews the endpoints of the arcs. Next, the reservoir is partially filled with water. A viscous oil is poured slowly onto the water and is expected to take on an isoperimetrically optimal shape, which it does. Again, the meniscus effect of the oil slightly skews the endpoits of the arcs. The third experiment uses a flexible, asymmetrical triangular wood fence and a sturdypaper closed fence with perimeter less than that of the triangle. BB pellets are poured inside the paper fence, which is expected to take on an isoperimetrically optimal shape, which it does. This internal-pressure experiment does not yield any skewed results. The three experiments yield the same description of the isoperimetrically optimal shape: the arcs have equal radii, the arcs have equal chords, and the arcs have equal length.
+
+\subsection{David Singmaster and D.J. Souppouris}
+The ratio of area to perimeter, A/P, is examined to find the set which produces the greatest number. Using advanced calculus and analysis, the maximal ratio of A/P is a measure of the circularity of the set.
+
+\subsection{Gary Lawlor}
+A new proof of the planar isoperimetric property is presented. The method is a slicing and covering argument, and calls for strategically dividing the circle as well as another, arbitrary region of equal perimeter, into tiny pieces. Each pieces from non-circle region contains the same length of the region’s boundary and has less area than the piece of the circle containing the same length of the circle’s boundary. An advantage of this proof is, as it is comparative, it does not require a proof of existence of an optimum solution.
 
 \begin{lemma} 
     Among all the triangles with the same base, the isosceles triangle covers the greatest area.
@@ -509,18 +467,18 @@ Firstly, we will look at this proposition. Isosceles triangle has the smallest l
         		\caption{Figure I}
 		%Tikz
 		\begin{tikzpicture}
-			\pgfdeclarelayer{nodelayer} 
-			\pgfdeclarelayer{edgelayer}
-			\pgfsetlayers{main,nodelayer,edgelayer}
+			%\pgfdeclarelayer{nodelayer} 
+			%\pgfdeclarelayer{edgelayer}
+			%\pgfsetlayers{main,nodelayer,edgelayer}
 			% nodes
-			\begin{pgfonlayer}{nodelayer}
-				\node [style=none] (A) at (0,10) {};
-				\node [style=none] (B) at (6,10) {};
-				\node [style=none] (C) at (0,13) {};
-				\node [style=none] (D) at (6,13) {};
-			\end{pgfonlayer}
+			%\begin{pgfonlayer}{nodelayer}
+			%	\node [style=none] (A) at (0,10) {};
+			%	\node [style=none] (B) at (6,10) {};
+			%	\node [style=none] (C) at (0,13) {};
+			%	\node [style=none] (D) at (6,13) {};
+			%\end{pgfonlayer}
 			% horizontal parallel lines
-			\begin{pgfonlayer}{edgelayer}
+			%\begin{pgfonlayer}{edgelayer}
 				\draw (0,10) -- (6,10);
 				\draw (0,13) -- (6,13);
 				% diagonal lines
@@ -528,7 +486,7 @@ Firstly, we will look at this proposition. Isosceles triangle has the smallest l
 				\draw (3,13) -- (5,10);
 				\draw (1,10) -- (3.5,13);
 				\draw (3.5,13) -- (5,10);
-			\end{pgfonlayer}{edgelayer}
+			%\end{pgfonlayer}{edgelayer}
 		\end{tikzpicture}
 	\end{minipage}\hfill
     	\begin{minipage}{0.5\textwidth}

@@ -48,6 +48,11 @@ Thomas~Little Heath.
 \newblock {\em A history of Greek mathematics}, volume~1.
 \newblock Cambridge University Press, 2013.
 
+\bibitem{holman2022isoperimetric}
+Kimberly Holman.
+\newblock {\em Isoperimetric Properties of the Circle}.
+\newblock PhD thesis, Auburn University, 2022.
+
 \bibitem{goldstein1980classical}
 Herbert Goldstein.
 \newblock Classical mechanics 2nd ed.
@@ -58,12 +63,6 @@ David Hilbert.
 \newblock {\em Methods of mathematical physics}.
 \newblock CUP Archive, 1985.
 
-\bibitem{do2016differential}
-Manfredo~P Do~Carmo.
-\newblock {\em Differential geometry of curves and surfaces: revised and
-  updated second edition}.
-\newblock Courier Dover Publications, 2016.
-
 \bibitem{chern1966curves}
 Shiing-shen Chern.
 \newblock {\em Curves and surfaces in Euclidean space}.
@@ -73,5 +72,10 @@ Shiing-shen Chern.
 Herman Gluck.
 \newblock 5. the isoperimetric problem.
 \newblock {\em Math 501 - Differential Geometry}, 2012.
+
+\bibitem{schneider2014convex}
+Rolf Schneider.
+\newblock {\em Convex bodies: the Brunn--Minkowski theory}.
+\newblock Number 151. Cambridge university press, 2014.
 
 \end{thebibliography}

@@ -344,7 +344,7 @@ As our goal is to maximize, get the largest area, it is quite clear on why we ch
 \end{remark}
 
 \begin{definition}
-	Let $A\subseteq\mathbb{R}^n$ be non-empty, compact and convex. Then $A$ is called $convex$ $body$. The set of all convex bodies of $\mathbb{R}^n$ is denoted by $K^n$ and the set of all convex bodies in $\mathbb{R}^n$ with non-empty interior is denoted by $K_{0}^{n}$.
+	Let $A\subseteq\mathbb{R}^n$ be non-empty, compact and convex. Then $A$ is called $convex$ $body$. The set of all convex bodies of $\mathbb{R}^n$ is denoted by $\mathscr{K}^n$ and the set of all convex bodies in $\mathbb{R}^n$ with non-empty interior is denoted by $\mathscr{K}_{0}^{n}$.
 \end{definition}
 
 \begin{definition}
@@ -683,13 +683,66 @@ The following section introduces the support function, which can be used to asce
 \end{remark}
 
 \begin{lemma}
-	Let $K,L\in K^{n}$, then$h(K+L,u)= h(K,u)+h(L,u)$.
+	Let $K,L\in\mathscr{K}^{n}$, then$h(K+L,u)= h(K,u)+h(L,u)$.
 \end{lemma}
 \begin{proof}
 	tbc.
 \end{proof}
 
 \section{The Hausdorff Metric}
+To prove the continuity of the volume functional and of the support function with respect to convex bodies, we need a metric on the set of convex bodies. This metric will be introduced in the following subsection.
+
+\begin{definition}
+    For $K,L\in K^{n}$, define Hausdorff distance or Hausedorff metric by
+    \begin{center}
+        $\delta(K,L):=min\{\lambda\geq;K\subsesteq L+\lambda B^{n},L\subseteq K+\lambda B^{n}\}$,
+    \end{center}
+\end{definition}
+
+\begin{remark}
+    The Hausdorff distance (Hausdorff metric) on the set of convex bodies. This follows directly from the properties of minima and from the convexity of $K$.
+\end{remark}
+
+\begin{lemma}
+    Let $K,L\in\mathscr{K}^{n}$, $K,L\subseteq RB^{n}$, where $R>0$, and $u,v\in\mathbb{R}^{n}$. Then
+    \begin{center}
+        $|h(K,u)-h(L,v)|\leq R|u-v|+max\{|u|,|v|\}\delta(K,L)$.
+    \end{center}
+\end{lemma}
+\begin{proof}
+    Proof can be found in~\cite{schneider2014convex} (section 1.8, Lemma 1.8.12).
+\end{proof}
+
+\begin{remark}
+    Lemma above proves the local Lipschitz continuity of the support function in both arguments.
+\end{remark}
+
+\begin{theorem}
+    Let $K,L\in\mathscr{K}^{n}$, then
+    \begin{center}
+        $\delta(K,L)=sup_{u\in\mathbb{S}^{n-1}}|h(K,u)-h(L,u)|=:||\bar{h}_{K}-\bar{h}_{L}||$,
+    \end{center}
+    where $\bar{h}_{K}=h_{k}|_{\mathbb{S}^{n-1}}$.
+\end{theorem}
+\begin{proof}
+    Let $\delta(K,L)\leq\alpha$. This implies $K\subseteq L+\alpha B^{n}$. For $u\in\mathbb{S}^{n-1}$, it follows 
+    \begin{center}
+        $h(K,u)\leq h(L+\alpha B^{n},u)=h(L,u)+\alpha h(B^{n},u)=h(L,u)+\alpha$
+    \end{center}
+    After switching $K$ and $L$, we can conclude for $u\in\mathbb{S}^{n-1}$ that
+    \begin{center}
+        $|h(K,u)-h(L,u)|\leq\alpha$
+    \end{center}
+    This implies $||\bar{h}_{K}-\bar{h}_{L}||\leq\delta(K,L)$. Using a similar argument one can show the other estimation.
+\end{proof}
+
+\begin{lemma}
+    Let $K_{1},K_{2}\in\mathscr{K}^{n}$ and $K_{2}\subseteq\mathring{K}_{1}$. Then there exists $\eta>0$ such that for all $K\in\mathscr{K}^{n}$ with $\delta(K,K_{1})<\eta$, $K_{2}\subseteq K$ holds.
+\end{lemma}
+\begin{proof}
+    Can be found in~\cite{schneider2014convex} (Section 1.8, Lemma 1.8.18)
+\end{proof}
+    
 \section{Volume and Surface Measure}
 \section{Brunn-Minkowski Theorem}
 \section{3-Dimensional Case ($\mathbb{R}^3$)}

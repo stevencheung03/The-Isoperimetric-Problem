@@ -683,10 +683,23 @@ The following section introduces the support function, which can be used to asce
 \end{remark}
 
 \begin{lemma}
-	Let $K,L\in\mathscr{K}^{n}$, then$h(K+L,u)= h(K,u)+h(L,u)$.
+	Let $K,L\in\mathscr{K}^{n}$, then$h(K+L,u)=h(K,u)+h(L,u)$.
 \end{lemma}
 \begin{proof}
-	tbc.
+	Let $u\in\mathbb{R}^{n}\backslash\{0\}$.
+
+    First, we show $h(K+L,u)\geq h(K,u)+h(L,u)$. Since $K$ and $L$ are compact, the supremum of the support function is attained. Thus, there exists $x\in K$ and $y\in L$ such that $h(L,u)=\langle y,u\rangle$ and $h(K,u)=\langle x,u\rangle$.
+
+    Then we have
+    \begin{center}
+        $h(K,u)+h(L,u)=\langle y,u\rangle+\langle x,u\rangle=\langle x+y,u\rangle\leq h(K+L,u)$.
+    \end{center}
+
+    Secondly, we want to show $h(K+L,u)\leq h(K,u)+h(L,u)$. Let $z\in K+L$ so that $H(K+L,u)=\langle u,z\rangle$. Then there exists $x\in K$ and $y\in L$ such that $z=x+y$. It follows
+    \begin{center}
+        $h(K+L,u)=\langle z,u\rangle=\langle x+y,u\rangle=\langle x,u\rangle+\langle y,u\rangle\leq h(K,u)+h(L,u)$.
+    \end{center}
+    Both inequalities are shown and so the claim follows.
 \end{proof}
 
 \section{The Hausdorff Metric}

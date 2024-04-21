@@ -316,9 +316,9 @@ The two definitions, above, are vital into understanding the main theorem. Since
 \begin{definition}
     Let $X$ be a topological space and $A \subset X$. An open cover for $A$ is a family $\{U_\lambda\}_{\lambda\in I}$ of open subsets of $X$ such that
     \begin{center}
-        $A \subset \cup_{\lambda\in I}{U_\lambda}$
+        $A \subset\underset{\lambda\in I}{\bigcup}{U_\lambda}$
     \end{center}
-    An open cover is called finite if $\|I\|<\infty$. If $\{U_\lambda\}_{\lambda\in I}$ is an open cover for $A$ and $J \subset I$ is such that $A\subset\cup_{\lambda\in J}{U_\lambda}$, then $\{U_\lambda\}_{\lambda\in J}$ is called a subcover of $\{U_\lambda\}_{\lambda\in I}$.
+    An open cover is called finite if $\|I\|<\infty$. If $\{U_\lambda\}_{\lambda\in I}$ is an open cover for $A$ and $J \subset I$ is such that $A\subset\underset{\lambda\in J}{\bigcup}{U_\lambda}$, then $\{U_\lambda\}_{\lambda\in J}$ is called a subcover of $\{U_\lambda\}_{\lambda\in I}$.
 \end{definition}
 
 \begin{definition}
@@ -337,7 +337,7 @@ As our goal is to maximize, get the largest area, it is quite clear on why we ch
 \newline
 
 \begin{definition}
-	A set $A\subseteq\mathbb{R}^n$ is called $convex$ if all $x,y\in A$ satisfy $(1-\lambda)x+\lambda y\in A$, $0\leq\lambda\leq1$
+	A set $A\subseteq\mathbb{R}^n$ is called $convex$ if all $x,y\in A$ satisfy $(1-\lambda)x+\lambda y\in A$, $\forall\lambda\in[0,1]$.
 \end{definition}
 
 \begin{remark}
@@ -358,7 +358,7 @@ As our goal is to maximize, get the largest area, it is quite clear on why we ch
 	\begin{itemize}
 		\item Define $\bar{R}=\mathbb{R}\cup\{ \infty,-\infty\}$.
 		\item A function $f:\mathbb{R}^n\to\bar{\mathbb{R}}$ is called $proper$ if it satisfies $\{f=-\infty\}=\emptyset$ and $\{f=\infty\}\neq\mathbb{R}^n$.
-		\item A function $f:\mathbb{R}^n\to\bar{\mathbb{R}}$ is called $convex$ if it satisfies 
+		\item A proper function $f:\mathbb{R}^n\to\bar{\mathbb{R}}$ is called $convex$ if it satisfies 
 		\begin{center}
 			$f((1-\lambda)x+\lambda y)\leq(1-\lambda)f(x)+\lambda f(y)$
 		\end{center}
@@ -525,8 +525,11 @@ A new proof of the planar isoperimetric property is presented. The method is a s
 \begin{proof} 
     Let $P$ be the perimeter of of this n sided polygon In addition let $h$ be the apothem, which is the perpendicular which goes from the centre to a side. Then the area of the polygon is A where,  $A=\frac{1}{2} hP$. By considering the diagram above we can see that as n increases the length of the sides as well as the angle $\alpha$ decreases which means h increases. Well this means that the area must increase as $P$ is fixed and $h$ is increasing.
 \end{proof}
-\begin{theorem}   If L is the perimeter and A is the area of
-any regular 2n-sided polygon, then $$L^{2} \ge 8n*A*tan(\frac{\pi}{2n})$$
+\begin{theorem}
+	If L is the perimeter and A is the area of any regular 2n-sided polygon, then 
+	\begin{center}
+		$L^{2}\geq8n*A*\tan{(\frac{\pi}{2n})}$
+	\end{center}
 \end{theorem}
 
 \begin{figure} [h]
@@ -542,18 +545,26 @@ any regular 2n-sided polygon, then $$L^{2} \ge 8n*A*tan(\frac{\pi}{2n})$$
         \caption{figure VI}
     \end{minipage}
 \end{figure}
-\begin{proof}
-    Since its a regular polygon we could consider one of the 2n triangles its made off as shown in the figure above. $$tan(\alpha)=\frac{(\frac{L}{4n})}{h}$$
-    
-    Rearranging the formula to make h the subject as well as using the fact that $\alpha=\frac{2\pi}{2n} \frac{1}{2}=\frac{\pi}{2n}$, we get $$h=\frac{L}{4n} \frac{1}{tan(\frac{\pi}{2n})}$$
-    
-    Now for the area of the above triangle we get $\frac{1}{2}h*\frac{L}{2n}$ 
-    
-    Substituting h, we obtain $$\frac{L^{2}}{16n^{2}} \frac{1}{tan(\frac{\pi}{2n})}$$
 
-    Finally, we consider the area of the whole polygon which is just 2n times of the above expression. So we have 
-    $$A=\frac{L^{2}}{8n} \frac{1}{tan(\frac{\pi}{2n})}$$
-    Since this is the optimal area we can be more precise and by rearranging the express we can conclude our desired expression which was $L^{2} \ge 8nAtan(\frac{\pi}{2n})$
+\begin{proof}
+    	Since its a regular polygon we could consider one of the 2n triangles its made off as shown in the figure above. 
+	\begin{center}
+		$\displaystyle \tan(\alpha)=\frac{(\frac{L}{4n})}{h}$
+	\end{center}
+    	Rearranging the formula to make h the subject as well as using the fact that $\alpha=\frac{2\pi}{2n} \frac{1}{2}=\frac{\pi}{2n}$, we get 
+	\begin{center}
+		$\displaystyle h=\frac{L}{4n} \frac{1}{\tan(\frac{\pi}{2n})}$
+	\end{center}
+	Now for the area of the above triangle we get $\frac{1}{2}h*\frac{L}{2n}$
+    	Substituting h, we obtain
+	\begin{center}
+		$\displaystyle \frac{L^{2}}{16n^{2}} \frac{1}{\tan(\frac{\pi}{2n})}$
+	\end{center}
+    	Finally, we consider the area of the whole polygon which is just 2n times of the above expression. So we have 
+	\begin{center}
+    		$\displaystyle A=\frac{L^{2}}{8n} \frac{1}{\tan(\frac{\pi}{2n})}$
+	\end{center}
+    	Since this is the optimal area we can be more precise and by rearranging the express we can conclude our desired expression which was $L^{2} \ge 8nA\tan(\frac{\pi}{2n})$
 \end{proof}
 
 \section{Unpacking J.Steiner's proof}
@@ -587,7 +598,7 @@ The proof that I will be unpacking and taking a closer look at will be from the 
             \includegraphics[width=85mm]{isofig3.png}
             \captionof{figure}{Figure IX}
         \end{minipage}
-        Well, we know that $gsin($x$)=h$ $\&$ the area of triangle, $A=(1/2)fh=(1/2)fgsin(x)$, clearly A is maximised when x is $90^\circ$ as sin(x) is then equal to 1.
+        Well, we know that $g\sin(x)=h$ and the area of triangle, $A=(1/2)fh=(1/2)fg\sin(x)$, clearly A is maximised when x is $90^\circ$ as $\sin(x)$ is then equal to 1.
 
         Now turning our attention back figure VIII, for the sake of contradiction we will assume that the angle PRQ is not a right angle. Then, we can treat the arc as hinged at R and either open or close it to make the angle at R a right angle, we can do this by adjusting either PR or RQ or maybe both. This adjustment does not alter the arc's length, consequently expanding the total area encapsulated by the arc PRQ and the line PQ. However, this contradicts the maximization achieved by the original arc, which had already optimized the enclosed total area. Therefore, the inscribed angle at R must be a right angle, confirming that the arc is indeed a semi-circle. Now since we have proven that it is a semi circle, we can use this logic and expand it to the whole curve to conclude that it is a circle, by way of reflecting the curve along the original symmetry line.
         
@@ -595,10 +606,14 @@ The proof that I will be unpacking and taking a closer look at will be from the 
         Use Theorem 7 (we will consider the case where N=2n, as this is just a case of the general theorem)
         Now, let C be a smooth, regular simple closed curve in the plane, with length L and enclosing a region of area A. 
         We can cleverly manipulate our expression from theorem 8 to obtain
-        $$L^{2} \ge 4\pi A \frac{tan(\frac{\pi}{2n})}{\frac{\pi}{2n}}$$
+	\begin{center}
+        $\displaystyle L^{2}\geq4\pi A \frac{\tan(\frac{\pi}{2n})}{\frac{\pi}{2n}}$
+	\end{center}
         Now if we carefuly choose our points such that $n \to \infty $,  $L_{n} \to L$ and $A_{n} \to A$, 
         Well, as $n \to \infty$ our expression above becomes
-        $$L^{2} \ge 4\pi A$$
+	\begin{center}
+        $L^{2}\geq4\pi A$
+	\end{center}
 
         Now we need to show that the equality materialises if and only if the curve in question happens to be a circle. Well if L represents the perimeter of a closed curve, the maximum enclosed area is $\frac{L^{2}}{4\pi}$, conversely if A denotes the area enclosed by a simple closed curve the minimum for the perimeter would be $\sqrt{4 \pi A}$, but the circle is the only curve capable of satisfying such conditions, thus we know that a circle maximises enclosed area among all smooth regular simple closed curves of a fixed length.This confirms the existence of the maximizer. Hence the proof is complete.  
     \end{enumerate}
@@ -652,7 +667,7 @@ The following section introduces the support function, which can be used to asce
 \begin{definition}
 	Let $K\subseteq\mathbb{R}^n$ be non-empty, convex and closed. The $support$ $function$ $h(K,\cdot\space)=h_k$ is defined by
 	\begin{center}
-		$h(K,u):=sup\{\langle x,u\rangle;x\in K\}$ for $u\in\mathbb{R}^n$
+		$h(K,u):=\sup\{\langle x,u\rangle;x\in K\}$ for $u\in\mathbb{R}^n$
 	\end{center}
 	Furthermore we define for $u\in dom\,h(K,\cdot)\backslash\{0\}$
 	\begin{center}
@@ -715,7 +730,7 @@ To prove the continuity of the volume functional and of the support function wit
 \begin{definition}
     For $K,L\in K^{n}$, define Hausdorff distance or Hausedorff metric by
     \begin{center}
-        $\delta(K,L):=min\{\lambda\geq;K\subseteq L+\lambda B^{n},L\subseteq K+\lambda B^{n}\}$,
+        $\delta(K,L):=\min\{\lambda\geq;K\subseteq L+\lambda B^{n},L\subseteq K+\lambda B^{n}\}$,
     \end{center}
 \end{definition}
 
@@ -726,7 +741,7 @@ To prove the continuity of the volume functional and of the support function wit
 \begin{lemma}
     Let $K,L\in\mathscr{K}^{n}$, $K,L\subseteq RB^{n}$, where $R>0$, and $u,v\in\mathbb{R}^{n}$. Then
     \begin{center}
-        $|h(K,u)-h(L,v)|\leq R|u-v|+max\{|u|,|v|\}\delta(K,L)$.
+        $|h(K,u)-h(L,v)|\leq R|u-v|+\max\{|u|,|v|\}\delta(K,L)$.
     \end{center}
 \end{lemma}
 \begin{proof}
@@ -740,9 +755,9 @@ To prove the continuity of the volume functional and of the support function wit
 \begin{theorem}
     Let $K,L\in\mathscr{K}^{n}$, then
     \begin{center}
-        $\delta(K,L)=\underset{u\in\mathbb{S}^{n-1}}{sup}|h(K,u)-h(L,u)|=:||\bar{h}_{K}-\bar{h}_{L}||$,
+        $\delta(K,L)=\underset{u\in\mathbb{S}^{n-1}}{\sup}|h(K,u)-h(L,u)|=:||\bar{h}_{K}-\bar{h}_{L}||$,
     \end{center}
-    where $\bar{h}_{K}=h_{k}|_{\mathbb{S}^{n-1}}$.
+    where $\displaystyle \bar{h}_{K}=h_{k}|_{\mathbb{S}^{n-1}}$.
 \end{theorem}
 \begin{proof}
     Let $\delta(K,L)\leq\alpha$. This implies $K\subseteq L+\alpha B^{n}$. For $u\in\mathbb{S}^{n-1}$, it follows 
@@ -769,7 +784,7 @@ In this subsection, we will introduce the volume functional and show its continu
 \begin{definition}
 	Let $M\subseteq\mathbb{R}^{n}, p\geq0$. For $\delta>0$ define
 	\begin{center}
-		$\mathscr{H}_{\delta}^{P}(M):=inf\{\sum\limits_{i=1}^{\infty}\alpha(p)(\frac{diam C_{i}}{2})^{p};(C_{i})_{i\in\mathbb{N}}$ open sets in $\mathbb{R}^n$
+		$\displaystyle \mathscr{H}_{\delta}^{P}(M):=\inf\{\sum\limits_{i=1}^{\infty}\alpha(p)(\frac{diam C_{i}}{2})^{p};(C_{i})_{i\in\mathbb{N}}$ open sets in $\mathbb{R}^n$
 
 		\hspace{1cm}with $diam C_{i}\leq\delta$ and $M\subseteq\underset{i\in\mathbb{N}}{\cup}{C_{i}}\}$
 	\end{center}
@@ -777,7 +792,7 @@ In this subsection, we will introduce the volume functional and show its continu
 	
 	Define the p-dimensional Hausdorff measure of $M$ by
 	\begin{center}
-		$\mathscr{H}^{p}(M):=\underset{\delta>0}{sup}\mathscr{H}_{\delta}^{p}(M)=\underset{\delta\to0}{\lim}\mathscr{H}_{\delta}^{p}(M)$.
+		$\mathscr{H}^{p}(M):=\underset{\delta>0}{\sup}\mathscr{H}_{\delta}^{p}(M)=\underset{\delta\to0}{\lim}\mathscr{H}_{\delta}^{p}(M)$.
 	\end{center}
 \end{definition}
 

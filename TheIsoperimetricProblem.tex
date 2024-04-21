@@ -307,6 +307,13 @@ The two definitions, above, are vital into understanding the main theorem. Since
 \end{definition}
 
 \begin{definition}
+	Let $f:D\to\mathbb{R}$ a function and $c\in\mathbb{R}$ such that there exists $p>0$ such that $(c-p,c+p)\in D$. Then $f$ is called \textit{continuous} at $c$ if
+	\begin{center}
+		$\underset{x\to c}{\lim}f(x)=f(c)$.
+	\end{center}
+\end{definition}
+
+\begin{definition}
     Let $X$ be a topological space and $A \subset X$. An open cover for $A$ is a family $\{U_\lambda\}_{\lambda\in I}$ of open subsets of $X$ such that
     \begin{center}
         $A \subset \cup_{\lambda\in I}{U_\lambda}$
@@ -708,7 +715,7 @@ To prove the continuity of the volume functional and of the support function wit
 \begin{definition}
     For $K,L\in K^{n}$, define Hausdorff distance or Hausedorff metric by
     \begin{center}
-        $\delta(K,L):=min\{\lambda\geq;K\subsesteq L+\lambda B^{n},L\subseteq K+\lambda B^{n}\}$,
+        $\delta(K,L):=min\{\lambda\geq;K\subseteq L+\lambda B^{n},L\subseteq K+\lambda B^{n}\}$,
     \end{center}
 \end{definition}
 
@@ -733,7 +740,7 @@ To prove the continuity of the volume functional and of the support function wit
 \begin{theorem}
     Let $K,L\in\mathscr{K}^{n}$, then
     \begin{center}
-        $\delta(K,L)=sup_{u\in\mathbb{S}^{n-1}}|h(K,u)-h(L,u)|=:||\bar{h}_{K}-\bar{h}_{L}||$,
+        $\delta(K,L)=\underset{u\in\mathbb{S}^{n-1}}{sup}|h(K,u)-h(L,u)|=:||\bar{h}_{K}-\bar{h}_{L}||$,
     \end{center}
     where $\bar{h}_{K}=h_{k}|_{\mathbb{S}^{n-1}}$.
 \end{theorem}
@@ -757,6 +764,39 @@ To prove the continuity of the volume functional and of the support function wit
 \end{proof}
     
 \section{Volume and Surface Measure}
+In this subsection, we will introduce the volume functional and show its continuity. The results of this subsection are important in the proof of Brunn-Minkowski.
+
+\begin{definition}
+	Let $M\subseteq\mathbb{R}^{n}, p\geq0$. For $\delta>0$ define
+	\begin{center}
+		$\mathscr{H}_{\delta}^{P}(M):=inf\{\sum\limits_{i=1}^{\infty}\alpha(p)(\frac{diam C_{i}}{2})^{p};(C_{i})_{i\in\mathbb{N}}$ open sets in $\mathbb{R}^n$
+
+		\hspace{1cm}with $diam C_{i}\leq\delta$ and $M\subseteq\underset{i\in\mathbb{N}}{\cup}{C_{i}}\}$
+	\end{center}
+	with $\alpha(p)=\frac{\pi^{\frac{p}{2}}}{\Gamma(p)(\frac{p}{2}+1)}$ for $p\neq0$, where $\Gamma(p):=\int_{0}^{\infty}t^{-1}e^{-t}\,dt$ and $\alpha(0)=0$.
+	
+	Define the p-dimensional Hausdorff measure of $M$ by
+	\begin{center}
+		$\mathscr{H}^{p}(M):=\underset{\delta>0}{sup}\mathscr{H}_{\delta}^{p}(M)=\underset{\delta\to0}{\lim}\mathscr{H}_{\delta}^{p}(M)$.
+	\end{center}
+\end{definition}
+
+\begin{remark}
+	Let $t\in\mathbb{R}^{n}$ and $\lambda\in\mathbb{R}$, then we have
+	\begin{center}
+		$\mathscr{H}^{p}(\lambda M)=\lambda^{p}\mathscr{H}^{p}(M)$ and $\mathscr{H}^{p}(M=t)=\mathscr{H}^{p}(M)$.
+	\end{center}
+	Furthermroe, for $A\subseteq B$ we have $\mathscr{H}^{p}(A)\leq\mathscr{H}^{p}(B)$.
+\end{remark}
+
+\begin{definition}
+	The volume funcational $V_{n}$ on $\mathscr{K}^{n}$ is defined by the restriction of the $n$-dimensional Hausdorff measure on $\mathscr{K}^{n}$.
+\end{definition}
+
+\begin{theorem}
+	The volume functional $V_{n}:\mathscr{K}^{n}\to\mathbb{R}$ is continuous.
+\end{theorem}
+
 \section{Brunn-Minkowski Theorem}
 \section{3-Dimensional Case ($\mathbb{R}^3$)}
 \subsection{Proof of 3-Dimensional Case}

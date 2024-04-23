@@ -906,7 +906,7 @@ where $a,b$ are nonnegative numbers and $a\mathrm{S}$ is the dilation by factor 
 For example, the Minkowski sum of two rectanbles is still a rectangle.
 \begin{center}
     $r([0,a]\times[0,b])\boxplus s([0,c]\times[0,d])=[0,ra+sc]\times[0,rb+sd]$.
-\end{center}
+\end{center} 
 (image here of Minkowski sum)
 
 According to the Brunn-Minkowski theorem, the area of the added figure is greater than the area of the summands because the Minkowski addition tends to "round out" the figures being added. So the theorem goes as:
@@ -918,11 +918,56 @@ According to the Brunn-Minkowski theorem, the area of the added figure is greate
     \end{center}
     Equality holds for $\lambda\in(0, 1)$ if and only if $\mathrm{K}_{0}$ and $\mathrm{K}_{1}$ are contained in parallel hyperplanes or are homothetic.
 \end{theorem}
+\begin{proof}
+    First, consider the case that $\mathrm{K}_{0},\mathrm{K}_{1}\in\mathscr{K}^{n}$ are two contrained in parallel hyperplanes.
+    
+    Let $\mathrm{K}_{0}\subset\mathrm{E}$ and $\mathrm{K}_{1}\subset\mathrm{F}$ with E and F huperplanes. Without loss of generality, assume that for all $x\in\mathrm{E}$ we have $x=t$ for some $t\in\mathbb{R}$, and for all $y\in\mathrm{F}$ we have $y_{1}=r$ for some $r\in\mathbb{R}$.
+    
+    It then follows for all $z\in(1-\lambda)\mathrm{K}_{0}+\lambda\mathrm{K}_{1}$ that there are $x\in\mathrm{K}_{0}$ and $y\in\mathrm{K}_{1}$ with
+    \begin{center}
+        $z_{1}=(1-\lambda)x_{1}+\lambda y_{1}=(1-\lambda)t+\lambda s$.
+    \end{center}
+    Therefore, $(1-\lambda)\mathrm{K}_{0}+\lambda\mathrm{K}_{1}$ is also contained in a parallel hyperplane. Since hyperplanes are $n-1$ dimensional, equality holds trivially.
 
+    Now, let $\mathrm{K}_{0},\mathrm{K}_{1}\in\mathscr{K}^{n}$ be homothetic and $\mathrm{K}_{0}=\mu\mathrm{K}_{1}$ for $\mu\in\mathbb{R}$ and $t\in\mathbb{R}^{n}$. For $\lambda\in[0,1]$ we have
+    \begin{center}
+        $\mathrm{V}_{n}((1-\lambda)\mathrm{K}_{0}+\lambda\mathrm{K}_{1})^{\frac{1}{n}}=\mathrm{V}_{n}([(1-\lambda)\mu+\lambda]\mathrm{K}_{1}+t)^{\frac{1}{n}}$
+
+        $=\mathrm{V}_{n}([(1-\lambda)\mu+\lambda]\mathrm{K}_{1})^{\frac{1}{n}}$
+
+        $=[(1-\lambda)\mu+\lambda]\mathrm{V}_{n}(\mathrm{K}_{1}){\frac{1}{n}}$
+
+        $=(1-\lambda)\mathrm{V}_{n}(\mathrm{K}_{0})^{\frac{1}{n}}+\lambda\mathrm{V}_{n}(\mathrm{K}_{1})^{\frac{1}{n}}$,
+    \end{center}
+    and therefore equality holds.
+
+    In the following, we will show the inequality in Brunn-Minkowski Theorem.
+
+    \textbf{Case 1 $\dim{\mathrm{K}_{0}}=\dim{\mathrm{K}_{1}}<n$.} Since $\mathrm{V}_{n}(\mathrm{K}_{0})=\mathrm{V}_{n}(\mathrm{K}_{1})=0$ this case is trival. Equality implies $\dim((1-\lambda)\mathrm{K}_{0}+\lambda\mathrm{K}_{1})<n$. This implies that all three convex bodies have to be contained in parallel hyperplanes.\
+
+    \textbf{Case 2 $\dim{\mathrm{K}_{0}}<0, \dim{\mathrm{K}_{1}}=n$.} For $x\in\mathrm{K}_{0}$ we have
+    \begin{center}
+        $(1-\lambda)\mathrm{K}_{0}+\lambda\mathrm{K}_{1}\supseteq(1-\lambda)x+\lambda\mathrm{K}_{1}$,
+    \end{center}
+    which implies that
+    \begin{center}
+        $\mathrm{V}((1-\lambda)\mathrm{K}_{0}+\lambda\mathrm{K}_{1})^{\frac{1}{1}}$.
+    \end{center}
+    This implies the Brunn-Minkowski inequality. If equality holds then $\mathrm{K}_{0}=\{x\}$. Hence, $\mathrm{K}_{0}$ and $\mathrm{K}_{1}$ are homothetic.
+
+    \textbf{Case 3 $\dim{\mathrm{K}_{0}}=\dim{\mathrm{K}_{1}}=n$.} This case will be proven by induction.
+
+    The case $n=1$ is trivial. Now consider the iteration from $n-1$ to $n$.
+
+    Without loss of generality, assume $\mathrm{V}_{n}(\mathrm{K}_{0})=\mathrm{V}_{n}(\mathrm{K}_{1})=1$. This is allowed becuase the general inequality follows from this special case. Indeed, for $\mathrm{K}_{0},\mathrm{K}_{1}\in\mathscr{K}^{n}$ being $n$-dimensional with arbitrar volume and $\lambda\in[0,1]$ consider
+    \begin{center}
+        $\overline{\mathrm{K}_{i}}:=\frac{\mathrm{K}_{i}}{\mathrm{V}_{n}(\mathrm{K}_{i})^{\frac{1}{n}}}$ und 
+    \end{center}
+\end{proof}
+    
 \section{3-Dimensional Case ($\mathbb{R}^3$)}
-\subsection{Proof of 3-Dimensional Case}
+\subsection{Proof of 3-Dimensional Case} 
 \section{Proof of the Isoperimetric Inequality in n-Dimension}
-
 \chapter{Manifolds}
 
 \bibliography{The-Isoperimetric-Problem-References}

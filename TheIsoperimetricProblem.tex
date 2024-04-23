@@ -811,6 +811,86 @@ In this subsection, we will introduce the volume functional and show its continu
 \begin{theorem}
 	The volume functional $V_{n}:\mathscr{K}^{n}\to\mathbb{R}$ is continuous.
 \end{theorem}
+\begin{proof}
+    \textbf{Case 1 $\mathrm{V}_{n}(\mathrm{K})=0$:}
+    Let $\overline{a}\in\mathscr{K}^{n}$ and, without loss of generality, assume $\delta(K,\overline{K})=\alpha\leq1$. Thus, it holds that $\overline{K}\subseteq K+\alpha B^{n}$. Since $V_{0}(K)=0$ and $K$ is convex, we know that $K$ has to be contained in a hyperplane. From the monotony of the Hausdorff measure it follows for $u$ orthogonal on the hyperplane, that
+    \begin{center}
+        $V_{n}(\mathrm{K})\leq \mathrm{V}_{n}(K+\alpha \mathrm{B}_{n})$
+
+        $=\int_{-\alpha}^{\alpha}\mathrm{V}_{n-1}([\mathrm{K}+\alpha \mathrm{B}^{n}]\cap\mathrm{H}_{u,\zeta})\,d\zeta$
+
+        $\leq\int_{-\alpha}^{\alpha}\mathrm{V}_{n-1}(K+(\alpha\mathrm{B}^{n}\cap\mathrm{H}_{u,\zeta}))\,d\zeta$
+
+        $=2\alpha \mathrm{V}_{n-1}(K+(\alpha\mathrm{B}^{n}\cap\mathrm{H}_{u,0}))$
+
+        $\overset{\alpha\leq1}{\leq}\underbrace{2\mathrm{~V}_{n-1}\left(\mathrm{~K}+\left(\mathrm{B}^n\cap \mathrm{H}_{u, 0}\right)\right)}_{:=c(\mathrm{~K})}\cdot\alpha$,
+    \end{center}
+    In the second line we used that $K+\alpha B^{n}$ varies in the fixed coordinate of $K$ by $2\alpha$. Since $c(K)$ is fixed and does not depend on $\alpha$ the continuity follows.
+
+    \textbf{Case 2 $\mathrm{V}_{n}(\mathrm{K})>0$:}
+    Without loss of generality, assume that $0\in\overset{\circ}{\mathrm{K}}$ (if not, we can shift it, since the Hausdorff measure is invariant under shifts). Let $\epsilon>0$ and choose $\lambda>1$ such that
+    \begin{center}
+        $(\lambda^{n}-1)\lambda^{n}\mathrm{V}_{n}(\mathrm{K})<\epsilon$
+    \end{center}
+    and $\rho>0$ so that $\rho\mathrm{B}^{n}\subseteq\overset{\circ}{\mathrm{K}}$. From Lemma 13, we 
+    know that there is an $\alpha>0$ with $\alpha\leq(\lambda-1)\rho$ so that $\rho\mathrm{B}_{n}\subseteq\overset{\circ}{\mathrm{K}}\subseteq\overline{\mathrm{K}}$. For all $\mathrm{K}$ with $\delta(K,\overline{\mathrm{K}})<\alpha$. From $\delta(\mathrm{K},\overline{\mathrm{K}})<\alpha$ it follows
+    \begin{center}
+        $\mathrm{K}\subseteq\overline{\mathrm{K}}+\alpha\mathrm{B}^{n}\subseteq\overline{\mathrm{K}}+(\lambda-1)\rho\mathrm{B}^{n}\subseteq\overline{\mathrm{K}}+(\lambda-1)\overline{\mathrm{K}}=\lambda\overline{\mathrm{K}}$
+    \end{center}
+    With the same argument, we can also show that $\overline{\mathrm{K}}\subseteq\lambda\mathrm{K}$. Hence we have the inequalities $\mathrm{V}_{n}(\mathrm{K})\leq\mathrm{V}_{n}(\lambda\mathrm{K})=\lambda^{n}\mathrm{V}_{n}(\overline{\mathrm{K}})$ and $\mathrm{V}(\overline{\mathrm{K}})\leq\mathrm{V}_{n}(\lambda\mathrm{K})=\lambda^{n}\mathrm{V}_{n}{\mathrm{K}}$. \newline
+    This implies
+    \begin{center}
+        $\mathrm{V}_{n}(\mathrm{K})-\mathrm{V}_{n}(\overline{\mathrm{K}})\leq(\lambda^{n}-1)\mathrm{V}_{n}(\overline{\mathrm{K}})\leq(\lambda^{n}-1)\lambda^{n}\mathrm{V}_{n}(\mathrm{K})$ and
+
+        $\mathrm{V}_{n}(\overline{\mathrm{K}})-\mathrm{V}_{n}(\mathrm{K})\leq(\lambda^{n}-1)\mathrm{V}_{n}(\mathrm{K})\overset{\lambda>1}{\leq}(\lambda^{n}-1)\lambda^{n}\mathrm{V}_{n}(\mathrm{K})$.
+    \end{center}
+    As a consequence we have the estimate
+    \begin{center}
+        $|\mathrm{V}_{n}(\mathrm{K})-\mathrm{V}_{n}(\overline{\mathrm{K}})|\leq(\lambda^{n}-1)\lambda^{n}\mathrm{V}_{n}(\mathrm{K})<\epsilon$.
+    \end{center}
+    This implies the continuity of $\mathrm{V}_{n}$.
+\end{proof}
+
+\begin{theorem}(Steiner's Formula)
+    There are $\mathrm{V}_{m}:\mathscr{K}^{n}\to\mathbb{R}$ and cofficients $k_i\in\mathbb{R}$ for $i=0,1,\dots,n$ such that 
+    \begin{center}
+        $\mathrm{V}_{n}(\mathrm{K}+\rho\mathrm{B}^{n})=\overset{n}{\underset{m=0}{\sum}}\rho^{n-m}k_{n-m}\mathrm{V}_{m}(\mathrm{K})$
+    \end{center}
+    for all $\mathrm{K}\in\mathscr{K}^{n}$, $\rho\geq0$.
+\end{theorem}
+A proof of this can be found in~\cite{schneider2014convex} (Theorem 4.2.1).
+
+\begin{remark}
+    Steiner’s formula implies that $\rho\mapsto\mathrm{V}_{n}(\mathrm{K}+\rho\mathrm{B}^{n})$ is a polynomial of degree $n$.
+\end{remark}
+
+\begin{definition} (Surface Measure)
+    Let $\mathrm{K}\subseteq\mathscr{K}^{n}$. Then we define the \textit{surface measure} of $\mathrm{K}$ by
+    \begin{center}
+        $\mathrm{S}(\mathrm{K}):=\underset{\rho\to0}{\lim}\frac{\mathrm{V}_{n}(\mathrm{K}+\epsilon\mathrm{B}^{n})-\mathrm{V}_{n}(\mathrm{K})}{\rho}$.
+    \end{center}
+\end{definition}
+
+\begin{remark}
+    This limit exists, because $\mathrm{V}_{n}(\mathrm{K}+\epsilon\mathrm{B}^{n})$ is a polynomial and, therefore, it is smooth.
+\end{remark}
+
+\begin{remark}
+    Let $\mathrm{B}^{n}\subseteq\mathbb{R}^{n}$ be a ball. We then have
+    \begin{center}
+        $\mathrm{S}(r\mathrm{B}^{n})=nr^{n-1}\mathrm{V}_{n}(\mathrm{B}^{n})$
+    \end{center}
+\end{remark}
+\begin{proof}
+    Using the convexivity of $\mathrm{B}^{n}$ and the properties of the volume functional, we can compute
+    \begin{center}
+        $\displaystyle \mathrm{S}(\mathrm{B}^{n})=\underset{\rho\downarrow0}{\lim}\frac{\mathrm{V}_{n}(\mathrm{K}+\epsilon\mathrm{B}^{n})-\mathrm{V}_{n}(\mathrm{K})}{\rho}$
+
+        $\displaystyle =\underset{\rho\downarrow0}{\lim}\frac{((r+\rho)^{n}-r^{n})\mathrm{V}_{n}(\mathrm{B}^{n})}{\epsilon}$
+
+        $\displaystyle =\mathrm{V}_{n}(\mathrm{B}^{n})\underset{\rho\downarrow0}{\lim}\frac{(r+\rho)^{n}-r^{n}}{\epsilon}=\mathrm{V}_{n}(\mathrm{B})\cdot n\cdot r^{n−1}$.
+    \end{center}
+\end{proof}
 
 \section{Brunn-Minkowski Theorem}
 \section{3-Dimensional Case ($\mathbb{R}^3$)}

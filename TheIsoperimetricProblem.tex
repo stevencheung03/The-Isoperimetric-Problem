@@ -888,11 +888,37 @@ A proof of this can be found in~\cite{schneider2014convex} (Theorem 4.2.1).
 
         $\displaystyle =\underset{\rho\downarrow0}{\lim}\frac{((r+\rho)^{n}-r^{n})\mathrm{V}_{n}(\mathrm{B}^{n})}{\epsilon}$
 
-        $\displaystyle =\mathrm{V}_{n}(\mathrm{B}^{n})\underset{\rho\downarrow0}{\lim}\frac{(r+\rho)^{n}-r^{n}}{\epsilon}=\mathrm{V}_{n}(\mathrm{B})\cdot n\cdot r^{n−1}$.
+        $\displaystyle =\mathrm{V}_{n}(\mathrm{B}^{n})\underset{\rho\downarrow0}{\lim}\frac{(r+\rho)^{n}-r^{n}}{\epsilon}=\mathrm{V}_{n}(\mathrm{B})\cdot n\cdot r^{n-1}$.
     \end{center}
 \end{proof}
 
 \section{Brunn-Minkowski Theorem}
+First we will show an important theorem of convex geometry, the Brunn-Minkowski Theorem, which we will use in the proof of the isoperimetric inequality in the next subsection. Osserman~\cite{osserman1978isoperimetric} wrote an extensive survey on the isoperimetric inequality. The traditional isoperimetric inequality for significant classes of subsets of $\mathbb{R}^{n}$ can be obtained quickly from the proof of the Brunn-Minkowski inequality, which takes only one page, and deserves to be better known.
+
+The Minkowski Addition of two arbitrary sets $\mathrm{S},\mathrm{T}\subset\mathbb{R}^{n}$ is defined to be
+\begin{center}
+    $a\mathrm{S}\boxplus b\mathrm{T}:=\{x+y:x\in a\mathrm{S}$ and $y\in b\mathrm{T}\}$
+\end{center}
+where $a,b$ are nonnegative numbers and $a\mathrm{S}$ is the dilation by factor $a$
+\begin{center}
+    $a\mathrm{S}=\{ax:x\in\mathrm{S}\}$.
+\end{center}
+For example, the Minkowski sum of two rectanbles is still a rectangle.
+\begin{center}
+    $r([0,a]\times[0,b])\boxplus s([0,c]\times[0,d])=[0,ra+sc]\times[0,rb+sd]$.
+\end{center}
+(image here of Minkowski sum)
+
+According to the Brunn-Minkowski theorem, the area of the added figure is greater than the area of the summands because the Minkowski addition tends to "round out" the figures being added. So the theorem goes as:
+
+\begin{theorem}(Brunn-Minkowski)
+    Let $\mathrm{K}_{0},\mathrm{K}_{1}\in\mathscr{K}^{n}$ be two convex bodies and $\lambda\in[0,1]$, then
+    \begin{center}
+        $\displaystyle \mathrm{V}_{n}((1-\lambda)\mathrm{K}_{0}+\lambda\mathrm{K}_{1})^{\frac{1}{n}}\geq (1-\lambda)\mathrm{V}_{n}(\mathrm{K}_{0})^{\frac{1}{n}}+\lambda\mathrm{V}_{n}(\mathrm{K}_{0})^{\frac{1}{n}}$.
+    \end{center}
+    Equality holds for $\lambda\in(0, 1)$ if and only if $\mathrm{K}_{0}$ and $\mathrm{K}_{1}$ are contained in parallel hyperplanes or are homothetic.
+\end{theorem}
+
 \section{3-Dimensional Case ($\mathbb{R}^3$)}
 \subsection{Proof of 3-Dimensional Case}
 \section{Proof of the Isoperimetric Inequality in n-Dimension}

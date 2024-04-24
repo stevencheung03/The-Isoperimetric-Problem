@@ -274,7 +274,7 @@ Problems posed by the ancients not only speeded the progression towards more rig
 We will take for granted the Jordan Curve Theorem
 \begin{theorem}[Jordan Curve Theorem]
     A simple closed curve in the plane divides the plane into two regions, one compact and one non-compact, and in the common boundary of both regions.
-\end{theorem}
+\end{theorem} 
 
 The Jordan Curve Theorem is just a standard, but highly non-trivial, result of the topology of $\mathbb{R}^2$, that any simple closed curve in the plane has an 'interior' and 'exterior': more precisely, the complement of the image of $\gamma$ (i.e. the set of two points $\mathbb{R}^2$ that are \underline{not} in the image of $\gamma$) is the disjoint union of two subsets of $\mathbb{R}^2$, denoted by $int(\gamma)$ and $ext(\gamma)$, with the following properties:
 \begin{enumerate}
@@ -397,17 +397,52 @@ Firstly, we will look at this proposition. Isosceles triangle has the smallest l
 \subsection{Karl Weierstrass}
 Relying on calculus of variation, this proof defines area and length in terms of integrals. However Karl Weierstrass's calculus of variation is very strong, and that the isoperimetric problem pops out of it. Calculus of variations is concerned with the problem of extremising "functionals", finding extrema of functions of \textit{infinite} variables. Functionals can be looked at like "functions of functions". The result is two Euler-Lagrange equations which when solved, provide an equation in the form of a circle and the length of the radius which optimizes the area given the length of the perimeter. The lagrangian, denoted by $L(x,y,y')$ normally opted as $L=T-V$, the kinetic energy minus the potential energy. Extremal curves represent solutions to the isoperimetric problem, providing the shapes that maximize the enclosed area under a fixed perimeter. Extremal curves are smooth and regular, ensuring the validity of the Euler-Lagrange equation and the associated boundary conditions. We shall not give proofs to these theorem and lemmas.
 \begin{theorem}
-	Consider the functional $J(Y)$, an extremum, defined as follows:
+	Consider the functional $\mathrm{J}(Y)$, an extremum, defined as follows:
 	\begin{center}
-		$J[y]=\int_{a}^{b}L(x,y,y')\,dx$
+		$\displaystyle \mathrm{J}[y]=\int_{a}^{b}L(x,y,y')\,dx$
 	\end{center}
 	where $L(x,y,y')$ is the lagrangian and $y'$ denotes the derivative of $y$ with respect to $x$. The critical points of $J[y]$ satisfy the Euler-Lagrange equation:
 	\begin{center}
-		$\frac{\partial}{\partial x}(\frac{\partial L}{\partial y'})-\frac{\partial L}{\partial y}=0$
+		$\displaystyle \frac{\partial}{\partial x}\Big(\frac{\partial L}{\partial y'}\Big)-\frac{\partial L}{\partial y}=0$
 	\end{center}
 \end{theorem}
 \begin{proof}
     Consider functions $\mathrm{Y}_{\epsilon}(x)$ of the form $\mathrm{Y}_{\epsilon}(x)=\mathrm{Y}(x)+\epsilon\eta(x)$
+
+    where $\epsilon\in\mathbb{R}$, a smooth curve $\eta(x)\in \mathrm{C}^{2}[a,b]$ satisfies $\eta(a)=\eta(b)=0$ so that $\mathrm{Y}_{\epsilon}(a)=\mathrm{A}$ and $\mathrm{Y}_{\epsilon}(b)=\mathrm{B}$ i.e. $\mathrm{Y}_{\epsilon}$ still satisfies the boundary conditions.
+
+    so $\mathrm{Y}_{\epsilon}$ is a function which satisfies our boundary conditions and which is ``near to'' $\mathrm{Y}$ when $\epsilon$ is small. $\mathrm{I}(\mathrm{Y}_{\epsilon})$ depends on the value of $\epsilon$ and we write $\mathrm{I}[\epsilon]$ for the value of $\mathrm{I}(\epsilon)$:
+    \begin{center}
+        $\displaystyle \mathrm{I}[\epsilon]=\int_{a}^{b}\mathrm{F}(x,\mathrm{Y}_{\epsilon},\mathrm{Y}_{\epsilon}')\,dx$
+    \end{center}
+    when $\epsilon=0$, the function $\mathrm{I}[\epsilon]$ has an extremum and so
+    \begin{center}
+        $\displaystyle \frac{d\mathrm{I}}{d\epsilon}=0$ when $\epsilon=0$ 
+    \end{center}
+    we can compute the derivative $\displaystyle \frac{d\mathrm{I}}{d\epsilon}$ by differentiating under the integral sign:
+    \begin{center}
+        $\displaystyle \frac{d\mathrm{I}}{d\epsilon}=\frac{d}{d\epsilon}\int_{a}^{b}\mathrm{F}(x,\mathrm{Y}_{\epsilon},\mathrm{Y}_{\epsilon}')\,dx=\int_{a}^{b}\frac{d\mathrm{F}}{d\epsilon}\mathrm{F}(x,\mathrm{Y}_{\epsilon},\mathrm{Y}_{\epsilon}')\,dx$
+    \end{center}
+    we now use the multivariable chain rule to differentiate $\mathrm{F}$ with respect to $\epsilon$. Well, in our case, the first argument $x$ is independant of $\epsilon$, so $\displaystyle \frac{dx}{d\epsilon}=0$, and since $\mathrm{Y}_{\epsilon}=\mathrm{Y}+\epsilon\eta$ we have $\displaystyle \frac{d\mathrm{Y}_{\epsilon}}{d\epsilon}=\eta$ and $\displaystyle \frac{d\mathrm{Y}_{\epsilon}'}{d\epsilon}=\eta'$. Therefore
+    \begin{center}
+        $\displaystyle \frac{d\mathrm{F}}{d\epsilon}(x,\mathrm{Y}_{\epsilon},\mathrm{Y}_{\epsilon}')=\int_{a}^{b}\Big(\frac{\partial\mathrm{L}}{\partial y}\frac{\partial y}{\partial \epsilon}+\frac{\partial\mathrm{L}}{\partial y'}\frac{\partial y'}{\partial \epsilon}\Big)\,dx=\frac{\partial\mathrm{F}}{\partial y}\eta(x)+\frac{\partial\mathrm{F}}{\partial y'}\eta(x')$.
+    \end{center}
+    but recall that $\displaystyle \frac{d\mathrm{I}}{d\epsilon}$ when $\epsilon=0$. Since $\mathrm{Y}_{0}=\mathrm{Y}$ and $\mathrm{Y}_{0}'=\mathrm{Y}'$.
+    \begin{center}
+        $\displaystyle 0=\int_{a}^{b}\frac{\partial\mathrm{F}}{\partial y}(x,\mathrm{Y},\mathrm{Y}')\eta(x)+\frac{\partial\mathrm{F}}{\partial y'}(x,\mathrm{Y},\mathrm{Y}')\eta'(x)\,dx$
+    \end{center}
+    integrating the second term above by parts, we get
+    \begin{center}
+        $\displaystyle \int_{a}^{b}\frac{\partial\mathrm{F}}{\partial y'}\eta'(x)\,dx=\Big[\frac{\partial\mathrm{F}}{\partial y'}\eta(x)\Big]_{a}^{b}-\int_{a}^{b}\frac{d}{dx}\Big(\frac{\partial\mathrm{F}}{\partial y'}\Big)\eta(x)\,dx$.
+    \end{center}
+    the first term on the right hand side vanishes because $\eta(a)=\eta(b)=0$ and by substituting the second term we get 
+    \begin{center}
+        $\displaystyle \int_{a}^{b}\Big(\frac{\partial\mathrm{F}}{\partial y}-\frac{d}{dx}\frac{\partial\mathrm{F}}{\partial y'}\Big)\eta(x)\,dx=0$
+    \end{center}
+    the equation above holds for any $\eta(x)\in\mathrm{C}^2[a,b]$ satisfying $\eta(a)=\eta(b)=0$, so the fundamental lemma of calculus of variations tells us that $\mathrm{Y}(x)$ satisfies
+    \begin{center}
+        $\displaystyle \frac{\partial}{\partial x}\Big(\frac{\partial \mathrm{L}}{\partial y'}\Big)-\frac{\partial \mathrm{L}}{\partial y}=0$
+    \end{center}
 \end{proof}
 \begin{remark}
 	$Y$ satisfying the Euler-Lagrange equation is a necessary, but not sufficient, condition for $J(Y)$ to be an extremum. In other words, a function $Y(x)$ may satisfy the Euler-Lagrange equation even when $J(Y)$ is not an extremum.

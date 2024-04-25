@@ -989,12 +989,48 @@ According to the Brunn-Minkowski theorem, the area of the added figure is greate
 
     Without loss of generality, assume $\mathrm{V}_{n}(\mathrm{K}_{0})=\mathrm{V}_{n}(\mathrm{K}_{1})=1$. This is allowed becuase the general inequality follows from this special case. Indeed, for $\mathrm{K}_{0},\mathrm{K}_{1}\in\mathscr{K}^{n}$ being $n$-dimensional with arbitrar volume and $\lambda\in[0,1]$ consider
     \begin{center}
-        $\overline{\mathrm{K}_{i}}:=\frac{\mathrm{K}_{i}}{\mathrm{V}_{n}(\mathrm{K}_{i})^{\frac{1}{n}}}$ und 
+        $\displaystyle \overline{\mathrm{K}_{i}}:=\frac{\mathrm{K}_{i}}{\mathrm{V}_{n}(\mathrm{K}_{i})^{\frac{1}{n}}}$ und $\displaystyle \overline{\lambda}:=\frac{\lambda\mathrm{V}_{n}(\mathrm{K}_{1})^{1/n}}{(1-\lambda)\mathrm{V}_{n}(\mathrm{K}_{0})^\{1/n\}+\lambda\mathrm{V}_{n}(\mathrm{K}_{1})^{1/n}}\in[0,1]$.
+    \end{center}
+    Then we get
+    \begin{center}
+        $\displaystyle \mathrm{V}_{n}((1-\overline{\lambda})\overline{\mathrm{K}_{0}}+\overline{\lambda}\overline{\mathrm{K}_{1}})^{\frac{1}{n}}=\mathrm{V}_{n}\Big(\frac{(1-\lambda)\mathrm{K}_{0}+\lambda\mathrm{V}_{n}(\mathrm{K}_{1})^{1/n}\overline{\mathrm{K}_{0}}-\lambda\mathrm{V}_{n}(\mathrm{K}_{1})^{1/n}\overline{\mathrm{K}_{0}}+\lambda\mathrm{K}_{1}}{(1-\lambda)\mathrm{V}_{n}(\mathrm{K}_{0})^{1/n}+\lambda\mathrm{V}_{n}(\mathrm{K}_{1})^{1/n}}\Big)^{1/n}$
+
+        $\displaystyle =\frac{1}{(1-\lambda)\mathrm{V}_{n}(\mathrm{K}_{0}+\lambda\mathrm{V}_{n}(\mathrm{K}_{1})^{1/n}}\mathrm{V}_{n}((1-\lambda)\mathrm{K}_{0}+\lambda\mathrm{K}_{1})^{\frac{1}{n}}$.
+    \end{center}
+    In addition, we also have (because the inequality is already proven for $\mathrm{V}_{n}(\overline{\mathrm{K}_{i}})=1$)
+    \begin{center}
+        $\displaystyle \mathrm{V}_{n}((1-\overline{\lambda})\overline{\mathrm{K}_{0}}+\overline{\lambda}\overline{\mathrm{K}_{1}})^{\frac{1}{n}}\geq(1-\overline{\lambda})\mathrm{V}_{n}(\overline{\mathrm{K}_{0}})^{\frac{1}{n}}+\overline{\lambda}\mathrm{V}_{n}(\mathrm{K}_{1})^{\frac{1}{n}}=1$.
+    \end{center}
+    This implies
+    \begin{center}
+        $\displaystyle \frac{1}{(1-\lambda)\mathrm{V}_{n}(\mathrm{K}_{0})^{1/n}+\lambda\mathrm{V}_{n}(\mathrm{K}_{1})^{1/n}}\mathrm{V}_{n}((1-\lambda)\mathrm{K}_{0}+\lambda\mathrm{K}_{1})^{\frac{1}{n}}\geq1$.
+    \end{center}
+    Thus, the inequality in Brunn-Minkowski Theorem is proven.
+
+    Therefore let $\mathrm{V}_{n}(\mathrm{K}_{0})=\mathrm{V}_{n}(\mathrm{K}_{1})=1$. Choose $u\in\mathbb{S}^{n}$ and $\lambda\in[0,1]$. We now introduce the following notations to shorten the computations. We set $\mathrm{K}_{\lambda}:=(1-\lambda)\mathrm{K}_{0}+\lambda\mathrm{K}_{1}$ and $\beta_{\lambda}:=h(\mathrm{K}_{\lambda},u)$, and $\alpha_{\lambda}:=-h(\mathrm{K}_{\lambda},-u)$. Furthermore, for $\zeta\in(\alpha_{i},\beta_{i})$\;$i=0,1$ we set the half space $\mathrm{H}^{-}(\zeta):=\{x\in\mathbb{R}^{n};\langle x,u\rangle\leq\zeta\}$ and the hyperplane $\mathrm{H}(\zeta):=\{x\in\mathbb{R}^{n};\langle x,u\rangle=h(\mathrm{K},u)\}$, as well as the volume $v_{i}:=\mathrm{V}_{n-1}(\mathrm{K}_{i}\cap\mathrm{H}(\zeta))$.
+
+    Let us define for every $\zeta\in[\alpha_{i}\beta_{i}]$
+    \begin{center}
+        $\displaystyle w{i}(\zeta):=\int_{\alpha_{i}}^{\zeta}v_{i}(t)\,dt$.
+    \end{center}
+    We know that the support functions $h$ and $\mathrm{V}_{n}$ are continuous. Hence, $\mathrm{V}_{n}(\mathrm{K}_{i}\cap\mathrm{H}^{-}(\zeta))$ is also continous in $\zeta$ and we can apply the Fundamental Theorem of Calculus on $w_{i}$. It follows that $w_i$ is differentiable and it holds that $w'_{i}(\zeta)=v_{i}>0$ (because $\dim\mathrm{K}_{i}=n$). This implies that $w_{i}$ is strictly monotonically increasing and is therefore a bijection on its image $(0,1)$. For $i=0,1$ define $z_{i}$ as the inverse function of $w_{i}$. Intuitively, this means that for a volume $\tau\in(0,1)$ with $\mathrm{V}_{n}(\mathrm{K}_{i}\cap\mathrm{H}^{-}(z_{i}(\tau)))=\tau$, the function $z_{i}$ maps $\tau$ to the ``height'' of $\mathrm{H}$ (figure).
+
+    Consider $z_{\lambda}(\tau):=(1-\lambda)z_{0}+\lambda z_{1}$ for $\lambda\in(0,1)$, $i=0,1$, and $\tau\in(0,1)$. Let $k_i(\tau):=\mathrm{K}_{i}\cap\mathrm{H}(z_i(\tau))$, then we have
+    \begin{center}
+        $\displaystyle (1-\lambda)k_{0}(\tau)+\lambda k_{1}(\tau)\subseteq\mathrm{K}_{\lambda}\cap\mathrm{H}(z_{\lambda}(\tau))\;\forall\lambda,\tau\in(0,1)$
+    \end{center}
+    Now, we can prove the inequality in Brunn-Minkowski Theorem by induction. As mentioned before, the case $n=1$ holds trivially. For the iteration from $n-1$ to $n$, we can compute
+    \begin{center}
+        $\displaystyle \mathrm{V}_{n}(\mathrm{K}_{\lambda})\overset{Fubini}{=}\int_{\alpha_{\lambda}}^{\beta_{\lambda}}\mathrm{V}_{n-1}(\mathrm{K}_{\lambda}\cap\mathrm{H}(\zeta))\,d\zeta$
+
+        $\displaystyle \overset{\zeta=z_{\lambda}(\tau)}{=}\int_{0}^{1}\mathrm{V}_{n-1}(\mathrm{K}_{\lambda}\cap\mathrm{H}(z_{\lambda}(\tau)))\cdot z'_{\lambda}(\tau)\,d\tau$
+
+        $\displaystyle \overset{\zeta=z_{\lambda}(\tau)}{\geq}\int_{0}^{1}\mathrm{V}_{n-1}((1-\lambda)k_{0}(\tau)+\lambda k_{1}(\tau))\cdot z'_{\lambda}(\tau)\,d\tau$
     \end{center}
 \end{proof}
     
 \section{3-Dimensional Case ($\mathbb{R}^3$)}
-\subsection{Proof of 3-Dimensional Case} 
+\subsection{Proof of 3-Dimensional Case}  
 \section{Proof of the Isoperimetric Inequality in n-Dimension}
 \chapter{Manifolds}
 

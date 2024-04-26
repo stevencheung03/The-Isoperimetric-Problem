@@ -81,6 +81,13 @@ Rolf Schneider.
 \bibitem{osserman1978isoperimetric}
 Robert Osserman.
 \newblock The isoperimetric inequality.
-\newblock (6), 1978.
+\newblock {\em Bulletin of the American Mathematical Society},
+  84(6):1182--1238, 1978.
+
+\bibitem{gardner2002brunn}
+Richard Gardner.
+\newblock The brunn-minkowski inequality.
+\newblock {\em Bulletin of the American mathematical society}, 39(3):355--405,
+  2002.
 
 \end{thebibliography}

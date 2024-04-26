@@ -1011,7 +1011,7 @@ According to the Brunn-Minkowski theorem, the area of the added figure is greate
 
     Let us define for every $\zeta\in[\alpha_{i}\beta_{i}]$
     \begin{center}
-        $\displaystyle w{i}(\zeta):=\int_{\alpha_{i}}^{\zeta}v_{i}(t)\,dt$.
+        $\displaystyle w_{i}(\zeta):=\int_{\alpha_{i}}^{\zeta}v_{i}(t)\,dt$.
     \end{center}
     We know that the support functions $h$ and $\mathrm{V}_{n}$ are continuous. Hence, $\mathrm{V}_{n}(\mathrm{K}_{i}\cap\mathrm{H}^{-}(\zeta))$ is also continous in $\zeta$ and we can apply the Fundamental Theorem of Calculus on $w_{i}$. It follows that $w_i$ is differentiable and it holds that $w'_{i}(\zeta)=v_{i}>0$ (because $\dim\mathrm{K}_{i}=n$). This implies that $w_{i}$ is strictly monotonically increasing and is therefore a bijection on its image $(0,1)$. For $i=0,1$ define $z_{i}$ as the inverse function of $w_{i}$. Intuitively, this means that for a volume $\tau\in(0,1)$ with $\mathrm{V}_{n}(\mathrm{K}_{i}\cap\mathrm{H}^{-}(z_{i}(\tau)))=\tau$, the function $z_{i}$ maps $\tau$ to the ``height'' of $\mathrm{H}$ (figure).
 
@@ -1026,9 +1026,76 @@ According to the Brunn-Minkowski theorem, the area of the added figure is greate
         $\displaystyle \overset{\zeta=z_{\lambda}(\tau)}{=}\int_{0}^{1}\mathrm{V}_{n-1}(\mathrm{K}_{\lambda}\cap\mathrm{H}(z_{\lambda}(\tau)))\cdot z'_{\lambda}(\tau)\,d\tau$
 
         $\displaystyle \overset{\zeta=z_{\lambda}(\tau)}{\geq}\int_{0}^{1}\mathrm{V}_{n-1}((1-\lambda)k_{0}(\tau)+\lambda k_{1}(\tau))\cdot z'_{\lambda}(\tau)\,d\tau$
+
+        $\displaystyle \begin{aligned} & \geq \int_0^1[(1-\lambda) \underbrace{\mathrm{V}{n-1}\left(k_0(\tau)\right)^{\frac{1}{n-1}}}_{=\nu_0\left(z_0(\tau)\right)^{\frac{1}{n-1}}}+\lambda \underbrace{\mathrm{V}_{n-1}\left(k_1(\tau)\right)^{\frac{1}{n-1}}}_{=\nu_1\left(z_1(\tau)\right)^{\frac{1}{n-1}}}]^{n-1} \cdot\left(\frac{1-\lambda}{\nu_0\left(z_0(\tau)\right)}+\frac{\lambda}{\nu_1\left(z_1(\tau)\right)}\right) d \tau \\ & =\int_0^1\left((1-\lambda) \nu_0\left(z_0(\tau)\right)^{\frac{1}{n-1}}+\lambda \nu_1\left(z_1(\tau)\right)^{\left.\frac{1}{n-1}\right)}\right)^{n-1} \cdot\left(\frac{1-\lambda}{\nu_0\left(z_0(\tau)\right)}+\frac{\lambda}{\nu_1\left(z_1(\tau)\right)}\right) d \tau,\end{aligned}$
     \end{center}
+    where we used in the third line the Inverse Function Theorem, which implies
+    \begin{center}
+        $\displaystyle z'_{i}(\tau)=\frac{1}{w'_{i}(\tau)}=\frac{1}{v_{i}(\tau)}$,
+    \end{center}
+    and the claim for $n-1$.
+
+    To simplify the notation, define $\mathit{p}:=\frac{1}{n-1}$ and $v_{i}=v_{i}(z_{i}(\tau))$. The concavity of log implies
+    \begin{center}
+        $\displaystyle \log\Big([(1-\lambda)v^{\mathit{p}}_{0}+\lambda v^{\mathit{p}}_{1}]^{\frac{`}{\mathit{p}}}\cdot\Big(\frac{1-\lambda}{v_{0}}+\frac{\lambda}{v_{1}}\Big)\Big)=\frac{1}{\mathit{p}}\log[(1-\lambda)v^{\mathit{p}}_{0}+\lambda v^{\mathit{p}}_{1}]+\log\Big(\frac{1-\lambda}{v_{0}}+\frac{\lambda}{v_{1}}\Big)$
+
+        $\geq\frac{1}{\mathit{p}}[\mathit{p}(1-\lambda)\log{v_{0}}+\mathit{p}\lambda\log{v_{1}}]-[(1-\lambda)\log{v_{0}}+\lambda\log{v_{1}}]=0$.
+    \end{center}
+    After applying exp, we see that
+    \begin{center}
+        $\displaystyle \Big((1-\lambda)v_{0}(z_{0}(\tau))^{\frac{1}{n-1}}+\lambda v_{1}(z_{1}(\tau))^{\frac{1}{n-1}}\Big)^{n-1}\cdot\Big(\frac{1-\lambda}{v_{0}(z_{0}(\tau))}+\frac{\lambda}{v_{1}(z_{1}(\tau))}\Big)\geq1$.
+    \end{center}
+    This implies
+    \begin{center}
+        $\displaystyle \int_{0}^{1}\Big((1-\lambda)v_{0}(z_{0}(\tau))^{\frac{1}{n-1}}+\lambda v_{1}(z_{1}(\tau))^{\frac{1}{n-1}}\Big)^{n-1}\cdot\Big(\frac{1-\lambda}{v_{0}(z_{0}(\tau))}+\frac{\lambda}{v_{1}(z_{1}(\tau))}\Big)\,d\tau\geq1$
+    \end{center}
+    on $(0,1)$. Hence, the inequality
+    \begin{center}
+        $\displaystyle \mathrm{V}_{n}((1-\lambda)\mathrm{K}_{0}+\lambda\mathrm{K}_{1})^{\frac{1}{n}}=\mathrm{V}_{n}(\mathrm{K}_{\lambda})^{\frac{1}{n}}\geq(1-\lambda)\mathrm{V}_{n}(\mathrm{K}_{0})^{\frac{1}{n}}+\lambda\mathrm{V}_{n}(\mathrm{K}_{1})^{\frac{1}{n}}$.
+    \end{center}
+    is proven. Now, it only remains to show that he equality implies that $\mathrm{K}_{1}$ and $\mathrm{K}_{2}$ are homothetic. Suppose for a $\lambda\in(0,1)$ that equality holds.
+
+    This implies $\mathrm{K}_{\lambda}\cap\mathrm{H}(z_{\lambda}(\tau))=(1-\lambda)k_{0}(\tau)+\lambda k_{1}(\tau)$. Thus, we have $k_{1}(\tau)=k_{0}(\tau)$ and therefore also $v_{1}(z_{1}(\tau))=v_{0}(z_{0}(\tau))$. This implies $z'_{1}(\tau)=z'_{0}(\tau)$, and hence, $z_{1}(\tau)-z_{0}(\tau)$ is constant.
+
+    Without loss of generality, assume that $\int_{\mathrm{K}_i}y\,dy=0$, for $i=0,1$ (otherwise shift the sets).
+
+    Then we see that $\int_{\mathrm{K}_i}\langle y,u\rangle\,dy=\sum_{i=1}^{n}u_{i}\int_{\mathrm{K}_i}y\,dy=0$. This implies
+    \begin{center}
+        $\displaystyle 0=\int_{\mathrm{K}_i}\langle y,u\rangle\,dy=\int_{\alpha_{i}}^{\beta_{i}}\int_{\mathrm{K}\cap\mathrm{H}(\zeta)}\underbrace{\langle u,z\rangle}_{=\zeta}\,dz\,d\zeta$
+
+        $\displaystyle =\int_{\alpha_{i}}^{\beta_{i}}\mathrm{V}_{n-1}(\mathrm{K}_{i}\cap\mathrm{H}(\zeta))\zeta\,d\zeta$
+
+        $\displaystyle =\int_{0}^{1}\mathrm{V}_{n-1}(\mathrm{K}_{i}\cap\mathrm{H}(z_{i}(\tau)))z_{\tau}\dot{z}_{i}(\tau)\,d\tau$
+
+        $\displaystyle =\int_{0}^{1}v_{i}(z_{i}(\tau))z_{i}(\tau)\frac{1}{v_{i}(z_{i}(\tau))}\,d\tau=\int_{0}^{1}z_{i}(\tau)\,d\tau$,
+    \end{center}
+    by using $\mathrm{K_{i}=\bigcup_{\zeta}\mathrm{K}_{i}\cap\mathrm{H}(\zeta)}$ and Fubini's Theorem.
+
+    Now, we konw that $\int_{0}^{1}z_{0}(\tau)-z_{1}(\tau)\,d\tau=0$, and $z_{0}=z_{1}$ on $(0,1)$. Therefore, we also know $w_{1}=w_{0}$ and $v_{1}=v_{0}$. Furthermore, using
+    \begin{center}
+        $\int_{\alpha_{1}}^{\beta_{1}}v_{1}(\tau)\,dt=w_{1}=w_{0}=\int_{\alpha_{0}}^{\beta_{0}}v_{0}(t)\,dt$,
+    \end{center}
+    we can conclude that $\alpha_{0}=\alpha_{1}$ and $\beta_{0}=\alpha_{1}$. This implies $h(\mathrm{K}_{0},u)=h(\mathrm{K}_{1},u)$ and, with Remark 8, we get that $\mathrm{K}_{0}=\mathrm{K}_{1}$. In particular $\mathrm{K}_{0}$ and $\mathrm{K}_{1}$ are homothetic.
 \end{proof}
-    
+
+\begin{remark}
+    The Brunn-Minkowski Inequality can also be proven for domains with differentiable boundary. Using this, it is also possible to prove the isoperimetric inequality. In addition, there is also a Brunn-Minkowski inequality for general domains. More information can be found in~\cite{gardner2002brunn}.
+\end{remark}
+
+\begin{corollary}
+    Let $\mathrm{K}_{0}, \mathrm{K}_{1}\in\mathscr{K}_{n}$ and $\mathrm{I}=[0,1]$. Then the function
+    \begin{center}
+        $f:\mathrm{I}\to\mathbb{R}\;\lambda\to\mathrm{V}_{n}((1-\lambda)\mathrm{K}_{0}+\lambda\mathrm{K}_{1})^{1/n}$
+    \end{center}
+    is concave. The function $f$ is linear if and only if $\mathrm{K}_{0}$ and $\mathrm{K}_{0}$ are contained in parallel hyperplanes or are homothetic.
+\end{corollary}
+
+The next lemma follows by using basic tools of analysis. Hence, we will not prove it here, but we will use it in the proof of the isoperimetric inequality.
+
+\begin{lemma}
+    Let $f:\mathrm{I}\to\mathbb{R}$ be a smooth, convex functions such that $f'(0)=f(1)-f(0)$ holds. Then $f$ is linear.
+\end{lemma}
+
 \section{3-Dimensional Case ($\mathbb{R}^3$)}
 \subsection{Proof of 3-Dimensional Case}  
 \section{Proof of the Isoperimetric Inequality in n-Dimension}

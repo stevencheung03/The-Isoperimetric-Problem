@@ -1096,8 +1096,19 @@ The next lemma follows by using basic tools of analysis. Hence, we will not prov
     Let $f:\mathrm{I}\to\mathbb{R}$ be a smooth, convex functions such that $f'(0)=f(1)-f(0)$ holds. Then $f$ is linear.
 \end{lemma}
 
-\section{3-Dimensional Case ($\mathbb{R}^3$)}
-\subsection{Proof of 3-Dimensional Case}  
+\section{3-Dimensional Case ($\mathbb{R}^{3}$)}
+\begin{remark}
+    For dimension two the isoperimetric inequality in theorem 18 can be written as
+     \begin{center}
+        $\displaystyle \mathrm{U}(\mathrm{K})\geq 2\mathrm{V}_{2}(\mathrm{B}_{2})^{1/2}\mathrm{V}_{2}(\mathrm{K})^{1/2}=2\sqrt{\pi}\mathrm{A}[\mathrm{K}]^{1/2}$,
+    \end{center}
+    where $\mathrm{A}$ is the area and $\mathrm{U}$ is the perimeter of $\mathrm{K}$. By squaring this, we get
+     \begin{center}
+        $4\pi\cdot\mathrm{A}[\mathrm{G}]\leq\mathrm{U}[\mathrm{G}]^{2}$.
+    \end{center}
+\end{remark}
+\subsection{Proof of 3-Dimensional Case}
+
 \section{Proof of the Isoperimetric Inequality in n-Dimension}
 Before proving the isoperimetric inequality using methods of convex geometry. Therefore, we need to adapt the assumptions of our theorem. Since we have introduced new language describing convex geometry, it is better that we also reintroduce the isoperimetric theorem in terms of our new language. Hence:
 \begin{theorem} (Isoperimetric Inequality)
@@ -1110,8 +1121,35 @@ Before proving the isoperimetric inequality using methods of convex geometry. Th
 \begin{proof}
     Let $\mathrm{K}\in\mathscr{K}_{0}^{n}$. We have $\mathrm{V}_{n}(\mathrm{K})\neq0$. Consider $\epsilon:=\frac{t}{1-t}$. We compute
     \begin{center}
-        $\mathrm{S}(\mathrm{K})=$
+        $\displaystyle \mathrm{S}(\mathrm{K})=\underset{t\downarrow0}{\lim}\frac{\mathrm{V}{n}(\mathrm{K}+\frac{t}{1-t}\mathrm{B}^{n})-\mathrm{V}{n}(\mathrm{K})}{(\frac{t}{1-t})}$
+
+        $\displaystyle =\underset{t\downarrow0}{\lim}\frac{\mathrm{V}{n}((1-t)\mathrm{K}+t\mathrm{B}^{n})-(1-t)^{n}\mathrm{V}{n}(\mathrm{K})}{(1-t)^{n-1}t}$
+
+        $\displaystyle =\underset{t\downarrow0}{\lim}\Big[\frac{\mathrm{V}_{n}((1-t)\mathrm{K}+t\mathrm{B}^{n})-\mathrm{V}_{n}(\mathrm{K})}{t}+\frac{(1-(1-t)^{n})\mathrm{V}_{n}(\mathrm{K})}{t}\Big]$
+
+        $\displaystyle =\underset{t\downarrow0}{\lim}\Big[\frac{\mathrm{V}_{n}((1-t)\mathrm{K}+t\mathrm{B}^{n})-\mathrm{V}_{n}(\mathrm{K})}{t}\Big]+n\mathrm{V}_{n}(\mathrm{K})$.
     \end{center}
+    In the third line, we used that the limits are the same. In the last line, we used the Theorem of l'Hopital. This implies
+    \begin{center}
+        $\displaystyle \mathrm{S}(\mathrm{K})-n\mathrm{V}_{n}(\mathrm{K})=\underset{t\downarrow0}{\lim}\frac{\mathrm{V}_{n}((1-t)\mathrm{K}+t\mathrm{B}^{n})-\mathrm{V}_{n}(\mathrm{K})}{t}\cdot(\ast)$
+    \end{center}
+    Now consider the function $f(t):=\mathrm{V}_{n}((1-t)\mathrm{K}+t\mathrm{B}^{n})^{1/n}$ and observe
+    \begin{center}
+        $f'(t)=\frac{1}{n}\mathrm{V}_{n}((1-t)\mathrm{K}+t\mathrm{B}^{n})^{1/{n-1}}\cdot\frac{d}{dt}\mathrm{V}_{n}((1-t)\mathrm{K}+t\mathrm{B}^{n})$.
+    \end{center}
+    This implies $f'(0)\overset{(\ast)}{=}\frac{1}{n}\mathrm{V}_{n}(\mathrm{K})^{1/{n-1}}(\mathrm{S}(\mathrm{K})-n\mathrm{V}_{n}(\mathrm{K}))$. By using corollary 1, it follows that $f$ is concave on [0,1]. hence, we know that $f'(0)\geq f(1)-f(0)$. This implies the inequality
+    \begin{center}
+        $\displaystyle \frac{1}{n}\mathrm{V}_{n}(\mathrm{K})^{1/{n-1}}\mathrm{S}(\mathrm{K})-\mathrm{V}_{n}(\mathrm{K})^{1/n}=\frac{1}{n}\mathrm{V}_{n}(\mathrm{K})^{1/{n-1}}(\mathrm{S}(\mathrm{K})-n\mathrm{V}_{n}(\mathrm{K}))\geq\mathrm{V}_{n}(\mathrm{B}^{n})^{1/n}-\mathrm{V}_{n}(\mathrm{K})^{1/n}$.
+    \end{center}
+    Therefore, the isoperimetric inequality
+    \begin{center}
+        $\displaystyle \mathrm{S}(\mathrm{K})\geq n\mathrm{V}_{n}(\mathrm{B}_{n})^{1/n}\mathrm{V}_{n}(\mathrm{K})^{1-1/n}$
+    \end{center}
+    follows. If $\mathrm{K}$ is a ball, equality follows by using remark 12.
+
+    Equality implies $f'(0)=f(1)-f(0)$. By using the concavity of $f$ and lemma 17, it follows that $f$ is linear. From corollary 1, we know that $\mathrm{K}$ and $\mathrm{B}^{n}$ are homothetic.
+
+    Hence, $\mathrm{K}$ is a ball.
 \end{proof}
 
 \chapter{Manifolds}

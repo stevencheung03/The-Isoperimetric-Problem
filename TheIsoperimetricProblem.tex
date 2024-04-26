@@ -397,6 +397,87 @@ The seven proofs were done by Jakob Steiner, Karl Weierstrass, Erhard Schmidt, V
 \subsection{Jakob Steiner}
 Firstly, we will look at this proposition. Isosceles triangle has the smallest leg-sum compared to trianges of the same baselien and either height or area, and vice-versa. Given an uneqal triangle, we want to maximise area on a triangle with the same baseline. We make the other two sides, not the baseline, equal. The result is a triangle witha smaller leg-sum, and therefor a smaller perimeter, containigng the same area. Now we can expand on the previous principle to demonstrate that any parallel trapezoid with unequal angles on one baseline may be transformed into another of the same area and baselines; Moreover, the new parallel trapezoid will have symmetry along the axis formed by the baseline midpoints and a smalelr sum of side lengths.
 
+\begin{lemma} 
+    Among all the triangles with the same base, the isosceles triangle covers the greatest area.
+\end{lemma}
+\begin{figure}[h]
+    \centering
+    \begin{minipage}{0.5\textwidth}
+        \centering
+                \includegraphics[width=65mm]{isofig5.png} % first figure itself
+                \caption{Figure I}
+    \end{minipage}\hfill
+        \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=65mm]{isofig6.png} % second figure itself
+        \caption{figure II}
+    \end{minipage}
+\end{figure}
+\begin{proof} 
+    Let us consider the triangle ABC with base AB=b, looking at the figure above then our statement is logically equivalent to minimising AC+CB, since the area is just the product of the base and the height, we can slide C along the line $l_1$ this will preserve the area but alter the length of AC+CB, now to prove that the triangle shown in figure II minimises AC+CB we will use some inpiration from physics, lets consider a ray of light travelling from A to the line L, reflecting and then travelling back to B, now from the laws of attraction, light takes the shortest path, and the laws of reflection tells us that the angle of incident is equal to the angle of reflection with respect to the normal, in other words, for our scenario this means that AC=CB since the angles are the same. 
+\end{proof}
+
+\begin{lemma}
+    For a given perimeter the equilateral triangle has the biggest area of all the triangles. 
+\end{lemma}
+\begin{proof} 
+    Well from our previous diagram we can treat AC as the base and follow the same logic to arrive at the conclusion that CB=AB, similarly, treat CB as the base and follow the exact steps to arrive at the conclusion AC=AB, so from all of this we can conclude that AB=BC=AC, and so the equilateral triangle maximises the area.
+\end{proof}
+
+\begin{theorem}
+    Among regular polygons with fixed perimeter, an increase in the number of sides results in a larger area.    
+\end{theorem} 
+
+\begin{minipage}{\linewidth}
+    \centering
+    \includegraphics[width=7cm]{isofig10.png}
+    \captionof{figure}{Figure III}
+\end{minipage}
+\begin{proof} 
+    Let $P$ be the perimeter of of this n sided polygon In addition let $h$ be the apothem, which is the perpendicular which goes from the centre to a side. Then the area of the polygon is A where,  $A=\frac{1}{2} hP$. By considering the diagram above we can see that as n increases the length of the sides as well as the angle $\alpha$ decreases which means h increases. Well this means that the area must increase as $P$ is fixed and $h$ is increasing.
+\end{proof}
+\begin{theorem}
+    If L is the perimeter and A is the area of any regular 2n-sided polygon, then 
+    \begin{center}
+        $L^{2}\geq8n*A*\tan{(\frac{\pi}{2n})}$
+    \end{center}
+\end{theorem}
+
+\begin{figure} [h]
+    \centering
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{isofig8.png} % first figure itself
+        \caption{Figure V}
+    \end{minipage}\hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{isofig9.png} % second figure itself
+        \caption{figure VI}
+    \end{minipage}
+\end{figure}
+
+\begin{proof}
+        Since its a regular polygon we could consider one of the 2n triangles its made off as shown in the figure above. 
+    \begin{center}
+        $\displaystyle \tan(\alpha)=\frac{(\frac{L}{4n})}{h}$
+    \end{center}
+        Rearranging the formula to make h the subject as well as using the fact that $\alpha=\frac{2\pi}{2n} \frac{1}{2}=\frac{\pi}{2n}$, we get 
+    \begin{center}
+        $\displaystyle h=\frac{L}{4n} \frac{1}{\tan(\frac{\pi}{2n})}$
+    \end{center}
+    Now for the area of the above triangle we get $\frac{1}{2}h*\frac{L}{2n}$
+        Substituting h, we obtain
+    \begin{center}
+        $\displaystyle \frac{L^{2}}{16n^{2}} \frac{1}{\tan(\frac{\pi}{2n})}$
+    \end{center}
+        Finally, we consider the area of the whole polygon which is just 2n times of the above expression. So we have 
+    \begin{center}
+            $\displaystyle A=\frac{L^{2}}{8n} \frac{1}{\tan(\frac{\pi}{2n})}$
+    \end{center}
+        Since this is the optimal area we can be more precise and by rearranging the express we can conclude our desired expression which was $L^{2} \ge 8nA\tan(\frac{\pi}{2n})$
+\end{proof}
+
 \subsection{Karl Weierstrass}
 Relying on calculus of variation, this proof defines area and length in terms of integrals. However Karl Weierstrass's calculus of variation is very strong, and that the isoperimetric problem pops out of it. Calculus of variations is concerned with the problem of extremising "functionals", finding extrema of functions of \textit{infinite} variables. Functionals can be looked at like "functions of functions". The result is two Euler-Lagrange equations which when solved, provide an equation in the form of a circle and the length of the radius which optimizes the area given the length of the perimeter. The lagrangian, denoted by $L(x,y,y')$ normally opted as $L=T-V$, the kinetic energy minus the potential energy. Extremal curves represent solutions to the isoperimetric problem, providing the shapes that maximize the enclosed area under a fixed perimeter. Extremal curves are smooth and regular, ensuring the validity of the Euler-Lagrange equation and the associated boundary conditions. We shall not give proofs to these theorem and lemmas.
 \begin{theorem}
@@ -513,87 +594,6 @@ The ratio of area to perimeter, A/P, is examined to find the set which produces 
 
 \subsection{Gary Lawlor}
 A new proof of the planar isoperimetric property is presented. The method is a slicing and covering argument, and calls for strategically dividing the circle as well as another, arbitrary region of equal perimeter, into tiny pieces. Each pieces from non-circle region contains the same length of the region’s boundary and has less area than the piece of the circle containing the same length of the circle’s boundary. An advantage of this proof is, as it is comparative, it does not require a proof of existence of an optimum solution.
-
-\begin{lemma} 
-    Among all the triangles with the same base, the isosceles triangle covers the greatest area.
-\end{lemma}
-\begin{figure}[h]
-	\centering
-	\begin{minipage}{0.5\textwidth}
-		\centering
-        		\includegraphics[width=65mm]{isofig5.png} % first figure itself
-        		\caption{Figure I}
-	\end{minipage}\hfill
-    	\begin{minipage}{0.5\textwidth}
-		\centering
-		\includegraphics[width=65mm]{isofig6.png} % second figure itself
-		\caption{figure II}
-	\end{minipage}
-\end{figure}
-\begin{proof} 
-    Let us consider the triangle ABC with base AB=b, looking at the figure above then our statement is logically equivalent to minimising AC+CB, since the area is just the product of the base and the height, we can slide C along the line $l_1$ this will preserve the area but alter the length of AC+CB, now to prove that the triangle shown in figure II minimises AC+CB we will use some inpiration from physics, lets consider a ray of light travelling from A to the line L, reflecting and then travelling back to B, now from the laws of attraction, light takes the shortest path, and the laws of reflection tells us that the angle of incident is equal to the angle of reflection with respect to the normal, in other words, for our scenario this means that AC=CB since the angles are the same. 
-\end{proof}
-
-\begin{lemma}
-    For a given perimeter the equilateral triangle has the biggest area of all the triangles. 
-\end{lemma}
-\begin{proof} 
-    Well from our previous diagram we can treat AC as the base and follow the same logic to arrive at the conclusion that CB=AB, similarly, treat CB as the base and follow the exact steps to arrive at the conclusion AC=AB, so from all of this we can conclude that AB=BC=AC, and so the equilateral triangle maximises the area.
-\end{proof}
-
-\begin{theorem}
-    Among regular polygons with fixed perimeter, an increase in the number of sides results in a larger area.    
-\end{theorem} 
-
-\begin{minipage}{\linewidth}
-    \centering
-    \includegraphics[width=7cm]{isofig10.png}
-    \captionof{figure}{Figure III}
-\end{minipage}
-\begin{proof} 
-    Let $P$ be the perimeter of of this n sided polygon In addition let $h$ be the apothem, which is the perpendicular which goes from the centre to a side. Then the area of the polygon is A where,  $A=\frac{1}{2} hP$. By considering the diagram above we can see that as n increases the length of the sides as well as the angle $\alpha$ decreases which means h increases. Well this means that the area must increase as $P$ is fixed and $h$ is increasing.
-\end{proof}
-\begin{theorem}
-	If L is the perimeter and A is the area of any regular 2n-sided polygon, then 
-	\begin{center}
-		$L^{2}\geq8n*A*\tan{(\frac{\pi}{2n})}$
-	\end{center}
-\end{theorem}
-
-\begin{figure} [h]
-    \centering
-    \begin{minipage}{0.5\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{isofig8.png} % first figure itself
-        \caption{Figure V}
-    \end{minipage}\hfill
-    \begin{minipage}{0.5\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{isofig9.png} % second figure itself
-        \caption{figure VI}
-    \end{minipage}
-\end{figure}
-
-\begin{proof}
-    	Since its a regular polygon we could consider one of the 2n triangles its made off as shown in the figure above. 
-	\begin{center}
-		$\displaystyle \tan(\alpha)=\frac{(\frac{L}{4n})}{h}$
-	\end{center}
-    	Rearranging the formula to make h the subject as well as using the fact that $\alpha=\frac{2\pi}{2n} \frac{1}{2}=\frac{\pi}{2n}$, we get 
-	\begin{center}
-		$\displaystyle h=\frac{L}{4n} \frac{1}{\tan(\frac{\pi}{2n})}$
-	\end{center}
-	Now for the area of the above triangle we get $\frac{1}{2}h*\frac{L}{2n}$
-    	Substituting h, we obtain
-	\begin{center}
-		$\displaystyle \frac{L^{2}}{16n^{2}} \frac{1}{\tan(\frac{\pi}{2n})}$
-	\end{center}
-    	Finally, we consider the area of the whole polygon which is just 2n times of the above expression. So we have 
-	\begin{center}
-    		$\displaystyle A=\frac{L^{2}}{8n} \frac{1}{\tan(\frac{\pi}{2n})}$
-	\end{center}
-    	Since this is the optimal area we can be more precise and by rearranging the express we can conclude our desired expression which was $L^{2} \ge 8nA\tan(\frac{\pi}{2n})$
-\end{proof}
 
 \section{Unpacking J.Steiner's proof}
 The proof that I will be unpacking and taking a closer look at will be from the book (reference the book here), and is credited by them to Jakob Sternier. Packed and concise proof from~\cite{gluck2012isoperimetric}. To reiterate, the German mathematician Peter Dirichlet (1805- 1859), remarked, Steiner had made an underlying assumption not explicitly addressed in his proof, namely that a solution existed (Nahin 59~\cite{nahin2021least}). A rather helpful computer visualisation, before we start the proof, to aid in the identification that indeed the circle is an answer, and how naturally a compressed circle (ellipse) has less area than a full and complete circle.
@@ -1099,6 +1099,21 @@ The next lemma follows by using basic tools of analysis. Hence, we will not prov
 \section{3-Dimensional Case ($\mathbb{R}^3$)}
 \subsection{Proof of 3-Dimensional Case}  
 \section{Proof of the Isoperimetric Inequality in n-Dimension}
+Before proving the isoperimetric inequality using methods of convex geometry. Therefore, we need to adapt the assumptions of our theorem. Since we have introduced new language describing convex geometry, it is better that we also reintroduce the isoperimetric theorem in terms of our new language. Hence:
+\begin{theorem} (Isoperimetric Inequality)
+    Let $\mathrm{K}\in\mathscr{K}_{0}^{n}$. Then
+    \begin{center}
+        $\displaystyle \mathrm{S}(\mathrm{K})\geq n\mathrm{V}_{n}(\mathrm{B}_{n})^{1/n}\mathrm{V}_{n}(\mathrm{K})^{1-1/n}$.
+    \end{center}
+    Equality holds if and only if $\mathrm{K}$ is a ball.
+\end{theorem}
+\begin{proof}
+    Let $\mathrm{K}\in\mathscr{K}_{0}^{n}$. We have $\mathrm{V}_{n}(\mathrm{K})\neq0$. Consider $\epsilon:=\frac{t}{1-t}$. We compute
+    \begin{center}
+        $\mathrm{S}(\mathrm{K})=$
+    \end{center}
+\end{proof}
+
 \chapter{Manifolds}
 
 \bibliography{The-Isoperimetric-Problem-References}

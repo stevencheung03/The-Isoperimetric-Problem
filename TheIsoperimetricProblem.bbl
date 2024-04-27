@@ -1,93 +1,78 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{xx}
 
-\bibitem{wiegert2010sagacity}
-Jennifer Wiegert.
-\newblock The sagacity of circles: a history of the isoperimetric problem.
-\newblock {\em Loci, July}, 2010.
+\harvarditem{Bulmer-Thomas}{1941}{ivor1941selections}
+Bulmer-Thomas, I.  \harvardyearleft 1941\harvardyearright , {\em Selections
+  illustrating the history of Greek mathematics}, Vol.~2, Harvard University
+  Press.
 
-\bibitem{ivor1941selections}
-Ivor Bulmer-Thomas.
-\newblock {\em Selections illustrating the history of Greek mathematics},
-  volume~2.
-\newblock Harvard University Press, 1941.
+\harvarditem{Chern}{1966}{chern1966curves}
+Chern, S.-s.  \harvardyearleft 1966\harvardyearright , {\em Curves and surfaces
+  in Euclidean space}.
 
-\bibitem{virgil1981aeneid}
-Virgil.
-\newblock {\em The Aeneid}.
-\newblock Trans. Robert Fitzgerald. New York: Random House, 1981.
+\harvarditem{Demjanenko}{2008}{demjanenko2008isoperimetric}
+Demjanenko, S.  \harvardyearleft 2008\harvardyearright , `The isoperimetric
+  inequality: A history of the problem, proofs and applications'.
 
-\bibitem{kline1985mathematics}
-Morris Kline.
-\newblock {\em Mathematics for the Nonmathematician}.
-\newblock Courier Corporation, 1985.
+\harvarditem{Evans et~al.}{1920}{evans1920histories}
+Evans, S. et~al.  \harvardyearleft 1920\harvardyearright , {\em Manmouth,
+  Geoffrey of. Histories of the Kings of Britain}, number 577, JM Dent \& sons,
+  Limited.
 
-\bibitem{demjanenko2008isoperimetric}
-S~Demjanenko.
-\newblock The isoperimetric inequality: A history of the problem, proofs and
-  applications, 2008.
+\harvarditem{Gardner}{2002}{gardner2002brunn}
+Gardner, R.  \harvardyearleft 2002\harvardyearright , `The brunn-minkowski
+  inequality', {\em Bulletin of the American mathematical society} {\bf
+  39}(3),~355--405.
 
-\bibitem{yardley1994justin}
-JC~Yardley and R~Develin.
-\newblock Justin, epitome of the philippic history of pompeius trogus,
-  translated by jc yardley, with introduction and explanatory notes by r.
-\newblock {\em Develin, Seattle}, 1994.
+\harvarditem{Gluck}{2012}{gluck2012isoperimetric}
+Gluck, H.  \harvardyearleft 2012\harvardyearright , `5. the isoperimetric
+  problem', {\em Math 501 - Differential Geometry} .
 
-\bibitem{evans1920histories}
-Sebastian Evans et~al.
-\newblock {\em Manmouth, Geoffrey of. Histories of the Kings of Britain}.
-\newblock Number 577. JM Dent \& sons, Limited, 1920.
+\harvarditem{Goldstein}{1980}{goldstein1980classical}
+Goldstein, H.  \harvardyearleft 1980\harvardyearright , `Classical mechanics
+  2nd ed', {\em Reading, Penn., Addison-Wesley} .
 
-\bibitem{nahin2021least}
-Paul~J Nahin.
-\newblock {\em When Least is Best: how mathematicians discovered many clever
-  ways to make things as small (or as large) as possible}, volume 114.
-\newblock Princeton University Press, 2021.
+\harvarditem{Heath}{2013}{heath2013history}
+Heath, T.~L.  \harvardyearleft 2013\harvardyearright , {\em A history of Greek
+  mathematics}, Vol.~1, Cambridge University Press.
 
-\bibitem{heath2013history}
-Thomas~Little Heath.
-\newblock {\em A history of Greek mathematics}, volume~1.
-\newblock Cambridge University Press, 2013.
+\harvarditem{Hilbert}{1985}{hilbert1985methods}
+Hilbert, D.  \harvardyearleft 1985\harvardyearright , {\em Methods of
+  mathematical physics}, CUP Archive.
 
-\bibitem{holman2022isoperimetric}
-Kimberly Holman.
-\newblock {\em Isoperimetric Properties of the Circle}.
-\newblock PhD thesis, Auburn University, 2022.
+\harvarditem{Holman}{2022}{holman2022isoperimetric}
+Holman, K.  \harvardyearleft 2022\harvardyearright , Isoperimetric Properties
+  of the Circle, PhD thesis, Auburn University.
 
-\bibitem{goldstein1980classical}
-Herbert Goldstein.
-\newblock Classical mechanics 2nd ed.
-\newblock {\em Reading, Penn., Addison-Wesley}, 1980.
+\harvarditem{Kline}{1985}{kline1985mathematics}
+Kline, M.  \harvardyearleft 1985\harvardyearright , {\em Mathematics for the
+  Nonmathematician}, Courier Corporation.
 
-\bibitem{hilbert1985methods}
-David Hilbert.
-\newblock {\em Methods of mathematical physics}.
-\newblock CUP Archive, 1985.
+\harvarditem{Nahin}{2021}{nahin2021least}
+Nahin, P.~J.  \harvardyearleft 2021\harvardyearright , {\em When Least is Best:
+  how mathematicians discovered many clever ways to make things as small (or as
+  large) as possible}, Vol. 114, Princeton University Press.
 
-\bibitem{chern1966curves}
-Shiing-shen Chern.
-\newblock {\em Curves and surfaces in Euclidean space}.
-\newblock 1966.
+\harvarditem{Osserman}{1978}{osserman1978isoperimetric}
+Osserman, R.  \harvardyearleft 1978\harvardyearright , `The isoperimetric
+  inequality', {\em Bulletin of the American Mathematical Society} {\bf
+  84}(6),~1182--1238.
 
-\bibitem{gluck2012isoperimetric}
-Herman Gluck.
-\newblock 5. the isoperimetric problem.
-\newblock {\em Math 501 - Differential Geometry}, 2012.
+\harvarditem{Schneider}{2014}{schneider2014convex}
+Schneider, R.  \harvardyearleft 2014\harvardyearright , {\em Convex bodies: the
+  Brunn--Minkowski theory}, number 151, Cambridge university press.
 
-\bibitem{schneider2014convex}
-Rolf Schneider.
-\newblock {\em Convex bodies: the Brunn--Minkowski theory}.
-\newblock Number 151. Cambridge university press, 2014.
+\harvarditem{Virgil}{1981}{virgil1981aeneid}
+Virgil  \harvardyearleft 1981\harvardyearright , {\em The Aeneid}, Trans.
+  Robert Fitzgerald. New York: Random House.
 
-\bibitem{osserman1978isoperimetric}
-Robert Osserman.
-\newblock The isoperimetric inequality.
-\newblock {\em Bulletin of the American Mathematical Society},
-  84(6):1182--1238, 1978.
+\harvarditem{Wiegert}{2010}{wiegert2010sagacity}
+Wiegert, J.  \harvardyearleft 2010\harvardyearright , `The sagacity of circles:
+  a history of the isoperimetric problem', {\em Loci, July} .
 
-\bibitem{gardner2002brunn}
-Richard Gardner.
-\newblock The brunn-minkowski inequality.
-\newblock {\em Bulletin of the American mathematical society}, 39(3):355--405,
-  2002.
+\harvarditem{Yardley \harvardand\ Develin}{1994}{yardley1994justin}
+Yardley, J. \harvardand\ Develin, R.  \harvardyearleft 1994\harvardyearright ,
+  `Justin, epitome of the philippic history of pompeius trogus, translated by
+  jc yardley, with introduction and explanatory notes by r', {\em Develin,
+  Seattle} .
 
 \end{thebibliography}

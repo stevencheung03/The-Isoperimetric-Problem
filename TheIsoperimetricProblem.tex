@@ -1,7 +1,6 @@
 \documentclass[a4paper]{book}
 \usepackage{extarrows}
-\usepackage{amsmath,amsthm}
-\usepackage{amsmath}
+\usepackage{amsmath,amsthm}\usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsfonts}
 \usepackage{answers}
@@ -19,15 +18,13 @@
 \usepackage{titlesec}
 \titleformat{\chapter}{}{}{0em}{\bf\huge}
 \usepackage{amsthm}
-\usepackage{cite}
 \usepackage[utf8]{inputenc}
 \usepackage[colorlinks,urlcolor=blue,citecolor=blue,linkcolor=blue]{hyperref}
 \usepackage{tikz}
 \usepackage{setspace}
 \usepackage{xspace}
-\usepackage{cite}
 \usepackage{parskip}
-\usepackage{natbib}
+\usepackage[sort,comma]{natbib}
 
 \newtheorem{theorem}{Theorem}%[section]
 \newtheorem{lemma}[theorem]{Lemma}%[section]
@@ -96,6 +93,7 @@
 \end{center}
 \end{titlepage}
 
+\bibliographystyle{agsm}
 \renewcommand{\bibname}{References}
 
 \tableofcontents
@@ -158,7 +156,7 @@ In general, we want the maximum area whose boundary must pertain a specific leng
 Isoperimeter, isos which is ancient Greek for equal and perimetron for perimeter. The isoperimetric perimetric problem, even though not properly formalized, was already thought about all throughout the history. 
 \newline
 \newline
-Book V of Pappus of Alexandria's Mathematical collections ~\cite{wiegert2010sagacity} began with a preface titled ``On the Sagacity of Bees'', rather than the history of mathematicians past or their accomplishments to follow. This was written near the end of the 3rd century $A.D.$. Observing, Pappus credited the bees with ``a certain geometrical forethought'' (Thomas 593~\cite{ivor1941selections}) for their nearly faultless hexagonal comb structure. He wrote
+Book V of Pappus of Alexandria's Mathematical collections~\citep{wiegert2010sagacity} began with a preface titled ``On the Sagacity of Bees'', rather than the history of mathematicians past or their accomplishments to follow. This was written near the end of the 3rd century $A.D.$. Observing, Pappus credited the bees with ``a certain geometrical forethought'' (Thomas 593~\citep{ivor1941selections}) for their nearly faultless hexagonal comb structure. He wrote
 \begin{center}
     \begin{quote}
         ``Bees know just this fact which is useful to them, that 
@@ -166,7 +164,7 @@ Book V of Pappus of Alexandria's Mathematical collections ~\cite{wiegert2010saga
         and will hold more honey for the same expenditure of 
         material in constructing each''
     \end{quote}
-    (Thomas 593~\cite{ivor1941selections})
+    (Thomas 593~\citep{ivor1941selections})
 \end{center}
 Beyond the efficiency of bees, Pappus prefaced, ``We'' he continued
 \begin{center}
@@ -176,7 +174,7 @@ Beyond the efficiency of bees, Pappus prefaced, ``We'' he continued
         perimeter, that which has the greater number of angles is always great 
         and the greates of them all is the circle having it's perimeter equal to them''
     \end{quote}
-    (Thomas 593~\cite{ivor1941selections})
+    (Thomas 593~\citep{ivor1941selections})
 \end{center}
 
 Pappus then started working on the isoperimetric problem, which included numerous smaller problems within it. The main objective of the problem is to determine which of the planes and figures with the same perimeter has the largest area amongst them.
@@ -192,14 +190,14 @@ The isoperimetric issue demonstrates ancient mathmaticians' perceptiveness and t
         There bought a space of ground, which Byrsa call'd,
         From the bull's hide they first inclos'd and wall'd.''
     \end{quote}
-    (Book I of Aeneid~\cite{virgil1981aeneid})
+    (Book I of Aeneid~\citep{virgil1981aeneid})
 \end{center}
 
-Virgil's version has it that Dido, daughter of the king of Tyre, fled home after her brother killed her husband. Dido ended up on the north coast of Africa, where she bargained to buy as much land as she could enclose with an oxhide. Thus, she cut the hide into thin strips, presumably met and solved enclosing the largest area with a given perimeter - the isoperimetric problem. Dido may have been clever enough and chose an area by the coast to exploit the shore as part of the perimeter. But this mostly spoils the purity of posed problem. Kline concludes~\cite{kline1985mathematics}. The Aeneid was written between $29$ and $19 B.C.$.
+Virgil's version has it that Dido, daughter of the king of Tyre, fled home after her brother killed her husband. Dido ended up on the north coast of Africa, where she bargained to buy as much land as she could enclose with an oxhide. Thus, she cut the hide into thin strips, presumably met and solved enclosing the largest area with a given perimeter - the isoperimetric problem. Dido may have been clever enough and chose an area by the coast to exploit the shore as part of the perimeter. But this mostly spoils the purity of posed problem. Kline concludes~\citep{kline1985mathematics}. The Aeneid was written between $29$ and $19 B.C.$.
 \begin{figure}[h]
     \begin{center}   
         \includegraphics[width=120mm]{dido_1}
-        \caption{Representations of areas bounded by common shapes of the same perimeter. The semicircle, answer to Dido's problem which contains the greatest area. (image and caption from~\cite{demjanenko2008isoperimetric})}
+        \caption{Representations of areas bounded by common shapes of the same perimeter. The semicircle, answer to Dido's problem which contains the greatest area. (image and caption from~\citep{demjanenko2008isoperimetric})}
     \end{center}
 \end{figure}
 \leavevmode
@@ -209,7 +207,7 @@ In the 3rd century $A.D.$, Roman historian Marcus Junianus Justinus compliled an
     \begin{quote}
         ``Then [Elissa] bout some land, just as much as could be covered by a cow's hide, where she could give some recreation to her men... She next gave orders for the hide to be cut into very fine strips, and in this way she took possession of a great area than she had apparently bargained for''
     \end{quote}
-    (Book XVIII 157~\cite{yardley1994justin})
+    (Book XVIII 157~\citep{yardley1994justin})
 \end{center}
 
 So since ancient Greece, around $100B.C.$, they wanted to measure the size of islands by timing how long it takes to circumnavigate the entire island. Proclus, a classical mathematician, mocked geometers for ``measuring the size of a city from the lengths of its walls''. To the common person of antiquity, two shapes with equal perimeter may have different areas. Interestingly, some individuals exploited this misconception to defraud others of land. Considerably more amusing, these con artists were viewed as liberal which demonstrates how unnatural the idea of shapes with a similar edge having different regions was to the old Greeks.
@@ -220,19 +218,19 @@ Geoffrey of Monmouth's Historia Regum Britanniae (History of the Kings of Englan
     \begin{quote}
         ``'Grant', said Vortigern, 'unto thy servant but so much only as may be compassed round about by a single thong within the land thou hast given me, that so I ma build me a high place therein whereunto if need be I may betake me’...Straightaway...Hengist took a bull’s hide, and wrought the same into a single thong throughout. He then compassed round with his thong a stony place that he had right cunningly chosen, and within the space thus meted out did begin to build a castle that was afterwards called in British , Kaercorrei, but in Saxon, Thongceaster, the which in Latin’s speech is called Castrum corrigae'''
     \end{quote}
-    (Monmouth 105-106~\cite{evans1920histories})
+    (Monmouth 105-106~\citep{evans1920histories})
 \end{center}
 \leavevmode
 \newline
 \newline
 Thus, the poets and historians who chronicled the exploits of these mythological characters as well as the figures themselves found special meaning in the isoperimetric problem. Despite its extensive implications, the notion of isoperimetry was ``naturally greek''. The Greeks have pretty much solved it, by their standards. Zenodorus was an ancient Greek mathematician from around $200B.C.$ to $120B.C.$. And have mostly proved that a circle has greater area than any polygon with the same perimeter. Majority of his work was lost. However, fortunately, parts of his work survived through references by Pappus and Theon of Alexandria.
 
-Theon of Alexandria then develops this idea, with a summary of the proofs present by Zenodorus in ``On Isoperimetric Figures''. According to Theon, Zenodorus did not initiate his disussion of isoperimetry with the circle. Rather he stated that ``Of all rectilinear figures having an equal perimeter - I mean equilateral and equiangular figures - the greatest is that which has the most angles'' (Thomas 388-389~\cite{ivor1941selections}). In more modern language, the proposition is stated as follows: ``Given two regular $n$-gons with the same perimeter, one with $n=n_1$ and the other with $n=n_2>n_1$ then the regualr $n_2$-gon has the larger area'' (Nahin 47~\cite{nahin2021least}). Following this, Zenodorus was able to arrive at the proposition that "if a circle have an equal primter with an equilateral and equiangular rectilinear figure, the circle shall be the great" (Thomas 391~\cite{ivor1941selections}). As Heath notes in his ``History of Greek Mathematics'', Zenodorus chose to base his proof of this proposition on the theorem already established by Archimedes that ``the area of a circle is eaual to the right-angled triange with perpendicular side equal to the radius and base equal to the perimeter of the circle'' (Heath 209~\cite{heath2013history}). Frome here, Zenodorus proceeded on the basis of two preliminary lemmas: first that ``if there be two triangels on the same base and with the same perimeter one bein isosceles and the other scalene, the isosceles triangle has the greater area'' (Heath 209~\cite{heath2013history}); second that ``given two isosceles triangles not similar to one another, if [one constructs] on the same bases two triangles similar to one another such that the sme of the areas of the similar triangles is great than the sum of the ares of the non-similar triangles'' (Heath 210~\cite{heath2013history}). Both commentors seem to hint that it will be covered in subsequent chapters, but as Heath bemoans ``in the text as we have it the promise is not fulfilled'' (Heath 212~\cite{heath2013history}) (this entire paragraph is lifted from~\cite{wiegert2010sagacity})
+Theon of Alexandria then develops this idea, with a summary of the proofs present by Zenodorus in ``On Isoperimetric Figures''. According to Theon, Zenodorus did not initiate his disussion of isoperimetry with the circle. Rather he stated that ``Of all rectilinear figures having an equal perimeter - I mean equilateral and equiangular figures - the greatest is that which has the most angles'' (Thomas 388-389~\citep{ivor1941selections}). In more modern language, the proposition is stated as follows: ``Given two regular $n$-gons with the same perimeter, one with $n=n_1$ and the other with $n=n_2>n_1$ then the regualr $n_2$-gon has the larger area'' (Nahin 47~\citep{nahin2021least}). Following this, Zenodorus was able to arrive at the proposition that "if a circle have an equal primter with an equilateral and equiangular rectilinear figure, the circle shall be the great" (Thomas 391~\citep{ivor1941selections}). As Heath notes in his ``History of Greek Mathematics'', Zenodorus chose to base his proof of this proposition on the theorem already established by Archimedes that ``the area of a circle is eaual to the right-angled triange with perpendicular side equal to the radius and base equal to the perimeter of the circle'' (Heath 209~\citep{heath2013history}). Frome here, Zenodorus proceeded on the basis of two preliminary lemmas: first that ``if there be two triangels on the same base and with the same perimeter one bein isosceles and the other scalene, the isosceles triangle has the greater area'' (Heath 209~\citep{heath2013history}); second that ``given two isosceles triangles not similar to one another, if [one constructs] on the same bases two triangles similar to one another such that the sme of the areas of the similar triangles is great than the sum of the ares of the non-similar triangles'' (Heath 210~\citep{heath2013history}). Both commentors seem to hint that it will be covered in subsequent chapters, but as Heath bemoans ``in the text as we have it the promise is not fulfilled'' (Heath 212~\citep{heath2013history}) (this entire paragraph is lifted from~\citep{wiegert2010sagacity})
 \newline
 \newline
 In the ancient world, the problem of isoperimetry was associated with the work of Zenodorus and his commentator Pappus. It was the work of a  Swiss mathematician Jacob Steiner (1796-1863) who tackled the isoperimetric theorem in the modern word.
 
-Indeed, the problem of isoperimetry in the niniteenth century emerged at an important juncture in mathematical thought. Mathematicians working in all fields of inquiry struggled over the use of analytic (i.e. calculus) or synthentic (i.e pure geometry) methods in solving problems.~\cite{wiegert2010sagacity} Nahin notes that Steiner's 1842 geometrical proof of the isoperimetric theorem is still regarded as a ``model of mathematical ingenuity'' despite subsequent discoveries of defects in the synthetic approach. The following propositions must be understood to be logically equivalent in order for Steiner's proof of the isoperimetric theorem to hold:
+Indeed, the problem of isoperimetry in the niniteenth century emerged at an important juncture in mathematical thought. Mathematicians working in all fields of inquiry struggled over the use of analytic (i.e. calculus) or synthentic (i.e pure geometry) methods in solving problems.~\citep{wiegert2010sagacity} Nahin notes that Steiner's 1842 geometrical proof of the isoperimetric theorem is still regarded as a ``model of mathematical ingenuity'' despite subsequent discoveries of defects in the synthetic approach. The following propositions must be understood to be logically equivalent in order for Steiner's proof of the isoperimetric theorem to hold:
 \begin{center}
     \begin{quote}
         A. ``Of all closed curves in a plane with equal perimeters, the cicle bounds the largest area''
@@ -241,15 +239,15 @@ Indeed, the problem of isoperimetry in the niniteenth century emerged at an impo
         \newline
         B. ``Of all closed curves in a plane with equal areas, the cricle has the smallest perimeter''
     \end{quote}
-    (Nahim 55~\cite{nahin2021least})
+    (Nahim 55~\citep{nahin2021least})
 \end{center}
 
-Steiner thought he had demonstrated that the circle was the answer to the isoperimetric problem. As later researchers, especially the German mathematician Peter Dirichlet (1805-1859), remarked, Steiner had made an underlying assumption not explicitly addressed in his proof, namely that a solution existed (Nahin 59~\cite{nahin2021least}).
+Steiner thought he had demonstrated that the circle was the answer to the isoperimetric problem. As later researchers, especially the German mathematician Peter Dirichlet (1805-1859), remarked, Steiner had made an underlying assumption not explicitly addressed in his proof, namely that a solution existed (Nahin 59~\citep{nahin2021least}).
 \newline
 \newline
 Other mathematicians attempted to tackle the isoperimetric problem from the analytic or calculus-based perspective. And to no avail.
 
-Problems posed by the ancients not only speeded the progression towards more rigorous, complete systems of mathematics, but also prompted later innovators to develop new systems to deal with these early questions. The isoperimetric problem thus demonstrates an important continuity in mathematical thought. From Zenodorus to Pappus and from Steiner to the mathematicians of the twenty-first century, isoperimetry has transcended its origins in ancient geometry to become a building block of more modern analytic systems of mathematics~\cite{wiegert2010sagacity}. Below is a table summary:
+Problems posed by the ancients not only speeded the progression towards more rigorous, complete systems of mathematics, but also prompted later innovators to develop new systems to deal with these early questions. The isoperimetric problem thus demonstrates an important continuity in mathematical thought. From Zenodorus to Pappus and from Steiner to the mathematicians of the twenty-first century, isoperimetry has transcended its origins in ancient geometry to become a building block of more modern analytic systems of mathematics~\citep{wiegert2010sagacity}. Below is a table summary:
 \begin{center}
     \begin{tabular}{||c c c||} 
         \hline
@@ -395,7 +393,7 @@ The circle therefore bounds the biggest area among all simple closed curves in t
 \section{Seven Proofs Concerning Variants of the Isoperimetric Property}
 This is possibly may be one of the oldest problem in differential geometry. With that it comes with multiple mathematicians trying to prove the problem and or simplify the problem. The first considered real and rigorous proof was by Jakob Steiner however it had an apparent flaw, later indicated by K. Weierstrass. That it only proved the existence. In fact the isoperimetric problem was only a corollary of a theory developed by Weierstrass to handle problems of maximizing or minimizing certain integrals, this theory is called calculus of variations. More direct proofs were discovered later. We will mainly look at J.Steiner's and E.Schmidt's proof but the other proofs are mainly here to give additional insight on how to think about this problem. 
 
-The seven proofs were done by Jakob Steiner, Karl Weierstrass, Erhard Schmidt, Vladimir Boltjanski, Richard Demar, Alfred D. Garvin, David Singmaster and D.J.Souppouris, and Gary Lawlor. This section is mostly studied from Kimberly Holman as her Masters Thesis~\cite{holman2022isoperimetric}.
+The seven proofs were done by Jakob Steiner, Karl Weierstrass, Erhard Schmidt, Vladimir Boltjanski, Richard Demar, Alfred D. Garvin, David Singmaster and D.J.Souppouris, and Gary Lawlor. This section is mostly studied from Kimberly Holman as her Masters Thesis~\citep{holman2022isoperimetric}.
 
 \subsection{Jakob Steiner}
 Firstly, we will look at this proposition. Isosceles triangle has the smallest leg-sum compared to trianges of the same baselien and either height or area, and vice-versa. Given an uneqal triangle, we want to maximise area on a triangle with the same baseline. We make the other two sides, not the baseline, equal. The result is a triangle witha smaller leg-sum, and therefor a smaller perimeter, containigng the same area. Now we can expand on the previous principle to demonstrate that any parallel trapezoid with unequal angles on one baseline may be transformed into another of the same area and baselines; Moreover, the new parallel trapezoid will have symmetry along the axis formed by the baseline midpoints and a smalelr sum of side lengths.
@@ -550,9 +548,9 @@ Applying the Euler-Lagrange equation to this Lagrangian, we get:
     \begin{lemma}(\textbf{Uniqueness of Extremal Curves})
         Under certain regularity conditions, there exists a unique extremal curve that satisfies the Euler-Lagrange equation and optimizes the area under a fixed perimeter.
 
-        Solving the differential equation subject to the fixed endpoints~\cite{goldstein1980classical} and~\cite{hilbert1985methods}, along with the fixed area constraint, leads us to the discovery of extremal curves that not only minimize the perimeter but also provide profound insights into the Isoperimetric Inequality in two-dimensional spaces.
+        Solving the differential equation subject to the fixed endpoints~\citep{goldstein1980classical} and~\citep{hilbert1985methods}, along with the fixed area constraint, leads us to the discovery of extremal curves that not only minimize the perimeter but also provide profound insights into the Isoperimetric Inequality in two-dimensional spaces.
     \end{lemma}
-Direct proofs from Weierstrass' corollary can be found in $Curves$ $and$ $Surfaces$ $in$ $Euclidean$ $Spaces$~\cite{chern1966curves}.
+Direct proofs from Weierstrass' corollary can be found in $Curves$ $and$ $Surfaces$ $in$ $Euclidean$ $Spaces$~\citep{chern1966curves}.
 
 \subsection{Erhard Schmidt}
 E.Schmidt simplified the work of Weierstrass to whom provided a complete proof of the Isoperimetric problem, however this proof seemed difficult to digest thus later mathematicians came in to assist, decades later. Beginning with parameterised curves, a circle is defined using carefully selected intervals and bounding. Using advanced calculus, isoperimetric equality is obtained if all calculated isoperimetric inequality statements are equalities. But here we will start off with the initial formula that we will see down below and how this initial formula will be used.
@@ -599,7 +597,7 @@ The ratio of area to perimeter, A/P, is examined to find the set which produces 
 A new proof of the planar isoperimetric property is presented. The method is a slicing and covering argument, and calls for strategically dividing the circle as well as another, arbitrary region of equal perimeter, into tiny pieces. Each pieces from non-circle region contains the same length of the region’s boundary and has less area than the piece of the circle containing the same length of the circle’s boundary. An advantage of this proof is, as it is comparative, it does not require a proof of existence of an optimum solution.
 
 \section{Unpacking J.Steiner's proof}
-The proof that I will be unpacking and taking a closer look at will be from the book (reference the book here), and is credited by them to Jakob Sternier. Packed and concise proof from~\cite{gluck2012isoperimetric}. To reiterate, the German mathematician Peter Dirichlet (1805- 1859), remarked, Steiner had made an underlying assumption not explicitly addressed in his proof, namely that a solution existed (Nahin 59~\cite{nahin2021least}). A rather helpful computer visualisation, before we start the proof, to aid in the identification that indeed the circle is an answer, and how naturally a compressed circle (ellipse) has less area than a full and complete circle.
+The proof that I will be unpacking and taking a closer look at will be from the book (reference the book here), and is credited by them to Jakob Sternier. Packed and concise proof from~\citep{gluck2012isoperimetric}. To reiterate, the German mathematician Peter Dirichlet (1805- 1859), remarked, Steiner had made an underlying assumption not explicitly addressed in his proof, namely that a solution existed (Nahin 59~\citep{nahin2021least}). A rather helpful computer visualisation, before we start the proof, to aid in the identification that indeed the circle is an answer, and how naturally a compressed circle (ellipse) has less area than a full and complete circle.
 \begin{minipage}{\linewidth}
     \centering
     \includegraphics[width=150mm]{steinerproofvisualisation.png}
@@ -791,7 +789,7 @@ To prove the continuity of the volume functional and of the support function wit
     \end{center}
 \end{lemma}
 \begin{proof}
-    Proof can be found in~\cite{schneider2014convex} (section 1.8, Lemma 1.8.12).
+    Proof can be found in~\citep{schneider2014convex} (section 1.8, Lemma 1.8.12).
 \end{proof}
 
 \begin{remark}
@@ -821,7 +819,7 @@ To prove the continuity of the volume functional and of the support function wit
     Let $K_{1},K_{2}\in\mathscr{K}^{n}$ and $K_{2}\subseteq\mathring{K}_{1}$. Then there exists $\eta>0$ such that for all $K\in\mathscr{K}^{n}$ with $\delta(K,K_{1})<\eta$, $K_{2}\subseteq K$ holds.
 \end{lemma}
 \begin{proof}
-    Can be found in~\cite{schneider2014convex} (Section 1.8, Lemma 1.8.18)
+    Can be found in~\citep{schneider2014convex} (Section 1.8, Lemma 1.8.18)
 \end{proof}
     
 \section{Volume and Surface Measure}
@@ -904,7 +902,7 @@ In this subsection, we will introduce the volume functional and show its continu
     \end{center}
     for all $\mathrm{K}\in\mathscr{K}^{n}$, $\rho\geq0$.
 \end{theorem}
-A proof of this can be found in~\cite{schneider2014convex} (Theorem 4.2.1).
+A proof of this can be found in~\citep{schneider2014convex} (Theorem 4.2.1).
 
 \begin{remark}
     Steiner’s formula implies that $\rho\mapsto\mathrm{V}_{n}(\mathrm{K}+\rho\mathrm{B}^{n})$ is a polynomial of degree $n$.
@@ -939,7 +937,7 @@ A proof of this can be found in~\cite{schneider2014convex} (Theorem 4.2.1).
 \end{proof}
 
 \section{Brunn-Minkowski Theorem}
-First we will show an important theorem of convex geometry, the Brunn-Minkowski Theorem, which we will use in the proof of the isoperimetric inequality in the next subsection. Osserman~\cite{osserman1978isoperimetric} wrote an extensive survey on the isoperimetric inequality. The traditional isoperimetric inequality for significant classes of subsets of $\mathbb{R}^{n}$ can be obtained quickly from the proof of the Brunn-Minkowski inequality, which takes only one page, and deserves to be better known.
+First we will show an important theorem of convex geometry, the Brunn-Minkowski Theorem, which we will use in the proof of the isoperimetric inequality in the next subsection. Osserman~\citep{osserman1978isoperimetric} wrote an extensive survey on the isoperimetric inequality. The traditional isoperimetric inequality for significant classes of subsets of $\mathbb{R}^{n}$ can be obtained quickly from the proof of the Brunn-Minkowski inequality, which takes only one page, and deserves to be better known.
 
 The Minkowski Addition of two arbitrary sets $\mathrm{S},\mathrm{T}\subset\mathbb{R}^{n}$ is defined to be
 \begin{center}
@@ -1085,6 +1083,12 @@ According to the Brunn-Minkowski theorem, the area of the added figure is greate
 
         $\displaystyle =\int_{0}^{1}\mathrm{V}_{n-1}(\mathrm{K}_{i}\cap\mathrm{H}(z_{i}(\tau)))z_{\tau}\dot{z}_{i}(\tau)\,d\tau$
 
+
+
+
+
+
+
         $\displaystyle =\int_{0}^{1}v_{i}(z_{i}(\tau))z_{i}(\tau)\frac{1}{v_{i}(z_{i}(\tau))}\,d\tau=\int_{0}^{1}z_{i}(\tau)\,d\tau$,
     \end{center}
     by using $\mathrm{K_{i}=\bigcup_{\zeta}\mathrm{K}_{i}\cap\mathrm{H}(\zeta)}$ and Fubini's Theorem.
@@ -1097,7 +1101,7 @@ According to the Brunn-Minkowski theorem, the area of the added figure is greate
 \end{proof}
 
 \begin{remark}
-    The Brunn-Minkowski Inequality can also be proven for domains with differentiable boundary. Using this, it is also possible to prove the isoperimetric inequality. In addition, there is also a Brunn-Minkowski inequality for general domains. More information can be found in~\cite{gardner2002brunn}.
+    The Brunn-Minkowski Inequality can also be proven for domains with differentiable boundary. Using this, it is also possible to prove the isoperimetric inequality. In addition, there is also a Brunn-Minkowski inequality for general domains. More information can be found in~\citep{gardner2002brunn}.
 \end{remark}
 
 \begin{corollary}
@@ -1177,5 +1181,4 @@ $\displaystyle \mathrm{U}(\mathrm{K})\geq 3\mathrm{V}_{3}(\mathrm{B}_{3})^{1/3}\
 \chapter{Manifolds}
 
 \bibliography{The-Isoperimetric-Problem-References}
-\bibliographystyle{unsrt}
 \end{document}

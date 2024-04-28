@@ -383,6 +383,34 @@ We use Fourier series to expand periodic functions from $\mathbb{B}$ to $\mathbb
     as the \textit{Fourier series} of $f$.
 \end{definition}
 
+\subsection{Plane Curves}
+In this subsection, we consider curves in the Euclidean plane. Here, we will introduce briefly the language of the differential geometry of curves.
+
+\begin{definition}
+    Let $\mathrm{I}\subseteq\mathbb{R}$ be an interval. A \textit{plane parameterized curve} is a continuously differential map $c:\mathrm{I}\to\mathbb{R}^{2}$. A plane parametrized curve is called \textit{regular}, if for all $t\in\mathrm{I}$ the derivative of $c$, denoted by $\dot{c}=(c'_{1},c'_{2})$, satisfies $\dot{c}(t)\neq0$.
+\end{definition} 
+
+\begin{note}
+    From now on, all our curves will be regularly parameterized curves.
+\end{note}
+
+\begin{definition}
+    A curve $c:\mathbb{R}\to\mathbb{R}^{2}$ is called
+    \begin{itemize}
+        \item periodic with $\mathrm{L}$, if it holds that
+        \begin{enumerate}
+            \item $\exists\mathrm{I}>0: c(t+\mathrm{L})=c(t)\;\forall t\in\mathbb{R}$, and
+            \item $\forall\mathrm{L}'$ with $c(t+\mathrm{L}')=c(t)\;\forall t\in\mathbb{R}$: $\mathrm{L}\leq\mathrm{L}'$.
+        \end{enumerate}
+        \item closed if it has a periodic regular parametrization
+        \item simply closed if it has a periodic regular parametrization $c$ with period $\mathrm{L}$ so that $c|_{[0,\mathrm{L})}$ is injective.
+    \end{itemize}
+\end{definition}
+
+\begin{remark}
+    The definition 1.2.16 of a period above is a special case of 1.2.11. Contrary to defition 1.2.11, we require that the period $\mathrm{L}$ is the smallest possible number with the needed properties. Later this will be important because we want to know at which time the curve finishes one round around the domain. Furthermore, we need a boundary curve of a domain and, if we have a curve that is not simply close, our enclosed set is not connected.
+\end{remark}
+
 \subsection{Basics in Convex Geometry}
 You may be wondering why we would study convex geometry but this is the necessary language and notation, which will be used in the following sections. Convex geometry will give us a way to describe objects and sets in Euclidean space; We consider convex, compact sets in $\mathbb{R}^n$ and their properties (areas, volumes, etc). The term convex is used to refere to a shape that has a curve or a protuding suface. In other words, all the lines across the outline are straight and they point outwards. Examples of convex polygons are signboard, a football, etc. The complement of convex is concave, where the shape curves inwards and no protuding surface at some point. For example the inside of a bowl. A clear definition of when a set is convex is given below. 
 

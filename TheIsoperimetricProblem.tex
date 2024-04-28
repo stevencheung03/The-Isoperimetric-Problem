@@ -417,7 +417,7 @@ The circle therefore bounds the biggest area among all simple closed curves in t
 \section{Seven Proofs Concerning Variants of the Isoperimetric Property}
 This is possibly may be one of the oldest problem in differential geometry. With that it comes with multiple mathematicians trying to prove the problem and or simplify the problem. The first considered real and rigorous proof was by Jakob Steiner however it had an apparent flaw, later indicated by K. Weierstrass. That it only proved the existence. In fact the isoperimetric problem was only a corollary of a theory developed by Weierstrass to handle problems of maximizing or minimizing certain integrals, this theory is called calculus of variations. More direct proofs were discovered later. We will mainly look at J.Steiner's and E.Schmidt's proof but the other proofs are mainly here to give additional insight on how to think about this problem. 
 
-The seven proofs were done by Jakob Steiner, Karl Weierstrass, Erhard Schmidt, Vladimir Boltjanski, Richard Demar, Alfred D. Garvin, David Singmaster and D.J.Souppouris, and Gary Lawlor. This section is mostly studied from Kimberly Holman as her Masters Thesis~\citep{holman2022isoperimetric}.
+The seven proofs were done by Jakob Steiner, Karl Weierstrass, Erhard Schmidt, Vladimir Boltjanski, Richard Demar, Alfred D. Garvin, David Singmaster and D.J.Souppouris, and Gary Lawlor. This section is mostly revised from Kimberly Holman as her Masters Thesis~\citep{holman2022isoperimetric}.
 
 \subsection{Jakob Steiner}
 Firstly, we will look at this proposition. Isosceles triangle has the smallest leg-sum compared to trianges of the same baselien and either height or area, and vice-versa. 
@@ -572,13 +572,43 @@ Let us note that the third vertex $\mathrm{C}$, is located on the ellipse
     
     Lets now move on to the main part, \textbf{$n$-gon Case:} Suppose that the angle $\displaystyle \theta=\frac{2\pi}{n}$, the length $a=\frac{\mathrm{L}}{n}$, and 
     \begin{center}
-        $\frac{(a/2)}{h}=\tan{\pi/2}$
+        $\displaystyle \frac{(a/2)}{h}=\tan{(\theta/2)}$
+
+        $\displaystyle \frac{(a)}{h}=2\tan{(\theta/2)}$
+
+        $\displaystyle h=\frac{a}{2\tan{(\pi/n)}}$
+    \end{center}
+    So the area is
+    \begin{center}
+        $\displaystyle \mathrm{Area}=\mathrm{A}=n\cdot\text{area of }\triangle\mathrm{OAB}=n\cdot\frac{a}{2}\cdot h$
+
+        $\displaystyle n\cdot\frac{a^{2}}{4\tan{\pi/n}}=n\frac{\cdot\mathrm{L}^{2}}{4n^{2}\tan{\pi/n}}$
+
+        $\displaystyle =\frac{\mathrm{L^{2}}}{4n\tan{(\pi/n)}}$
     \end{center}
 \end{proof}
 
 \begin{note}
-    we can see that $\displaystyle \frac{\mathrm{L}^{2}}{12\sqrt{3}}<\frac{\mathrm{L}^{2}}{16}$, as dividing by $12\sqrt{3}$ gives a smaller result than dividing by $16$. Hence the square is a better choice.
+    we can see that $\displaystyle \frac{\mathrm{L}^{2}}{12\sqrt{3}}<\frac{\mathrm{L}^{2}}{16}$, as dividing by $12\sqrt{3}$ gives a smaller result than dividing by $16$. Hence the square is a better choice. And that $\displaystyle 4n\tan{(\pi/n)>{16}}$.
 \end{note}
+\begin{problem}
+    So what happens when $n$ increases to infinity (i.e. $n\to\infty$)?
+
+    \begin{center}
+        $\displaystyle \underset{n\to\infty}{\lim}\frac{\mathrm{L}^{2}}{4n\tan{(n/\pi)}}$
+
+        $\displaystyle =\underset{n\to\infty}{\lim}\frac{\mathrm{L}^{2}\cos{(\pi/n)}}{4\pi\frac{n}{\pi}\sin{(\pi/n)}}$
+
+        $\displaystyle =\underset{n\to\infty}{\lim}\frac{\mathrm{L}^{2}\cos{(\pi/n)}}{4\pi\frac{\sin{(\pi/n)}}{\pi/n}}$
+    \end{center}
+    as $\displaystyle \frac{\sin{(\pi/n)}}{\pi/n}=1$, and $\cos{\pi/n}=1$
+    \begin{center}
+        $\displaystyle \underset{n\to\infty}{\lim}\frac{\mathrm{L}^{2}}{4n\tan{(n/\pi)}}=\frac{\mathrm{L}^{2}\cdot1}{4\pi\cdot1}$,
+
+        $\displaystyle =\frac{\mathrm{L}^{2}}{4\pi}$,
+    \end{center}
+    which gives us the area of the circle.
+\end{problem}
 
 \begin{theorem}
     If L is the perimeter and A is the area of any regular 2n-sided polygon, then 
@@ -610,7 +640,7 @@ Let us note that the third vertex $\mathrm{C}$, is located on the ellipse
     \begin{center}
         $\displaystyle h=\frac{L}{4n} \frac{1}{\tan(\frac{\pi}{2n})}$
     \end{center}
-    Now for the area of the above triangle we get $\frac{1}{2}h*\frac{L}{2n}$
+    Now for the area of the above triangle we get $\displaystyle \frac{1}{2}h*\frac{L}{2n}$
         Substituting h, we obtain
     \begin{center}
         $\displaystyle \frac{L^{2}}{16n^{2}} \frac{1}{\tan(\frac{\pi}{2n})}$

@@ -421,6 +421,7 @@ The seven proofs were done by Jakob Steiner, Karl Weierstrass, Erhard Schmidt, V
 
 \subsection{Jakob Steiner}
 Firstly, we will look at this proposition. Isosceles triangle has the smallest leg-sum compared to trianges of the same baselien and either height or area, and vice-versa. 
+
 \begin{enumerate}
     \item Given an uneqal triangle, we want to maximise area on a triangle with the same baseline. 
 
@@ -428,6 +429,7 @@ Firstly, we will look at this proposition. Isosceles triangle has the smallest l
 
     \item Now we can expand on the previous principle to demonstrate that any parallel trapezoid with unequal angles on one baseline may be transformed into another of the same area and baselines; Moreover, the new parallel trapezoid will have symmetry along the axis formed by the baseline midpoints and a smaller sum of side lengths. 
 \end{enumerate}
+
 We will show this proof in the next section (section 2.2).
 
 \begin{lemma} 
@@ -483,7 +485,7 @@ Let us note that the third vertex $\mathrm{C}$, is located on the ellipse
 \begin{proof} 
     Using Heron's formula for the are ofa triangle to help here
     \begin{center}
-        $\displaystyle \mathrm{A}=\sqrt{s(s-a)(s-b)(s-c)}$
+        $\displaystyle \mathrm{Area}=\mathrm{A}=\sqrt{s(s-a)(s-b)(s-c)}$
     \end{center}
     where is is the semi-perimeter
     \begin{center}
@@ -517,20 +519,58 @@ Let us note that the third vertex $\mathrm{C}$, is located on the ellipse
 
 \begin{proposition}
     Among all regular polygons with fixed perimeter, an increase in the number of sides results in a larger area.  
-\end{proposition} 
+\end{proposition}
 \begin{figure}[hbt!]
-    \begin{center}
-        \includegraphics[width=70mm]{isofig10}
-        \caption{a labelled 6-gon, hexagon, with half a slice}
+    \begin{center}   
+        \includegraphics[width=140mm]{isofig11}
+        \caption{representating increasing number of sides gives larger area (i)triangle, (ii)square, (iii)pentagon, (iv)carries on}
     \end{center}
 \end{figure}\leavevmode
-\begin{note}
-    We will need to use Heron's formula \textbf{and} the AM-GM inequality.
-\end{note}
-\newpage
+\begin{remark}
+    We will need to use Heron's formula \textbf{and} the AM-GM inequality for the proof of proposition 2.1.3.
+\end{remark}
 \begin{proof} 
-    Let $P$ be the perimeter of of this n sided polygon In addition let $h$ be the apothem, which is the perpendicular which goes from the centre to a side. Then the area of the polygon is A where,  $A=\frac{1}{2} hP$. By considering the diagram above we can see that as n increases the length of the sides as well as the angle $\alpha$ decreases which means h increases. Well this means that the area must increase as $P$ is fixed and $h$ is increasing.
+    Suppose that $n$ is the number of sides of a regular polygon.
+
+    \textbf{Triangle Case, $n=3$:} We start with Heron's formula
+    \begin{center}
+        $\displaystyle \mathrm{Area}=\mathrm{A}=\sqrt{s(s-a)(s-b)(s-c)}$ where $\displaystyle s=\frac{\mathrm{L}}{2}$ is a constant
+    \end{center}
+    Applying the AM-GM Inequality
+    \begin{center}
+        $\displaystyle (\sqrt[3]{(s-a)(s-b)(s-c)})^{3}\leq\Big(\frac{s-a+s-b+s-c}{3}\Big)^{3}$
+
+        $\displaystyle =\Big(\frac{s}{3}\Big)=\Big(\frac{\mathrm{L}}{6}\Big)^{3}$
+    \end{center}
+    so for the area we have
+    \begin{center}
+        $\displaystyle \mathrm{Area}=\sqrt{s}\sqrt{(s-a)(s-b)(s-c)}\leq\sqrt{\frac{\mathrm{L}^{3}}{6^3}}\times\sqrt{\frac{\mathrm{L}}{3}}$
+
+        $\displaystyle =\sqrt{\frac{\mathrm{L}^{4}}{2\times2^{3}\times3^{3}}}$
+
+        $\displaystyle =\frac{\mathrm{L}^{2}}{4\times3\sqrt{3}}=\frac{\mathrm{L}^{2}}{12\sqrt{3}}$
+    \end{center}
+    hence we get $\displaystyle s-a=s-b=s-c\;\therefore$ regular triangle
+
+    \textbf{Square Case, $n=4$:} If we lable Figure 2.2 (ii) sides with $a$ and $b$ adjacently. The area is
+    \begin{center}
+        $\displaystyle \mathrm{Area}=ab$ where $\displaystyle a+b=\frac{\mathrm{L}}{2}$
+    \end{center}
+    Applying the AM-GM Inequality again
+    \begin{center}
+        $\displaystyle \sqrt{ab}\leq\frac{a+b}{2}=\frac{L}{4}$
+    \end{center}
+    hence
+    \begin{center}
+        $\displaystyle \mathrm{Area}=ab\leq\Big(\frac{a+b}{2}\Big)^{2}=\frac{\mathrm{L}^{2}}{16}$
+    \end{center}
+    \begin{note}
+        we can see that $\displaystyle \frac{\mathrm{L}^{2}}{12\sqrt{3}}<\frac{\mathrm{L}^{2}}{16}$, as dividing by $12\sqrt{3}$ gives a smaller result than dividing by $16$. Hence the square is a better choice.
+    \end{note}
+
+    Lets now move on to the main part, \textbf{$n$-gon Case:}
 \end{proof}
+
 \begin{theorem}
     If L is the perimeter and A is the area of any regular 2n-sided polygon, then 
     \begin{center}

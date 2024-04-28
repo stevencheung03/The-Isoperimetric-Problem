@@ -139,12 +139,13 @@ In general, we want the maximum area whose boundary must pertain a specific leng
 \textbf{2-D Case:} The isoperimetric problem revolves around finding the shape that achieves the maximum enclosed area among all closed curves with a given length. We introduce three proofs from different approaches from different disciplines of mathematics. Amongst the many simple curves, we identify that the circle is unique for pertaining the optimal area. We touch on Steiner's proof along the way to provide his insight into how this particular curve is maximal comparative to others. We then show how the Euler-Lagrange Equation comes into effect; the finding of extremal curves with fixed areas and fixed perimeters. Finally, we will then show how Fourier analysis and differential geometry can be used as tools to prove the problem. Our overall findings and conclusions are to show that across many a proofs through the decades, mathematicians have opted to find curves under this fixed perimeter constraint with additional factors taking place. 
 \newline
 \newline
-\textbf{N-Dimensions:} Most common example of the isoperimetric inequality seen in three dimensional space is through a water droplet. Spherical in nature which allows us to refer back to our 2-D case. Here we will discuss the spherical isoperimetric inequality. To begin we introduce several more important tools, the support function, Hausdorff metric, volume and surface measure, and then prove the Brunn-Minkowski inequality. Using this inequality, the proof of the isoperimetric inequality in $n$-dimension will be shown. Then we will see how the 2-D and the 3-D cases will behave under this new result.
+\textbf{N-Dimensions:} Spherical in 3-D, which allows us to refer back to our 2-D case. Here we will discuss the spherical isoperimetric inequality. To begin we introduce several more important tools, the support function, Hausdorff metric, volume and surface measure, and then prove the Brunn-Minkowski inequality. Using this inequality, the proof of the isoperimetric inequality in $n$-dimension will be shown. We will then see how the 2-D and the 3-D cases will behave under this new result.
 \newline
 \newline
-\textbf{Manifolds:} 
+\textbf{Manifolds:} A light introduction to the isoperimetric inequalities in manifolds.
 \newline
 \newline
+Finally a comparison between the proofs. Where we shall discuss the limitations of each proof and how it differs to each other.
 
 %-------------------------------------------------------------------------------------
 \chapter{Introduction}
@@ -929,8 +930,14 @@ When does the inequality hold?
 \end{enumerate}
 
 \section{Proof Using Fourier Analysis {\&} Differential Geometry}
+In this proof of the Isoperimetric Inequality in two dimensions, we will look at domains
+with continuously differentiable boundary. We will identify the Euclidean plane with $\mathrm{C}$
+and we will consider the boundary as a periodic function from $\mathrm{R}$ to $\mathrm{C}$, so that we are able
+to use Fourier analysis. 
 
 \chapter{n-Dimensional Case ($\mathbb{R}^n$)}
+The idea of the proof for this theorem is to show the inequality above using induction on $n$. Here, we will use the Integral Theorem of Fubini to establish induction step. In this chapter, some statements of the theory of convex, compact sets will be introduced as well as properties of the volume functional. Later, we will show the Isoperimetric Inequality using the theorem of Brunn–Minkowski. We will follow~\citep{schneider2014convex}.
+
 \section{The Support Function}
 The following section introduces the support function, which can be used to ascertain the "height" of a convex body. The support function is a convex function on $\mathbb{R}$ and is compatible with many geometric opetions such as scaling, translation, rotation and importantly the \textbf{Minkowski addition}. These characteristics make the support function one of the most important foundational ideas in convex geometry.
 

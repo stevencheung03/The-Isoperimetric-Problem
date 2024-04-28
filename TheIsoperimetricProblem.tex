@@ -291,16 +291,38 @@ The Jordan Curve Theorem is just a standard, but highly non-trivial, result of t
 \end{note}
 
 \begin{definition}
-    A closed curve, is a curve that changes direction but does not cross itself whilst changing direction.
+    A closed curve, is a curve that changes direction but does not cross itself whilst changing direction and which completely encloses an \textit{area}. 
+
+    An open curve, is a curve that does not enclose any area within itself and has two endpoints.
 \end{definition}
+\begin{figure}[hbt!]
+    \begin{center}   
+        \includegraphics[width=130mm]{ClosedCurve}
+        \caption{(i) are closed curves, (ii) are open curves}
+    \end{center}
+\end{figure}\leavevmode
 
 \begin{definition}
-    A simple curve, is a curve that changes direction but does not cross itself whilst changing direction.
+    A simple curve, is a curve that changes direction but does not cross itself whilst changing direction. 
+
+    A nonsimple curve, is a curve that cross itself.
 \end{definition}
+\begin{figure}[hbt!]
+    \begin{center}   
+        \includegraphics[width=130mm]{SimpleCurves}
+        \caption{(i) is simple curves, (ii) is nonsimple curves}
+    \end{center}
+\end{figure}\leavevmode
 
 \begin{definition}
     A simple closed curve in $\mathbb{R}^2$, is a closed curve in $\mathbb{R}^2$ that has no self-intersections
 \end{definition}
+\begin{figure}[hbt!]
+    \begin{center}   
+        \includegraphics[width=130mm]{SimpleClosedCurveExamples}
+        \caption{(i) is simple curves, (ii) is nonsimple curves}
+    \end{center}
+\end{figure}\leavevmode
 
 The two definitions, above, are vital into understanding the main theorem. Since the isoperimetric inequality is a global result, we borrow concepts from topology, such as:
 
@@ -396,44 +418,114 @@ This is possibly may be one of the oldest problem in differential geometry. With
 The seven proofs were done by Jakob Steiner, Karl Weierstrass, Erhard Schmidt, Vladimir Boltjanski, Richard Demar, Alfred D. Garvin, David Singmaster and D.J.Souppouris, and Gary Lawlor. This section is mostly studied from Kimberly Holman as her Masters Thesis~\citep{holman2022isoperimetric}.
 
 \subsection{Jakob Steiner}
-Firstly, we will look at this proposition. Isosceles triangle has the smallest leg-sum compared to trianges of the same baselien and either height or area, and vice-versa. Given an uneqal triangle, we want to maximise area on a triangle with the same baseline. We make the other two sides, not the baseline, equal. The result is a triangle witha smaller leg-sum, and therefor a smaller perimeter, containigng the same area. Now we can expand on the previous principle to demonstrate that any parallel trapezoid with unequal angles on one baseline may be transformed into another of the same area and baselines; Moreover, the new parallel trapezoid will have symmetry along the axis formed by the baseline midpoints and a smalelr sum of side lengths.
+Firstly, we will look at this proposition. Isosceles triangle has the smallest leg-sum compared to trianges of the same baselien and either height or area, and vice-versa. 
+\begin{enumerate}
+    \item Given an uneqal triangle, we want to maximise area on a triangle with the same baseline. 
+
+    \item We make the other two sides, not the baseline, equal. The result is a triangle witha smaller leg-sum, and therefor a smaller perimeter, containigng the same area.
+
+    \item Now we can expand on the previous principle to demonstrate that any parallel trapezoid with unequal angles on one baseline may be transformed into another of the same area and baselines; Moreover, the new parallel trapezoid will have symmetry along the axis formed by the baseline midpoints and a smaller sum of side lengths. 
+\end{enumerate}
+We will show this proof in the next section (section 2.2).
 
 \begin{lemma} 
-    Among all the triangles with the same base, the isosceles triangle covers the greatest area.
+    Among all triangles ABC with same perimeter and same base AB, which has bigger area?
 \end{lemma}
-\begin{figure}[h]
-    \centering
-    \begin{minipage}{0.5\textwidth}
-        \centering
-                \includegraphics[width=65mm]{isofig5.png} % first figure itself
-                \caption{Figure I}
-    \end{minipage}\hfill
-        \begin{minipage}{0.5\textwidth}
-        \centering
-        \includegraphics[width=65mm]{isofig6.png} % second figure itself
-        \caption{figure II}
-    \end{minipage}
-\end{figure}
+\newpage
+\begin{figure}[hbt!]
+    \begin{center}   
+        \includegraphics[width=80mm]{lemma3}
+        \caption{labeled figure to lemma 3, helps with the proof}
+    \end{center}
+\end{figure}\leavevmode
+Let us note that the third vertex $\mathrm{C}$, is located on the ellipse
 \begin{proof} 
-    Let us consider the triangle ABC with base AB=b, looking at the figure above then our statement is logically equivalent to minimising AC+CB, since the area is just the product of the base and the height, we can slide C along the line $l_1$ this will preserve the area but alter the length of AC+CB, now to prove that the triangle shown in figure II minimises AC+CB we will use some inpiration from physics, lets consider a ray of light travelling from A to the line L, reflecting and then travelling back to B, now from the laws of attraction, light takes the shortest path, and the laws of reflection tells us that the angle of incident is equal to the angle of reflection with respect to the normal, in other words, for our scenario this means that AC=CB since the angles are the same. 
+    Let $|\mathrm{BC}|=a$, $|\mathrm{AC}|=b$, $|\mathrm{AB}|=c$ be the side of $\triangle ABC$, and let $|\mathrm{OP}|=u$ and $|\mathrm{OQ}|=v$ be the semi-major and semi-minor axis of the ellipse, respectively.
+
+    Since the ellipse is symmetric, we can consider only the I quadrant of the ellipse (non-shaded area of Figure 2.1).
+
+    Following the cosine rule $a^{2}=b^{2}+b^{2}-2bc\cos{\alpha}$,
+    \begin{center}
+        $\displaystyle a^{2}=b^{2}+c^{2}-2bc\cos{\alpha}$,
+
+        $\displaystyle b^{2}=a^{2}+b^{2}-2ac\cos{\beta}$,
+
+        $\displaystyle 2(b^{2}-a^{2})=2bc\cos{\alpha}-2ac\cos{\beta}$,
+
+        $\displaystyle b-a=\frac{c}{a+b}(b\cos{\alpha}-a\cos{\beta})$
+
+        $\displaystyle =\frac{c}{a+b}(|\mathrm{AH}|-|\mathrm{BH}|)$
+
+        $\displaystyle =\frac{2c}{a+b}|\mathrm{OH}|$
+
+        $\displaystyle =\frac{2c}{a+b}x$
+
+        Since $\displaystyle \frac{2c}{a+b}=const$, $\displaystyle \;b-a\sim x$.
+    \end{center}
+    Expression for the point $\mathrm{C}=(x,y)$ on the ellipic arc $\mathrm{PQ}$ (red arc on figure 2.1) in terms of parameter $\theta\in(0,\frac{\pi}{2})$ gives
+    \begin{center}
+        $x(\theta)=u\cos{\theta}$,
+
+        $y(\theta)=v\sin{\theta}$,
+
+        $x'(\theta)=-u\sin{\theta}<0\;\;\;\;\;\forall\theta\in(0,\frac{\pi}{2})$,
+
+        $y'(\theta)=v\cos{\theta}>0\;\;\;\;\;\forall\theta\in(0,\frac{\pi}{2})$,
+    \end{center}
+    so, smaller $x$ is equivalent to biggy and the smaller side difference, the bigger the area.
 \end{proof}
 
 \begin{lemma}
     For a given perimeter the equilateral triangle has the biggest area of all the triangles. 
 \end{lemma}
 \begin{proof} 
-    Well from our previous diagram we can treat AC as the base and follow the same logic to arrive at the conclusion that CB=AB, similarly, treat CB as the base and follow the exact steps to arrive at the conclusion AC=AB, so from all of this we can conclude that AB=BC=AC, and so the equilateral triangle maximises the area.
+    Using Heron's formula for the are ofa triangle to help here
+    \begin{center}
+        $\displaystyle \mathrm{A}=\sqrt{s(s-a)(s-b)(s-c)}$
+    \end{center}
+    where is is the semi-perimeter
+    \begin{center}
+        $\displaystyle s=\frac{a+b+c}{2}$
+    \end{center}
+    To find the conditions for the macimum area we want to comput derivatives with respect to $a$, $b$ and $c$, but since they are not independent variables, we first substitue the semi-perimeter equation in to he area equation, to remove $c$
+    \begin{center}
+        $\displaystyle c=2s-a-b$
+
+        $\displaystyle \therefore\mathrm{A}=\sqrt{s(s-a)(s-b)(a+b-s)}$
+    \end{center}
+    Setting the derivative with respect to $a$ to $0$:
+    \begin{center}
+        $\displaystyle \frac{d\mathrm{A}}{da}=\frac{s(s-b)(2s-2a-b)}{2\mathrm{A}}=0$
+
+        $\displaystyle \implies 2s-2a-b=0$
+    \end{center}
+    Similarly, setting the derivative with respect to $b$ to $0$ yields
+    \begin{center}
+        $2s-2b-a=0$
+    \end{center}
+    Solving simultaneously gives
+    \begin{center}
+        $\displaystyle a=b=\frac{2s}{3}$
+    \end{center}
+    by substituting $\displaystyle c=\frac{2s}{3}$ back, we get
+    \begin{center}
+        $\displaystyle a=b=c$ and the triangle is equilateral.
+    \end{center}
 \end{proof}
 
-\begin{theorem}
-    Among regular polygons with fixed perimeter, an increase in the number of sides results in a larger area.    
-\end{theorem} 
-
-\begin{minipage}{\linewidth}
-    \centering
-    \includegraphics[width=7cm]{isofig10.png}
-    \captionof{figure}{Figure III}
-\end{minipage}
+\begin{proposition}
+    Among all regular polygons with fixed perimeter, an increase in the number of sides results in a larger area.  
+\end{proposition} 
+\begin{figure}[hbt!]
+    \begin{center}
+        \includegraphics[width=70mm]{isofig10}
+        \caption{a labelled 6-gon, hexagon, with half a slice}
+    \end{center}
+\end{figure}\leavevmode
+\begin{note}
+    We will need to use Heron's formula \textbf{and} the AM-GM inequality.
+\end{note}
+\newpage
 \begin{proof} 
     Let $P$ be the perimeter of of this n sided polygon In addition let $h$ be the apothem, which is the perpendicular which goes from the centre to a side. Then the area of the polygon is A where,  $A=\frac{1}{2} hP$. By considering the diagram above we can see that as n increases the length of the sides as well as the angle $\alpha$ decreases which means h increases. Well this means that the area must increase as $P$ is fixed and $h$ is increasing.
 \end{proof}

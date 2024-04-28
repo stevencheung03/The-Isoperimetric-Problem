@@ -8,45 +8,45 @@ Database file #1: The-Isoperimetric-Problem-References.bib
 Warning--empty publisher in chern1966curves
 Warning--there's a number but no series in evans1920histories
 Warning--there's a number but no series in schneider2014convex
-You've used 18 entries,
+You've used 17 entries,
             2909 wiz_defined-function locations,
-            734 strings with 6899 characters,
-and the built_in function-call counts, 37934 in all, are:
-= -- 5839
-> -- 478
+            728 strings with 6735 characters,
+and the built_in function-call counts, 35960 in all, are:
+= -- 5540
+> -- 454
 < -- 5
-+ -- 2579
-- -- 140
-* -- 2926
-:= -- 8330
-add.period$ -- 18
-call.type$ -- 18
-change.case$ -- 242
-chr.to.int$ -- 18
-cite$ -- 21
-duplicate$ -- 274
-empty$ -- 516
-format.name$ -- 182
-if$ -- 6666
++ -- 2447
+- -- 133
+* -- 2770
+:= -- 7894
+add.period$ -- 17
+call.type$ -- 17
+change.case$ -- 228
+chr.to.int$ -- 17
+cite$ -- 20
+duplicate$ -- 258
+empty$ -- 486
+format.name$ -- 173
+if$ -- 6322
 int.to.chr$ -- 5
 int.to.str$ -- 0
-missing$ -- 25
-newline$ -- 57
-num.names$ -- 180
-pop$ -- 117
+missing$ -- 24
+newline$ -- 54
+num.names$ -- 170
+pop$ -- 114
 preamble$ -- 1
-purify$ -- 270
+purify$ -- 255
 quote$ -- 0
-skip$ -- 198
+skip$ -- 185
 stack$ -- 0
-substring$ -- 7878
-swap$ -- 32
-text.length$ -- 257
+substring$ -- 7475
+swap$ -- 29
+text.length$ -- 243
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 54
+type$ -- 50
 warning$ -- 3
-while$ -- 383
+while$ -- 361
 width$ -- 0
-write$ -- 222
+write$ -- 210
 (There were 3 warnings)

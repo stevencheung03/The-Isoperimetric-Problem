@@ -136,13 +136,10 @@ In general, we want the maximum area whose boundary must pertain a specific leng
 \textbf{Rich History:} Our problem is one not to be trifled with, and across many a centuries to even dating back to 200 BC, we can see the events unfold of how we learn about how the small intricacies become part of something larger and more complex. 
 \newline
 \newline
-\textbf{2-D Case:} The isoperimetric problem revolves around finding the shape that achieves the maximum enclosed area among all closed curves with a given length. Amongst the many simple curves, we identify that the circle is unique for pertaining the optimal area. We touch on Steiner's proof along the way to provide his insight into how this particular curve is maximal comparative to others. Additionally, show how the Euler-Lagrange Equation comes into effect; the finding of extremal curves with fixed areas and fixed perimeters. Our overall findings and conclusions are to show that across many a proofs through the decades, mathematicians have opted to find curves under this fixed perimeter constraint with additional factors taking place. Afterwards we focus on how Stokes' Theorem works with the inequality using a variety of calculus equations and figures in order to prove that the problem holds true under certain circumstances.
+\textbf{2-D Case:} The isoperimetric problem revolves around finding the shape that achieves the maximum enclosed area among all closed curves with a given length. We introduce three proofs from different approaches from different disciplines of mathematics. Amongst the many simple curves, we identify that the circle is unique for pertaining the optimal area. We touch on Steiner's proof along the way to provide his insight into how this particular curve is maximal comparative to others. We then show how the Euler-Lagrange Equation comes into effect; the finding of extremal curves with fixed areas and fixed perimeters. Finally, we will then show how Fourier analysis and differential geometry can be used as tools to prove the problem. Our overall findings and conclusions are to show that across many a proofs through the decades, mathematicians have opted to find curves under this fixed perimeter constraint with additional factors taking place. 
 \newline
 \newline
-\textbf{3-D Case:} Most common example of the isoperimetric inequality seen in three dimensional space is through a water droplet. Spherical in nature which allows us to refer back to our 2-D case, but applying further mathematical skills we delve into the world of surfaces, tension and forces. Here we will discuss the spherical isoperimetric inequality. (Here we will add our findings and conclusions, along with further proofs: Topological, Calculus, ODE)
-\newline
-\newline
-\textbf{N-Dimensions:} 
+\textbf{N-Dimensions:} Most common example of the isoperimetric inequality seen in three dimensional space is through a water droplet. Spherical in nature which allows us to refer back to our 2-D case. Here we will discuss the spherical isoperimetric inequality. To begin we introduce several more important tools, the support function, Hausdorff metric, volume and surface measure, and then prove the Brunn-Minkowski inequality. Using this inequality, the proof of the isoperimetric inequality in $n$-dimension will be shown. Then we will see how the 2-D and the 3-D cases will behave under this new result.
 \newline
 \newline
 \textbf{Manifolds:} 
@@ -824,7 +821,7 @@ The ratio of area to perimeter, A/P, is examined to find the set which produces 
 \subsection{Gary Lawlor}
 A new proof of the planar isoperimetric property is presented. The method is a slicing and covering argument, and calls for strategically dividing the circle as well as another, arbitrary region of equal perimeter, into tiny pieces. Each pieces from non-circle region contains the same length of the region’s boundary and has less area than the piece of the circle containing the same length of the circle’s boundary. An advantage of this proof is, as it is comparative, it does not require a proof of existence of an optimum solution.
 
-\section{Unpacking J.Steiner's proof}
+\section{Unpacking J.Steiner's Proof}
 The proof that I will be unpacking and taking a closer look at will be from the book (reference the book here), and is credited by them to Jakob Sternier. Packed and concise proof from~\citep{gluck2012isoperimetric}. To reiterate, the German mathematician Peter Dirichlet (1805- 1859), remarked, Steiner had made an underlying assumption not explicitly addressed in his proof, namely that a solution existed (Nahin 59~\citep{nahin2021least}). A rather helpful computer visualisation, before we start the proof, to aid in the identification that indeed the circle is an answer, and how naturally a compressed circle (ellipse) has less area than a full and complete circle.
 \begin{minipage}{\linewidth}
     \centering
@@ -931,6 +928,8 @@ When does the inequality hold?
 
     \item Does the Cauchy-Schwarz inequality hold?
 \end{enumerate}
+
+\section{Proof Using Fourier Analysis {\&} Differential Geometry}
 
 \chapter{n-Dimensional Case ($\mathbb{R}^n$)}
 \section{The Support Function}

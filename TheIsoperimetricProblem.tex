@@ -28,21 +28,23 @@
 
 \newtheorem{theorem}{Theorem}%[section]
 \newtheorem{lemma}[theorem]{Lemma}%[section]
-\newtheorem{example}{Example}%[section]
-\newtheorem{remark}{Remark}%[section]
-\newtheorem{note}{Note}%[section]
-\newtheorem{proposition}{Proposition}%[section]
-\newtheorem{definition}{Definition}%[section]
-\newtheorem{conjecture}{Conjecture}%[section]
-\newtheorem{corollary}{Corollary}%[section]
-\newtheorem{problem}{Problem}%[section]
-\newtheorem{condition}{Condition}%[section]
+\newtheorem{example}[theorem]{Example}%[section]
+\newtheorem{remark}[theorem]{Remark}%[section]
+\newtheorem{note}[theorem]{Note}%[section]
+\newtheorem{proposition}[theorem]{Proposition}%[section]
+\newtheorem{definition}[theorem]{Definition}%[section]
+\newtheorem{conjecture}[theorem]{Conjecture}%[section]
+\newtheorem{corollary}[theorem]{Corollary}%[section]
+\newtheorem{problem}[theorem]{Problem}%[section]
+\newtheorem{condition}[theorem]{Condition}%[section]
+
+\numberwithin{theorem}{section}%[fixes numbering]
 
 \renewcommand{\proofname}{\textbf{Proof}}
 
-\newenvironment{ddd}{\begin{rmdef}\rm}{\end{rmdef}}                             
-\newenvironment{eee}{\begin{rmexa}\rm}{\end{rmexa}}                             
-\newenvironment{rrr}{\begin{rmrem}\rm}{\end{rmrem}}                                   
+\newenvironment{ddd}{\begin{rmdef}\rm}{\end{rmdef}}
+\newenvironment{eee}{\begin{rmexa}\rm}{\end{rmexa}}
+\newenvironment{rrr}{\begin{rmrem}\rm}{\end{rmrem}}
 \newenvironment{pf}[1][Proof]{\par\noindent{\em #1}. }{\hfill\framebox(6,6)\par\medskip}
 
 \usepackage{geometry}

@@ -467,9 +467,11 @@ As our goal is to maximize, get the largest area, it is quite clear on why we ch
 The circle therefore bounds the biggest area among all simple closed curves in the plane with a given length.
 
 \section{Seven Proofs Concerning Variants of the Isoperimetric Property}
-This is possibly may be one of the oldest problem in differential geometry. With that it comes with multiple mathematicians trying to prove the problem and or simplify the problem. The first considered real and rigorous proof was by Jakob Steiner however it had an apparent flaw, later indicated by K. Weierstrass. That it only proved the existence. In fact the isoperimetric problem was only a corollary of a theory developed by Weierstrass to handle problems of maximizing or minimizing certain integrals, this theory is called calculus of variations. More direct proofs were discovered later. We will mainly look at J.Steiner's and E.Schmidt's proof but the other proofs are mainly here to give additional insight on how to think about this problem. 
+This is possibly may be one of the oldest problem in differential geometry. With that it comes with multiple mathematicians trying to prove the problem and or simplify the problem. The first considered real and rigorous proof was by Jakob Steiner however it had an apparent flaw, later indicated by K. Weierstrass. That it only proved the existence. In fact the isoperimetric problem was only a corollary of a theory developed by Weierstrass to handle problems of maximizing or minimizing certain integrals, this theory is called calculus of variations. 
 
-The seven proofs were done by Jakob Steiner, Karl Weierstrass, Erhard Schmidt, Vladimir Boltjanski, Richard Demar, Alfred D. Garvin, David Singmaster and D.J.Souppouris, and Gary Lawlor. This section is mostly revised from Kimberly Holman as her Masters Thesis~\citep{holman2022isoperimetric}.
+More direct proofs were discovered later. We will mainly look at J.Steiner's proof, E.Schmidt's proof, and Fourier analysis {\&} differential geometry approach to the proof but the other proofs in this section are mainly here to give additional insight on how to think about this problem. 
+
+The seven proofs were done by Jakob Steiner, Karl Weierstrass, Erhard Schmidt, Vladimir Boltjanski, Richard Demar, Alfred D. Garvin, David Singmaster and D.J.Souppouris, and Gary Lawlor. This section is mostly following from Kimberly Holman as her Masters Thesis~\citep{holman2022isoperimetric}.
 
 \subsection{Jakob Steiner}
 Firstly, we will look at this proposition. Isosceles triangle has the smallest leg-sum compared to trianges of the same baselien and either height or area, and vice-versa. 
@@ -483,6 +485,8 @@ Firstly, we will look at this proposition. Isosceles triangle has the smallest l
 \end{enumerate}
 
 We will show this proof in the next section (section 2.2).
+\newline
+\newline
 
 \begin{lemma} 
     Among all triangles ABC with same perimeter and same base AB, which has bigger area?
@@ -910,8 +914,13 @@ This proof will need:
 			
 			$= \int_{0}^{l} x'y \,dt$ \;\;\;by Green's theorem
 	\end{enumerate}
-
-	(the figure)
+    \newpage
+    \begin{figure}[hbt!]
+        \begin{center}   
+            \includegraphics[width=100mm]{esfigure}
+            \caption{asdf}
+        \end{center}
+    \end{figure}\leavevmode
     $\mathrm{C}(s)=(x(s),y(s))\;s\in[0,l]$
 \end{proof}
 

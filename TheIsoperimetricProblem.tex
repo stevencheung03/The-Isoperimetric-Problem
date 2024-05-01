@@ -638,22 +638,69 @@ More direct proofs were discovered later. We will mainly look at J.Steiner's pro
 
 The seven proofs were done by Jakob Steiner, Karl Weierstrass, Erhard Schmidt, Vladimir Boltjanski, Richard Demar, Alfred D. Garvin, David Singmaster and D.J.Souppouris, and Gary Lawlor. This section is mostly following from Kimberly Holman as her Masters Thesis~\citep{holman2022isoperimetric}.
 \begin{itemize}
-    \item Vladimir Boltjanski's work provided a summary of Steiner's isoperimetric proof. Which starts off by showing that the maximum area of the shape must be convex. 
+    \item An overview of Steiner's isoperimetric evidence was given by Vladimir Boltjanski's work~\citep{boltjansky1985geometry}. It first demonstrates the need for the shape's largest area to be convexv. 
+    \begin{figure}[hbt!]
+        \begin{center}   
+            \includegraphics[width=70mm]{Boltjanski1}
+            \caption{Solution must be convex}
+        \end{center}
+    \end{figure}
     \begin{enumerate}
         \item Towards a general shape. He makes a "cross-cut" that divides the boundary into two equal lengths. If every cross-cut has equal area then the shape is extremal. Otherwise, omit the side with smaller area and reflect the larger area across the cross-cut. We may continue in this way until every cross-cut. We may continue in this way until every cross-cut has equal area.
         \item Now  he takes a fixed cross-cut, $a$, $b$, and any boundary points distinct from $a$ and $b$, $c$, and demonstrates that the extremal must have $\angle acb=90^{\circ}$. If the angle is anything else, install a hinge and rotate about $c$ until the angle mesaure of $acb$ is $90^{\circ}$.
         \item The reflect over the cross-cut to achieve a shape with greater area and same perimeter.
     \end{enumerate}
 
-    \item Richard Demar begins with an indirect proof to show that the extremal is convex, then proceeds with a trivial example that the square is not extremal. While the square example is trivial and can easily be proved computationally, the trick Demar uses here will be used in subsequent proofs. is that we start with a square, then we would cut a piece off, then glue it to another place, and hence our shape is nonconvex. An illustration is shown below.
+    \item Richard Demar begins with an indirect proof to show that the extremal is convex, then proceeds with a trivial example that the square is not extremal~\citep{demar1975simple}. While the square example is trivial and can easily be proved computationally, the trick Demar uses here will be used in subsequent proofs. is that we start with a square, then we would cut a piece off, then glue it to another place, and hence our shape is nonconvex. An illustration is shown below.
     \begin{figure}[hbt!]
         \begin{center}   
             \includegraphics[width=120mm]{RichardDemar}
             \caption{Left shows square; Middle we replace; Right shows our shape is nonconvex}
         \end{center}
+    \end{figure}\leavevmode
+    \newline
+    We want to now round off those sharp corners on the triangles in the figures above, and very naturally leads us to the following theorem.
+    \begin{theorem}
+        Let $\mathrm{T}$ be a given triangular region with perimeter $\mathrm{P}$ and with a circumference of the inscribed circle equal to $c$. Let $p$ be a number such that $c\leq p\leq\mathrm{P}$. Then among all regions contained in $\mathrm{T}$ and having perimeter $p$, the region $\mathrm{R}$ of maximum area has boundary $\gamma$ consisting of three circular arcs of all the same radius, each tangent to two adjacent sides of the boundary of $\mathrm{T}$, together with the three segments of sides of $\mathrm{T}$ between endpoints of these arcs.
+    \end{theorem}
+    Demar indicates that $\gamma$ contains at least one circular arc through citing the previous theorem (Proposition 4.1.3). Demar uses an indirect proof. He demonstrates that $\gamma$ comprises three circular arcs since none of the vertices of $\mathrm{T}$ can coincide with $\gamma$. While length and area are preserved, a nonconvex region is produced by replacing a tiny sector of the arc near $\mathrm{B}$ and a small corner piece at $\mathrm{C}$.
+    \begin{figure}[hbt!]
+        \begin{center}   
+            \includegraphics[width=60mm]{Demar1}
+            \caption{Replacing a small corner with a small sector, and vice-versa}
+        \end{center}
+    \end{figure}\leavevmode
+    By using indirect proof again, Demar shows that the radii of each of the three arcs are identical. So when the extremal is assumed to have different radii, using replacement of small sectors, a nonconvex shape is achieved, implying that the radii are equal.
+    \begin{figure}[hbt!]
+        \begin{center}   
+            \includegraphics[width=60mm]{Demar2}
+            \caption{Replace two small sectors with each other}
+        \end{center}
+    \end{figure}\leavevmode
+    Lastly to show that each of the circular arcs of $\gamma$ is tangent to $\mathrm{T}$, and indirect approach is used. Reflections and replacements yield a $\gamma'$ which is not convex, hence, the arcs are tangent to $\mathrm{T}$.
+    \begin{figure}[hbt!]
+        \begin{center}   
+            \includegraphics[width=60mm]{Demar3}
+            \caption{Drawing a tangent to the arc, segments on AB, and triangles from AB to the point of tangency resulting in a contradiction such that the point of tangency touches BC}
+        \end{center}
+    \end{figure}
+    \newpage
+    If we zoom into one of the corners where the arc is reflected and replaced, the figure below (Figure 3.6) helps illustrate.
+    \begin{figure}[hbt!]
+        \centering
+        \begin{minipage}{0.5\textwidth}
+            \centering
+            \includegraphics[width=83mm]{Demar4} % first figure itself
+            \caption{a zoomed in view of where the arc is reflected and replaced}
+        \end{minipage}\hfill
+        \begin{minipage}{0.5\textwidth}
+            \centering
+            \includegraphics[width=60mm]{Demar5} % second figure itself
+            \caption{The maximum area solution}
+        \end{minipage}
     \end{figure}
 
-    \item Expanding on the work of Demar, Alfred D. Garvin, physical experiments are performed to prove the statements. First, liquid mercury is slowly poured into a confined triangular reservoir and is expected to take on an isoperimetrically optimal configuration, which it does. However, the meniscus effect of the mercury slightly skews the endpoints of the arcs. Next, the reservoir is partially filled with water. A viscous oil is poured slowly onto the water and is expected to take on an isoperimetrically optimal shape, which it does. Again, the meniscus effect of the oil slightly skews the endpoits of the arcs. The third experiment uses a flexible, asymmetrical triangular wood fence and a sturdypaper closed fence with perimeter less than that of the triangle. BB pellets are poured inside the paper fence, which is expected to take on an isoperimetrically optimal shape, which it does. This internal-pressure experiment does not yield any skewed results. The three experiments yield the same description of the isoperimetrically optimal shape: the arcs have equal radii, the arcs have equal chords, and the arcs have equal length.
+    \item Expanding on the work of Demar, Alfred D. Garvin, physical experiments are performed to prove the statements. First, liquid mercury is slowly poured into a confined triangular reservoir and is expected to take on an isoperimetrically optimal configuration, which it does. However, the meniscus effect of the mercury slightly skews the endpoints of the arcs. Next, the reservoir is partially filled with water. A viscous oil is poured slowly onto the water and is expected to take on an isoperimetrically optimal shape, which it does. Again, the meniscus effect of the oil slightly skews the endpoits of the arcs. The third experiment uses a flexible, asymmetrical triangular wood fence and a sturdypaper closed fence with perimeter less than that of the triangle. BB pellets are poured inside the paper fence, which is expected to take on an isoperimetrically optimal shape, which it does. This internal-pressure experiment does not yield any skewed results. The three experiments yield the same description of the isoperimetrically optimal shape: the arcs have equal radii, the arcs have equal chords, and the arcs have equal length. ~\citep{garvin1975note}
 
     \item David Singmaster and D.J. Souppouris looked at the ratio of area to perimeter, A/P. Where it is examined to find the set which produces the greatest number. Using advanced calculus and analysis, the maximal ratio of A/P is a measure of the circularity of the set.
 

@@ -1,5 +1,9 @@
 \begin{thebibliography}{xx}
 
+\harvarditem{Boltjansky}{1985}{boltjansky1985geometry}
+Boltjansky, V.~G.  \harvardyearleft 1985\harvardyearright , {\em Combinatorial
+  geometry}, Cambridge University Press.
+
 \harvarditem{Bulmer-Thomas}{1941}{ivor1941selections}
 Bulmer-Thomas, I.  \harvardyearleft 1941\harvardyearright , {\em Selections
   illustrating the history of Greek mathematics}, Vol.~2, Harvard University
@@ -8,6 +12,11 @@ Bulmer-Thomas, I.  \harvardyearleft 1941\harvardyearright , {\em Selections
 \harvarditem{Chern}{1966}{chern1966curves}
 Chern, S.-s.  \harvardyearleft 1966\harvardyearright , {\em Curves and surfaces
   in Euclidean space}.
+
+\harvarditem{Demar}{1975}{demar1975simple}
+Demar, R.~F.  \harvardyearleft 1975\harvardyearright , `A simple approach to
+  isoperimetric problems in the plane', {\em Mathematics Magazine} {\bf
+  48}(1),~1--12.
 
 \harvarditem{Demjanenko}{2008}{demjanenko2008isoperimetric}
 Demjanenko, S.  \harvardyearleft 2008\harvardyearright , `The isoperimetric
@@ -22,6 +31,11 @@ Evans, S. et~al.  \harvardyearleft 1920\harvardyearright , {\em Manmouth,
 Gardner, R.  \harvardyearleft 2002\harvardyearright , `The brunn-minkowski
   inequality', {\em Bulletin of the American mathematical society} {\bf
   39}(3),~355--405.
+
+\harvarditem{Garvin}{1975}{garvin1975note}
+Garvin, A.~D.  \harvardyearleft 1975\harvardyearright , `A note on demar's “a
+  simple approach to isoperimetric problems in the plane” and an epilogue',
+  {\em Mathematics Magazine} {\bf 48}(4),~219--221.
 
 \harvarditem{Gluck}{2012}{gluck2012isoperimetric}
 Gluck, H.  \harvardyearleft 2012\harvardyearright , `5. the isoperimetric

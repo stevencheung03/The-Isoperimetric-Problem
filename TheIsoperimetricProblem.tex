@@ -148,9 +148,9 @@ In general, we want the maximum area whose boundary must pertain a specific leng
 Finally a comparison between the proofs. Where we shall discuss the limitations of each proof and how it differs to each other.
 
 %-------------------------------------------------------------------------------------
-\chapter{Introduction}
+%\chapter{Introduction}
 %\addcontentsline{toc}{chapter}{\hspace{0.2in}Introduction}
-\section{Historical Notes}
+\chapter{Historical Notes}
 %\addcontentsline{toc}{section}{\hspace{0.2in}Historical Notes}
 Isoperimeter, isos which is ancient Greek for equal and perimetron for perimeter. The isoperimetric problem, even though it was not properly formalized, was already thought about all throughout the history. 
 \newline
@@ -269,9 +269,9 @@ Problems posed by the ancients, not only speeded the progression towards more ri
     \end{tabular}
 \end{center}
 
-\section{Important Preliminaries}
+\chapter{Preliminaries}
 %\addcontentsline{toc}{chapter}{\hspace{0.2in}Important Preliminaries}
-\subsection{2-Dimensional Preliminaries}
+\section{2-Dimensional Preliminaries}
 We will take for granted the Jordan Curve Theorem
 \begin{theorem}[Jordan Curve Theorem]
     A simple closed curve in the plane divides the plane into two regions, one compact and one non-compact, and in the common boundary of both regions.
@@ -408,6 +408,55 @@ In this subsection, we consider curves in the Euclidean plane. Here, we will int
     The definition 1.2.16 of a period above is a special case of 1.2.11. Contrary to defition 1.2.11, we require that the period $\mathrm{L}$ is the smallest possible number with the needed properties. Later this will be important because we want to know at which time the curve finishes one round around the domain. Furthermore, we need a boundary curve of a domain and, if we have a curve that is not simply close, our enclosed set is not connected.
 \end{remark}
 
+\subsection{Length and Area}
+In this subsection we will show the relation between the parameterization of a curve and the enclosed area. First we, will introduce a few properties on the length of a curve that can be proved with simple computation.
+
+\begin{definition}
+    A unit speed curve is a regular curve $c:\mathrm{I}\to\mathbb{R}^2$ satisfying $||\dot{c}(t)||=1\;\;\;\forall t\in\mathrm{I}$, where $||\cdot||$ is the Euclidean norm.
+\end{definition}
+
+\begin{proposition}
+    For all regualr curves $c$, there exists a transformation of parameter $\varphi$ so that the reparameterization $c\circ\varphi$ is a unit speed curve
+\end{proposition}
+
+\begin{definition}
+    Let $c:[a,b]\to\mathbb{R}^2$ be a curve. Then $\mathrm{L}[c]:=\int_{a}^{b}||\dot{c}(t)||\,dt$ is called the length of c.
+\end{definition}
+
+\begin{lemma}
+    The length of a curve is invariant under reparameterization.
+\end{lemma}
+
+\begin{remark}
+    Before we prove the Isoperimetric Inequality we will show a way to compute the area of a domain using the parametrization of the boundary curve.
+\end{remark}
+
+\begin{lemma}
+    let $\mathrm{G}\subseteq\mathbb{R}^{2}$ be a bounded domain such that the boundary is a simply closed curve with parameterization $c(t)=(x(t),y(t))^{\mathrm{T}}$ and period $\mathrm{L}$, Then
+    \begin{center}
+        $\mathrm{A}[\mathrm{G}]=-\int_0^{\mathrm{L}} \dot{x}(t) y(t) d t=\int_0^{\mathrm{L}} x(t) \dot{y}(t) d t=\frac{1}{2} \int_0^{\mathrm{L}}(x(t) \dot{y}(t)-\dot{x}(t) y(t)) d t .$
+    \end{center}    
+\end{lemma}
+\begin{proof}
+    Let $c$ be the curve mentioned above. Without loss of generality, assume that $c$ is a unit speed curve and is positively oriented. Let $n(t)$ be the inner unit normal of $c(t)$ and define $i d_{\mathbb{R}^2}: \mathbb{R}^2 \rightarrow \mathbb{R}^2$ with $i d_{\mathbb{R}^2}(x, y)=(x, y)$. Using Gauss theorem and the fact that the curve is a unit speed curve, we get
+    $\int_{\mathrm{G}}\left(\frac{\partial\left(i d_{\mathbb{R}^2}\right)^1}{\partial x}+\frac{\partial\left(i d_{\mathbb{R}^2}\right)^2}{\partial y}\right) d x d y=\int_{\mathrm{G}} \operatorname{div} i d_{\mathbb{R}^2} d x d y=-\int_0^{\mathrm{L}}\left\langle i d_{\mathbb{R}^2}(c(t)), n(c(t))\right\rangle d t .$
+
+    First look at the left side of this equation
+    $\int_{\mathrm{G}}\left(\frac{\partial\left(i d_{\mathbb{R}^2}\right)^1}{\partial x}+\frac{\partial\left(i d_{\mathbb{R}^2}\right)^2}{\partial y}\right) d x d y=\int_{\mathrm{G}}\left(\frac{\partial x}{\partial x}+\frac{\partial y}{\partial y}\right) d x d y=2 \int_{\mathrm{G}} d x d y=2 \mathrm{~A}[\mathrm{G}] .$
+
+    For the right side, we compute
+    $\begin{aligned}
+    -\int_0^{\mathrm{L}}\left\langle i d_{\mathbb{R}^2}(c(t)), n(c(t))\right\rangle d t & =-\int_0^{\mathrm{L}}(-x(t) \dot{y}(t)+\dot{x}(t) y(t)) d t \\
+    & =\int_0^{\mathrm{L}}(x(t) \dot{y}(t)-\dot{x}(t) y(t)) d t .
+    \end{aligned}$
+
+    Putting both sides together, we get
+    $2 \mathrm{~A}[\mathrm{G}]=\int_0^{\mathrm{L}}(x(t) \dot{y}(t)-\dot{x}(t) y(t)) d t \Leftrightarrow \mathrm{A}[\mathrm{G}]=\frac{1}{2} \int_0^{\mathrm{L}}(x(t) \dot{y}(t)-\dot{x}(t) y(t)) d t .$
+
+    Using partial integration, it follows
+    $\int_0^{\mathrm{L}} x(t) \dot{y}(t) d t=\underbrace{[x(t) y(t)]_0^{\mathrm{L}}}_{=0}-\int_0^{\mathrm{L}} \dot{x}(t) y(t) d t=-\int_0^{\mathrm{L}} \dot{x}(t) y(t) d t .$
+\end{proof}
+
 \subsection{Basics in Convex Geometry}
 You may be wondering why we would study convex geometry but this is the necessary language and notation, which will be used in the following sections. Convex geometry will give us a way to describe objects and sets in Euclidean space; We consider convex, compact sets in $\mathbb{R}^n$ and their properties (areas, volumes, etc). The term convex is used to refere to a shape that has a curve or a protuding suface. In other words, all the lines across the outline are straight and they point outwards. Examples of convex polygons are signboard, a football, etc. The complement of convex is concave, where the shape curves inwards and no protuding surface at some point. For example the inside of a bowl. A clear definition of when a set is convex is given below. 
 
@@ -454,26 +503,165 @@ As our goal is to maximize, get the largest area, it is quite clear on why we ch
 		\item A function $f$ is $concave$ if $-f$ is convex.
 	\end{itemize}
 \end{definition}
-(Some Figure here)
+\begin{figure}[h]
+    \begin{center}   
+        \includegraphics[width=80mm]{ConcaveFunction}
+        \caption{The blue, green and red graphs are associated to convex functions but the pink graph is associated to a concave.}
+    \end{center}
+\end{figure}
 
-\subsection{$n$-Dimensional Preliminaries}
+\section{$n$-Dimensional Preliminaries}
+
+\subsection{The Support Function}
+The following section introduces the support function, which can be used to ascertain the "height" of a convex body. The support function is a convex function on $\mathbb{R}$ and is compatible with many geometric opetions such as scaling, translation, rotation and importantly the \textbf{Minkowski addition}. These characteristics make the support function one of the most important foundational ideas in convex geometry.
+
+\begin{definition}
+    Let $K\subseteq\mathbb{R}^n$ be non-empty, convex and closed. The $support$ $function$ $h(K,\cdot\space)=h_k$ is defined by
+    \begin{center}
+        $h(K,u):=\sup\{\langle x,u\rangle;x\in K\}$ for $u\in\mathbb{R}^n$
+    \end{center}
+    Furthermore we define for $u\in dom\,h(K,\cdot)\backslash\{0\}$
+    \begin{center}
+        $H(K,u):=\{x\in\mathbb{R}^n;\langle x,u\rangle=h(K,u)\}$ a supporting plane of K,
+        
+        $H^{-}:=\{x\in\mathbb{R}^n;\langle x,u\rangle\leq h(K,u)\}$ a support half space of K, and 
+        
+        $F(K,u):=H(K,u)\cap K$ a support domain of K
+    \end{center}
+\end{definition}
+
+\begin{remark}
+    The suuport function for $u\in\mathbb{S}^{n-1}\cap dom\,h(K,\cdot)$ can be viewed as the distance of the supporting plane at K with outer unit normal to the origin.(give some figure)
+\end{remark}
+
+\begin{remark}
+    For $B^{n}$ and $u\in\mathbb{S}^{n-1}$ the support function can be computed easily. For arbirary $x\in B^{n}$ and $u\in\mathbb{S}^{n-1}$ Cauchy Swarz gives us
+    \begin{center}
+        $|\langle x,u\rangle|\leq||u||\:||x||\leq1$
+    \end{center}
+    The support function is equal 1 on $B^{n}$ since the maximum is also 1.
+\end{remark}
+
+\begin{remark}
+    The support funtion has the following properties:
+    \begin{enumerate}
+        \item $h_{k}\leq h_{L}$ if and only if $K\subseteq L$,
+        \item $h(\{z\},u)=\langle x,y\rangle$ for $z,u\in\mathbb{R}^{n}$,
+        \item $h(K+t,u)=h(K,u)+\langle t,u\rangle$ for $t,u\in\mathbb{R}^{n}$,
+        \item $h(\lambda K, u)=\lambda h(K,u)=h(K,\lambda u)$ for $\lambda\in\mathbb{R}_{0}^{+}$, $u\in\mathbb{R}^{n}$,
+        \item $h(-K,u)=h(K,-u)$ for $u\in\mathbb{R}^{n}$,
+        \item $h(K,u_{1}+u_{2})\leq h(K,u_{1})+h(K,u_{2})$ for $u_{1},u_{2}\in\mathbb{R}^{n}$,
+        \item $h(K,\cdot)=: h_{k}$ is convex.
+    \end{enumerate}
+\end{remark}
+
+\begin{lemma}
+    Let $K,L\in\mathscr{K}^{n}$, then$h(K+L,u)=h(K,u)+h(L,u)$.
+\end{lemma}
+\begin{proof}
+    Let $u\in\mathbb{R}^{n}\backslash\{0\}$.
+
+    First, we show $h(K+L,u)\geq h(K,u)+h(L,u)$. Since $K$ and $L$ are compact, the supremum of the support function is attained. Thus, there exists $x\in K$ and $y\in L$ such that $h(L,u)=\langle y,u\rangle$ and $h(K,u)=\langle x,u\rangle$.
+
+    Then we have
+    \begin{center}
+        $h(K,u)+h(L,u)=\langle y,u\rangle+\langle x,u\rangle=\langle x+y,u\rangle\leq h(K+L,u)$.
+    \end{center}
+
+    Secondly, we want to show $h(K+L,u)\leq h(K,u)+h(L,u)$. Let $z\in K+L$ so that $H(K+L,u)=\langle u,z\rangle$. Then there exists $x\in K$ and $y\in L$ such that $z=x+y$. It follows
+    \begin{center}
+        $h(K+L,u)=\langle z,u\rangle=\langle x+y,u\rangle=\langle x,u\rangle+\langle y,u\rangle\leq h(K,u)+h(L,u)$.
+    \end{center}
+    Both inequalities are shown and so the claim follows.
+\end{proof}
+
+\subsection{The Hausdorff Metric}
+To prove the continuity of the volume functional and of the support function with respect to convex bodies, we need a metric on the set of convex bodies. This metric will be introduced in the following subsection.
+
+\begin{definition}
+    For $K,L\in K^{n}$, define Hausdorff distance or Hausedorff metric by
+    \begin{center}
+        $\delta(K,L):=\min\{\lambda\geq;K\subseteq L+\lambda B^{n},L\subseteq K+\lambda B^{n}\}$,
+    \end{center}
+\end{definition}
+
+\begin{remark}
+    The Hausdorff distance (Hausdorff metric) on the set of convex bodies. This follows directly from the properties of minima and from the convexity of $K$.
+\end{remark}
+
+\begin{lemma}
+    Let $K,L\in\mathscr{K}^{n}$, $K,L\subseteq RB^{n}$, where $R>0$, and $u,v\in\mathbb{R}^{n}$. Then
+    \begin{center}
+        $|h(K,u)-h(L,v)|\leq R|u-v|+\max\{|u|,|v|\}\delta(K,L)$.
+    \end{center}
+\end{lemma}
+\begin{proof}
+    Proof can be found in~\citep{schneider2014convex} (section 1.8, Lemma 1.8.12).
+\end{proof}
+
+\begin{remark}
+    Lemma above proves the local Lipschitz continuity of the support function in both arguments.
+\end{remark}
+
+\begin{theorem}
+    Let $K,L\in\mathscr{K}^{n}$, then
+    \begin{center}
+        $\delta(K,L)=\underset{u\in\mathbb{S}^{n-1}}{\sup}|h(K,u)-h(L,u)|=:||\bar{h}_{K}-\bar{h}_{L}||$,
+    \end{center}
+    where $\displaystyle \bar{h}_{K}=h_{k}|_{\mathbb{S}^{n-1}}$.
+\end{theorem}
+\begin{proof}
+    Let $\delta(K,L)\leq\alpha$. This implies $K\subseteq L+\alpha B^{n}$. For $u\in\mathbb{S}^{n-1}$, it follows 
+    \begin{center}
+        $h(K,u)\leq h(L+\alpha B^{n},u)=h(L,u)+\alpha h(B^{n},u)=h(L,u)+\alpha$
+    \end{center}
+    After switching $K$ and $L$, we can conclude for $u\in\mathbb{S}^{n-1}$ that
+    \begin{center}
+        $|h(K,u)-h(L,u)|\leq\alpha$
+    \end{center}
+    This implies $||\bar{h}_{K}-\bar{h}_{L}||\leq\delta(K,L)$. Using a similar argument one can show the other estimation.
+\end{proof}
+
+\begin{lemma}
+    Let $K_{1},K_{2}\in\mathscr{K}^{n}$ and $K_{2}\subseteq\mathring{K}_{1}$. Then there exists $\eta>0$ such that for all $K\in\mathscr{K}^{n}$ with $\delta(K,K_{1})<\eta$, $K_{2}\subseteq K$ holds.
+\end{lemma}
+\begin{proof}
+    Can be found in~\citep{schneider2014convex} (Section 1.8, Lemma 1.8.18)
+\end{proof}
+
 %-------------------------------------------------------------------------------------
 
-\chapter{2-Dimensional Case ($\mathbb{R}^2$)}
-\begin{theorem}
-    Let $C$ be a simple closed curve in the plane with length $L$ and bounding a region of area $A$ . 
-    Then $L^2 \leq 4\pi A$ with equality if and only if $C$ is a circle.
-\end{theorem}
-The circle therefore bounds the biggest area among all simple closed curves in the plane with a given length.
-
-\section{Seven Proofs Concerning Variants of the Isoperimetric Property}
+\chapter{Multiple Proofs Concerning the Isoperimetric Property}
 This is possibly may be one of the oldest problem in differential geometry. With that it comes with multiple mathematicians trying to prove the problem and or simplify the problem. The first considered real and rigorous proof was by Jakob Steiner however it had an apparent flaw, later indicated by K. Weierstrass. That it only proved the existence. In fact the isoperimetric problem was only a corollary of a theory developed by Weierstrass to handle problems of maximizing or minimizing certain integrals, this theory is called calculus of variations. 
 
 More direct proofs were discovered later. We will mainly look at J.Steiner's proof, E.Schmidt's proof, and Fourier analysis {\&} differential geometry approach to the proof but the other proofs in this section are mainly here to give additional insight on how to think about this problem. 
 
 The seven proofs were done by Jakob Steiner, Karl Weierstrass, Erhard Schmidt, Vladimir Boltjanski, Richard Demar, Alfred D. Garvin, David Singmaster and D.J.Souppouris, and Gary Lawlor. This section is mostly following from Kimberly Holman as her Masters Thesis~\citep{holman2022isoperimetric}.
+\begin{itemize}
+    \item Vladimir Boltjanski's work provided a summary of Steiner's isoperimetric proof. Which starts off by showing that the maximum area of the shape must be convex. 
+    \begin{enumerate}
+        \item Towards a general shape. He makes a "cross-cut" that divides the boundary into two equal lengths. If every cross-cut has equal area then the shape is extremal. Otherwise, omit the side with smaller area and reflect the larger area across the cross-cut. We may continue in this way until every cross-cut. We may continue in this way until every cross-cut has equal area.
+        \item Now  he takes a fixed cross-cut, $a$, $b$, and any boundary points distinct from $a$ and $b$, $c$, and demonstrates that the extremal must have $\angle acb=90^{\circ}$. If the angle is anything else, install a hinge and rotate about $c$ until the angle mesaure of $acb$ is $90^{\circ}$.
+        \item The reflect over the cross-cut to achieve a shape with greater area and same perimeter.
+    \end{enumerate}
 
-\subsection{Jakob Steiner}
+    \item Richard Demar begins with an indirect proof to show that the extremal is convex, then proceeds with a trivial example that the square is not extremal. While the square example is trivial and can easily be proved computationally, the trick Demar uses here will be used in subsequent proofs. is that we start with a square, then we would cut a piece off, then glue it to another place, and hence our shape is nonconvex. An illustration is shown below.
+    \begin{figure}[hbt!]
+        \begin{center}   
+            \includegraphics[width=120mm]{RichardDemar}
+            \caption{Left shows square; Middle we replace; Right shows our shape is nonconvex}
+        \end{center}
+    \end{figure}
+
+    \item Expanding on the work of Demar, Alfred D. Garvin, physical experiments are performed to prove the statements. First, liquid mercury is slowly poured into a confined triangular reservoir and is expected to take on an isoperimetrically optimal configuration, which it does. However, the meniscus effect of the mercury slightly skews the endpoints of the arcs. Next, the reservoir is partially filled with water. A viscous oil is poured slowly onto the water and is expected to take on an isoperimetrically optimal shape, which it does. Again, the meniscus effect of the oil slightly skews the endpoits of the arcs. The third experiment uses a flexible, asymmetrical triangular wood fence and a sturdypaper closed fence with perimeter less than that of the triangle. BB pellets are poured inside the paper fence, which is expected to take on an isoperimetrically optimal shape, which it does. This internal-pressure experiment does not yield any skewed results. The three experiments yield the same description of the isoperimetrically optimal shape: the arcs have equal radii, the arcs have equal chords, and the arcs have equal length.
+
+    \item David Singmaster and D.J. Souppouris looked at the ratio of area to perimeter, A/P. Where it is examined to find the set which produces the greatest number. Using advanced calculus and analysis, the maximal ratio of A/P is a measure of the circularity of the set.
+
+    \item Gary Lawlor presented a new proof of the planar isoperimetric property. His method is of slicing and covering argument, and calls for strategically dividing the circle as well as another, arbitrary region of equal perimeter, into tiny pieces. Each pieces from non-circle region contains the same length of the region’s boundary and has less area than the piece of the circle containing the same length of the circle’s boundary. An advantage of this proof is, as it is comparative, it does not require a proof of existence of an optimum solution.
+\end{itemize}
+
+\chapter{2-Dimensional Case ($\mathbb{R}^2$)}
+\section{Jakob Steiner}
 Firstly, we will look at this proposition. Isosceles triangle has the smallest leg-sum compared to trianges of the same baselien and either height or area, and vice-versa. 
 
 \begin{enumerate}
@@ -491,10 +679,9 @@ We will show this proof in the next section (section 2.2).
 \begin{lemma} 
     Among all triangles ABC with same perimeter and same base AB, which has bigger area?
 \end{lemma}
-\newpage
 \begin{figure}[hbt!]
     \begin{center}   
-        \includegraphics[width=80mm]{lemma3}
+        \includegraphics[width=88mm]{lemma3}
         \caption{labeled figure to lemma 3, helps with the proof}
     \end{center}
 \end{figure}\leavevmode
@@ -708,7 +895,76 @@ Let us note that the third vertex $\mathrm{C}$, is located on the ellipse
         Since this is the optimal area we can be more precise and by rearranging the express we can conclude our desired expression which was $L^{2} \ge 8nA\tan(\frac{\pi}{2n})$
 \end{proof}
 
-\subsection{Karl Weierstrass}
+\begin{theorem}
+    Let $C$ be a simple closed curve in the plane with length $L$ and bounding a region of area $A$ . 
+    Then $L^2 \leq 4\pi A$ with equality if and only if $C$ is a circle.
+\end{theorem}
+The circle therefore bounds the biggest area among all simple closed curves in the plane with a given length.
+\subsection{J.Steiner's Proof}
+The proof that I will be unpacking and taking a closer look at will be from the book (reference the book here), and is credited by them to Jakob Sternier. Packed and concise proof from~\citep{gluck2012isoperimetric}. To reiterate, the German mathematician Peter Dirichlet (1805- 1859), remarked, Steiner had made an underlying assumption not explicitly addressed in his proof, namely that a solution existed (Nahin 59~\citep{nahin2021least}). A rather helpful computer visualisation, before we start the proof, to aid in the identification that indeed the circle is an answer, and how naturally a compressed circle (ellipse) has less area than a full and complete circle.
+\begin{figure}[hbt!]
+    \begin{center}   
+        \includegraphics[width=150mm]{steinerproofvisualisation}
+        \caption{Digitally showing area comparison of curves.}
+    \end{center}
+\end{figure}
+\begin{proof} 
+    We will begin the proof by assuming the existence of a solution. In other words, that there exists a simple closed curve $\mathrm{C}$ of a specified length L, enclosing a region with the maximum possible area.
+    \textbf{Step 1:} We claim that the curve $\mathrm{C}$ must be convex, in the sense that any line segment joining two points of $\mathrm{C}$ must lie entirely in the closure of the region bouded by $\mathrm{C}$.
+
+    We see this as follows. If $\mathrm{C}$ were not convex, then we could draw a segment $\mathrm{OP}$ between two points of $\mathrm{C}$ which lies entirely (except for its endpoints) outside of $\mathrm{C}$.
+
+    Reflecting the appropriate arc of $\mathrm{C}$ between $\mathrm{O}$ and $\mathrm{P}$ in this line would produce another curve of the same length but bouding a larger area, as in the figure below.
+    \begin{figure}[hbt!]
+        \begin{center}   
+            \includegraphics[width=80mm]{steiner1}
+            \caption{a labeled hexagon in a circle, showing that a circle }
+        \end{center}
+    \end{figure}\leavevmode
+    Hence $\mathrm{C}$ must already be convex
+
+    \textbf{Step 2:} Now choose  two points, $\mathrm{A}$ and $\mathrm{B}$, dividing our solution curve $\mathrm{C}$ into arcs of equal length.
+
+    Then the line segment $\mathrm{AB}$ must also divide the region bounded by $\mathrm{C}$ into two parts of equal area. Otherwise, the part of greater area could be reflected in $\mathrm{AB}$ to give another curve of the same length $\mathrm{L}$ bounding a region of area greater than that bounded by $\mathrm{C}$.
+    \begin{figure}[hbt!]
+        \begin{center}   
+            \includegraphics[width=80mm]{steiner2}
+            \caption{a labeled hexagon in a circle, showing that a circle }
+        \end{center}
+    \end{figure}\leavevmode
+    It follows that half of our solution curve $\mathrm{C}$ must solve the following problem: To find the arc of length $\mathrm{L}/2$ with endpoints $\mathrm{A}$ and $\mathrm{B}$ lying anywhere on a straight line, such taht the arc together with the segment $\mathrm{AB}$ encloses a region of maximum area.
+
+    \textbf{Step 3:} Now we'll show that the solution to this new problem is a semi-circle, so tghat the solution to the orignal problem must be a full circle, so that the solution to the original problem must be a full circle.
+
+    Suppose the arc $\mathrm{AOB}$ shown at the left below solves this new problem It is sufficient to show that every inscribed angle, such as the one at $\mathrm{O}$, is a right angle, for this will prove that our arc is a semi-circle.
+    \begin{figure}[hbt!]
+        \begin{center}   
+            \includegraphics[width=130mm]{steiner3}
+            \caption{a labeled hexagon in a circle, showing that a circle }
+        \end{center}
+    \end{figure}\leavevmode
+    Suppose, to the contrary, that the angle at $\mathrm{O}$ is not $90^{\circ}$. Then we can view the arc as hinged at $\mathrm{O}$, and either open it or close it so as to make the angle at $\mathrm{O}$ exactly $90^{\circ}$
+
+    This will not change the length of the arc, nor change the two shaded areas, but will increase the triangular area, and therefore increase the total area enclosed by the arc $\mathrm{AOB}$ and the line segment $\mathrm{AB}$.
+
+    But this was already maximized by the original arc, so its inscribed angle at $\mathrm{O}$ is $90^{\circ}$ and the arc itself a semi-circle.
+
+    \textbf{Step 4:} Let $\mathrm{C}$ be a smooth, regular simple closed curve in the plane, with $\mathrm{L}$ and bounding a region of area $\mathrm{A}$.
+
+    For each $\epsilon>0$, we can inscribe in $\mathrm{C}$ a polygon $\mathrm{P}_{\epsilon}$ whose length $\mathrm{L}_{\epsilon}$ satisfies $|\mathrm{L}_{\epsilon}-\mathrm{L}|<\epsilon$ and whose area $\mathrm{A}_{\epsilon}$ satisfies $|\mathrm{A}_{\epsilon}-\mathrm{A}|<\epsilon$.
+
+    For the polygon $\mathrm{P}_{\epsilon}$ we already have the isoperimetric inequality $\mathrm{L}_{\epsilon}^{2}\geq4\pi\mathrm{A}_{\epsilon}$.
+
+    Now let $\epsilon\to0$ and we get the isoperimetric inequality for the given curve $\mathrm{C}$, $\mathrm{L}^{2}\geq4\pi\mathrm{A}$.
+
+    Since the cirlce of the same length $\mathrm{L}$ bounds a region of area $\mathrm{A}_{0}$ satisfying $\mathrm{L}^{2}=4\pi\mathrm{A}_{0}$, we know that $\mathrm{A}\leq\mathrm{A}_{0}$.
+
+    Thus we know that a circle maximizes the enclosed area among all smooth regular simple closed curves of the same length. So the maximizers exists.
+
+    Then by parts (1)-(3) of this proof, there are no other maximizers, completing the proof of the isoperimetric theorem.
+\end{proof}
+
+\section{Karl Weierstrass}
 Relying on calculus of variation, this proof defines area and length in terms of integrals. However Karl Weierstrass's calculus of variation is very strong, and that the isoperimetric problem pops out of it. Calculus of variations is concerned with the problem of extremising "functionals", finding extrema of functions of \textit{infinite} variables. Functionals can be looked at like "functions of functions". The result is two Euler-Lagrange equations which when solved, provide an equation in the form of a circle and the length of the radius which optimizes the area given the length of the perimeter. The lagrangian, denoted by $L(x,y,y')$ normally opted as $L=T-V$, the kinetic energy minus the potential energy. Extremal curves represent solutions to the isoperimetric problem, providing the shapes that maximize the enclosed area under a fixed perimeter. Extremal curves are smooth and regular, ensuring the validity of the Euler-Lagrange equation and the associated boundary conditions. We shall not give proofs to these theorem and lemmas.
 \begin{theorem}
 	Consider the functional $\mathrm{J}(Y)$, an extremum, defined as follows:
@@ -781,7 +1037,7 @@ Applying the Euler-Lagrange equation to this Lagrangian, we get:
     \end{lemma}
 Direct proofs from Weierstrass' corollary can be found in $Curves$ $and$ $Surfaces$ $in$ $Euclidean$ $Spaces$~\citep{chern1966curves}.
 
-\subsection{Erhard Schmidt}
+\section{Erhard Schmidt}
 E.Schmidt simplified the work of Weierstrass to whom provided a complete proof of the Isoperimetric problem, however this proof seemed difficult to digest thus later mathematicians came in to assist, decades later. Beginning with parameterised curves, a circle is defined using carefully selected intervals and bounding. Using advanced calculus, isoperimetric equality is obtained if all calculated isoperimetric inequality statements are equalities. But here we will start off with the initial formula that we will see down below and how this initial formula will be used.
 
 \textbf{Initial Formula}
@@ -803,81 +1059,7 @@ Area, A, bounded by a positively oriented simple closed curve where:
     The Green's theorem uses the definition of positively oriented curves.
 \end{remark}
 
-\subsection{Vladimir Boltjanski}
-Boltjanski's work provided a summary of Steiner's isoperimetric proof. Which starts off by showing that the maximum area of the shape must be convex.
-\begin{proof}
-	\begin{enumerate}
-		\item Towards a general shape. He makes a "cross-cut" that divides the boundary into two equal lengths. If every cross-cut has equal area then the shape is extremal. Otherwise, omit the side with smaller area and reflect the larger area across the cross-cut. We may continue in this way until every cross-cut. We may continue in this way until every cross-cut has equal area.
-		\item Now  he takes a fixed cross-cut, $a$, $b$, and any boundary points distinct from $a$ and $b$, $c$, and demonstrates that the extremal must have $\angle acb=90^{\circ}$. If the angle is anything else, install a hinge and rotate about $c$ until the angle mesaure of $acb$ is $90^{\circ}$.
-		\item The reflect over the cross-cut to achieve a shape with greater area and same perimeter.
-	\end{enumerate}
-\end{proof}
-
-\subsection{Richard Demar}
-Demar begins with an indirect proof to show that the extremal is convex, then proceeds with a trivial example that the square is not extremal. While the square example is trivial and can easily be proved computationally, the trick Demar uses here will be used in subsequent proofs.
-
-\subsection{Alfred D. Garvin}
-Expanding on the work of Demar, physical experiments are performed to prove the statements. First, liquid mercury is slowly poured into a confined triangular reservoir and is expected to take on an isoperimetrically optimal configuration, which it does. However, the meniscus effect of the mercury slightly skews the endpoints of the arcs. Next, the reservoir is partially filled with water. A viscous oil is poured slowly onto the water and is expected to take on an isoperimetrically optimal shape, which it does. Again, the meniscus effect of the oil slightly skews the endpoits of the arcs. The third experiment uses a flexible, asymmetrical triangular wood fence and a sturdypaper closed fence with perimeter less than that of the triangle. BB pellets are poured inside the paper fence, which is expected to take on an isoperimetrically optimal shape, which it does. This internal-pressure experiment does not yield any skewed results. The three experiments yield the same description of the isoperimetrically optimal shape: the arcs have equal radii, the arcs have equal chords, and the arcs have equal length.
-
-\subsection{David Singmaster and D.J. Souppouris}
-The ratio of area to perimeter, A/P, is examined to find the set which produces the greatest number. Using advanced calculus and analysis, the maximal ratio of A/P is a measure of the circularity of the set.
-
-\subsection{Gary Lawlor}
-A new proof of the planar isoperimetric property is presented. The method is a slicing and covering argument, and calls for strategically dividing the circle as well as another, arbitrary region of equal perimeter, into tiny pieces. Each pieces from non-circle region contains the same length of the region’s boundary and has less area than the piece of the circle containing the same length of the circle’s boundary. An advantage of this proof is, as it is comparative, it does not require a proof of existence of an optimum solution.
-
-\section{Unpacking J.Steiner's Proof}
-The proof that I will be unpacking and taking a closer look at will be from the book (reference the book here), and is credited by them to Jakob Sternier. Packed and concise proof from~\citep{gluck2012isoperimetric}. To reiterate, the German mathematician Peter Dirichlet (1805- 1859), remarked, Steiner had made an underlying assumption not explicitly addressed in his proof, namely that a solution existed (Nahin 59~\citep{nahin2021least}). A rather helpful computer visualisation, before we start the proof, to aid in the identification that indeed the circle is an answer, and how naturally a compressed circle (ellipse) has less area than a full and complete circle.
-\begin{minipage}{\linewidth}
-    \centering
-    \includegraphics[width=150mm]{steinerproofvisualisation.png}
-    \captionof{figure}{Area comparison of curves, Steiner's Proof}
-\end{minipage}
-\begin{proof}
-    We will begin the proof by assuming the existence of a solution. In other words, that there exists a simple closed curve C of a specified length L, enclosing a region with the maximum possible area.
-    \begin{enumerate}
-        \item We claim that the curve C must by convex, meaning that any straight line connecting two points (O and A) on C should entirely lie within the region enclosed by C. We justify this assertion thus, suppose that the curve is not convex then we could draw a segment OA connecting the two points of C, with the entire segment (except for its endpoints) situated outside of C. By mirroring the relevant arc of C between O and A along this line, a new curve of an identical length emerges, encapsulating a greater area, as illustrated in the figure below. Therefore, C is already a convex curve.
-
-        \begin{minipage}{\linewidth}
-            \centering
-            \includegraphics[width=70mm]{isofig1.png}
-            \captionof{figure}{Figure VII}
-        \end{minipage}
-        \item Select two points, P and Q, to partition our solution curve C into arcs of identical length. Consequently, the line segment PQ must divide the region enclosed by C into two sections of equal area. Failure to do so would imply that the portion with a larger area could be mirrored across PQ, resulting in another curve of the same length but with greater area.
-
-        \begin{minipage}{\linewidth}
-            \centering
-            \includegraphics[width=80mm]{isofig4.png}
-            \captionof{figure}{Figure VIII}
-        \end{minipage}
-        \item Next we will need to prove that the region bounded by the line PQ and the arc with length L/2 and endpoints P,Q bounds a region of maximum area and we will prove that the region is a semi-circle. Next we will need to prove that the region bounded by the line PQ and the arc with length L/2 and endpoints P,Q bounds a region of maximum area and we will prove that the region is a semi-circle. for this we are making an assumption which is that of all possible triangles with two sides of given length, the triangle of maximum area is the right triangle with the given sides as the perpendicular sides. This is quite straight forward, consider the figure below.
-
-        \begin{minipage}{\linewidth}
-            \centering
-            \includegraphics[width=85mm]{isofig3.png}
-            \captionof{figure}{Figure IX}
-        \end{minipage}
-        Well, we know that $g\sin(x)=h$ and the area of triangle, $A=(1/2)fh=(1/2)fg\sin(x)$, clearly A is maximised when x is $90^\circ$ as $\sin(x)$ is then equal to 1.
-
-        Now turning our attention back figure VIII, for the sake of contradiction we will assume that the angle PRQ is not a right angle. Then, we can treat the arc as hinged at R and either open or close it to make the angle at R a right angle, we can do this by adjusting either PR or RQ or maybe both. This adjustment does not alter the arc's length, consequently expanding the total area encapsulated by the arc PRQ and the line PQ. However, this contradicts the maximization achieved by the original arc, which had already optimized the enclosed total area. Therefore, the inscribed angle at R must be a right angle, confirming that the arc is indeed a semi-circle. Now since we have proven that it is a semi circle, we can use this logic and expand it to the whole curve to conclude that it is a circle, by way of reflecting the curve along the original symmetry line.
-        
-        \item Thus far, we have established that when considering a simple closed curve C with a designated length L, enclosing a region with maximum area, the curve in question must be a circle. Moving forward, we will demonstrate the existence of a maximizer and present this as the comprehensive Isoperimetric problem. In order to achieve this, we will approximate the curve C using a polygonal curve. 
-        Use Theorem 7 (we will consider the case where N=2n, as this is just a case of the general theorem)
-        Now, let C be a smooth, regular simple closed curve in the plane, with length L and enclosing a region of area A. 
-        We can cleverly manipulate our expression from theorem 8 to obtain
-	\begin{center}
-        $\displaystyle L^{2}\geq4\pi A \frac{\tan(\frac{\pi}{2n})}{\frac{\pi}{2n}}$
-	\end{center}
-        Now if we carefuly choose our points such that $n \to \infty $,  $L_{n} \to L$ and $A_{n} \to A$, 
-        Well, as $n \to \infty$ our expression above becomes
-	\begin{center}
-        $L^{2}\geq4\pi A$
-	\end{center}
-
-        Now we need to show that the equality materialises if and only if the curve in question happens to be a circle. Well if L represents the perimeter of a closed curve, the maximum enclosed area is $\frac{L^{2}}{4\pi}$, conversely if A denotes the area enclosed by a simple closed curve the minimum for the perimeter would be $\sqrt{4 \pi A}$, but the circle is the only curve capable of satisfying such conditions, thus we know that a circle maximises enclosed area among all smooth regular simple closed curves of a fixed length.This confirms the existence of the maximizer. Hence the proof is complete.  
-    \end{enumerate}
-\end{proof}
-
-\section{E.Schmidt's Proof}
+\subsection{E.Schmidt's Proof}
 This proof will need:
 \begin{enumerate}
 	\item AM-GM Inequality 
@@ -914,7 +1096,6 @@ This proof will need:
 			
 			$= \int_{0}^{l} x'y \,dt$ \;\;\;by Green's theorem
 	\end{enumerate}
-    \newpage
     \begin{figure}[hbt!]
         \begin{center}   
             \includegraphics[width=100mm]{esfigure}
@@ -947,155 +1128,38 @@ to use Fourier analysis.
 \chapter{n-Dimensional Case ($\mathbb{R}^n$)}
 The idea of the proof for this theorem is to show the inequality above using induction on $n$. Here, we will use the Integral Theorem of Fubini to establish induction step. In this chapter, some statements of the theory of convex, compact sets will be introduced as well as properties of the volume functional. Later, we will show the Isoperimetric Inequality using the theorem of Brunn–Minkowski. We will follow~\citep{schneider2014convex}.
 
-\section{The Support Function}
-The following section introduces the support function, which can be used to ascertain the "height" of a convex body. The support function is a convex function on $\mathbb{R}$ and is compatible with many geometric opetions such as scaling, translation, rotation and importantly the \textbf{Minkowski addition}. These characteristics make the support function one of the most important foundational ideas in convex geometry.
-
-\begin{definition}
-	Let $K\subseteq\mathbb{R}^n$ be non-empty, convex and closed. The $support$ $function$ $h(K,\cdot\space)=h_k$ is defined by
-	\begin{center}
-		$h(K,u):=\sup\{\langle x,u\rangle;x\in K\}$ for $u\in\mathbb{R}^n$
-	\end{center}
-	Furthermore we define for $u\in dom\,h(K,\cdot)\backslash\{0\}$
-	\begin{center}
-		$H(K,u):=\{x\in\mathbb{R}^n;\langle x,u\rangle=h(K,u)\}$ a supporting plane of K,
-		
-		$H^{-}:=\{x\in\mathbb{R}^n;\langle x,u\rangle\leq h(K,u)\}$ a support half space of K, and 
-		
-		$F(K,u):=H(K,u)\cap K$ a support domain of K
-	\end{center}
-\end{definition}
-
-\begin{remark}
-	The suuport function for $u\in\mathbb{S}^{n-1}\cap dom\,h(K,\cdot)$ can be viewed as the distance of the supporting plane at K with outer unit normal to the origin.(give some figure)
-\end{remark}
-
-\begin{remark}
-	For $B^{n}$ and $u\in\mathbb{S}^{n-1}$ the support function can be computed easily. For arbirary $x\in B^{n}$ and $u\in\mathbb{S}^{n-1}$ Cauchy Swarz gives us
-	\begin{center}
-		$|\langle x,u\rangle|\leq||u||\:||x||\leq1$
-	\end{center}
-	The support function is equal 1 on $B^{n}$ since the maximum is also 1.
-\end{remark}
-
-\begin{remark}
-	The support funtion has the following properties:
-	\begin{enumerate}
-		\item $h_{k}\leq h_{L}$ if and only if $K\subseteq L$,
-		\item $h(\{z\},u)=\langle x,y\rangle$ for $z,u\in\mathbb{R}^{n}$,
-		\item $h(K+t,u)=h(K,u)+\langle t,u\rangle$ for $t,u\in\mathbb{R}^{n}$,
-		\item $h(\lambda K, u)=\lambda h(K,u)=h(K,\lambda u)$ for $\lambda\in\mathbb{R}_{0}^{+}$, $u\in\mathbb{R}^{n}$,
-		\item $h(-K,u)=h(K,-u)$ for $u\in\mathbb{R}^{n}$,
-		\item $h(K,u_{1}+u_{2})\leq h(K,u_{1})+h(K,u_{2})$ for $u_{1},u_{2}\in\mathbb{R}^{n}$,
-		\item $h(K,\cdot)=: h_{k}$ is convex.
-	\end{enumerate}
-\end{remark}
-
-\begin{lemma}
-	Let $K,L\in\mathscr{K}^{n}$, then$h(K+L,u)=h(K,u)+h(L,u)$.
-\end{lemma}
-\begin{proof}
-	Let $u\in\mathbb{R}^{n}\backslash\{0\}$.
-
-    First, we show $h(K+L,u)\geq h(K,u)+h(L,u)$. Since $K$ and $L$ are compact, the supremum of the support function is attained. Thus, there exists $x\in K$ and $y\in L$ such that $h(L,u)=\langle y,u\rangle$ and $h(K,u)=\langle x,u\rangle$.
-
-    Then we have
-    \begin{center}
-        $h(K,u)+h(L,u)=\langle y,u\rangle+\langle x,u\rangle=\langle x+y,u\rangle\leq h(K+L,u)$.
-    \end{center}
-
-    Secondly, we want to show $h(K+L,u)\leq h(K,u)+h(L,u)$. Let $z\in K+L$ so that $H(K+L,u)=\langle u,z\rangle$. Then there exists $x\in K$ and $y\in L$ such that $z=x+y$. It follows
-    \begin{center}
-        $h(K+L,u)=\langle z,u\rangle=\langle x+y,u\rangle=\langle x,u\rangle+\langle y,u\rangle\leq h(K,u)+h(L,u)$.
-    \end{center}
-    Both inequalities are shown and so the claim follows.
-\end{proof}
-
-\section{The Hausdorff Metric}
-To prove the continuity of the volume functional and of the support function with respect to convex bodies, we need a metric on the set of convex bodies. This metric will be introduced in the following subsection.
-
-\begin{definition}
-    For $K,L\in K^{n}$, define Hausdorff distance or Hausedorff metric by
-    \begin{center}
-        $\delta(K,L):=\min\{\lambda\geq;K\subseteq L+\lambda B^{n},L\subseteq K+\lambda B^{n}\}$,
-    \end{center}
-\end{definition}
-
-\begin{remark}
-    The Hausdorff distance (Hausdorff metric) on the set of convex bodies. This follows directly from the properties of minima and from the convexity of $K$.
-\end{remark}
-
-\begin{lemma}
-    Let $K,L\in\mathscr{K}^{n}$, $K,L\subseteq RB^{n}$, where $R>0$, and $u,v\in\mathbb{R}^{n}$. Then
-    \begin{center}
-        $|h(K,u)-h(L,v)|\leq R|u-v|+\max\{|u|,|v|\}\delta(K,L)$.
-    \end{center}
-\end{lemma}
-\begin{proof}
-    Proof can be found in~\citep{schneider2014convex} (section 1.8, Lemma 1.8.12).
-\end{proof}
-
-\begin{remark}
-    Lemma above proves the local Lipschitz continuity of the support function in both arguments.
-\end{remark}
-
-\begin{theorem}
-    Let $K,L\in\mathscr{K}^{n}$, then
-    \begin{center}
-        $\delta(K,L)=\underset{u\in\mathbb{S}^{n-1}}{\sup}|h(K,u)-h(L,u)|=:||\bar{h}_{K}-\bar{h}_{L}||$,
-    \end{center}
-    where $\displaystyle \bar{h}_{K}=h_{k}|_{\mathbb{S}^{n-1}}$.
-\end{theorem}
-\begin{proof}
-    Let $\delta(K,L)\leq\alpha$. This implies $K\subseteq L+\alpha B^{n}$. For $u\in\mathbb{S}^{n-1}$, it follows 
-    \begin{center}
-        $h(K,u)\leq h(L+\alpha B^{n},u)=h(L,u)+\alpha h(B^{n},u)=h(L,u)+\alpha$
-    \end{center}
-    After switching $K$ and $L$, we can conclude for $u\in\mathbb{S}^{n-1}$ that
-    \begin{center}
-        $|h(K,u)-h(L,u)|\leq\alpha$
-    \end{center}
-    This implies $||\bar{h}_{K}-\bar{h}_{L}||\leq\delta(K,L)$. Using a similar argument one can show the other estimation.
-\end{proof}
-
-\begin{lemma}
-    Let $K_{1},K_{2}\in\mathscr{K}^{n}$ and $K_{2}\subseteq\mathring{K}_{1}$. Then there exists $\eta>0$ such that for all $K\in\mathscr{K}^{n}$ with $\delta(K,K_{1})<\eta$, $K_{2}\subseteq K$ holds.
-\end{lemma}
-\begin{proof}
-    Can be found in~\citep{schneider2014convex} (Section 1.8, Lemma 1.8.18)
-\end{proof}
-    
 \section{Volume and Surface Measure}
 In this subsection, we will introduce the volume functional and show its continuity. The results of this subsection are important in the proof of Brunn-Minkowski.
 
 \begin{definition}
-	Let $M\subseteq\mathbb{R}^{n}, p\geq0$. For $\delta>0$ define
-	\begin{center}
-		$\displaystyle \mathscr{H}_{\delta}^{P}(M):=\inf\{\sum\limits_{i=1}^{\infty}\alpha(p)(\frac{diam C_{i}}{2})^{p};(C_{i})_{i\in\mathbb{N}}$ open sets in $\mathbb{R}^n$
+    Let $M\subseteq\mathbb{R}^{n}, p\geq0$. For $\delta>0$ define
+    \begin{center}
+        $\displaystyle \mathscr{H}_{\delta}^{P}(M):=\inf\{\sum\limits_{i=1}^{\infty}\alpha(p)(\frac{diam C_{i}}{2})^{p};(C_{i})_{i\in\mathbb{N}}$ open sets in $\mathbb{R}^n$
 
-		\hspace{1cm}with $diam C_{i}\leq\delta$ and $M\subseteq\underset{i\in\mathbb{N}}{\cup}{C_{i}}\}$
-	\end{center}
-	with $\alpha(p)=\frac{\pi^{\frac{p}{2}}}{\Gamma(p)(\frac{p}{2}+1)}$ for $p\neq0$, where $\Gamma(p):=\int_{0}^{\infty}t^{-1}e^{-t}\,dt$ and $\alpha(0)=0$.
-	
-	Define the p-dimensional Hausdorff measure of $M$ by
-	\begin{center}
-		$\mathscr{H}^{p}(M):=\underset{\delta>0}{\sup}\mathscr{H}_{\delta}^{p}(M)=\underset{\delta\to0}{\lim}\mathscr{H}_{\delta}^{p}(M)$.
-	\end{center}
+        \hspace{1cm}with $diam C_{i}\leq\delta$ and $M\subseteq\underset{i\in\mathbb{N}}{\cup}{C_{i}}\}$
+    \end{center}
+    with $\alpha(p)=\frac{\pi^{\frac{p}{2}}}{\Gamma(p)(\frac{p}{2}+1)}$ for $p\neq0$, where $\Gamma(p):=\int_{0}^{\infty}t^{-1}e^{-t}\,dt$ and $\alpha(0)=0$.
+    
+    Define the p-dimensional Hausdorff measure of $M$ by
+    \begin{center}
+        $\mathscr{H}^{p}(M):=\underset{\delta>0}{\sup}\mathscr{H}_{\delta}^{p}(M)=\underset{\delta\to0}{\lim}\mathscr{H}_{\delta}^{p}(M)$.
+    \end{center}
 \end{definition}
 
 \begin{remark}
-	Let $t\in\mathbb{R}^{n}$ and $\lambda\in\mathbb{R}$, then we have
-	\begin{center}
-		$\mathscr{H}^{p}(\lambda M)=\lambda^{p}\mathscr{H}^{p}(M)$ and $\mathscr{H}^{p}(M=t)=\mathscr{H}^{p}(M)$.
-	\end{center}
-	Furthermroe, for $A\subseteq B$ we have $\mathscr{H}^{p}(A)\leq\mathscr{H}^{p}(B)$.
+    Let $t\in\mathbb{R}^{n}$ and $\lambda\in\mathbb{R}$, then we have
+    \begin{center}
+        $\mathscr{H}^{p}(\lambda M)=\lambda^{p}\mathscr{H}^{p}(M)$ and $\mathscr{H}^{p}(M=t)=\mathscr{H}^{p}(M)$.
+    \end{center}
+    Furthermroe, for $A\subseteq B$ we have $\mathscr{H}^{p}(A)\leq\mathscr{H}^{p}(B)$.
 \end{remark}
 
 \begin{definition}
-	The volume funcational $V_{n}$ on $\mathscr{K}^{n}$ is defined by the restriction of the $n$-dimensional Hausdorff measure on $\mathscr{K}^{n}$.
+    The volume funcational $V_{n}$ on $\mathscr{K}^{n}$ is defined by the restriction of the $n$-dimensional Hausdorff measure on $\mathscr{K}^{n}$.
 \end{definition}
 
 \begin{theorem}
-	The volume functional $V_{n}:\mathscr{K}^{n}\to\mathbb{R}$ is continuous.
+    The volume functional $V_{n}:\mathscr{K}^{n}\to\mathbb{R}$ is continuous.
 \end{theorem}
 \begin{proof}
     \textbf{Case 1 $\mathrm{V}_{n}(\mathrm{K})=0$:}
@@ -1417,8 +1481,6 @@ For the dimension three, the isoperimetric inequality in theorem 18 can be writt
 \begin{center}
 $\displaystyle \mathrm{U}(\mathrm{K})\geq 3\mathrm{V}_{3}(\mathrm{B}_{3})^{1/3}\mathrm{V}_{2}(\mathrm{K})^{1/3}=3\sqrt{\pi}\mathrm{A}[\mathrm{K}]^{2/3}$
 \end{center}
-
-\chapter{Manifolds}
 
 \bibliography{The-Isoperimetric-Problem-References}
 \end{document}

@@ -142,9 +142,6 @@ In general, we want the maximum area whose boundary must pertain a specific leng
 \textbf{N-Dimensions:} Spherical in 3-D, which allows us to refer back to our 2-D case. Here we will discuss the spherical isoperimetric inequality. To begin we introduce several more important tools, the support function, Hausdorff metric, volume and surface measure, and then prove the Brunn-Minkowski inequality. Using this inequality, the proof of the isoperimetric inequality in $n$-dimension will be shown. We will then see how the 2-D and the 3-D cases will behave under this new result.
 \newline
 \newline
-\textbf{Manifolds:} A light introduction to the isoperimetric inequalities in manifolds.
-\newline
-\newline
 Finally a comparison between the proofs. Where we shall discuss the limitations of each proof and how it differs to each other.
 
 %-------------------------------------------------------------------------------------
@@ -350,7 +347,9 @@ The two definitions, above, are vital into understanding the main theorem. Since
 
 \begin{definition} (Heine-Borel Theorem)
     A set in $\mathbb{R}^n$ is said to be compact if it is closed and bounded.
-\end{definition}
+\end{definition}\leavevmode \\
+
+Over the next couple subsections we will introduce the necessary knowledge, language and notation to prove the 2-D case. Although we will also give other proofs, the final 2-D proof we are going to give, will continue nicely into the 3-D proof.
 
 \newpage
 \subsection{Fourier Series}
@@ -492,12 +491,12 @@ As our goal is to maximize, get the largest area, it is quite clear on why we ch
 		for all $x, y\in\mathbb{R}^n$ and $0\leq\lambda\leq1$.
 		\item . A function $f:D\to\bar{\mathbb{R}}$ with $D\subseteq\mathbb{R}^n$ is called convex if its expansion on $\mathbb{R}^n$
 		\begin{center}
-			\begin{equation}
+			\begin{equation*}
 				  \tilde{f}(x):=\begin{cases}
 				    	f(x), & \text{for $x\in D$}.\\
 				   	 \infty, & \text{otherwise}.
 				  \end{cases}
-			\end{equation}
+			\end{equation*}
 		\end{center}
 		is convex.
 		\item A function $f$ is $concave$ if $-f$ is convex.
@@ -690,21 +689,57 @@ The seven proofs were done by Jakob Steiner, Karl Weierstrass, Erhard Schmidt, V
         \centering
         \begin{minipage}{0.5\textwidth}
             \centering
-            \includegraphics[width=83mm]{Demar4} % first figure itself
+            \includegraphics[width=63mm]{Demar4} % first figure itself
             \caption{a zoomed in view of where the arc is reflected and replaced}
         \end{minipage}\hfill
         \begin{minipage}{0.5\textwidth}
             \centering
-            \includegraphics[width=60mm]{Demar5} % second figure itself
+            \includegraphics[width=45mm]{Demar5} % second figure itself
             \caption{The maximum area solution}
         \end{minipage}
     \end{figure}
 
-    \item Expanding on the work of Demar, Alfred D. Garvin, physical experiments are performed to prove the statements. First, liquid mercury is slowly poured into a confined triangular reservoir and is expected to take on an isoperimetrically optimal configuration, which it does. However, the meniscus effect of the mercury slightly skews the endpoints of the arcs. Next, the reservoir is partially filled with water. A viscous oil is poured slowly onto the water and is expected to take on an isoperimetrically optimal shape, which it does. Again, the meniscus effect of the oil slightly skews the endpoits of the arcs. The third experiment uses a flexible, asymmetrical triangular wood fence and a sturdypaper closed fence with perimeter less than that of the triangle. BB pellets are poured inside the paper fence, which is expected to take on an isoperimetrically optimal shape, which it does. This internal-pressure experiment does not yield any skewed results. The three experiments yield the same description of the isoperimetrically optimal shape: the arcs have equal radii, the arcs have equal chords, and the arcs have equal length. ~\citep{garvin1975note}
+    \item Expanding on the work of Demar, Alfred D. Garvin, physical experiments are performed to prove the statements. 
+    \begin{enumerate}
+        \item Initially, a triangular reservoir is filled with liquid mercury in a slow and controlled manner. The intention is for the mercury to adopt an isoperimetrically optimal configuration, and indeed, it successfully achieves this desired state. However, due to the meniscus effect of the mercury, the endpoints of the arcs become slightly distorted.
+        First, a confined triangular reservoir is slowly and gradually filled with liquid mercury and eventually assuming an isoperimetrically optimal shape.
 
-    \item David Singmaster and D.J. Souppouris looked at the ratio of area to perimeter, A/P. Where it is examined to find the set which produces the greatest number. Using advanced calculus and analysis, the maximal ratio of A/P is a measure of the circularity of the set.
+        \item Secondly, the reservoir is partially filled with water, followed by a gradual pour of viscous oil is poured onto the surface of water. It is expected that the oil will adopt an isoperimetrically optimal form, and indeed, it does so. Nevertheless, the meniscus effect of the oil once again leads to a slight distortion of the endpoints of the arcs. 
 
-    \item Gary Lawlor presented a new proof of the planar isoperimetric property. His method is of slicing and covering argument, and calls for strategically dividing the circle as well as another, arbitrary region of equal perimeter, into tiny pieces. Each pieces from non-circle region contains the same length of the region’s boundary and has less area than the piece of the circle containing the same length of the circle’s boundary. An advantage of this proof is, as it is comparative, it does not require a proof of existence of an optimum solution.
+        \item Moving on to the third experiment, an asymmetrical triangular wooden fence and a sturdy paper fence with a perimeter smaller than that of the triangle are employed. BB pellets are poured into the paper fence, with the expectation that it will adopt an isoperimetrically optimal shape. Which it does.
+
+        \item All three experiments yield a consistent description of the isoperimetrically optimal shape. Specifically, the arcs exhibit equal radii, equal chords, and equal lengths.
+    \end{enumerate}~\citep{garvin1975note}
+    
+    \item David Singmaster and D.J. Souppouris looked at the ratio of area to perimeter, A/P. Where it is examined to find the set which produces the greatest number. Through the application of advanced calculus and analysis, the maximum ratio of A/P serves as an indicator of the circularity of the given set.~\citep{singmaster1978problem}
+    \newpage
+    \item Gary Lawlor presented a new proof of the planar isoperimetric property. His method is of slicing and covering argument, and calls for strategically dividing the circle as well as another, arbitrary region of equal perimeter, into tiny pieces. 
+    \begin{figure}[hbt!]
+        \begin{center}   
+            \includegraphics[width=40mm]{Lawlor1}
+            \caption{Slicing the circle}
+        \end{center}
+    \end{figure}\leavevmode
+    \newline
+    Each pieces from non-circle region contains the same length of the region’s boundary and has less area than the piece of the circle containing the same length of the circle’s boundary. But the two main ideas that Lawlor employs goes as: the local maximization proof is based on the observation that when considering triangles with a common base and opposite angle, the one with the greatest area is always an isosceles triangle. 
+    \begin{figure}[hbt!]
+        \begin{center}   
+            \includegraphics[width=40mm]{Lawlor3}
+            \caption{Among triangles with fixed base and fixed opposite angle, the one with greatest area is isosceles}
+        \end{center}
+    \end{figure}\leavevmode
+    \newline
+    And then in order to connect local and global perspectives, it is necessary to develop a method for tiling a specific region with triangles. These triangles should be oriented in such a way that their shorter base aligns with the boundary of the region, while also maintaining a constant fixed angle opposite to this base.
+    \newline
+    And constructing the covering triangles. Let $\mathrm{S}_{1}$ be the curve of length $\pi/2$, which is the portion of $\mathrm{S}$ lying in the first quadrant
+    \begin{figure}[hbt!]
+        \begin{center}   
+            \includegraphics[width=100mm]{Lawlor2}
+            \caption{Among triangles with fixed base and fixed opposite angle, the one with greatest area is isosceles}
+        \end{center}
+    \end{figure}\leavevmode
+    \newline
+    An advantage of this proof is, as it is comparative, it does not require a proof of existence of an optimum solution.~\citep{lawlor1998new}
 \end{itemize}
 
 \chapter{2-Dimensional Case ($\mathbb{R}^2$)}
@@ -1067,11 +1102,11 @@ Relying on calculus of variation, this proof defines area and length in terms of
 \subsubsection{Isoperimetric with Lagrangian}
 For the isoperimetric problem, the Lagrangian $L(x, y, y')$ becomes the integrand of the perimeter functional, which is the square root of $1 + (y')^2$.
 \begin{center}
-	$L(x, y, y') = \sqrt{1 + (y')^2}$
+	$\displaystyle L(x, y, y') = \sqrt{1 + (y')^2}$
 \end{center}
 Applying the Euler-Lagrange equation to this Lagrangian, we get:
 \begin{center}
-	$\frac{d}{dx} \left( \frac{y'}{\sqrt{1 + (y')^2}} \right) - \frac{y}{\sqrt{1 + (y')^2}} = 0$
+	$\displaystyle \frac{d}{dx} \left( \frac{y'}{\sqrt{1 + (y')^2}} \right) - \frac{y}{\sqrt{1 + (y')^2}} = 0$
 \end{center}
 \begin{lemma}(\textbf{Existence of Extremal Curves})
         There exists at least one extremal curve that satisfies the Euler-Lagrange equation and corresponds to a critical point of the functional \( J[y] \).
@@ -1085,16 +1120,56 @@ Applying the Euler-Lagrange equation to this Lagrangian, we get:
 Direct proofs from Weierstrass' corollary can be found in $Curves$ $and$ $Surfaces$ $in$ $Euclidean$ $Spaces$~\citep{chern1966curves}.
 
 \section{Erhard Schmidt}
-E.Schmidt simplified the work of Weierstrass to whom provided a complete proof of the Isoperimetric problem, however this proof seemed difficult to digest thus later mathematicians came in to assist, decades later. Beginning with parameterised curves, a circle is defined using carefully selected intervals and bounding. Using advanced calculus, isoperimetric equality is obtained if all calculated isoperimetric inequality statements are equalities. But here we will start off with the initial formula that we will see down below and how this initial formula will be used.
+E.Schmidt simplified the work of Weierstrass to whom provided a complete proof of the Isoperimetric problem, however this proof seemed difficult to digest thus later mathematicians came in to assist, decades later. 
+
+Beginning with parameterised curves, a circle is defined using carefully selected intervals and bounding. Using advanced calculus, isoperimetric equality is obtained if all calculated isoperimetric inequality statements are equalities. But here we will start off with the initial formula that we will see down below and how this initial formula will be used.
 
 \textbf{Initial Formula}
 Area, A, bounded by a positively oriented simple closed curve where: 
 \begin{center}
-	$\alpha(t)=(x(t),y(t)), t\in [a,b]$
+	$\displaystyle \alpha(t)=(x(t),y(t)), t\in [a,b]$ is an arbitrary parameter
 \end{center}
 \begin{center}
-	$A=-\int_{a}^{b}y(t)x'(t)\,dt=\int_{a}^{b}x(t)y'(t)\,dt = 1/2\int_{a}^{b}(xy'-yx')\,dt$
+	$\displaystyle A=-\int_{a}^{b}y(t)x'(t)\,dt=\int_{a}^{b}x(t)y'(t)\,dt$
+
+    $\displaystyle =1/2\int_{a}^{b}(xy'-yx')\,dt$
 \end{center}
+Observe that the second formula is acquired from the first one by recognizing that
+\begin{center}
+    $\displaystyle \int_{a}^{a}xy'\,dt=\int_{a}^{b}(xy)'\,dt-\int_{a}^{b}x'y\,dt$
+
+    $\displaystyle =[xy(b)-xy(a)]-\int_{a}^{b}x'y\,dt$
+
+    $\displaystyle = \int_{a}^{b}(xy)'\,dt$,
+\end{center}
+since the curve is closed. Folloing immediately from the first two formula, we have the third formula. 
+
+To show the first formula from the initial formula, we consider initally the case where the curve is made up of two straight-line segments parallel to the y-axis
+\newpage
+\begin{figure}[hbt!]
+    \begin{center}   
+        \includegraphics[width=80mm]{Schmidt1}
+        \caption{asdf}
+    \end{center}
+\end{figure}\leavevmode
+and two arcs that can be written in the form
+\begin{center}
+    $y=f_{1}(x)$ and $y=f_{1}(x)$, $x\in[x_{0},x_{1}]$, $f_{1}>f_{2}$
+\end{center}
+Clearly, the area bounded by the curve is
+\begin{center}
+    $\mathrm{A}=\int_{x_{0}}^{x_{1}}f_{1}(x)\,dx-\int_{x_{0}}^{x_{1}}f_{2}(x)\,dx$.
+\end{center}
+Since the curve is positaively oriented, we obtain with the notation of Figure 4.10.
+
+To prove the general case, it must be shown that it is possible to divide the region bounded by the curve into a finite number of regions of the above type.
+\begin{figure}[hbt!]
+    \begin{center}   
+        \includegraphics[width=80mm]{Schmidt2}
+        \caption{curve's region divided into a finite number of regions}
+    \end{center}
+\end{figure}\leavevmode
+If there exists a straight line $\mathrm{E}$ in the plane such that the distance $p(t)$ of $\alpha(t)$ to this line is a function with fintely many critial points. The initial formula can also be obtained by using Green's theorem in the plane.
 
 \begin{definition}
     Let $\mathrm{C}$ be a simple closed curve then $\mathrm{C}$ is called positively oriented if the traversal of the curve is counter clockwise.
@@ -1103,74 +1178,294 @@ Area, A, bounded by a positively oriented simple closed curve where:
 \end{definition}
 
 \begin{remark}
-    The Green's theorem uses the definition of positively oriented curves.
+    The Green's theorem uses the definition of positively oriented curves. Which converts a line integral into a double integral, or the other way.
 \end{remark}
 
+\begin{theorem} (Green's Theorem)
+    Let $\mathrm{C}$ be a positively oriented, piecewise smooth, simple, closed cruve and let $\mathrm{R}$ be the region enclosed by the curve. $f(x,y)=(u(x,y),v(x,y))$,
+
+    \begin{center}
+        $\displaystyle \int_{\delta R}\overrightarrow{f}\,d\overrightarrow{r}=\iint_{R}\frac{\delta v}{\delta x}-\frac{\delta u}{\delta y}\,dA$
+    \end{center}
+\end{theorem}
+
 \subsection{E.Schmidt's Proof}
-This proof will need:
-\begin{enumerate}
-	\item AM-GM Inequality 
-	\item Cauchy-Schwarz Inequality
-	\item $A=\int_{0}^{l} xy' \,dx = -\int_{0}^{l} yx' \,ds$ so $c(s)=(x(s),y(s))$
-\end{enumerate}
-\textbf{Green's Theorem} $f(x,y)=(u(x,y),v(x,y))$, $\int_{\delta R}\overrightarrow{f} d\overrightarrow{r}$
+In this proof we will use AM-GM inequality, Cauchy-Schwarz inequality and the fact that $\displaystyle A=\int_{0}^{l} xy' \,dx = -\int_{0}^{l} yx' \,ds$ so $\displaystyle c(s)=(x(s),y(s))$. This proof is quite satisfactory of the fact that the circle is a solution to the isoperimetric problem. Proof from~\citep{do2016differential} but it was also cited in~\citep{gluck2012isoperimetric}, where I started reading~\citep{do2016differential}
+\leavevmode \\
 
+Before beginning the main proof, we can show that and prove we can get the area by using Green's Theorem.
 \begin{proof}
-	Let's begin the proof by trying to compute $\iint_{1} 1 \,du\,dv$
+	Let's begin the proof by trying to compute $\displaystyle \iint_{1} 1 \,du\,dv$
+	\begin{figure}[hbt!]
+        \begin{center}   
+            \includegraphics[width=40mm]{Schmidt3}
+            \caption{the region we are computing; R is the region, C is the curve, and $\delta\mathrm{R}$ is the boundary}
+        \end{center}
+    \end{figure}\leavevmode
+    \newline
+    We can see that $\displaystyle \iint_{1} 1 \,du\,dv$ will give us the area for our formula.
 
-	(some figure)
-
-	One condition we know is $\frac{\delta v}{\delta x}-\frac{\delta u}{\delta y}=1$
+	And now we should pick our candidates for what $\overrightarrow{f}$ could be, so that coming from the double integral side in the Green's theorem (Theorem 4.3.3) is possible. Hence the one condition that we know is $\displaystyle \frac{\delta v}{\delta x}-\frac{\delta u}{\delta y}=1$.
 	
-	So we have two solutions:
+	So we have two solutions, the candidates:
 	\begin{enumerate}
-		\item $f(0,x)$
-		\item $g(-y,0)$
+		\item $f(0,x)$,
+		\item $g(-y,0)$.
 	\end{enumerate}
 	
-	taking the line integral of $f(0,x)$ and $g(-y,0)$
+	Now, by taking the line integral over these two candidates: $f(0,x)$ and $g(-y,0)$
 	\begin{enumerate}
 		\item
 			$\int_{C} \overrightarrow{f} \,dr$ \;\;\;where\; $C=(x(t),y(t))$
-				
-			$= \int_{0}^{l} \overrightarrow{f}(c(t))c'(t) \,dt$ \;\;\;by definition of line integral
 
-			$= \int_{0}^{l} (0,x(t))(x',y') \,dt$
+            we will then get below, by definition of line integral; the boundaries of the integral will be from $0$ to $l$, as $l$ is the perimeter. The equation is nicely parameterized, we can just use this formula,
+            \begin{center}
+                $\displaystyle =\int_{0}^{l} \overrightarrow{f}(c(t))c'(t) \,dt$
+            \end{center}
+
+            Since that was the definition of the line integral, we can plug in the numbers from the candidates, giving us,
+            \begin{center}
+                $\displaystyle = \int_{0}^{l} (0,x(t))(x',y') \,dt$
+            \end{center}
+
+            If we take the dot product
+			\begin{center}
+                $\displaystyle = \int_{0}^{l} xy' \,dt$
+            \end{center}
 			
-			$= \int_{0}^{l} xy' \,dt$ \;\;\;by Green's theorem
 		\item
-			$\int_{0}^{l} (-y,0)(x',y') \,dt$
-			
-			$= \int_{0}^{l} x'y \,dt$ \;\;\;by Green's theorem
+            The premise here will be the same as the previous, in that we take the line integral of $g(-y,0)$, thus
+            \begin{center}
+                $\displaystyle \int_{0}^{l} (-y,0)(x',y') \,dt$
+
+                $\displaystyle =-\int_{0}^{l} x'y \,dt$
+            \end{center}
 	\end{enumerate}
+    As a result, this will get us the area using Green's Theorem. 
+\end{proof}
+Thus, we now have everything we need to prove the actual theorem we want to prove.
+\begin{theorem}
+    Let $\mathrm{C}$ be a simple, closed curve of length $l$. Let $\mathrm{A}$ be a region that encloses. Then
+    \begin{center}
+        $\displaystyle \mathrm{A}\leq\frac{l^2}{4\pi}$
+    \end{center}
+\end{theorem}
+\begin{proof}
+    We first do a construction. The curve is arc length parameterised $\displaystyle \mathrm{C}(s)=(x(s),y(s))\;\;s\in[0,l]$
     \begin{figure}[hbt!]
         \begin{center}   
-            \includegraphics[width=100mm]{esfigure}
-            \caption{asdf}
+            \includegraphics[width=70mm]{esfigure}
+            \caption{construction with a curve on top and a perfect cirlce on the bottom; origin starts at the center of the circle}
         \end{center}
     \end{figure}\leavevmode
-    $\mathrm{C}(s)=(x(s),y(s))\;s\in[0,l]$
-\end{proof}
+    \newline
+    In Figure 4.13, we will bring the lines $\mathrm{E}$ \& $\mathrm{E}'$ closer and closer together until we have reached $\mathrm{L}$ and $\mathrm{L}'$. Where finally it will be tangent at the two points, $s=0$ and $s=s_{1}$. 
 
-When does the inequality hold?
-\begin{enumerate}
-    \item Does the AM-GM inequality hold? when both are the same.
+    The circle will have a radius of $r$. 
+
+    We can calculate the area of the curve on top since we have the arc length parameterised $\mathrm{C}(s)$.
+
+    So now we have the circle, we can add both of these areas in Figure 4.13, and we bound both those areas, we can have a bound on the curve. With $\mathrm{C}(s)$, we know it is arc length parameterized, then when we take the derivative, the magnitude of the derivative is $1$. 
+
+    Thus the advantage of having a circle, is that if we take the magnitude of the circle, we will still get $1$.
+
+    Now we shall have to parameterize the circle,
     \begin{center}
-        $\sqrt{aa}=\frac{a+a}{2}$
+        $\displaystyle \overline{\mathrm{C}}(s)=(\overline{x}(s),\overline{y}(s))$
+        \begin{equation*}
+            =\begin{cases}
+                x, & \sqrt{r^{2}-x^{2}}\;\;s\in[0,s_{1}],\\
+                x, & -\sqrt{r^{2}-x^{2}}\;\;s\in[s_{1},l].
+            \end{cases}
+        \end{equation*}
+    \end{center}
+    We know that the circle is not exactly a function, so we try to parameterize it like a function. For the top part of the curve, we can correlate each point on there to each point on the circle.
 
-        $\mathrm{A}=\pi r^{2}=\frac{l^{2}}{4\pi}$
+    \textbf{For our general idea:} Considering area of the circle and the curve, $\displaystyle \mathrm{A}+\pi r^{2}$
+    \begin{figure}[hbt!]
+        \begin{center}   
+            \includegraphics[width=50mm]{esfigure2}
+            \caption{a curve and cricle compressed with a rectangle around them}
+        \end{center}
+    \end{figure}\leavevmode
+    \newline
+    Hence we can see that we have a bound on the two areas,
+    \begin{center}
+        $\displaystyle \mathrm{A}+\pi r^{2}<2rl$
+    \end{center}
+    By using the AM-GM inequality,
+    \begin{center}
+        $\displaystyle \sqrt{\mathrm{A}+\pi r^{2}}\leq2rl=rl$
+    \end{center}
+    Squaring both sides,
+    \begin{center}
+        $\displaystyle \mathrm{A}+\pi r^{2}<r^{2}l^{2}$
+    \end{center}
+    And finally, we have $\displaystyle \mathrm{A}\leq\frac{l^2}{4\pi}$
+
+    Since we want this to be stricter, a stricter rule called the Cauchy Schwarz inequality will be used. So the area of the curve
+    \begin{center}
+        $\displaystyle \mathrm{A}+\pi r^{2}=\int_{0}^{l}xy'\,ds-\int_{0}^{l}\overline{x}'\overline{y}\,ds$
+    \end{center}
+    The LHS is the parameterization of the curve and the RHS is the parameterization of the circle. So notice that that anytime we use a bar, we talk about the circle. We see that $\overline{x}$ is $x, \sqrt{r^{2}-x^{2}}\;s\in[0,s_{1}]$, which is also $x(s)$. Then
+    \begin{center}
+        $\displaystyle =\int_{0}^{l}xy'-x'\overline{y}\,ds$
+    \end{center}
+    The bar on the $y$ remains as one is above the other one. And we can interpret this as the dot product,
+    \begin{center}
+        $\displaystyle =\int_{0}^{l}(x,\overline{y})\cdot(y',-x')\,ds$
+    \end{center}
+    Now we use the Cauchy Schwarz inequality, introducing a possibility for an inequality,
+    \begin{center}
+        $\displaystyle =\int_{0}^{l}|x,\overline{y}|\cdot|y',-x'|\,ds$ ($x$ can also be $\overline{x}$)
+    \end{center}
+    $\displaystyle|x,\overline{y}|$ is the magnitude of the circle which is $r$, and $\displaystyle |y',-x'|$ is our derivative of our curve but the magnitude will be $1$ since the curve is arc length parameterized, so
+    \begin{center}
+        $\displaystyle =\int_{0}^{l}r\cdot1\,ds$
+
+        $\displaystyle =rl$
+    \end{center}
+    For this final step,
+    \begin{center}
+        $\displaystyle \mathrm{A}\pi r^{2}\leq\Big(\frac{rl}{2}\Big)^{2}=\frac{r^{2}l^{2}}{4}$
+    \end{center}
+    Hence,
+    \begin{center}
+        $\displaystyle \mathrm{A}\leq\frac{l^2}{4\pi}$
     \end{center}
 
-    So, as we rotate $\mathrm{C}$, the radius has to be fixed.
+    \begin{problem}
+        When does the two inequality hold?
+    \end{problem}
+    \begin{enumerate}
+        \item Does the AM-GM inequality hold? We are taking the product of $\mathrm{A}\pi r^{2}$ so when both are the same, it will hold.
+        \begin{center}
+            $\displaystyle \sqrt{aa}=\frac{a+a}{2}$
 
-    \item Does the Cauchy-Schwarz inequality hold?
-\end{enumerate}
+            $\displaystyle \mathrm{A}=\pi r^{2}=\frac{l^{2}}{4\pi}$
+        \end{center}
+
+        Since, if we rotate the curve, the radius can change. Which changes the area but we know that the area is constant with respect to $r$. Then as we rotate $\mathrm{C}$, the radius has to be fixed.
+
+        \item Does the Cauchy-Schwarz inequality hold? Well if we have two vectors 
+        \begin{center}
+            $\displaystyle \overrightarrow{v}\cdot\overrightarrow{w}=|\overrightarrow{v}||\overrightarrow{w}|$ when $\overrightarrow{v}=r\overrightarrow{w}$ (a scaling of the other factor)
+
+            $\displaystyle =|\overrightarrow{v}||\overrightarrow{w}|\cos{\theta}$
+        \end{center}
+        Well, $\cos{\theta}$ is always less than or equal to $1$. And it only equals $1$ when $\theta$ is equal to $0$, meaning they are just parallel.
+
+        $\displaystyle |x,\overline{y}|$ and $\displaystyle |y',-x'|$ are multiples of each other, and we can see that we have 
+        \begin{center}
+            $\displaystyle x=ry'$
+
+            $\displaystyle y\cdot y_{0}=-rx'$, $y$ is shifted
+
+            $\displaystyle x^{2}+(y-y_{0})^{2}=r^{2}(x'+y')=r^2\cdot1=r^{2}$, since the curve is arc length parameterized
+        \end{center}
+        \textbf{To check} what we have above
+        \begin{center}
+            $\displaystyle (\overline{x},\overline{y})\cdot(y',x')=|x,\overline{y}|\cdot|y',-x'|$
+
+            $\displaystyle =r\cdot1$
+        \end{center}
+        It follows that we have a unit vector, then
+        \begin{center}
+            $\displaystyle =(\overline{x},\overline{y})=r(y',x')$
+        \end{center}
+        If $(y',x')$ is a scalar multiple of $(\overline{x},\overline{y})$. We can pull out the scalar and have two unit vectors, where the magnitude is still going to be an unit vector.
+        \begin{center}
+            $\displaystyle x=ry'$
+        \end{center}
+        For the second one, we will rotate about $(0,y_0)$
+        \begin{center}
+            $\displaystyle \begin{bmatrix}
+                0 & -1\\
+                1 & 0
+            \end{bmatrix}
+            \begin{bmatrix}
+                x\\
+                y-y_{0}
+            \end{bmatrix}+
+            \begin{bmatrix}
+                0\\
+                y_{0}
+            \end{bmatrix}=\begin{bmatrix}
+                -(y-y_{0})\\
+                x+y_{0}
+            \end{bmatrix}$
+        \end{center}
+        Since the rotations don't change the radius, we have
+        \begin{center}
+            $\displaystyle -(y-y_{0})=r(x+y_{0})'$
+
+            $\displaystyle \longrightarrow y-y_{0}=-rx'$
+        \end{center}
+        Square both of these and we will have $\displaystyle r^{2}(x'^{2}+y'^{2})=r^{2}$
+    \end{enumerate}
+\end{proof}
 
 \section{Proof Using Fourier Analysis {\&} Differential Geometry}
 In this proof of the Isoperimetric Inequality in two dimensions, we will look at domains
 with continuously differentiable boundary. We will identify the Euclidean plane with $\mathrm{C}$
 and we will consider the boundary as a periodic function from $\mathrm{R}$ to $\mathrm{C}$, so that we are able
 to use Fourier analysis. 
+
+We will establish the isoperimetric inequality again:
+\begin{theorem}
+    Let $\mathrm{G}\subseteq\mathbb{R}^{2}$ be a bounded domain such that the boundary is a simply closed curve with period $\mathrm{L}$. Let $\mathrm{A}[\mathrm{G}]$ be the area and $\mathrm{U}[\mathrm{G}]$ be the perimeter of $\mathrm{G}$. Then
+    \begin{center}
+        $4\pi\cdot\mathrm{A}[\mathrm{G}]\leq\mathrm{U}[\mathrm{G}]$
+    \end{center}
+\end{theorem}
+\begin{proof}
+    Without loss of generality, assume $c$ is a unit speed curve. Consider the injective restriction $\left.c\right|_{[0, \mathrm{~L}]}$ and by abusing notation call it also $c$. Let $c(t)=(x(t), y(t))^{\mathrm{T}}$ and consider the complex valued function
+    \begin{center}
+        $\displaystyle z:\mathbb{R} \rightarrow \mathbb{C}, z(t)=x\left(\frac{\mathrm{L}}{2 \pi} t\right)+i y\left(\frac{\mathrm{L}}{2 \pi t}\right).$
+    \end{center}
+
+    The function $z$ parametrizes the curve $c$. Now, we can look at the Fourier series of $z$, written (see Definition 3.3) as follows
+    \begin{center}
+        $\displaystyle \mathscr{F}_n[z](t)=\sum_{k=-\infty}^{\infty}c_k e^{i k t},$
+    \end{center}
+
+    where $c_k$ are the Fourier coefficients. Because $z$ is a periodic, continuously differentiable function, with Theorem 3.4 we can conclude that
+    \begin{center}
+        $\displaystyle z(t)=\sum_{k=-\infty}^{\infty} c_k e^{i k t}.$
+    \end{center}
+    
+    Step 1. We want to express the length of $c$ by the Fourier coefficients. For this, we first compute
+    \begin{center}
+        $\displaystyle \int_0^{2 \pi}|\dot{z}(t)|^2 d t=\int_0^{2 \pi}\left(\frac{\mathrm{L}}{2 \pi}\right)^2 \underbrace{\left\|\dot{c}\left(\frac{\mathrm{L} t}{2 \pi}\right)\right\|^2}_{=1 \text { unit speed }} d t=\frac{\mathrm{L}^2}{2 \pi},$
+    \end{center}
+
+    where the derivative of $z$ is given by $\dot{z}(t)=\sum_{k=-\infty}^{\infty} c_k i k e^{i k t}$. Hence, we get
+    \begin{center}
+        $\displaystyle \begin{aligned}\int_0^{2 \pi}|\dot{z}(t)|^2 d t=\int_0^{2 \pi} \dot{z}(t) \overline{\dot{z}(t)} d t & =\int_0^{2 \pi} \sum_{k,l=-\infty}^{\infty} c_k\overline{c_l}kle^{i(k-l)t}dt\\&=2\pi \sum_{k=-\infty}^{\infty}\left|c_k\right|^2 k^2.\end{aligned}$
+    \end{center}
+
+    Equation (1) implies that for the length of $c$
+    \begin{center}
+        $\displaystyle \mathrm{L}[c]^2=(2 \pi)^2 \sum_{k=-\infty}^{\infty} k^2\left|c_k\right|^2$
+    \end{center}
+
+    Step 2. Next, we want to express the area using the Fourier coefficients. From Lemma 3.14 it follows that
+    \begin{center}
+        $\displaystyle \begin{aligned}&2\mathrm{~A}[\mathrm{G}]=\int_0^{2 \pi} \Re(z(s) \cdot i \cdot \overline{\dot{z}(s)}) d s \\&=\int_0^{2 \pi} \Re\left(\sum_{k=-\infty}^{\infty} c_k e^{i k s} \cdot i \cdot \sum_{l=-\infty}^{\infty} \overline{c_l}(-i) l e^{-i l s}\right) d s \\& =\Re\left(\int_0^{2 \pi} \sum_{k, l=-\infty}^{\infty} l c_k \overline{c_l} e^{l(k-l) s} d s\right)=2 \pi \sum_{k=-\infty}^{\infty} k\left|c_k\right|^2 \\&\end{aligned}$
+    \end{center}
+
+    Step 3. Now, we put the first and the second step together. From
+    \begin{center}
+        $\displaystyle \frac{\mathrm{A}[\mathrm{G}]}{\pi}=\sum_{k=-\infty}^{\infty} k\left|c_k\right|^2 \leq \sum_{k=-\infty}^{\infty} k^2\left|c_k\right|^2=\frac{\mathrm{L}[c]^2}{4 \pi^2}$
+    \end{center}
+
+    follows $4 \pi \mathrm{A}[\mathrm{G}] \leq \mathrm{L}[c]^2$. In two dimensions we have $\mathrm{U}[\mathrm{G}]=\mathrm{L}[c]$. Thus, we showed the Isoperimetric Inequality. Equality holds if and only if
+    \begin{center}
+        $\displaystyle \sum_{k=-\infty}^{\infty} k\left|c_k\right|^2=\sum_{k=-\infty}^{\infty} k^2\left|c_k\right|^2 .$
+    \end{center}
+
+    This is equivalent to $c_k=0 \forall k \neq 0,1$. This is satisfied if and only if we have $z(t)=$ $c_0+c_1 \cdot e^{i t}$, i.e., a circle.
+\end{proof}
 
 \chapter{n-Dimensional Case ($\mathbb{R}^n$)}
 The idea of the proof for this theorem is to show the inequality above using induction on $n$. Here, we will use the Integral Theorem of Fubini to establish induction step. In this chapter, some statements of the theory of convex, compact sets will be introduced as well as properties of the volume functional. Later, we will show the Isoperimetric Inequality using the theorem of Brunn–Minkowski. We will follow~\citep{schneider2014convex}.

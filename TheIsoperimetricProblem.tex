@@ -1242,14 +1242,22 @@ Applying the Euler-Lagrange equation to this Lagrangian, we get:
 	$\displaystyle \frac{d}{dx} \left( \frac{y'}{\sqrt{1 + (y')^2}} \right) - \frac{y}{\sqrt{1 + (y')^2}} = 0$
 \end{center}
 \begin{lemma}(\textbf{Existence of Extremal Curves})
-        There exists at least one extremal curve that satisfies the Euler-Lagrange equation and corresponds to a critical point of the functional \( J[y] \).
-    \end{lemma}
+    There exists at least one extremal curve that satisfies the Euler-Lagrange equation and corresponds to a critical point of the functional \( J[y] \).
+\end{lemma}
 
-    \begin{lemma}(\textbf{Uniqueness of Extremal Curves})
-        Under certain regularity conditions, there exists a unique extremal curve that satisfies the Euler-Lagrange equation and optimizes the area under a fixed perimeter.
+\begin{lemma}(\textbf{Uniqueness of Extremal Curves})
+    Under certain regularity conditions, there exists a unique extremal curve that satisfies the Euler-Lagrange equation and optimizes the area under a fixed perimeter.
 
-        Solving the differential equation subject to the fixed endpoints~\citep{goldstein1980classical} and~\citep{hilbert1985methods}, along with the fixed area constraint, leads us to the discovery of extremal curves that not only minimize the perimeter but also provide profound insights into the Isoperimetric Inequality in two-dimensional spaces.
-    \end{lemma}
+    Solving the differential equation subject to the fixed endpoints~\citep{goldstein1980classical} and~\citep{hilbert1985methods}, along with the fixed area constraint, leads us to the discovery of extremal curves that not only minimize the perimeter but also provide profound insights into the Isoperimetric Inequality in two-dimensional spaces. 
+\end{lemma}
+\newpage
+What if we remove one $x$ or $y$ or $y'$
+\begin{itemize}
+    \item $\mathrm{L}$ is explicitly independent of $y$. $\frac{\delta\mathrm{L}}{\delta y}=$constant
+    \item $\mathrm{L}=\mathrm{L}(x,y)$. $\frac{\delta\mathrm{L}}{\delta y}=0$
+    \item $\mathrm{L}=\mathrm{L}(y,y')$. $\mathrm{L}-y'\frac{\delta\mathrm{L}}{\delta y'}=$constant
+\end{itemize}
+
 Direct proofs from Weierstrass' corollary can be found in $Curves$ $and$ $Surfaces$ $in$ $Euclidean$ $Spaces$~\citep{chern1966curves}.
 
 \section{Erhard Schmidt}
@@ -1280,7 +1288,7 @@ since the curve is closed. Folloing immediately from the first two formula, we h
 To show the first formula from the initial formula, we consider initally the case where the curve is made up of two straight-line segments parallel to the y-axis
 \begin{figure}[hbt!]
     \begin{center}   
-        \includegraphics[width=90mm]{Schmidt1}
+        \includegraphics[width=75mm]{Schmidt1}
         \caption{}
     \end{center}
 \end{figure}\leavevmode\newline

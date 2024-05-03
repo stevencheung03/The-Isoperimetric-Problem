@@ -513,21 +513,21 @@ The next couple of subsections will help us understand what goes on behind the $
 \begin{definition}
     A hyperplane is a set described by a single scalar product equality. Precisely, a hyperplane in $\mathrm{R}^{n}$ is a set of the form
     \begin{center}
-        $\mathrm{H}=\{x:a^{\mathrm{T}}x=b\}$,
+        $\displaystyle \mathrm{H}=\{x:a^{\mathrm{T}}x=b\}$,
     \end{center}
-    where $a\in\mathrm{R}^{n}$, $a\neq0$, and $b\in\mathrm{R}$ are given.
+    where $\displaystyle a\in\mathrm{R}^{n}$, $\displaystyle a\neq0$, and $\displaystyle b\in\mathrm{R}$ are given.~\citep{tsai2023applications}
 \end{definition}
 
-When $b=0$, the hyperplane is simply the set of points that are orthogonal to $a$; when $b\neq0$, the hyperplane is a translation, along direction $a$, of that set.
+When $\displaystyle b=0$, the hyperplane is simply the set of points that are orthogonal to $a$; when $\displaystyle b\neq0$, the hyperplane is a translation, along direction $a$, of that set.
 
-If $x_{0}\in\mathrm{H}$, then for any other element $x\in\mathrm{H}$, we have
+If $\displaystyle x_{0}\in\mathrm{H}$, then for any other element $\displaystyle x\in\mathrm{H}$, we have
 \begin{center}
-    $b=a^{\mathrm{T}x_{0}}=a^{\mathrm{T}x}$.
+    $\displaystyle b=a^{\mathrm{T}x_{0}}=a^{\mathrm{T}x}$.
 \end{center}
 
-Hence, the hyperplane can be characterized as the set of vectors x such that $x-x_{0}$ is orthogonal to $a$:
+Hence, the hyperplane can be characterized as the set of vectors x such that $\displaystyle x-x_{0}$ is orthogonal to $a$:
 \begin{center}
-    $\mathrm{H}=\{x:a^{\mathrm{T}}(x-x_{0})=b\}$.
+    $\displaystyle \mathrm{H}=\{x:a^{\mathrm{T}}(x-x_{0})=b\}$.
 \end{center}
 Hyperplanes are very useful because they allows to separate the whole space in two regions, giving us a seperated set. Hence an illustrative figure is given:
 \begin{figure}[hbt!]
@@ -537,8 +537,64 @@ Hyperplanes are very useful because they allows to separate the whole space in t
     \end{center}
 \end{figure}\leavevmode
 
+Integration and differentiation are related, as stated in the fundamental theorem of calculus. And gives us a way to evaluate definite integrals without using Riemann sums or calculating areas. 
+
+In the first part of the theorem, it statse that a definite integral of a function can be evaluated by computing the indefinite integral of that function. The sectnd part of the theorem, it mentions that the differentiation is the inverse of integration, and vice versa. We will not give the proof.
+
+\begin{theorem} (Fundamental Theorem of Calculus)
+    \begin{enumerate}
+        \item (Integrals and Antiderivative) Suppose $\mathrm{F}$ is a function such that $\mathrm{F}'(x)=f(x)$ exists and is continuous on $[a,b]$. Then
+        \begin{center}
+            $\displaystyle \int_{a}^{b}f(x)\,dx=\mathrm{F}(b)-\mathrm{F}(a)$.
+        \end{center}
+
+        \item (The Evaluation Theorem) Suppose that $f$ is continuous on $[a,b]$ and $\displaystyle \mathrm{F}(x)=\int_{a}^{x}f(t)\,dt$. Then $\mathrm{F}$ is differentiable on $(a,b)$ and
+        \begin{center}
+            $\displaystyle \mathrm{F}'(x)=f(x)$.
+        \end{center}
+    \end{enumerate}
+\end{theorem}
+
+\begin{remark}
+    We have a defined function, $\mathrm{F}(x)$, as the definite integral of another function, $f(t)$, from the point $a$ to the point $x$. To clarify on why it is $\mathrm{F}(x)$, when we have the definite integral, but the function $\mathrm{F}(x)$ returns a number (the value of the definite integral) for each value of $x$.
+\end{remark}
+
+\begin{remark}
+    We have some key implications of this theorem:
+    \begin{itemize}
+        \item Establishes relationship between integration and differentiation,
+        \item Guarantees existence of antiderivative for any integrable function,
+        \item Specifically ensures any continuous function has an antiderivative.
+    \end{itemize}
+\end{remark}
+
+Application of this theorem is rather simple once you have approximated areas using the sum of n rectangles. Just computing the antiderivative at the beginning and ending points of the interval yields an almost unbelievably easy way to get the area of a curved region.
+
+\begin{theorem} (Fubini's Theorem)
+    If $f(x,y)$ is continuous on $\displaystyle \mathrm{R}=[a,b]\times[c,d]$ then,
+    \begin{center}
+        $\displaystyle \underset{\mathrm{R}}{\iint}f(x,y)\,d\mathrm{A}=\int_{a}^{b}\int_{c}^{d}f(x,y)\,dydx=\int_{c}^{b}\int_{a}^{b}f(x,y)\,dxdy$
+    \end{center}
+    These integrals are called iterated integrals.
+\end{theorem}
+
+\begin{note}
+    Note that there are two ways to compute a double integral over a rectangle. It is crucial to understand that the limits of the inner integral and the differential variable inside correlate, just as the limits and the outside differential do.
+\end{note}
+
+\begin{theorem} (Inverse Function Theorem)
+    Let $f$ be a continuous strictly increasing function on an interval $J=[a,b]$ of positive length, such that $f'(x)>0$ for all $x\in interior(\mathrm{J})$. Let $\mathrm{I}$ be the image of $\mathrm{J}$ and let
+    \begin{center}
+        $\displaystyle g:\mathrm{I}\to\mathrm{J}$
+    \end{center}
+    be the inverse function for $f$. Then $g$ is differentiable on the interior of $\mathrm{I}$ and
+    \begin{center}
+        $\displaystyle g'(s)=\frac{1}{f'(g(s))}$ for all $s\in interior(\mathrm{I})$
+    \end{center}
+\end{theorem}
+
 \subsection{The Support Function}
-The following section introduces the support function, which can be used to ascertain the "height" of a convex body. The support function is a convex function on $\mathbb{R}$ and is compatible with many geometric opetions such as scaling, translation, rotation and importantly the \textbf{Minkowski addition}. These characteristics make the support function one of the most important foundational ideas in convex geometry.
+The following section introduces the support function, which can be used to ascertain the "height" of a convex body. The support function is a convex function on $\mathbb{R}$ and is compatible with many geometric opetions such as scaling, translation, rotation and importantly the \textbf{Minkowski addition}. These characteristics make the support function one of the most important foundational ideas in convex geometry.~\citep{gehring2019isoperimetric}
 
 \begin{definition}
     Let $K\subseteq\mathbb{R}^n$ be non-empty, convex and closed. The $support$ $function$ $h(K,\cdot\space)=h_k$ is defined by
@@ -601,7 +657,7 @@ The following section introduces the support function, which can be used to asce
 \end{proof}
 
 \subsection{The Hausdorff Metric}
-To prove the continuity of the volume functional and of the support function with respect to convex bodies, we need a metric on the set of convex bodies. This metric will be introduced in the following subsection.
+To prove the continuity of the volume functional and of the support function with respect to convex bodies, we need a metric on the set of convex bodies. This metric will be introduced in the following subsection.~\citep{gehring2019isoperimetric}
 
 \begin{definition}
     For $K,L\in K^{n}$, define Hausdorff distance or Hausedorff metric by
@@ -1074,6 +1130,14 @@ The proof that I will be unpacking and taking a closer look at will be from the 
 
 \section{Karl Weierstrass}
 Relying on calculus of variation, this proof defines area and length in terms of integrals. However Karl Weierstrass's calculus of variation is very strong, and that the isoperimetric problem pops out of it. Calculus of variations is concerned with the problem of extremising "functionals", finding extrema of functions of \textit{infinite} variables. Functionals can be looked at like "functions of functions". The result is two Euler-Lagrange equations which when solved, provide an equation in the form of a circle and the length of the radius which optimizes the area given the length of the perimeter. The lagrangian, denoted by $L(x,y,y')$ normally opted as $L=T-V$, the kinetic energy minus the potential energy. Extremal curves represent solutions to the isoperimetric problem, providing the shapes that maximize the enclosed area under a fixed perimeter. Extremal curves are smooth and regular, ensuring the validity of the Euler-Lagrange equation and the associated boundary conditions. We shall not give proofs to these theorem and lemmas.
+
+\begin{definition}
+    We say that $x=c$ is a critical point of the function $f(x)$ if $f(c)$ exists and if either of the following are true
+    \begin{center}
+        $f'(c)=0$ OR $f'(c)$ doesn't exist
+    \end{center}
+\end{definition}
+
 \begin{theorem}
 	Consider the functional $\mathrm{J}(Y)$, an extremum, defined as follows:
 	\begin{center}

@@ -10,45 +10,45 @@ Warning--there's a number but no series in evans1920histories
 Warning--there's a number but no series in schneider2014convex
 Warning--can't use both volume and number fields in singmaster1978problem
 Warning--empty publisher in tsai2023applications
-You've used 25 entries,
+You've used 27 entries,
             2909 wiz_defined-function locations,
-            771 strings with 7754 characters,
-and the built_in function-call counts, 56926 in all, are:
-= -- 8849
-> -- 692
+            779 strings with 7942 characters,
+and the built_in function-call counts, 60804 in all, are:
+= -- 9442
+> -- 740
 < -- 6
-+ -- 3940
-- -- 203
-* -- 4469
-:= -- 12307
-add.period$ -- 25
-call.type$ -- 25
-change.case$ -- 337
-chr.to.int$ -- 25
-cite$ -- 30
-duplicate$ -- 393
-empty$ -- 748
-format.name$ -- 267
-if$ -- 10050
++ -- 4198
+- -- 217
+* -- 4758
+:= -- 13173
+add.period$ -- 27
+call.type$ -- 27
+change.case$ -- 364
+chr.to.int$ -- 27
+cite$ -- 32
+duplicate$ -- 424
+empty$ -- 803
+format.name$ -- 285
+if$ -- 10729
 int.to.chr$ -- 5
 int.to.str$ -- 0
-missing$ -- 35
-newline$ -- 78
-num.names$ -- 250
-pop$ -- 159
+missing$ -- 38
+newline$ -- 84
+num.names$ -- 270
+pop$ -- 175
 preamble$ -- 1
-purify$ -- 375
+purify$ -- 405
 quote$ -- 0
-skip$ -- 285
+skip$ -- 307
 stack$ -- 0
-substring$ -- 12035
-swap$ -- 53
-text.length$ -- 356
+substring$ -- 12829
+swap$ -- 55
+text.length$ -- 384
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 76
+type$ -- 82
 warning$ -- 5
-while$ -- 539
+while$ -- 581
 width$ -- 0
-write$ -- 308
+write$ -- 331
 (There were 5 warnings)

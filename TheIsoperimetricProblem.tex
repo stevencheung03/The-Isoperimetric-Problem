@@ -25,6 +25,7 @@
 \usepackage{xspace}
 \usepackage{parskip}
 \usepackage[sort,comma]{natbib}
+\usepackage{float}
 
 \newtheorem{theorem}{Theorem}%[section]
 \newtheorem{lemma}[theorem]{Lemma}%[section]
@@ -345,13 +346,23 @@ The two definitions, above, are vital into understanding the main theorem. Since
 
 \begin{definition} (Heine-Borel Theorem)
     A set in $\mathbb{R}^n$ is said to be compact if it is closed and bounded.
-\end{definition}\leavevmode \\
+\end{definition}
+
+\begin{definition} (Heron's Formula)
+    Suppose a triangle $\mathrm{ABC}$, with sides $a$, $b$, $c$. The area,
+    \begin{center}
+        $\displaystyle \mathrm{A}=\sqrt{s(s-a)(s-b)(s-c)}$, where $s=\frac{a+b+c}{2}$, the semi-perimeter
+    \end{center}
+\end{definition}
+
+\begin{definition} (AM-GM Inequality)
+    If $x_1,_2,\ldots,x_n\geq0$, then $\displaystyle \frac{x_1+_2+\ldots,x_n}{n}\geq\sqrt{x_1 x_2 \ldots x_n}$ with equality if and only if $x_1=x_2=\ldots=x_n$.
+\end{definition}
 
 Over the next couple subsections we will introduce the necessary knowledge, language and notation to prove the 2-D case. Although we will also give other proofs, the final 2-D proof we are going to give, will continue nicely into the $n$-D proof.
 
-\newpage
 \subsection{Fourier Series}
-We use Fourier series to expand periodic functions from $\mathbb{B}$ to $\mathbb{C}$. This is so we can simplify the fourmulas of area by rewriting it using Fourier coefficients. We shall be introducing the theory behind Fourier series and answer the questions of existence and convergence of Fourier expansions.
+We use Fourier series to expand periodic functions from $\mathbb{R}$ to $\mathbb{C}$. This is so we can simplify the fourmulas of area by rewriting it using Fourier coefficients. We shall be introducing the theory behind Fourier series and answer the questions of existence and convergence of Fourier expansions.
 
 \begin{definition}
     A function $f:\mathbb{R}\to\mathbb{C}$ is called \textit{periodic} with period $\mathrm{L}\in\mathbb{R}$ if it satisfies
@@ -376,6 +387,13 @@ We use Fourier series to expand periodic functions from $\mathbb{B}$ to $\mathbb
     \end{center}
     as the \textit{Fourier series} of $f$.
 \end{definition}
+
+\begin{theorem}
+    Let $f:\mathbb{R}\to\mathbb{C}$ be a periodic function that is piecewise continuously differentiable. Then the Fourier series of $f$ converges uniformly to $f$
+\end{theorem}
+\begin{proof}
+    Can be found in~\citep{forster2011analysis}(Chapter 23, Theorem 3).
+\end{proof}
 
 \subsection{Plane Curves}
 In this subsection, we consider curves in the Euclidean plane. Here, we will introduce briefly the language of the differential geometry of curves.
@@ -532,7 +550,7 @@ Hence, the hyperplane can be characterized as the set of vectors x such that $\d
 Hyperplanes are very useful because they allows to separate the whole space in two regions, giving us a seperated set. Hence an illustrative figure is given:
 \begin{figure}[hbt!]
     \begin{center}   
-        \includegraphics[width=120mm]{hyperplane}
+        \includegraphics[width=130mm]{hyperplane}
         \caption{Left is in $2$-Dimensions; Right is in $3$-Dimensions; both showing a seperation of the space}
     \end{center}
 \end{figure}\leavevmode
@@ -616,7 +634,7 @@ The following section introduces the support function, which can be used to asce
 \end{remark}
 
 \begin{remark}
-    For $B^{n}$ and $u\in\mathbb{S}^{n-1}$ the support function can be computed easily. For arbirary $x\in B^{n}$ and $u\in\mathbb{S}^{n-1}$ Cauchy Swarz gives us
+    For $B^{n}$ and $u\in\mathbb{S}^{n-1}$ the support function can be computed easily. For arbirary $x\in B^{n}$ and $u\in\mathbb{S}^{n-1}$ Cauch-xSwarz gives us
     \begin{center}
         $|\langle x,u\rangle|\leq||u||\:||x||\leq1$
     \end{center}
@@ -836,7 +854,7 @@ Firstly, we will look at this proposition. Isosceles triangle has the smallest l
     \item Now we can expand on the previous principle to demonstrate that any parallel trapezoid with unequal angles on one baseline may be transformed into another of the same area and baselines; Moreover, the new parallel trapezoid will have symmetry along the axis formed by the baseline midpoints and a smaller sum of side lengths. 
 \end{enumerate}
 
-We will show this proof in the next section (section 2.2).
+We will show this proof in the next section.
 \newline
 \newline
 
@@ -846,14 +864,14 @@ We will show this proof in the next section (section 2.2).
 \begin{figure}[hbt!]
     \begin{center}   
         \includegraphics[width=88mm]{lemma3}
-        \caption{labeled figure to lemma 3, helps with the proof}
+        \caption{labeled figure to lemma 4.1.1, helps with the proof}
     \end{center}
 \end{figure}\leavevmode
 Let us note that the third vertex $\mathrm{C}$, is located on the ellipse
 \begin{proof} 
     Let $|\mathrm{BC}|=a$, $|\mathrm{AC}|=b$, $|\mathrm{AB}|=c$ be the side of $\triangle ABC$, and let $|\mathrm{OP}|=u$ and $|\mathrm{OQ}|=v$ be the semi-major and semi-minor axis of the ellipse, respectively.
 
-    Since the ellipse is symmetric, we can consider only the I quadrant of the ellipse (non-shaded area of Figure 2.1).
+    Since the ellipse is symmetric, we can consider only the I quadrant of the ellipse (non-shaded area of Figure 4.1).
 
     Following the cosine rule $a^{2}=b^{2}+b^{2}-2bc\cos{\alpha}$,
     \begin{center}
@@ -873,15 +891,15 @@ Let us note that the third vertex $\mathrm{C}$, is located on the ellipse
 
         Since $\displaystyle \frac{2c}{a+b}=const$, $\displaystyle \;b-a\sim x$.
     \end{center}
-    Expression for the point $\mathrm{C}=(x,y)$ on the ellipic arc $\mathrm{PQ}$ (red arc on figure 2.1) in terms of parameter $\theta\in(0,\frac{\pi}{2})$ gives
+    Expression for the point $\mathrm{C}=(x,y)$ on the ellipic arc $\mathrm{PQ}$ (red arc on figure 4.1) in terms of parameter $\displaystyle \theta\in(0,\frac{\pi}{2})$ gives
     \begin{center}
-        $x(\theta)=u\cos{\theta}$,
+        $\displaystyle x(\theta)=u\cos{\theta}$,
 
-        $y(\theta)=v\sin{\theta}$,
+        $\displaystyle y(\theta)=v\sin{\theta}$,
 
-        $x'(\theta)=-u\sin{\theta}<0\;\;\;\;\;\forall\theta\in(0,\frac{\pi}{2})$,
+        $\displaystyle x'(\theta)=-u\sin{\theta}<0\;\;\;\;\;\forall\theta\in(0,\frac{\pi}{2})$,
 
-        $y'(\theta)=v\cos{\theta}>0\;\;\;\;\;\forall\theta\in(0,\frac{\pi}{2})$,
+        $\displaystyle y'(\theta)=v\cos{\theta}>0\;\;\;\;\;\forall\theta\in(0,\frac{\pi}{2})$,
     \end{center}
     so, smaller $x$ is equivalent to biggy and the smaller side difference, the bigger the area.
 \end{proof}
@@ -934,7 +952,7 @@ Let us note that the third vertex $\mathrm{C}$, is located on the ellipse
     \end{center}
 \end{figure}\leavevmode
 \begin{remark}
-    We will need to use Heron's formula \textbf{and} the AM-GM inequality for the proof of proposition 2.1.3.
+    We will need to use Heron's formula \textbf{and} the AM-GM inequality for the proof of proposition 4.1.3.
 \end{remark}
 \begin{proof} 
     Suppose that $n$ is the number of sides of a regular polygon.
@@ -1029,12 +1047,12 @@ Let us note that the third vertex $\mathrm{C}$, is located on the ellipse
     \begin{minipage}{0.5\textwidth}
         \centering
         \includegraphics[width=1\textwidth]{isofig8.png} % first figure itself
-        \caption{Figure V}
+        \caption{}
     \end{minipage}\hfill
     \begin{minipage}{0.5\textwidth}
         \centering
         \includegraphics[width=1\textwidth]{isofig9.png} % second figure itself
-        \caption{figure VI}
+        \caption{}
     \end{minipage}
 \end{figure}
 
@@ -1043,7 +1061,7 @@ Let us note that the third vertex $\mathrm{C}$, is located on the ellipse
     \begin{center}
         $\displaystyle \tan(\alpha)=\frac{(\frac{L}{4n})}{h}$
     \end{center}
-        Rearranging the formula to make h the subject as well as using the fact that $\alpha=\frac{2\pi}{2n} \frac{1}{2}=\frac{\pi}{2n}$, we get 
+        Rearranging the formula to make h the subject as well as using the fact that $\displaystyle \alpha=\frac{2\pi}{2n} \frac{1}{2}=\frac{\pi}{2n}$, we get 
     \begin{center}
         $\displaystyle h=\frac{L}{4n} \frac{1}{\tan(\frac{\pi}{2n})}$
     \end{center}
@@ -1068,17 +1086,16 @@ The circle therefore bounds the biggest area among all simple closed curves in t
 The proof that I will be unpacking and taking a closer look at will be from the book (reference the book here), and is credited by them to Jakob Sternier. Packed and concise proof from~\citep{gluck2012isoperimetric}. To reiterate, the German mathematician Peter Dirichlet (1805- 1859), remarked, Steiner had made an underlying assumption not explicitly addressed in his proof, namely that a solution existed (Nahin 59~\citep{nahin2021least}). A rather helpful computer visualisation, before we start the proof, to aid in the identification that indeed the circle is an answer, and how naturally a compressed circle (ellipse) has less area than a full and complete circle.
 \begin{figure}[hbt!]
     \begin{center}   
-        \includegraphics[width=150mm]{steinerproofvisualisation}
+        \includegraphics[width=120mm]{steinerproofvisualisation}
         \caption{Digitally showing area comparison of curves.}
     \end{center}
 \end{figure}
 \begin{proof} 
     We will begin the proof by assuming the existence of a solution. In other words, that there exists a simple closed curve $\mathrm{C}$ of a specified length L, enclosing a region with the maximum possible area.
+
     \textbf{Step 1:} We claim that the curve $\mathrm{C}$ must be convex, in the sense that any line segment joining two points of $\mathrm{C}$ must lie entirely in the closure of the region bouded by $\mathrm{C}$.
 
-    We see this as follows. If $\mathrm{C}$ were not convex, then we could draw a segment $\mathrm{OP}$ between two points of $\mathrm{C}$ which lies entirely (except for its endpoints) outside of $\mathrm{C}$.
-
-    Reflecting the appropriate arc of $\mathrm{C}$ between $\mathrm{O}$ and $\mathrm{P}$ in this line would produce another curve of the same length but bouding a larger area, as in the figure below.
+    We see this as follows. If $\mathrm{C}$ were not convex, then we could draw a segment $\mathrm{OP}$ between two points of $\mathrm{C}$ which lies entirely (except for its endpoints) outside of $\mathrm{C}$. Reflecting the appropriate arc of $\mathrm{C}$ between $\mathrm{O}$ and $\mathrm{P}$ in this line would produce another curve of the same length but bouding a larger area, as in the figure below.
     \begin{figure}[hbt!]
         \begin{center}   
             \includegraphics[width=80mm]{steiner1}
@@ -1089,14 +1106,20 @@ The proof that I will be unpacking and taking a closer look at will be from the 
 
     \textbf{Step 2:} Now choose  two points, $\mathrm{A}$ and $\mathrm{B}$, dividing our solution curve $\mathrm{C}$ into arcs of equal length.
 
-    Then the line segment $\mathrm{AB}$ must also divide the region bounded by $\mathrm{C}$ into two parts of equal area. Otherwise, the part of greater area could be reflected in $\mathrm{AB}$ to give another curve of the same length $\mathrm{L}$ bounding a region of area greater than that bounded by $\mathrm{C}$.
+    Then the line segment $\mathrm{AB}$ must also divide the region bounded by $\mathrm{C}$ into two parts of equal area. Otherwise, the part of greater area could be reflected in $\mathrm{AB}$ to give another curve of the same length $\mathrm{L}$ bounding a region of area greater than that bounded by $\mathrm{C}$. 
+
+    The existence of such a pair of points is intuitively evident and will be accepted here without proof. But it seems clear why such a pair of points exists, since the pair of points are on the curve itself.
     \begin{figure}[hbt!]
         \begin{center}   
             \includegraphics[width=80mm]{steiner2}
-            \caption{a labeled hexagon in a circle, showing that a circle }
+            \caption{}
         \end{center}
-    \end{figure}\leavevmode
+    \end{figure}\leavevmode\newline
+    Now let $\mathrm{A}_{1}$, $\mathrm{A}_{2}$ be the areas between the diameter $\mathrm{AB}$ and $k_{1}$, $k_{2}$ respectively (so that $\mathrm{A}_{1}+\mathrm{A}_{2}$ is the area enclosed by $\mathrm{C}$) and suppose that $\mathrm{A}_{1}\geq\mathrm{A}_{2}$. Replace $k_{2}$ by the arc $k'_{2}$, obtained through reflection of $k_{1}$ with respect to the diameter $\mathrm{AB}$. The new curve $k'$, consisting of $k_{1}$ and $k'_{2}$, has the same length as $k$ but the included area is $2\mathrm{A}_{1}\geq\mathrm{A}_{1}+\mathrm{A}_{2}$, so that the area has certainly not diminished.
+
     It follows that half of our solution curve $\mathrm{C}$ must solve the following problem: To find the arc of length $\mathrm{L}/2$ with endpoints $\mathrm{A}$ and $\mathrm{B}$ lying anywhere on a straight line, such taht the arc together with the segment $\mathrm{AB}$ encloses a region of maximum area.
+
+    But how do we choose where $\mathrm{A}$ and $\mathrm{B}$ to go? Since if we place $\mathrm{A}$ and $\mathrm{B}$ in a different location on the curve, $\mathrm{C}$, we can get a different distance between $\mathrm{A}$ and $\mathrm{B}$. We not always guaranteed that the two divided areas will be unbalanced. And that in the off chance that the divided areas are equal, we can just pick another two location on $\mathrm{C}$, for $\mathrm{A}$ and $\mathrm{B}$. Knowing this, another question arises: how do we make sure that the two points picked for $\mathrm{A}$ and $\mathrm{B}$, will yeild a bigger unbalance of area?
 
     \textbf{Step 3:} Now we'll show that the solution to this new problem is a semi-circle, so tghat the solution to the orignal problem must be a full circle, so that the solution to the original problem must be a full circle.
 
@@ -1104,14 +1127,36 @@ The proof that I will be unpacking and taking a closer look at will be from the 
     \begin{figure}[hbt!]
         \begin{center}   
             \includegraphics[width=130mm]{steiner3}
-            \caption{a labeled hexagon in a circle, showing that a circle }
+            \caption{}
         \end{center}
-    \end{figure}\leavevmode
+    \end{figure}\leavevmode\\
     Suppose, to the contrary, that the angle at $\mathrm{O}$ is not $90^{\circ}$. Then we can view the arc as hinged at $\mathrm{O}$, and either open it or close it so as to make the angle at $\mathrm{O}$ exactly $90^{\circ}$
 
     This will not change the length of the arc, nor change the two shaded areas, but will increase the triangular area, and therefore increase the total area enclosed by the arc $\mathrm{AOB}$ and the line segment $\mathrm{AB}$.
 
     But this was already maximized by the original arc, so its inscribed angle at $\mathrm{O}$ is $90^{\circ}$ and the arc itself a semi-circle.
+
+    Since we have figured out what angle is best to maximize the area, how about when we add the two together? We relable the curve as such;
+    \begin{figure} [hbt!]
+        \centering
+        \begin{minipage}{0.5\textwidth}
+            \centering
+            \includegraphics[width=50mm]{Steiner4} % first figure itself
+            \caption{}
+        \end{minipage}\hfill
+        \begin{minipage}{0.5\textwidth}
+            \centering
+            \includegraphics[width=50mm]{Steiner5} % second figure itself
+            \caption{}
+        \end{minipage}
+    \end{figure}\leavevmode\newline
+    In Figure 4.10, imagine that $\mathrm{ACBC}'$ is made up of four rigid rods freely jointed at the vertices $\mathrm{A}$, $\mathrm{C}$, $\mathrm{B}$, $\mathrm{C}'$. Let us pull the vertices $\mathrm{A}$, $\mathrm{B}$ (if $\phi<90^{\circ}$) or $\mathrm{C}$, $\mathrm{C}'$ (if $\phi>90^{\circ}$) apart, until the angle at $\mathrm{C}$ (and $\mathrm{C}'$) becomes a right angle. Imagine that the four shaded segments enclosed between $k'$ and the rods $\mathrm{AC}$, $\mathrm{CB}$, $\mathrm{BC}'$, $\mathrm{C}'\mathrm{A}$ are carried along during this process as shown.
+
+    In Figure 4.11; The the new curve $k''$ has the same circumference as $k'$ (since it consists of the same four pieces of arc), but its area is larger because the shaded positions are the same but the area of the triangle $\mathrm{ABC}$ in the new position n is larger than in the original position (having the same sides $\mathrm{AC}$, $\mathrm{BC}$, but the right angle at $\mathrm{C}$.
+
+    Thus we were able to increase the area provided that there existed a point $\mathrm{C}$ on $k_{1}$ with $\angle\mathrm{ABC}\neq90^{\circ}$. But if $\phi=90^{\circ}$ for every $\mathrm{C}$ on $k_{1}$ then $k_{1}$ is a semicricle above the diameter $\mathrm{AB}$, and $k_{1}$ is a circle. 
+
+    However, we are not complete as we need to check if the is it fully maximized first, and to do that, we move on to step 4.
 
     \textbf{Step 4:} Let $\mathrm{C}$ be a smooth, regular simple closed curve in the plane, with $\mathrm{L}$ and bounding a region of area $\mathrm{A}$.
 
@@ -1123,9 +1168,7 @@ The proof that I will be unpacking and taking a closer look at will be from the 
 
     Since the cirlce of the same length $\mathrm{L}$ bounds a region of area $\mathrm{A}_{0}$ satisfying $\mathrm{L}^{2}=4\pi\mathrm{A}_{0}$, we know that $\mathrm{A}\leq\mathrm{A}_{0}$.
 
-    Thus we know that a circle maximizes the enclosed area among all smooth regular simple closed curves of the same length. So the maximizers exists.
-
-    Then by parts (1)-(3) of this proof, there are no other maximizers, completing the proof of the isoperimetric theorem.
+    Thus we know that a circle maximizes the enclosed area among all smooth regular simple closed curves of the same length. So the maximizers exists. Then by parts (1)-(3) of this proof, there are no other maximizers, completing the proof of the isoperimetric theorem.
 \end{proof}
 
 \section{Karl Weierstrass}
@@ -1235,13 +1278,12 @@ Observe that the second formula is acquired from the first one by recognizing th
 since the curve is closed. Folloing immediately from the first two formula, we have the third formula. 
 
 To show the first formula from the initial formula, we consider initally the case where the curve is made up of two straight-line segments parallel to the y-axis
-\newpage
 \begin{figure}[hbt!]
     \begin{center}   
-        \includegraphics[width=80mm]{Schmidt1}
-        \caption{asdf}
+        \includegraphics[width=90mm]{Schmidt1}
+        \caption{}
     \end{center}
-\end{figure}\leavevmode
+\end{figure}\leavevmode\newline
 and two arcs that can be written in the form
 \begin{center}
     $y=f_{1}(x)$ and $y=f_{1}(x)$, $x\in[x_{0},x_{1}]$, $f_{1}>f_{2}$
@@ -1258,7 +1300,7 @@ To prove the general case, it must be shown that it is possible to divide the re
         \includegraphics[width=80mm]{Schmidt2}
         \caption{curve's region divided into a finite number of regions}
     \end{center}
-\end{figure}\leavevmode
+\end{figure}\leavevmode\newline\newline
 If there exists a straight line $\mathrm{E}$ in the plane such that the distance $p(t)$ of $\alpha(t)$ to this line is a function with fintely many critial points. The initial formula can also be obtained by using Green's theorem in the plane.
 
 \begin{definition}
@@ -1284,6 +1326,7 @@ In this proof we will use AM-GM inequality, Cauchy-Schwarz inequality and the fa
 \leavevmode \\
 
 Before beginning the main proof, we can show that and prove we can get the area by using Green's Theorem.
+\newpage
 \begin{proof}
 	Let's begin the proof by trying to compute $\displaystyle \iint_{1} 1 \,du\,dv$
 	\begin{figure}[hbt!]
@@ -1334,6 +1377,7 @@ Before beginning the main proof, we can show that and prove we can get the area 
     As a result, this will get us the area using Green's Theorem. 
 \end{proof}
 Thus, we now have everything we need to prove the actual theorem we want to prove.
+\newpage
 \begin{theorem}
     Let $\mathrm{C}$ be a simple, closed curve of length $l$. Let $\mathrm{A}$ be a region that encloses. Then
     \begin{center}
@@ -1368,9 +1412,10 @@ Thus, we now have everything we need to prove the actual theorem we want to prov
                 x, & -\sqrt{r^{2}-x^{2}}\;\;s\in[s_{1},l].
             \end{cases}
         \end{equation*}
-    \end{center}
+    \end{center}\leavevmode
     We know that the circle is not exactly a function, so we try to parameterize it like a function. For the top part of the curve, we can correlate each point on there to each point on the circle.
 
+    \newpage
     \textbf{For our general idea:} Considering area of the circle and the curve, $\displaystyle \mathrm{A}+\pi r^{2}$
     \begin{figure}[hbt!]
         \begin{center}   
@@ -1499,7 +1544,7 @@ Thus, we now have everything we need to prove the actual theorem we want to prov
 In this proof of the Isoperimetric Inequality in two dimensions, we will look at domains
 with continuously differentiable boundary. We will identify the Euclidean plane with $\mathrm{C}$
 and we will consider the boundary as a periodic function from $\mathrm{R}$ to $\mathrm{C}$, so that we are able
-to use Fourier analysis. 
+to use Fourier analysis.~\citep{bar2010elementare} and~\citep{gehring2019isoperimetric}.
 
 We will establish the isoperimetric inequality again:
 \begin{theorem}
@@ -1509,37 +1554,41 @@ We will establish the isoperimetric inequality again:
     \end{center}
 \end{theorem}
 \begin{proof}
-    Without loss of generality, assume $c$ is a unit speed curve. Consider the injective restriction $\left.c\right|_{[0, \mathrm{~L}]}$ and by abusing notation call it also $c$. Let $c(t)=(x(t), y(t))^{\mathrm{T}}$ and consider the complex valued function
+    Without loss of generality, assume $c$ is a unit speed curve. Consider the injective restriction $\displaystyle \left.c\right|_{[0, \mathrm{~L}]}$ and by abusing the notations here, we are going to call it $c$. Hence, let $c(t)=(x(t), y(t))^{\mathrm{T}}$ and consider the complex valued function
     \begin{center}
-        $\displaystyle z:\mathbb{R} \rightarrow \mathbb{C}, z(t)=x\left(\frac{\mathrm{L}}{2 \pi} t\right)+i y\left(\frac{\mathrm{L}}{2 \pi t}\right).$
+        $\displaystyle z:\mathbb{R} \rightarrow \mathbb{C},\;\; z(t)=x\left(\frac{\mathrm{L}}{2 \pi} t\right)+i y\left(\frac{\mathrm{L}}{2 \pi t}\right).$
     \end{center}
 
-    The function $z$ parametrizes the curve $c$. Now, we can look at the Fourier series of $z$, written (see Definition 3.3) as follows
+    The function $z$ parametrizes the curve $c$. Now, we can look at the Fourier series of $z$, written (see Definition 2.1.13) as follows
     \begin{center}
         $\displaystyle \mathscr{F}_n[z](t)=\sum_{k=-\infty}^{\infty}c_k e^{i k t},$
     \end{center}
 
-    where $c_k$ are the Fourier coefficients. Because $z$ is a periodic, continuously differentiable function, with Theorem 3.4 we can conclude that
+    where $c_k$ are the Fourier coefficients. Because $z$ is a periodic, continuously differentiable function, with Theorem 2.1.14 we can conclude that
     \begin{center}
         $\displaystyle z(t)=\sum_{k=-\infty}^{\infty} c_k e^{i k t}.$
     \end{center}
+
+    In the next three steps, we will simplify the length and area. 
     
     Step 1. We want to express the length of $c$ by the Fourier coefficients. For this, we first compute
     \begin{center}
-        $\displaystyle \int_0^{2 \pi}|\dot{z}(t)|^2 d t=\int_0^{2 \pi}\left(\frac{\mathrm{L}}{2 \pi}\right)^2 \underbrace{\left\|\dot{c}\left(\frac{\mathrm{L} t}{2 \pi}\right)\right\|^2}_{=1 \text { unit speed }} d t=\frac{\mathrm{L}^2}{2 \pi},$
+        \begin{equation}
+            \displaystyle \int_0^{2 \pi}|\dot{z}(t)|^2 d t=\int_0^{2 \pi}\left(\frac{\mathrm{L}}{2 \pi}\right)^2 \underbrace{\left\|\dot{c}\left(\frac{\mathrm{L} t}{2 \pi}\right)\right\|^2}_{=1 \text { unit speed }} d t=\frac{\mathrm{L}^2}{2 \pi},
+        \end{equation}
     \end{center}
 
-    where the derivative of $z$ is given by $\dot{z}(t)=\sum_{k=-\infty}^{\infty} c_k i k e^{i k t}$. Hence, we get
+    where the derivative of $z$ is given by $\displaystyle \dot{z}(t)=\sum_{k=-\infty}^{\infty} c_k i k e^{i k t}$. Hence, we get
     \begin{center}
         $\displaystyle \begin{aligned}\int_0^{2 \pi}|\dot{z}(t)|^2 d t=\int_0^{2 \pi} \dot{z}(t) \overline{\dot{z}(t)} d t & =\int_0^{2 \pi} \sum_{k,l=-\infty}^{\infty} c_k\overline{c_l}kle^{i(k-l)t}dt\\&=2\pi \sum_{k=-\infty}^{\infty}\left|c_k\right|^2 k^2.\end{aligned}$
     \end{center}
 
-    Equation (1) implies that for the length of $c$
+    Equation (4.1) implies that for the length of $c$
     \begin{center}
         $\displaystyle \mathrm{L}[c]^2=(2 \pi)^2 \sum_{k=-\infty}^{\infty} k^2\left|c_k\right|^2$
     \end{center}
 
-    Step 2. Next, we want to express the area using the Fourier coefficients. From Lemma 3.14 it follows that
+    Step 2. Next, we want to express the area using the Fourier coefficients. From Lemma 2.1.24 it follows that
     \begin{center}
         $\displaystyle \begin{aligned}&2\mathrm{~A}[\mathrm{G}]=\int_0^{2 \pi} \Re(z(s) \cdot i \cdot \overline{\dot{z}(s)}) d s \\&=\int_0^{2 \pi} \Re\left(\sum_{k=-\infty}^{\infty} c_k e^{i k s} \cdot i \cdot \sum_{l=-\infty}^{\infty} \overline{c_l}(-i) l e^{-i l s}\right) d s \\& =\Re\left(\int_0^{2 \pi} \sum_{k, l=-\infty}^{\infty} l c_k \overline{c_l} e^{l(k-l) s} d s\right)=2 \pi \sum_{k=-\infty}^{\infty} k\left|c_k\right|^2 \\&\end{aligned}$
     \end{center}
@@ -1554,14 +1603,14 @@ We will establish the isoperimetric inequality again:
         $\displaystyle \sum_{k=-\infty}^{\infty} k\left|c_k\right|^2=\sum_{k=-\infty}^{\infty} k^2\left|c_k\right|^2 .$
     \end{center}
 
-    This is equivalent to $c_k=0 \forall k \neq 0,1$. This is satisfied if and only if we have $z(t)=$ $c_0+c_1 \cdot e^{i t}$, i.e., a circle.
+    This is equivalent to $c_k=0\; \forall k \neq 0,1$. This is satisfied if and only if we have $z(t)=$ $c_0+c_1 \cdot e^{i t}$, i.e., a circle.
 \end{proof}
 
 \chapter{n-Dimensional Case ($\mathbb{R}^n$)}
 The idea of the proof for this theorem is to show the inequality above using induction on $n$. Here, we will use the Integral Theorem of Fubini to establish induction step. In this chapter, some statements of the theory of convex, compact sets will be introduced as well as properties of the volume functional. Later, we will show the Isoperimetric Inequality using the theorem of Brunn–Minkowski. We will follow~\citep{schneider2014convex}.
 
 \section{Volume and Surface Measure}
-In this subsection, we will introduce the volume functional and show its continuity. The results of this subsection are important in the proof of Brunn-Minkowski.
+In this subsection, we will introduce the volume functional and show its continuity. The results of this subsection are important in the proof of Brunn-Minkowski.~\citep{gehring2019isoperimetric}
 
 \begin{definition}
     Let $M\subseteq\mathbb{R}^{n}, p\geq0$. For $\delta>0$ define
@@ -1570,18 +1619,18 @@ In this subsection, we will introduce the volume functional and show its continu
 
         \hspace{1cm}with $diam C_{i}\leq\delta$ and $M\subseteq\underset{i\in\mathbb{N}}{\cup}{C_{i}}\}$
     \end{center}
-    with $\alpha(p)=\frac{\pi^{\frac{p}{2}}}{\Gamma(p)(\frac{p}{2}+1)}$ for $p\neq0$, where $\Gamma(p):=\int_{0}^{\infty}t^{-1}e^{-t}\,dt$ and $\alpha(0)=0$.
+    with $\displaystyle \alpha(p)=\frac{\pi^{\frac{p}{2}}}{\Gamma(p)(\frac{p}{2}+1)}$ for $p\neq0$, where $\Gamma(p):=\int_{0}^{\infty}t^{-1}e^{-t}\,dt$ and $\alpha(0)=0$.
     
     Define the p-dimensional Hausdorff measure of $M$ by
     \begin{center}
-        $\mathscr{H}^{p}(M):=\underset{\delta>0}{\sup}\mathscr{H}_{\delta}^{p}(M)=\underset{\delta\to0}{\lim}\mathscr{H}_{\delta}^{p}(M)$.
+        $\displaystyle \mathscr{H}^{p}(M):=\underset{\delta>0}{\sup}\mathscr{H}_{\delta}^{p}(M)=\underset{\delta\to0}{\lim}\mathscr{H}_{\delta}^{p}(M)$.
     \end{center}
 \end{definition}
 
 \begin{remark}
     Let $t\in\mathbb{R}^{n}$ and $\lambda\in\mathbb{R}$, then we have
     \begin{center}
-        $\mathscr{H}^{p}(\lambda M)=\lambda^{p}\mathscr{H}^{p}(M)$ and $\mathscr{H}^{p}(M=t)=\mathscr{H}^{p}(M)$.
+        $\displaystyle \mathscr{H}^{p}(\lambda M)=\lambda^{p}\mathscr{H}^{p}(M)$ and $\mathscr{H}^{p}(M=t)=\mathscr{H}^{p}(M)$.
     \end{center}
     Furthermroe, for $A\subseteq B$ we have $\mathscr{H}^{p}(A)\leq\mathscr{H}^{p}(B)$.
 \end{remark}
@@ -1590,6 +1639,10 @@ In this subsection, we will introduce the volume functional and show its continu
     The volume funcational $V_{n}$ on $\mathscr{K}^{n}$ is defined by the restriction of the $n$-dimensional Hausdorff measure on $\mathscr{K}^{n}$.
 \end{definition}
 
+\begin{note}
+    If we don't have the restriction here, the $n$ could be anything. Having the restriction, gives us a clearer domain to work with.
+\end{note}
+
 \begin{theorem}
     The volume functional $V_{n}:\mathscr{K}^{n}\to\mathbb{R}$ is continuous.
 \end{theorem}
@@ -1597,46 +1650,50 @@ In this subsection, we will introduce the volume functional and show its continu
     \textbf{Case 1 $\mathrm{V}_{n}(\mathrm{K})=0$:}
     Let $\overline{a}\in\mathscr{K}^{n}$ and, without loss of generality, assume $\delta(K,\overline{K})=\alpha\leq1$. Thus, it holds that $\overline{K}\subseteq K+\alpha B^{n}$. Since $V_{0}(K)=0$ and $K$ is convex, we know that $K$ has to be contained in a hyperplane. From the monotony of the Hausdorff measure it follows for $u$ orthogonal on the hyperplane, that
     \begin{center}
-        $V_{n}(\mathrm{K})\leq \mathrm{V}_{n}(K+\alpha \mathrm{B}_{n})$
+        $\displaystyle V_{n}(\mathrm{K})\leq \mathrm{V}_{n}(K+\alpha \mathrm{B}_{n})$
 
-        $=\int_{-\alpha}^{\alpha}\mathrm{V}_{n-1}([\mathrm{K}+\alpha \mathrm{B}^{n}]\cap\mathrm{H}_{u,\zeta})\,d\zeta$
+        $\displaystyle =\int_{-\alpha}^{\alpha}\mathrm{V}_{n-1}([\mathrm{K}+\alpha \mathrm{B}^{n}]\cap\mathrm{H}_{u,\zeta})\,d\zeta$
 
-        $\leq\int_{-\alpha}^{\alpha}\mathrm{V}_{n-1}(K+(\alpha\mathrm{B}^{n}\cap\mathrm{H}_{u,\zeta}))\,d\zeta$
+        $\displaystyle \leq\int_{-\alpha}^{\alpha}\mathrm{V}_{n-1}(K+(\alpha\mathrm{B}^{n}\cap\mathrm{H}_{u,\zeta}))\,d\zeta$
 
-        $=2\alpha \mathrm{V}_{n-1}(K+(\alpha\mathrm{B}^{n}\cap\mathrm{H}_{u,0}))$
+        $\displaystyle =2\alpha \mathrm{V}_{n-1}(K+(\alpha\mathrm{B}^{n}\cap\mathrm{H}_{u,0}))$
 
-        $\overset{\alpha\leq1}{\leq}\underbrace{2\mathrm{~V}_{n-1}\left(\mathrm{~K}+\left(\mathrm{B}^n\cap \mathrm{H}_{u, 0}\right)\right)}_{:=c(\mathrm{~K})}\cdot\alpha$,
+        $\displaystyle \overset{\alpha\leq1}{\leq}\underbrace{2\mathrm{~V}_{n-1}\left(\mathrm{~K}+\left(\mathrm{B}^n\cap \mathrm{H}_{u, 0}\right)\right)}_{:=c(\mathrm{~K})}\cdot\alpha$,
     \end{center}
     In the second line we used that $K+\alpha B^{n}$ varies in the fixed coordinate of $K$ by $2\alpha$. Since $c(K)$ is fixed and does not depend on $\alpha$ the continuity follows.
 
     \textbf{Case 2 $\mathrm{V}_{n}(\mathrm{K})>0$:}
     Without loss of generality, assume that $0\in\overset{\circ}{\mathrm{K}}$ (if not, we can shift it, since the Hausdorff measure is invariant under shifts). Let $\epsilon>0$ and choose $\lambda>1$ such that
     \begin{center}
-        $(\lambda^{n}-1)\lambda^{n}\mathrm{V}_{n}(\mathrm{K})<\epsilon$
+        $\displaystyle (\lambda^{n}-1)\lambda^{n}\mathrm{V}_{n}(\mathrm{K})<\epsilon$
     \end{center}
-    and $\rho>0$ so that $\rho\mathrm{B}^{n}\subseteq\overset{\circ}{\mathrm{K}}$. From Lemma 13, we 
-    know that there is an $\alpha>0$ with $\alpha\leq(\lambda-1)\rho$ so that $\rho\mathrm{B}_{n}\subseteq\overset{\circ}{\mathrm{K}}\subseteq\overline{\mathrm{K}}$. For all $\mathrm{K}$ with $\delta(K,\overline{\mathrm{K}})<\alpha$. From $\delta(\mathrm{K},\overline{\mathrm{K}})<\alpha$ it follows
+    and $\rho>0$ so that $\displaystyle \rho\mathrm{B}^{n}\subseteq\overset{\circ}{\mathrm{K}}$. From Lemma 13, we 
+    know that there is an $\alpha>0$ with $\displaystyle \alpha\leq(\lambda-1)\rho$ so that $\displaystyle \rho\mathrm{B}_{n}\subseteq\overset{\circ}{\mathrm{K}}\subseteq\overline{\mathrm{K}}$. For all $\mathrm{K}$ with $\delta(K,\overline{\mathrm{K}})<\alpha$. From $\displaystyle \delta(\mathrm{K},\overline{\mathrm{K}})<\alpha$ it follows
     \begin{center}
-        $\mathrm{K}\subseteq\overline{\mathrm{K}}+\alpha\mathrm{B}^{n}\subseteq\overline{\mathrm{K}}+(\lambda-1)\rho\mathrm{B}^{n}\subseteq\overline{\mathrm{K}}+(\lambda-1)\overline{\mathrm{K}}=\lambda\overline{\mathrm{K}}$
+        $\displaystyle \mathrm{K}\subseteq\overline{\mathrm{K}}+\alpha\mathrm{B}^{n}\subseteq\overline{\mathrm{K}}+(\lambda-1)\rho\mathrm{B}^{n}\subseteq\overline{\mathrm{K}}+(\lambda-1)\overline{\mathrm{K}}=\lambda\overline{\mathrm{K}}$
     \end{center}
-    With the same argument, we can also show that $\overline{\mathrm{K}}\subseteq\lambda\mathrm{K}$. Hence we have the inequalities $\mathrm{V}_{n}(\mathrm{K})\leq\mathrm{V}_{n}(\lambda\mathrm{K})=\lambda^{n}\mathrm{V}_{n}(\overline{\mathrm{K}})$ and $\mathrm{V}(\overline{\mathrm{K}})\leq\mathrm{V}_{n}(\lambda\mathrm{K})=\lambda^{n}\mathrm{V}_{n}{\mathrm{K}}$. \newline
+    With the same argument, we can also show that $\overline{\mathrm{K}}\subseteq\lambda\mathrm{K}$. Hence we have the inequalities $\displaystyle \mathrm{V}_{n}(\mathrm{K})\leq\mathrm{V}_{n}(\lambda\mathrm{K})=\lambda^{n}\mathrm{V}_{n}(\overline{\mathrm{K}})$ and $\displaystyle \mathrm{V}(\overline{\mathrm{K}})\leq\mathrm{V}_{n}(\lambda\mathrm{K})=\lambda^{n}\mathrm{V}_{n}{\mathrm{K}}$. \newline
     This implies
     \begin{center}
-        $\mathrm{V}_{n}(\mathrm{K})-\mathrm{V}_{n}(\overline{\mathrm{K}})\leq(\lambda^{n}-1)\mathrm{V}_{n}(\overline{\mathrm{K}})\leq(\lambda^{n}-1)\lambda^{n}\mathrm{V}_{n}(\mathrm{K})$ and
+        $\displaystyle \mathrm{V}_{n}(\mathrm{K})-\mathrm{V}_{n}(\overline{\mathrm{K}})\leq(\lambda^{n}-1)\mathrm{V}_{n}(\overline{\mathrm{K}})\leq(\lambda^{n}-1)\lambda^{n}\mathrm{V}_{n}(\mathrm{K})$ and
 
-        $\mathrm{V}_{n}(\overline{\mathrm{K}})-\mathrm{V}_{n}(\mathrm{K})\leq(\lambda^{n}-1)\mathrm{V}_{n}(\mathrm{K})\overset{\lambda>1}{\leq}(\lambda^{n}-1)\lambda^{n}\mathrm{V}_{n}(\mathrm{K})$.
+        $\displaystyle \mathrm{V}_{n}(\overline{\mathrm{K}})-\mathrm{V}_{n}(\mathrm{K})\leq(\lambda^{n}-1)\mathrm{V}_{n}(\mathrm{K})\overset{\lambda>1}{\leq}(\lambda^{n}-1)\lambda^{n}\mathrm{V}_{n}(\mathrm{K})$.
     \end{center}
     As a consequence we have the estimate
     \begin{center}
-        $|\mathrm{V}_{n}(\mathrm{K})-\mathrm{V}_{n}(\overline{\mathrm{K}})|\leq(\lambda^{n}-1)\lambda^{n}\mathrm{V}_{n}(\mathrm{K})<\epsilon$.
+        $\displaystyle |\mathrm{V}_{n}(\mathrm{K})-\mathrm{V}_{n}(\overline{\mathrm{K}})|\leq(\lambda^{n}-1)\lambda^{n}\mathrm{V}_{n}(\mathrm{K})<\epsilon$.
     \end{center}
     This implies the continuity of $\mathrm{V}_{n}$.
 \end{proof}
 
+\begin{note}
+    In the case where the volume functinal is not continuous, we would have a disjoint area of region, which cannot happen since this defeats the purpose of the problem.
+\end{note}
+
 \begin{theorem}(Steiner's Formula)
-    There are $\mathrm{V}_{m}:\mathscr{K}^{n}\to\mathbb{R}$ and cofficients $k_i\in\mathbb{R}$ for $i=0,1,\dots,n$ such that 
+    There are $\displaystyle \mathrm{V}_{m}:\mathscr{K}^{n}\to\mathbb{R}$ and cofficients $k_i\in\mathbb{R}$ for $i=0,1,\dots,n$ such that 
     \begin{center}
-        $\mathrm{V}_{n}(\mathrm{K}+\rho\mathrm{B}^{n})=\overset{n}{\underset{m=0}{\sum}}\rho^{n-m}k_{n-m}\mathrm{V}_{m}(\mathrm{K})$
+        $\displaystyle \mathrm{V}_{n}(\mathrm{K}+\rho\mathrm{B}^{n})=\overset{n}{\underset{m=0}{\sum}}\rho^{n-m}k_{n-m}\mathrm{V}_{m}(\mathrm{K})$
     \end{center}
     for all $\mathrm{K}\in\mathscr{K}^{n}$, $\rho\geq0$.
 \end{theorem}
@@ -1649,9 +1706,17 @@ A proof of this can be found in~\citep{schneider2014convex} (Theorem 4.2.1).
 \begin{definition} (Surface Measure)
     Let $\mathrm{K}\subseteq\mathscr{K}^{n}$. Then we define the \textit{surface measure} of $\mathrm{K}$ by
     \begin{center}
-        $\mathrm{S}(\mathrm{K}):=\underset{\rho\to0}{\lim}\frac{\mathrm{V}_{n}(\mathrm{K}+\epsilon\mathrm{B}^{n})-\mathrm{V}_{n}(\mathrm{K})}{\rho}$.
+        $\displaystyle \mathrm{S}(\mathrm{K}):=\underset{\rho\to0}{\lim}\frac{\mathrm{V}_{n}(\mathrm{K}+\epsilon\mathrm{B}^{n})-\mathrm{V}_{n}(\mathrm{K})}{\rho}$.
     \end{center}
 \end{definition}
+
+\begin{note}
+    The surface measure, in $3$ dimensional case, will measure the surface area. And in $2$ dimensions, measures the length.
+\end{note}
+
+\begin{note}
+    It maybe unclear on how to check if the surface measure will be convex or not, however below will solve that issue.
+\end{note}
 
 \begin{remark}
     This limit exists, because $\mathrm{V}_{n}(\mathrm{K}+\epsilon\mathrm{B}^{n})$ is a polynomial and, therefore, it is smooth.
@@ -1675,7 +1740,7 @@ A proof of this can be found in~\citep{schneider2014convex} (Theorem 4.2.1).
 \end{proof}
 
 \section{Brunn-Minkowski Theorem}
-First we will show an important theorem of convex geometry, the Brunn-Minkowski Theorem, which we will use in the proof of the isoperimetric inequality in the next subsection. Osserman~\citep{osserman1978isoperimetric} wrote an extensive survey on the isoperimetric inequality. The traditional isoperimetric inequality for significant classes of subsets of $\mathbb{R}^{n}$ can be obtained quickly from the proof of the Brunn-Minkowski inequality, which takes only one page, and deserves to be better known.
+First we will show an important theorem of convex geometry, the Brunn-Minkowski Theorem, which we will use in the proof of the isoperimetric inequality in the next subsection. Osserman~\citep{osserman1978isoperimetric} wrote an extensive survey on the isoperimetric inequality. The traditional isoperimetric inequality for significant classes of subsets of $\mathbb{R}^{n}$ can be obtained quickly from the proof of the Brunn-Minkowski inequality, which takes only one page, and deserves to be better known.~\citep{gehring2019isoperimetric}
 
 The Minkowski Addition of two arbitrary sets $\mathrm{S},\mathrm{T}\subset\mathbb{R}^{n}$ is defined to be
 \begin{center}
@@ -1689,9 +1754,14 @@ For example, the Minkowski sum of two rectanbles is still a rectangle.
 \begin{center}
     $r([0,a]\times[0,b])\boxplus s([0,c]\times[0,d])=[0,ra+sc]\times[0,rb+sd]$.
 \end{center} 
-(image here of Minkowski sum)
+\begin{figure}[hbt!]
+    \begin{center}   
+        \includegraphics[width=100mm]{BrunnMinkowski1}
+        \caption{the Minkowski sum of a triangle and a rectangle}
+    \end{center}
+\end{figure}\leavevmode
 
-According to the Brunn-Minkowski theorem, the area of the added figure is greater than the area of the summands because the Minkowski addition tends to "round out" the figures being added. So the theorem goes as:
+The Brunn-Minkowski theorem states that when figures are added using Minkowski addition, the area of the final figure is greater than the sum of the areas of the individual figures because this addition method "smooths out" the shapes that are being united. As a result, the theorem:
 
 \begin{theorem}(Brunn-Minkowski)
     Let $\mathrm{K}_{0},\mathrm{K}_{1}\in\mathscr{K}^{n}$ be two convex bodies and $\lambda\in[0,1]$, then
@@ -1761,7 +1831,7 @@ According to the Brunn-Minkowski theorem, the area of the added figure is greate
     \end{center}
     Thus, the inequality in Brunn-Minkowski Theorem is proven.
 
-    Therefore let $\mathrm{V}_{n}(\mathrm{K}_{0})=\mathrm{V}_{n}(\mathrm{K}_{1})=1$. Choose $u\in\mathbb{S}^{n}$ and $\lambda\in[0,1]$. We now introduce the following notations to shorten the computations. We set $\mathrm{K}_{\lambda}:=(1-\lambda)\mathrm{K}_{0}+\lambda\mathrm{K}_{1}$ and $\beta_{\lambda}:=h(\mathrm{K}_{\lambda},u)$, and $\alpha_{\lambda}:=-h(\mathrm{K}_{\lambda},-u)$. Furthermore, for $\zeta\in(\alpha_{i},\beta_{i})$\;$i=0,1$ we set the half space $\mathrm{H}^{-}(\zeta):=\{x\in\mathbb{R}^{n};\langle x,u\rangle\leq\zeta\}$ and the hyperplane $\mathrm{H}(\zeta):=\{x\in\mathbb{R}^{n};\langle x,u\rangle=h(\mathrm{K},u)\}$, as well as the volume $v_{i}:=\mathrm{V}_{n-1}(\mathrm{K}_{i}\cap\mathrm{H}(\zeta))$.
+    Therefore let $\displaystyle \mathrm{V}_{n}(\mathrm{K}_{0})=\mathrm{V}_{n}(\mathrm{K}_{1})=1$. Choose $\displaystyle u\in\mathbb{S}^{n}$ and $\displaystyle \lambda\in[0,1]$. We now introduce the following notations to shorten the computations. We set $\displaystyle \mathrm{K}_{\lambda}:=(1-\lambda)\mathrm{K}_{0}+\lambda\mathrm{K}_{1}$ and $\displaystyle \beta_{\lambda}:=h(\mathrm{K}_{\lambda},u)$, and $\displaystyle \alpha_{\lambda}:=-h(\mathrm{K}_{\lambda},-u)$. Furthermore, for $\displaystyle \zeta\in(\alpha_{i},\beta_{i})$\;$i=0,1$ we set the half space $\mathrm{H}^{-}(\zeta):=\{x\in\mathbb{R}^{n};\langle x,u\rangle\leq\zeta\}$ and the hyperplane $\displaystyle \mathrm{H}(\zeta):=\{x\in\mathbb{R}^{n};\langle x,u\rangle=h(\mathrm{K},u)\}$, as well as the volume $\displaystyle v_{i}:=\mathrm{V}_{n-1}(\mathrm{K}_{i}\cap\mathrm{H}(\zeta))$.
 
     Let us define for every $\zeta\in[\alpha_{i}\beta_{i}]$
     \begin{center}
@@ -1857,7 +1927,7 @@ The next lemma follows by using basic tools of analysis. Hence, we will not prov
 \end{lemma}
 
 \section{Proof of the Isoperimetric Inequality in n-Dimension}
-Before proving the isoperimetric inequality using methods of convex geometry. Therefore, we need to adapt the assumptions of our theorem. Since we have introduced new language describing convex geometry, it is better that we also reintroduce the isoperimetric theorem in terms of our new language. Hence:
+Before proving the isoperimetric inequality using methods of convex geometry. Therefore, we need to adapt the assumptions of our theorem. Since we have introduced new language describing convex geometry, it is better that we also reintroduce the isoperimetric theorem in terms of our new language.~\citep{gehring2019isoperimetric} Hence:
 \begin{theorem} (Isoperimetric Inequality)
     Let $\mathrm{K}\in\mathscr{K}_{0}^{n}$. Then
     \begin{center}
@@ -1884,7 +1954,7 @@ Before proving the isoperimetric inequality using methods of convex geometry. Th
     \begin{center}
         $f'(t)=\frac{1}{n}\mathrm{V}_{n}((1-t)\mathrm{K}+t\mathrm{B}^{n})^{1/{n-1}}\cdot\frac{d}{dt}\mathrm{V}_{n}((1-t)\mathrm{K}+t\mathrm{B}^{n})$.
     \end{center}
-    This implies $f'(0)\overset{(\ast)}{=}\frac{1}{n}\mathrm{V}_{n}(\mathrm{K})^{1/{n-1}}(\mathrm{S}(\mathrm{K})-n\mathrm{V}_{n}(\mathrm{K}))$. By using corollary 1, it follows that $f$ is concave on [0,1]. hence, we know that $f'(0)\geq f(1)-f(0)$. This implies the inequality
+    This implies $f'(0)\overset{(\ast)}{=}\frac{1}{n}\mathrm{V}_{n}(\mathrm{K})^{1/{n-1}}(\mathrm{S}(\mathrm{K})-n\mathrm{V}_{n}(\mathrm{K}))$. By using corollary 5.2.3, it follows that $f$ is concave on [0,1]. hence, we know that $f'(0)\geq f(1)-f(0)$. This implies the inequality
     \begin{center}
         $\displaystyle \frac{1}{n}\mathrm{V}_{n}(\mathrm{K})^{1/{n-1}}\mathrm{S}(\mathrm{K})-\mathrm{V}_{n}(\mathrm{K})^{1/n}=\frac{1}{n}\mathrm{V}_{n}(\mathrm{K})^{1/{n-1}}(\mathrm{S}(\mathrm{K})-n\mathrm{V}_{n}(\mathrm{K}))\geq\mathrm{V}_{n}(\mathrm{B}^{n})^{1/n}-\mathrm{V}_{n}(\mathrm{K})^{1/n}$.
     \end{center}
@@ -1892,15 +1962,19 @@ Before proving the isoperimetric inequality using methods of convex geometry. Th
     \begin{center}
         $\displaystyle \mathrm{S}(\mathrm{K})\geq n\mathrm{V}_{n}(\mathrm{B}_{n})^{1/n}\mathrm{V}_{n}(\mathrm{K})^{1-1/n}$
     \end{center}
-    follows. If $\mathrm{K}$ is a ball, equality follows by using remark 12.
+    follows. If $\mathrm{K}$ is a ball, equality follows by using remark 5.1.13.
 
-    Equality implies $f'(0)=f(1)-f(0)$. By using the concavity of $f$ and lemma 17, it follows that $f$ is linear. From corollary 1, we know that $\mathrm{K}$ and $\mathrm{B}^{n}$ are homothetic.
+    Equality implies $f'(0)=f(1)-f(0)$. By using the concavity of $f$ and lemma 5.2.4, it follows that $f$ is linear. From corollary 5.2.3, we know that $\mathrm{K}$ and $\mathrm{B}^{n}$ are homothetic.
 
     Hence, $\mathrm{K}$ is a ball.
 \end{proof}
 
+\begin{note}
+    Notice in the proof, we use down arrows under our limits, this just means the same as $\to$
+\end{note}
+
 \subsection{3-Dimensional Case ($\mathbb{R}^{3}$)}
-For dimension two, the isoperimetric inequality in theorem 18 can be written as
+For dimension two, the isoperimetric inequality in theorem 5.3.1 can be written as
 \begin{center}
 $\displaystyle \mathrm{U}(\mathrm{K})\geq 2\mathrm{V}_{2}(\mathrm{B}_{2})^{1/2}\mathrm{V}_{2}(\mathrm{K})^{1/2}=2\sqrt{\pi}\mathrm{A}[\mathrm{K}]^{1/2}$,
 \end{center}
@@ -1909,10 +1983,19 @@ where $\mathrm{A}$ is the area and $\mathrm{U}$ is the perimeter of $\mathrm{K}$
 $4\pi\cdot\mathrm{A}[\mathrm{G}]\leq\mathrm{U}[\mathrm{G}]^{2}$.
 \end{center}
 
-For the dimension three, the isoperimetric inequality in theorem 18 can be written as
+For the dimension three, the isoperimetric inequality in theorem 5.3.1 can be written as
 \begin{center}
 $\displaystyle \mathrm{U}(\mathrm{K})\geq 3\mathrm{V}_{3}(\mathrm{B}_{3})^{1/3}\mathrm{V}_{2}(\mathrm{K})^{1/3}=3\sqrt{\pi}\mathrm{A}[\mathrm{K}]^{2/3}$
 \end{center}
+We can use the proof from $n$-dimensions for $n=3$. Hence the proof for the $3$-dimensions is an intermediate step for the $n$-dimension
+
+\section*{Conclusion}
+\addcontentsline{toc}{chapter}{\hspace{0.2in}Conclusion}
+We first started with Steiner's proof, where we looked at fixing two points between a concave set, then flipping that arc. And also dividing the length into two equal parts and ``stamping'' the larger area. Then we fount the largest area using interior angles of the quadrilateral. After we show that maximizer exists, we ultimately have the largest area. But this proof is not rigorous enough as it contains a fatal flaw within a logical error; It follows from Steiner’s argument that if the isoperimetric problem has a solution at all then the solution must be a circle.
+
+Later, a rigorous proof is presented by Erhard Schmidt, which used the likes of calculus. The simplistic nature, is quite genius using knowledge of AM-GM inequality, Cauchy-Schwarz inequality and greens theorem, Schmidt is able to prove the isoperimetric problem. Schmidts begin using comparisons of the curve with the desired result, a circle.
+
+In the final proof of the $2$-dimensional case, we needed a domain which has aboundary with high regularity. This proof relied on Fourier series, which cannot be generalized to $n$-dimension, which are only defined on $\mathbb{C}$. Then for the $n$-dimensional proof, the notion of convex and compact sets were important (we do not need any regularity assumptions on the boundary). As we said in the introduction, the convexity assumption is flexible and applicable in n dimensions.
 
 \bibliography{The-Isoperimetric-Problem-References}
 \end{document}

@@ -1,5 +1,9 @@
 \begin{thebibliography}{xx}
 
+\harvarditem{B{\"a}r}{2010}{bar2010elementare}
+B{\"a}r, C.  \harvardyearleft 2010\harvardyearright , {\em Elementare
+  Differentialgeometrie}, Walter de Gruyter.
+
 \harvarditem{Boltjansky}{1985}{boltjansky1985geometry}
 Boltjansky, V.~G.  \harvardyearleft 1985\harvardyearright , {\em Combinatorial
   geometry}, Cambridge University Press.
@@ -31,6 +35,10 @@ Do~Carmo, M.~P.  \harvardyearleft 2016\harvardyearright , {\em Differential
 Evans, S. et~al.  \harvardyearleft 1920\harvardyearright , {\em Manmouth,
   Geoffrey of. Histories of the Kings of Britain}, number 577, JM Dent \& sons,
   Limited.
+
+\harvarditem{Forster}{2011}{forster2011analysis}
+Forster, O.  \harvardyearleft 2011\harvardyearright , `Analysis 1:
+  Differential- und integralrechnung einer veränderlichen'.
 
 \harvarditem{Gardner}{2002}{gardner2002brunn}
 Gardner, R.  \harvardyearleft 2002\harvardyearright , `The brunn-minkowski

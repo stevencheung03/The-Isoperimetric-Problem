@@ -4,3 +4,5 @@ University of Leicester, BSc Mathematics, MA3516 Mathematics Research Project 20
 This is for my undergraduate dissertation on the topic: The Isoperimetric Problem
 
 Project Supervisor: Yifu Wang
+
+Mark Obtained: 90%
